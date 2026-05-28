@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ─────────────────────────────────────────────────── */
+:root {
+  --ink: #0d0d12;
+  --paper: #f7f2ea;
+  --paper-dark: #ede8df;
+  --red: #c8102e;
+  --red-bg: #f7e8eb;
+  --gold: #c9963c;
+  --gold-bg: #f9f0e0;
+  --teal: #1a6b6b;
+  --teal-bg: #e3f0f0;
+  --text: #1a1a22;
+  --muted: #6b6b7a;
+  --border: rgba(13, 13, 18, 0.1);
+  --white: #ffffff;
+}
+
+/* ─── Tailwind v4: Register custom colors & fonts ──────────────────── */
+@theme inline {
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-paper-dark: var(--paper-dark);
+  --color-brand-red: var(--red);
+  --color-red-bg: var(--red-bg);
+  --color-gold: var(--gold);
+  --color-gold-bg: var(--gold-bg);
+  --color-teal: var(--teal);
+  --color-teal-bg: var(--teal-bg);
+  --color-koto-text: var(--text);
+  --color-muted: var(--muted);
+
+  --font-sans: var(--font-noto-sans-jp), var(--font-inter), sans-serif;
+  --font-serif: var(--font-noto-serif-jp), serif;
+}
+
+/* ─── Base ──────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ─── Pulse animation for badge dot ────────────────────────────────── */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s infinite;
+}
