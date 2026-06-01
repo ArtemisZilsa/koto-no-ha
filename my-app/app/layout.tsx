@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google'
 import './globals.css'
+import { ThemeScript } from '@/components/theme/ThemeScript'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -35,7 +36,11 @@ export default function RootLayout({
     <html
       lang="id"
       className={`${inter.variable} ${notoSansJP.variable} ${notoSerifJP.variable}`}
+      suppressHydrationWarning
     >
+      <head>
+        <ThemeScript />
+      </head>
       <body className="min-h-screen">{children}</body>
     </html>
   )

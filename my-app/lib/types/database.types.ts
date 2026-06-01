@@ -154,6 +154,65 @@ export interface VisaInfo {
   updated_at: string
 }
 
+// ─── Learning Content (migration 002) ────────────────────────────────────────
+
+export interface Vocab {
+  id: string
+  level_id: number
+  word: string
+  hiragana: string
+  romaji: string
+  meaning: string
+  part_of_speech: string
+  usage_id: string
+  usage_jp: string | null
+  full_meaning: string
+  example_sentence: string
+  example_hiragana: string
+  example_meaning: string
+  order_index: number
+  created_at: string
+}
+
+export interface KanjiExampleJson {
+  kanji: string
+  hiragana: string
+  meaning: string
+}
+
+export interface Kanji {
+  id: string
+  level_id: number
+  kanji: string
+  hiragana: string
+  romaji: string
+  meaning: string
+  hint: string
+  stroke_count: number
+  examples: KanjiExampleJson[]
+  order_index: number
+  created_at: string
+}
+
+export interface GrammarExampleJson {
+  sentence: string
+  hiragana: string
+  meaning: string
+}
+
+export interface Grammar {
+  id: string
+  level_id: number
+  pattern: string
+  reading: string
+  meaning: string
+  explanation: string
+  tags: string[]
+  examples: GrammarExampleJson[]
+  order_index: number
+  created_at: string
+}
+
 // ─── Database Schema Type ─────────────────────────────────────────────────────
 
 export interface Database {
@@ -219,6 +278,21 @@ export interface Database {
         Row: VisaInfo
         Insert: Omit<VisaInfo, 'id'> & Partial<Pick<VisaInfo, 'id'>>
         Update: Partial<Omit<VisaInfo, 'id'>>
+      }
+      vocab: {
+        Row: Vocab
+        Insert: Omit<Vocab, 'id' | 'created_at'> & Partial<Pick<Vocab, 'id' | 'created_at'>>
+        Update: Partial<Omit<Vocab, 'id'>>
+      }
+      kanji: {
+        Row: Kanji
+        Insert: Omit<Kanji, 'id' | 'created_at'> & Partial<Pick<Kanji, 'id' | 'created_at'>>
+        Update: Partial<Omit<Kanji, 'id'>>
+      }
+      grammar: {
+        Row: Grammar
+        Insert: Omit<Grammar, 'id' | 'created_at'> & Partial<Pick<Grammar, 'id' | 'created_at'>>
+        Update: Partial<Omit<Grammar, 'id'>>
       }
     }
   }

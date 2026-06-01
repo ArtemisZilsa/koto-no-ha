@@ -1,48 +1,73 @@
-'use client'
-
-import { useState } from 'react'
-import type { LevelData } from '@/lib/data/types'
+import Link from 'next/link'
+import type { LevelData, VocabEntry, KanjiEntry, GrammarEntry } from '@/lib/data/types'
+import type { PagedResult } from '@/lib/data/queries'
 import KanjiGrid from './KanjiGrid'
 import VocabList from './VocabList'
 import GrammarList from './GrammarList'
+import Pagination from './Pagination'
 
 type Tab = 'kanji' | 'vocab' | 'grammar'
 
-const TABS: { id: Tab; label: string; jp: string; count: (d: LevelData) => number }[] = [
-  { id: 'kanji',   label: 'Kanji',     jp: '漢字', count: (d) => d.kanji.length   },
-  { id: 'vocab',   label: 'Kosakata',  jp: '語彙', count: (d) => d.vocab.length   },
-  { id: 'grammar', label: 'Tata Bahasa', jp: '文法', count: (d) => d.grammar.length },
-]
-
 interface LevelTabsProps {
   data: LevelData
+  activeTab: Tab
+  vocabFromDb: PagedResult<VocabEntry> | null
+  kanjiFromDb: PagedResult<KanjiEntry> | null
+  grammarFromDb: PagedResult<GrammarEntry> | null
+  currentPage: number
+  levelSlug: string
 }
 
-export default function LevelTabs({ data }: LevelTabsProps) {
-  const [active, setActive] = useState<Tab>('kanji')
+export default function LevelTabs({
+  data,
+  activeTab,
+  vocabFromDb,
+  kanjiFromDb,
+  grammarFromDb,
+  currentPage,
+  levelSlug,
+}: LevelTabsProps) {
+  const basePath = `/learn/${levelSlug}`
+
+  const vocabItems = vocabFromDb?.items ?? data.vocab
+  const vocabCount = vocabFromDb?.total ?? data.vocab.length
+
+  const kanjiItems = kanjiFromDb?.items ?? data.kanji
+  const kanjiCount = kanjiFromDb?.total ?? data.kanji.length
+
+  const grammarItems = grammarFromDb?.items ?? data.grammar
+  const grammarCount = grammarFromDb?.total ?? data.grammar.length
+
+  const TABS: { id: Tab; label: string; jp: string; count: number }[] = [
+    { id: 'kanji', label: 'Kanji', jp: '漢字', count: kanjiCount },
+    { id: 'vocab', label: 'Kosakata', jp: '語彙', count: vocabCount },
+    { id: 'grammar', label: 'Tata Bahasa', jp: '文法', count: grammarCount },
+  ]
 
   return (
     <>
       {/* Tab bar */}
-      <div className="flex items-center gap-2 mb-8">
+      <div className="flex items-center gap-2 mb-8 flex-wrap">
         {TABS.map((tab) => {
-          const isActive = active === tab.id
+          const isActive = activeTab === tab.id
+          // Reset page to 1 when switching tab
+          const href = `${basePath}?tab=${tab.id}&page=1`
           return (
-            <button
+            <Link
               key={tab.id}
-              onClick={() => setActive(tab.id)}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-150 cursor-pointer"
+              href={href}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-150 no-underline"
               style={
                 isActive
                   ? {
                       background: 'var(--ink)',
                       color: 'var(--paper)',
-                      boxShadow: '0 2px 8px rgba(13,13,18,0.15)',
+                      boxShadow: 'var(--shadow-soft)',
                     }
                   : {
-                      background: 'white',
+                      background: 'var(--surface)',
                       color: 'var(--muted)',
-                      border: '0.5px solid rgba(13,13,18,0.15)',
+                      border: '0.5px solid var(--border)',
                     }
               }
             >
@@ -58,22 +83,87 @@ export default function LevelTabs({ data }: LevelTabsProps) {
                     : { background: data.accentBg, color: data.accentColor }
                 }
               >
-                {tab.count(data)}
+                {tab.count}
               </span>
-            </button>
+            </Link>
           )
         })}
       </div>
 
       {/* Tab content */}
-      {active === 'kanji' && (
-        <KanjiGrid kanji={data.kanji} accentColor={data.accentColor} />
+      {activeTab === 'kanji' && (
+        <>
+          {kanjiFromDb && kanjiFromDb.total > 0 && (
+            <div className="mb-4 text-[12px]" style={{ color: 'var(--muted)' }}>
+              Menampilkan{' '}
+              <span className="font-medium" style={{ color: 'var(--ink)' }}>
+                {(kanjiFromDb.page - 1) * kanjiFromDb.pageSize + 1}–
+                {Math.min(kanjiFromDb.page * kanjiFromDb.pageSize, kanjiFromDb.total)}
+              </span>{' '}
+              dari <span className="font-medium" style={{ color: 'var(--ink)' }}>{kanjiFromDb.total}</span> kanji
+            </div>
+          )}
+          <KanjiGrid kanji={kanjiItems} accentColor={data.accentColor} />
+          {kanjiFromDb && (
+            <Pagination
+              currentPage={currentPage}
+              totalPages={kanjiFromDb.totalPages}
+              basePath={basePath}
+              tabParam="kanji"
+              accentColor={data.accentColor}
+            />
+          )}
+        </>
       )}
-      {active === 'vocab' && (
-        <VocabList vocab={data.vocab} accentColor={data.accentColor} />
+
+      {activeTab === 'vocab' && (
+        <>
+          {vocabFromDb && vocabFromDb.total > 0 && (
+            <div className="mb-4 text-[12px]" style={{ color: 'var(--muted)' }}>
+              Menampilkan{' '}
+              <span className="font-medium" style={{ color: 'var(--ink)' }}>
+                {(vocabFromDb.page - 1) * vocabFromDb.pageSize + 1}–
+                {Math.min(vocabFromDb.page * vocabFromDb.pageSize, vocabFromDb.total)}
+              </span>{' '}
+              dari <span className="font-medium" style={{ color: 'var(--ink)' }}>{vocabFromDb.total}</span> kosakata
+            </div>
+          )}
+          <VocabList vocab={vocabItems} accentColor={data.accentColor} />
+          {vocabFromDb && (
+            <Pagination
+              currentPage={currentPage}
+              totalPages={vocabFromDb.totalPages}
+              basePath={basePath}
+              tabParam="vocab"
+              accentColor={data.accentColor}
+            />
+          )}
+        </>
       )}
-      {active === 'grammar' && (
-        <GrammarList grammar={data.grammar} accentColor={data.accentColor} />
+
+      {activeTab === 'grammar' && (
+        <>
+          {grammarFromDb && grammarFromDb.total > 0 && (
+            <div className="mb-4 text-[12px]" style={{ color: 'var(--muted)' }}>
+              Menampilkan{' '}
+              <span className="font-medium" style={{ color: 'var(--ink)' }}>
+                {(grammarFromDb.page - 1) * grammarFromDb.pageSize + 1}–
+                {Math.min(grammarFromDb.page * grammarFromDb.pageSize, grammarFromDb.total)}
+              </span>{' '}
+              dari <span className="font-medium" style={{ color: 'var(--ink)' }}>{grammarFromDb.total}</span> pola
+            </div>
+          )}
+          <GrammarList grammar={grammarItems} accentColor={data.accentColor} />
+          {grammarFromDb && (
+            <Pagination
+              currentPage={currentPage}
+              totalPages={grammarFromDb.totalPages}
+              basePath={basePath}
+              tabParam="grammar"
+              accentColor={data.accentColor}
+            />
+          )}
+        </>
       )}
     </>
   )

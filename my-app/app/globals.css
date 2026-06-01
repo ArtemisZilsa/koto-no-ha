@@ -1,10 +1,17 @@
 @import "tailwindcss";
 
-/* ─── Design Tokens ─────────────────────────────────────────────────── */
+/* ============================================================
+   Koto no Ha — Design Tokens (Washi + Sumi-e)
+   Light mode: kertas washi krem + aksen tinta
+   Dark mode (yoru): tinta malam + washi krem soft
+   ============================================================ */
+
 :root {
+  /* — Light mode (washi) — */
   --ink: #0d0d12;
   --paper: #f7f2ea;
   --paper-dark: #ede8df;
+  --paper-warm: #faf6ef;
   --red: #c8102e;
   --red-bg: #f7e8eb;
   --gold: #c9963c;
@@ -14,14 +21,47 @@
   --text: #1a1a22;
   --muted: #6b6b7a;
   --border: rgba(13, 13, 18, 0.1);
+  --border-strong: rgba(13, 13, 18, 0.18);
+  --surface: #ffffff;
+  --surface-elevated: #ffffff;
+  --shadow-soft: 0 1px 3px rgba(13, 13, 18, 0.04), 0 4px 12px rgba(13, 13, 18, 0.04);
+  --shadow-card: 0 2px 8px rgba(13, 13, 18, 0.06);
   --white: #ffffff;
 }
 
-/* ─── Tailwind v4: Register custom colors & fonts ──────────────────── */
+html.dark {
+  /* — Dark mode (yoru — tinta malam) — */
+  --ink: #f0ebe0;
+  --paper: #14141c;
+  --paper-dark: #0d0d12;
+  --paper-warm: #1c1c26;
+  --red: #e63856;
+  --red-bg: #2a1620;
+  --gold: #d4a957;
+  --gold-bg: #2a2218;
+  --teal: #3da3a3;
+  --teal-bg: #142525;
+  --text: #e8e2d4;
+  --muted: #8c8a86;
+  --border: rgba(240, 235, 224, 0.12);
+  --border-strong: rgba(240, 235, 224, 0.2);
+  --surface: #1a1a24;
+  --surface-elevated: #20202b;
+  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --white: #1a1a24;
+}
+
+/* — Color scheme hint untuk browser native UI — */
+html { color-scheme: light; }
+html.dark { color-scheme: dark; }
+
+/* — Tailwind v4: register tokens as Tailwind colors — */
 @theme inline {
   --color-ink: var(--ink);
   --color-paper: var(--paper);
   --color-paper-dark: var(--paper-dark);
+  --color-paper-warm: var(--paper-warm);
   --color-brand-red: var(--red);
   --color-red-bg: var(--red-bg);
   --color-gold: var(--gold);
@@ -30,12 +70,13 @@
   --color-teal-bg: var(--teal-bg);
   --color-koto-text: var(--text);
   --color-muted: var(--muted);
+  --color-surface: var(--surface);
 
   --font-sans: var(--font-noto-sans-jp), var(--font-inter), sans-serif;
   --font-serif: var(--font-noto-serif-jp), serif;
 }
 
-/* ─── Base ──────────────────────────────────────────────────────────── */
+/* — Base — */
 html {
   scroll-behavior: smooth;
 }
@@ -46,14 +87,49 @@ body {
   font-family: var(--font-sans);
   line-height: 1.7;
   overflow-x: hidden;
+  /* Tekstur washi halus — noise pattern dari SVG inline */
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='7' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.035 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  transition: background-color 250ms ease, color 250ms ease;
 }
 
-/* ─── Pulse animation for badge dot ────────────────────────────────── */
+/* — Smooth color transitions on theme switch — */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+/* — Pulse dot animation — */
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
 }
-
 .animate-pulse-dot {
   animation: pulse-dot 2s infinite;
+}
+
+/* — Sumi-e ink stroke utility: pakai dengan <hr> atau divider element — */
+.ink-stroke {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--ink) 15%,
+    var(--ink) 85%,
+    transparent 100%
+  );
+  opacity: 0.4;
+  border: 0;
+}
+
+/* — Vertical accent line gaya kitab Jepang — */
+.tategaki-accent {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.2em;
 }

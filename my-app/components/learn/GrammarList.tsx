@@ -11,8 +11,8 @@ export default function GrammarList({ grammar, accentColor }: GrammarListProps) 
       {grammar.map((entry) => (
         <div
           key={entry.pattern}
-          className="rounded-2xl overflow-hidden bg-white hover:shadow-md transition-all duration-200"
-          style={{ border: '0.5px solid rgba(13,13,18,0.1)' }}
+          className="rounded-2xl overflow-hidden hover:shadow-md transition-all duration-200"
+          style={{ background: 'var(--surface)', border: '0.5px solid var(--border)' }}
         >
           {/* Header row */}
           <div
@@ -56,13 +56,13 @@ export default function GrammarList({ grammar, accentColor }: GrammarListProps) 
           {/* Explanation */}
           <div
             className="px-6 py-4"
-            style={{ background: 'var(--paper)', borderTop: '0.5px solid rgba(13,13,18,0.07)' }}
+            style={{ background: 'var(--paper)', borderTop: '0.5px solid var(--border)' }}
           >
             <p className="text-[13px] leading-relaxed text-ink">{entry.explanation}</p>
           </div>
 
           {/* Example sentences */}
-          <div className="px-6 py-4 space-y-4" style={{ background: 'white', borderTop: '0.5px solid rgba(13,13,18,0.07)' }}>
+          <div className="px-6 py-4 space-y-4" style={{ background: 'var(--surface)', borderTop: '0.5px solid var(--border)' }}>
             <div className="text-[10px] tracking-widest uppercase text-muted mb-3">
               Contoh Penggunaan
             </div>

@@ -79,7 +79,7 @@ export default async function DashboardPage() {
       {/* JLPT Level Quick Access */}
       <div className="mb-8">
         <h2 className="font-serif text-lg font-semibold text-ink mb-4">Materi Belajar JLPT</h2>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
           {[
             {
               level: 'N5',
@@ -89,7 +89,7 @@ export default async function DashboardPage() {
               color: 'var(--red)',
               bg: 'var(--red-bg)',
               href: '/learn/n5',
-              counts: '25 kanji · 25 kosakata · 20 pola',
+              counts: '200 kosakata',
             },
             {
               level: 'N4',
@@ -99,17 +99,37 @@ export default async function DashboardPage() {
               color: 'var(--gold)',
               bg: 'var(--gold-bg)',
               href: '/learn/n4',
-              counts: '25 kanji · 21 kosakata · 20 pola',
+              counts: '200 kosakata',
             },
             {
               level: 'N3',
               name: 'Menengah',
-              subtitle: 'Penguasaan Bahasa Jepang',
+              subtitle: 'Penguasaan Bahasa',
               bgKanji: '読',
               color: 'var(--teal)',
               bg: 'var(--teal-bg)',
               href: '/learn/n3',
-              counts: '25 kanji · 25 kosakata · 20 pola',
+              counts: '200 kosakata',
+            },
+            {
+              level: 'N2',
+              name: 'Lanjutan',
+              subtitle: 'Penguasaan Lanjutan',
+              bgKanji: '究',
+              color: 'var(--gold)',
+              bg: 'var(--gold-bg)',
+              href: '/learn/n2',
+              counts: '250 kanji · 200 kosakata · 50 pola',
+            },
+            {
+              level: 'N1',
+              name: 'Mahir',
+              subtitle: 'Tingkat Mahir',
+              bgKanji: '極',
+              color: 'var(--red)',
+              bg: 'var(--red-bg)',
+              href: '/learn/n1',
+              counts: '250 kanji · 200 kosakata · 30 pola',
             },
           ].map(({ level, name, subtitle, bgKanji, color, bg, href, counts }) => (
             <Link
@@ -118,10 +138,10 @@ export default async function DashboardPage() {
               className="relative overflow-hidden rounded-2xl p-6 hover:-translate-y-1 hover:shadow-lg transition-all no-underline"
               style={{ background: bg, border: `0.5px solid ${color}30` }}
             >
-              {/* Background kanji watermark */}
+              {/* Background kanji watermark — clamped inside card, won't overflow */}
               <span
-                className="absolute right-2 bottom-0 font-serif select-none pointer-events-none leading-none"
-                style={{ fontSize: '80px', color: `${color}18` }}
+                className="absolute -right-2 -bottom-3 font-serif select-none pointer-events-none leading-none"
+                style={{ fontSize: 'clamp(56px, 7vw, 80px)', color: `${color}18`, zIndex: 0 }}
                 aria-hidden
               >
                 {bgKanji}
@@ -151,8 +171,8 @@ export default async function DashboardPage() {
           <Link
             key={title}
             href={href}
-            className="rounded-xl p-6 bg-white hover:-translate-y-0.5 hover:shadow-md transition-all no-underline"
-            style={{ border: '0.5px solid rgba(13,13,18,0.1)' }}
+            className="rounded-xl p-6 hover:-translate-y-0.5 hover:shadow-md transition-all no-underline"
+            style={{ background: 'var(--surface)', border: '0.5px solid var(--border)' }}
           >
             <span className="text-xl mb-3 block">{icon}</span>
             <div className="font-serif text-[15px] font-semibold text-ink mb-1">{title}</div>

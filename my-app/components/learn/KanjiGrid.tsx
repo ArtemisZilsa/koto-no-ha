@@ -12,7 +12,7 @@ export default function KanjiGrid({ kanji, accentColor }: KanjiGridProps) {
         <div
           key={entry.kanji}
           className="rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200"
-          style={{ border: '0.5px solid rgba(13,13,18,0.1)' }}
+          style={{ border: '0.5px solid var(--border)' }}
         >
           {/* Top – dark kanji display */}
           <div
@@ -49,7 +49,7 @@ export default function KanjiGrid({ kanji, accentColor }: KanjiGridProps) {
           </div>
 
           {/* Middle – readings & meaning */}
-          <div className="bg-white px-5 py-4 border-b" style={{ borderColor: 'rgba(13,13,18,0.07)' }}>
+          <div className="px-5 py-4 border-b" style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}>
             <div className="font-serif text-lg font-semibold text-ink leading-tight">
               {entry.hiragana}
             </div>
@@ -72,8 +72,8 @@ export default function KanjiGrid({ kanji, accentColor }: KanjiGridProps) {
 
           {/* Examples */}
           <div className="bg-paper-dark px-5 py-4 space-y-3">
-            {entry.examples.map((ex) => (
-              <div key={ex.kanji} className="space-y-0.5">
+            {entry.examples.map((ex, i) => (
+              <div key={`${entry.kanji}-${i}`} className="space-y-0.5">
                 <div className="font-serif text-[15px] font-semibold text-ink">{ex.kanji}</div>
                 <div className="text-[11px] text-muted">{ex.hiragana}</div>
                 <div className="text-[12px]" style={{ color: 'var(--ink)' }}>{ex.meaning}</div>

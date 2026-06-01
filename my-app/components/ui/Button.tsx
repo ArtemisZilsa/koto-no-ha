@@ -33,11 +33,11 @@ const variantClasses: Record<ButtonVariant, string> = {
   solid:
     'bg-ink text-paper border border-transparent hover:opacity-85 transition-opacity',
   ghost:
-    'bg-transparent text-ink border border-[rgba(13,13,18,0.1)] hover:bg-paper-dark transition-colors',
+    'bg-transparent text-ink border border-[var(--border)] hover:bg-paper-dark transition-colors',
   hero:
     'bg-ink text-paper border-none hover:opacity-90 hover:-translate-y-px transition-all font-medium',
   'hero-outline':
-    'bg-transparent text-ink border border-[rgba(13,13,18,0.1)] hover:bg-paper-dark transition-colors inline-flex items-center gap-2',
+    'bg-transparent text-ink border border-[var(--border)] hover:bg-paper-dark transition-colors inline-flex items-center gap-2',
   cta:
     'bg-paper text-ink border-none hover:opacity-90 transition-opacity font-medium',
 }

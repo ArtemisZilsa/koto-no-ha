@@ -23,10 +23,10 @@ export function Input({ label, error, id, className = '', ...props }: InputProps
         id={id}
         className={`
           w-full rounded-lg border px-4 py-3 text-[14px]
-          bg-white text-[var(--text)] placeholder:text-[var(--muted)]
+          bg-surface text-[var(--text)] placeholder:text-[var(--muted)]
           outline-none transition-colors
-          border-[rgba(13,13,18,0.15)]
-          focus:border-[var(--ink)] focus:ring-2 focus:ring-[rgba(13,13,18,0.08)]
+          border-[var(--border-strong)]
+          focus:border-[var(--ink)] focus:ring-2 focus:ring-[rgba(127,127,127,0.18)]
           ${error ? 'border-[var(--red)] focus:border-[var(--red)] focus:ring-[rgba(200,16,46,0.1)]' : ''}
           ${className}
         `}

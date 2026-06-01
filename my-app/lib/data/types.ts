@@ -1,6 +1,6 @@
 // ─── Shared content types for N5/N4/N3 learning data ─────────────────────────
 
-export type JLPTLevel = 'N5' | 'N4' | 'N3'
+export type JLPTLevel = 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
 
 export interface KanjiExample {
   kanji: string      // 今日
@@ -26,11 +26,15 @@ export interface VocabExample {
 }
 
 export interface VocabEntry {
+  id?: string             // dari DB (opsional untuk legacy data)
   word: string            // 食べる
   hiragana: string        // たべる
   romaji: string          // taberu
   meaning: string         // makan
-  partOfSpeech: string    // Kata kerja (Godan)
+  partOfSpeech: string    // "Kata kerja golongan 2 (Ichidan)"
+  usage?: string          // Penjelasan penggunaan (Bahasa Indonesia)
+  usageJp?: string        // Penjelasan dalam Bahasa Jepang (opsional)
+  fullMeaning?: string    // Makna lengkap (Bahasa Indonesia)
   examples: VocabExample[]
 }
 
