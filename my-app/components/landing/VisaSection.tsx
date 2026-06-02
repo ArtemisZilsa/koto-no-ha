@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const visaCards = [
   {
     type: 'ssw',
@@ -87,6 +89,15 @@ export function VisaSection() {
             </ul>
           </div>
         ))}
+      </div>
+
+      <div className="mt-9">
+        <Link
+          href="/ssw"
+          className="inline-flex items-center gap-2 text-[13px] font-medium px-6 py-2.5 rounded-lg bg-ink text-paper no-underline hover:opacity-90 transition-opacity"
+        >
+          Panduan Lengkap SSW (14 Sektor) →
+        </Link>
       </div>
     </section>
   )

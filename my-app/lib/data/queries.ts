@@ -1,5 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
-import type { Vocab, Kanji, KanjiExampleJson, Grammar, GrammarExampleJson, NewsArticle } from '@/lib/types/database.types'
+import type { Vocab, Kanji, KanjiExampleJson, Grammar, GrammarExampleJson, NewsArticle, KaiwaStory } from '@/lib/types/database.types'
 import type { VocabEntry, KanjiEntry, GrammarEntry, JLPTLevel } from './types'
 
 const PAGE_SIZE = 50
@@ -195,6 +195,26 @@ export async function getNewsList(page = 1): Promise<PagedResult<NewsArticle>> {
     pageSize: NEWS_PAGE_SIZE,
     totalPages: Math.max(1, Math.ceil(total / NEWS_PAGE_SIZE)),
   }
+}
+
+// ── Kaiwa / Percakapan ─────────────────────────────────────────
+
+/** Semua kaiwa untuk satu level JLPT (tanpa paginasi — biasanya 5 per level). */
+export async function getKaiwaByLevel(level: JLPTLevel): Promise<KaiwaStory[]> {
+  const supabase = await createClient()
+  const levelId = levelIdByCode[level]
+
+  const { data, error } = await supabase
+    .from('kaiwa_stories')
+    .select('*')
+    .eq('level_id', levelId)
+    .order('title')
+
+  if (error) {
+    console.error('getKaiwaByLevel error', error)
+    return []
+  }
+  return (data ?? []) as KaiwaStory[]
 }
 
 export async function getNewsById(id: string): Promise<NewsArticle | null> {

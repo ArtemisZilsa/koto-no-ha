@@ -34,7 +34,7 @@ export function NavClient({ user }: NavClientProps) {
           { href: '/#fitur', label: 'Belajar' },
           { href: '/#level', label: 'Level' },
           { href: '/#kaiwa', label: 'Kaiwa' },
-          { href: '/#visa', label: 'SSW / TG' },
+          { href: '/ssw', label: 'SSW / TG' },
           { href: '/berita', label: 'Berita' },
         ].map(({ href, label }) => (
           <li key={href}>
@@ -108,7 +108,7 @@ export function NavClient({ user }: NavClientProps) {
             { href: '/#fitur', label: 'Belajar' },
             { href: '/#level', label: 'Level' },
             { href: '/#kaiwa', label: 'Kaiwa' },
-            { href: '/#visa', label: 'SSW / TG' },
+            { href: '/ssw', label: 'SSW / TG' },
             { href: '/berita', label: 'Berita' },
           ].map(({ href, label }) => (
             <Link

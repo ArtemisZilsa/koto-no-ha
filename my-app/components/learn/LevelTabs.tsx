@@ -1,12 +1,14 @@
 import Link from 'next/link'
 import type { LevelData, VocabEntry, KanjiEntry, GrammarEntry } from '@/lib/data/types'
 import type { PagedResult } from '@/lib/data/queries'
+import type { KaiwaStory } from '@/lib/types/database.types'
 import KanjiGrid from './KanjiGrid'
 import VocabList from './VocabList'
 import GrammarList from './GrammarList'
+import KaiwaList from './KaiwaList'
 import Pagination from './Pagination'
 
-type Tab = 'kanji' | 'vocab' | 'grammar'
+type Tab = 'kanji' | 'vocab' | 'grammar' | 'kaiwa'
 
 interface LevelTabsProps {
   data: LevelData
@@ -14,6 +16,7 @@ interface LevelTabsProps {
   vocabFromDb: PagedResult<VocabEntry> | null
   kanjiFromDb: PagedResult<KanjiEntry> | null
   grammarFromDb: PagedResult<GrammarEntry> | null
+  kaiwaFromDb: KaiwaStory[]
   currentPage: number
   levelSlug: string
 }
@@ -24,6 +27,7 @@ export default function LevelTabs({
   vocabFromDb,
   kanjiFromDb,
   grammarFromDb,
+  kaiwaFromDb,
   currentPage,
   levelSlug,
 }: LevelTabsProps) {
@@ -38,10 +42,13 @@ export default function LevelTabs({
   const grammarItems = grammarFromDb?.items ?? data.grammar
   const grammarCount = grammarFromDb?.total ?? data.grammar.length
 
+  const kaiwaCount = kaiwaFromDb.length
+
   const TABS: { id: Tab; label: string; jp: string; count: number }[] = [
     { id: 'kanji', label: 'Kanji', jp: '漢字', count: kanjiCount },
     { id: 'vocab', label: 'Kosakata', jp: '語彙', count: vocabCount },
     { id: 'grammar', label: 'Tata Bahasa', jp: '文法', count: grammarCount },
+    { id: 'kaiwa', label: 'Percakapan', jp: '会話', count: kaiwaCount },
   ]
 
   return (
@@ -163,6 +170,18 @@ export default function LevelTabs({
               accentColor={data.accentColor}
             />
           )}
+        </>
+      )}
+
+      {activeTab === 'kaiwa' && (
+        <>
+          {kaiwaCount > 0 && (
+            <div className="mb-5 text-[12px]" style={{ color: 'var(--muted)' }}>
+              <span className="font-medium" style={{ color: 'var(--ink)' }}>{kaiwaCount}</span> percakapan ·
+              setiap baris dilengkapi cara baca (hiragana &amp; romaji) dan terjemahan
+            </div>
+          )}
+          <KaiwaList kaiwa={kaiwaFromDb} accentColor={data.accentColor} />
         </>
       )}
     </>

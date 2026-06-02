@@ -5,7 +5,7 @@ import { n3Data } from '@/lib/data/n3'
 import { n2Data } from '@/lib/data/n2'
 import { n1Data } from '@/lib/data/n1'
 import type { LevelData, JLPTLevel } from '@/lib/data/types'
-import { getVocabByLevel, getKanjiByLevel, getGrammarByLevel } from '@/lib/data/queries'
+import { getVocabByLevel, getKanjiByLevel, getGrammarByLevel, getKaiwaByLevel } from '@/lib/data/queries'
 import LevelTabs from '@/components/learn/LevelTabs'
 import InkDivider from '@/components/ui/InkDivider'
 
@@ -55,7 +55,7 @@ export default async function LevelPage({
     redirect('/dashboard')
   }
 
-  const activeTab = (tab === 'vocab' || tab === 'grammar' || tab === 'kanji') ? tab : 'kanji'
+  const activeTab = (tab === 'vocab' || tab === 'grammar' || tab === 'kanji' || tab === 'kaiwa') ? tab : 'kanji'
   const pageNum = Math.max(1, parseInt(page ?? '1', 10) || 1)
 
   const vocabPaged = vocabDbLevels.has(data.level)
@@ -70,9 +70,12 @@ export default async function LevelPage({
     ? await getGrammarByLevel(data.level, pageNum)
     : null
 
+  const kaiwaStories = await getKaiwaByLevel(data.level)
+
   const vocabCount = vocabPaged?.total ?? data.vocab.length
   const kanjiCount = kanjiPaged?.total ?? data.kanji.length
   const grammarCount = grammarPaged?.total ?? data.grammar.length
+  const kaiwaCount = kaiwaStories.length
 
   const ornament = levelOrnaments[data.level]
 
@@ -178,6 +181,7 @@ export default async function LevelPage({
               { label: '漢字', count: kanjiCount, suffix: 'kanji' },
               { label: '語彙', count: vocabCount, suffix: 'kosakata' },
               { label: '文法', count: grammarCount, suffix: 'pola' },
+              { label: '会話', count: kaiwaCount, suffix: 'percakapan' },
             ].map(({ label, count, suffix }) => (
               <span
                 key={label}
@@ -205,6 +209,7 @@ export default async function LevelPage({
           vocabFromDb={vocabPaged}
           kanjiFromDb={kanjiPaged}
           grammarFromDb={grammarPaged}
+          kaiwaFromDb={kaiwaStories}
           currentPage={pageNum}
           levelSlug={level.toLowerCase()}
         />

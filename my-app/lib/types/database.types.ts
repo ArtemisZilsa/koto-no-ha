@@ -95,8 +95,10 @@ export interface QuizResult {
 
 export interface KaiwaLine {
   speaker: string
-  text: string
-  trans: string
+  text: string        // teks Jepang
+  reading?: string    // cara baca hiragana penuh
+  romaji?: string     // cara baca romaji
+  trans: string       // terjemahan Indonesia
   audio?: string
 }
 
