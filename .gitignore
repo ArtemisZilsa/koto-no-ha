@@ -17,6 +17,17 @@ my-app/.env*.local
 # Vercel
 .vercel
 
+# Netlify
+.netlify/
+
+# Local tooling / agent config (not needed for build)
+.claude/
+.agents/
+.mcp.json
+my-app/.mcp.json
+my-app/snapshots/
+skills-lock.json
+
 # TypeScript
 *.tsbuildinfo
 my-app/next-env.d.ts

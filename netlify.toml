@@ -1,0 +1,16 @@
+# Netlify build configuration for Koto no Ha (言の葉)
+# App lives in the my-app/ subfolder (Next.js 16 + Supabase SSR).
+
+[build]
+  base    = "my-app"
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # Pin Node to match local toolchain (Next 16 requires Node 18+).
+  NODE_VERSION = "20"
+
+# Official runtime that enables SSR, Server Actions, and route handlers
+# (this app is NOT a static export — it uses cookies/auth at request time).
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
