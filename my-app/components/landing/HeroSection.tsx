@@ -2,11 +2,11 @@ import Link from 'next/link'
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center px-12 pt-20 pb-16 relative overflow-hidden">
+    <section className="min-h-screen flex items-center px-5 md:px-12 pt-24 pb-16 relative overflow-hidden">
       {/* Background kanji */}
       <div
         className="absolute top-1/2 right-[-2%] -translate-y-1/2 font-serif font-light leading-none pointer-events-none select-none"
-        style={{ fontSize: '360px', color: 'var(--ink)', opacity: 0.04, letterSpacing: '-0.05em' }}
+        style={{ fontSize: 'clamp(200px, 45vw, 360px)', color: 'var(--ink)', opacity: 0.04, letterSpacing: '-0.05em' }}
         aria-hidden="true"
       >
         学
@@ -26,7 +26,7 @@ export function HeroSection() {
         </div>
 
         {/* Title */}
-        <h1 className="font-serif text-[54px] font-semibold leading-[1.15] text-ink mb-2 tracking-tight">
+        <h1 className="font-serif text-[36px] md:text-[54px] font-semibold leading-[1.15] text-ink mb-2 tracking-tight">
           Bahasa Jepang<br />dari Kata ke Dunia
         </h1>
         <p className="font-serif text-lg font-light text-muted italic mb-6">

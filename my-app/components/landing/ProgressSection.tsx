@@ -9,14 +9,14 @@ const skills = [
 
 export function ProgressSection() {
   return (
-    <section className="px-12 py-22" style={{ background: 'var(--paper-dark)' }}>
+    <section className="px-5 md:px-12 py-16 md:py-22" style={{ background: 'var(--paper-dark)' }}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Text */}
         <div>
           <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
             Dashboard Belajar
           </p>
-          <h2 className="font-serif text-[36px] font-semibold text-ink leading-[1.25] mb-4 tracking-tight">
+          <h2 className="font-serif text-[26px] md:text-[36px] font-semibold text-ink leading-[1.25] mb-4 tracking-tight">
             Lihat Kemajuanmu<br />Setiap Hari
           </h2>
           <p className="text-[15px] text-muted leading-[1.8] mb-6 max-w-[460px]">

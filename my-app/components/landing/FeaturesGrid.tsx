@@ -39,11 +39,11 @@ const features = [
 
 export function FeaturesGrid() {
   return (
-    <section id="fitur" className="px-12 py-22">
+    <section id="fitur" className="px-5 md:px-12 py-16 md:py-22">
       <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
         Fitur Platform
       </p>
-      <h2 className="font-serif text-[36px] font-semibold text-ink leading-[1.25] mb-4 tracking-tight">
+      <h2 className="font-serif text-[26px] md:text-[36px] font-semibold text-ink leading-[1.25] mb-4 tracking-tight">
         Semua yang Kamu Butuhkan<br />dalam Satu Tempat
       </h2>
       <p className="text-[15px] text-muted max-w-[540px] leading-[1.8] mb-12">

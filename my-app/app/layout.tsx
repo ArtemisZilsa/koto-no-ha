@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google'
 import './globals.css'
@@ -26,6 +26,22 @@ export const metadata: Metadata = {
   title: '言の葉 | Koto no Ha — Belajar Bahasa Jepang',
   description:
     'Platform belajar bahasa Jepang untuk orang Indonesia. Dari N5 hingga N1, SSW, dan level bisnis. Kanji, grammar, kaiwa, dan dokkai dalam satu tempat.',
+  manifest: '/manifest.webmanifest',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Koto no Ha',
+  },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f7f2ea' },
+    { media: '(prefers-color-scheme: dark)', color: '#14141c' },
+  ],
 }
 
 export default function RootLayout({

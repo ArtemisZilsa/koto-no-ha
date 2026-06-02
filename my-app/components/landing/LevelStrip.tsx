@@ -18,7 +18,7 @@ export function LevelStrip() {
   return (
     <div
       id="level"
-      className="flex items-stretch overflow-x-auto px-12"
+      className="flex items-stretch overflow-x-auto px-5 md:px-12"
       style={{ background: 'var(--ink-surface)' }}
     >
       {levels.map((lvl) => (

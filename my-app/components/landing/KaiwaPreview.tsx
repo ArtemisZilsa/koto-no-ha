@@ -30,14 +30,14 @@ const vocab = ['会議 rapat', '始まります mulai', '資料 materi/dokumen']
 
 export function KaiwaPreview() {
   return (
-    <section id="kaiwa" className="px-12 py-22">
+    <section id="kaiwa" className="px-5 md:px-12 py-16 md:py-22">
       <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-10 items-start">
         {/* Text */}
         <div>
           <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
             Kaiwa Stories
           </p>
-          <h2 className="font-serif text-[36px] font-semibold text-ink leading-[1.25] mb-4 tracking-tight">
+          <h2 className="font-serif text-[26px] md:text-[36px] font-semibold text-ink leading-[1.25] mb-4 tracking-tight">
             Belajar Bicara Jepang<br />dari Cerita Nyata
           </h2>
           <p className="text-[15px] text-muted leading-[1.8] mb-6 max-w-[460px]">

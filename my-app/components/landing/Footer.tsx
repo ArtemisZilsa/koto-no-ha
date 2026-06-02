@@ -10,7 +10,7 @@ const links = [
 export function Footer() {
   return (
     <footer
-      className="px-12 py-7 flex flex-col md:flex-row items-center justify-between gap-4"
+      className="px-5 md:px-12 py-7 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left"
       style={{ borderTop: '0.5px solid var(--border)' }}
     >
       <div className="font-serif text-[18px] font-semibold text-ink">言の葉 · Koto no Ha</div>

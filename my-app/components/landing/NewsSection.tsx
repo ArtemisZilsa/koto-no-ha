@@ -35,11 +35,11 @@ const articles = [
 
 export function NewsSection() {
   return (
-    <section id="berita" className="px-12 py-22" style={{ background: 'var(--paper-dark)' }}>
+    <section id="berita" className="px-5 md:px-12 py-16 md:py-22" style={{ background: 'var(--paper-dark)' }}>
       <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
         Konten Terkini
       </p>
-      <h2 className="font-serif text-[36px] font-semibold text-ink leading-[1.25] mb-4 tracking-tight">
+      <h2 className="font-serif text-[26px] md:text-[36px] font-semibold text-ink leading-[1.25] mb-4 tracking-tight">
         Belajar dari Berita Jepang Asli
       </h2>
       <p className="text-[15px] text-muted max-w-[540px] leading-[1.8] mb-12">

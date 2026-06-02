@@ -22,7 +22,7 @@ export default async function DashboardLayout({
     <div className="min-h-screen" style={{ background: 'var(--paper)' }}>
       {/* Dashboard Nav */}
       <header
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 h-[60px]"
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between gap-2 px-4 md:px-8 h-[60px]"
         style={{
           background: 'color-mix(in srgb, var(--paper) 92%, transparent)',
           backdropFilter: 'blur(14px)',
@@ -30,20 +30,20 @@ export default async function DashboardLayout({
           borderBottom: '0.5px solid var(--border)',
         }}
       >
-        <Link href="/" className="flex items-center gap-2 no-underline">
+        <Link href="/" className="flex items-center gap-2 no-underline shrink-0">
           <span className="font-serif text-xl font-semibold" style={{ color: 'var(--ink)' }}>言の葉</span>
-          <span className="text-[10px] tracking-widest uppercase" style={{ color: 'var(--muted)' }}>Koto no Ha</span>
+          <span className="text-[10px] tracking-widest uppercase hidden sm:inline" style={{ color: 'var(--muted)' }}>Koto no Ha</span>
         </Link>
 
-        <nav className="flex items-center gap-5">
+        <nav className="flex items-center gap-2.5 md:gap-5 overflow-x-auto">
           <Link
             href="/dashboard"
-            className="text-[13px] transition-colors no-underline"
+            className="text-[13px] transition-colors no-underline hidden sm:inline"
             style={{ color: 'var(--muted)' }}
           >
             Dashboard
           </Link>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-0.5 md:gap-1 shrink-0">
             {[
               { label: 'N5', href: '/learn/n5' },
               { label: 'N4', href: '/learn/n4' },

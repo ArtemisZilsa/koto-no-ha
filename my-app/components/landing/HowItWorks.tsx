@@ -18,11 +18,11 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="px-12 py-22" style={{ background: 'var(--paper-dark)' }}>
+    <section className="px-5 md:px-12 py-16 md:py-22" style={{ background: 'var(--paper-dark)' }}>
       <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
         Cara Kerja
       </p>
-      <h2 className="font-serif text-[36px] font-semibold text-ink leading-[1.25] tracking-tight">
+      <h2 className="font-serif text-[26px] md:text-[36px] font-semibold text-ink leading-[1.25] tracking-tight">
         Tiga Langkah Menuju Fasih
       </h2>
 

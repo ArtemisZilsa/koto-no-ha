@@ -3,7 +3,7 @@ import Link from 'next/link'
 export function CTASection() {
   return (
     <section
-      className="px-12 py-24 text-center relative overflow-hidden"
+      className="px-5 md:px-12 py-16 md:py-24 text-center relative overflow-hidden"
       style={{ background: 'var(--ink-surface)' }}
     >
       {/* Background character */}
@@ -15,7 +15,7 @@ export function CTASection() {
         言
       </div>
 
-      <h2 className="font-serif text-[42px] font-semibold leading-tight mb-3 relative" style={{ color: 'var(--on-ink)' }}>
+      <h2 className="font-serif text-[30px] md:text-[42px] font-semibold leading-tight mb-3 relative" style={{ color: 'var(--on-ink)' }}>
         Mulai Perjalananmu Hari Ini
       </h2>
       <p className="text-[15px] mb-9 relative" style={{ color: 'var(--on-ink-muted)' }}>
