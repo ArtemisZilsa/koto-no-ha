@@ -16,26 +16,26 @@ export function NavClient({ user }: NavClientProps) {
     <nav
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-12 h-[60px]"
       style={{
-        background: 'rgba(247,242,234,0.93)',
+        background: 'var(--nav-bg)',
         backdropFilter: 'blur(14px)',
-        borderBottom: '0.5px solid rgba(13,13,18,0.1)',
+        borderBottom: '0.5px solid var(--border)',
       }}
     >
       {/* Logo */}
       <Link href="/" className="flex items-center gap-2.5 no-underline">
         <span className="font-serif text-[22px] font-semibold text-ink tracking-tight">言の葉</span>
-        <div className="w-px h-[22px]" style={{ background: 'rgba(13,13,18,0.1)' }} />
+        <div className="w-px h-[22px]" style={{ background: 'var(--border)' }} />
         <span className="text-[11px] text-muted tracking-[0.12em] uppercase">Koto no Ha</span>
       </Link>
 
       {/* Desktop nav links */}
       <ul className="hidden md:flex items-center gap-7 list-none">
         {[
-          { href: '#fitur', label: 'Belajar' },
-          { href: '#level', label: 'Level' },
-          { href: '#kaiwa', label: 'Kaiwa' },
-          { href: '#visa', label: 'SSW / TG' },
-          { href: '#berita', label: 'Berita' },
+          { href: '/#fitur', label: 'Belajar' },
+          { href: '/#level', label: 'Level' },
+          { href: '/#kaiwa', label: 'Kaiwa' },
+          { href: '/#visa', label: 'SSW / TG' },
+          { href: '/berita', label: 'Berita' },
         ].map(({ href, label }) => (
           <li key={href}>
             <Link
@@ -55,7 +55,7 @@ export function NavClient({ user }: NavClientProps) {
             <Link
               href="/dashboard"
               className="text-[13px] px-4 py-[7px] rounded-lg border text-ink hover:bg-paper-dark transition-colors"
-              style={{ borderColor: 'rgba(13,13,18,0.1)' }}
+              style={{ borderColor: 'var(--border)' }}
             >
               Dashboard
             </Link>
@@ -73,7 +73,7 @@ export function NavClient({ user }: NavClientProps) {
             <Link
               href="/login"
               className="text-[13px] px-4 py-[7px] rounded-lg border text-ink hover:bg-paper-dark transition-colors"
-              style={{ borderColor: 'rgba(13,13,18,0.1)' }}
+              style={{ borderColor: 'var(--border)' }}
             >
               Masuk
             </Link>
@@ -102,20 +102,26 @@ export function NavClient({ user }: NavClientProps) {
       {menuOpen && (
         <div
           className="absolute top-[60px] left-0 right-0 bg-paper border-b px-5 py-4 flex flex-col gap-3 md:hidden"
-          style={{ borderColor: 'rgba(13,13,18,0.1)' }}
+          style={{ borderColor: 'var(--border)' }}
         >
-          {['Belajar', 'Level', 'Kaiwa', 'SSW / TG', 'Berita'].map((label) => (
+          {[
+            { href: '/#fitur', label: 'Belajar' },
+            { href: '/#level', label: 'Level' },
+            { href: '/#kaiwa', label: 'Kaiwa' },
+            { href: '/#visa', label: 'SSW / TG' },
+            { href: '/berita', label: 'Berita' },
+          ].map(({ href, label }) => (
             <Link
               key={label}
-              href="#"
+              href={href}
               className="text-sm text-muted py-1"
               onClick={() => setMenuOpen(false)}
             >
               {label}
             </Link>
           ))}
-          <div className="flex gap-2 pt-2 border-t" style={{ borderColor: 'rgba(13,13,18,0.1)' }}>
-            <Link href="/login" className="flex-1 text-center text-sm py-2 rounded-lg border text-ink" style={{ borderColor: 'rgba(13,13,18,0.1)' }}>
+          <div className="flex gap-2 pt-2 border-t" style={{ borderColor: 'var(--border)' }}>
+            <Link href="/login" className="flex-1 text-center text-sm py-2 rounded-lg border text-ink" style={{ borderColor: 'var(--border)' }}>
               Masuk
             </Link>
             <Link href="/register" className="flex-1 text-center text-sm py-2 rounded-lg bg-ink text-paper">

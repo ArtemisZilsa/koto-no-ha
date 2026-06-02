@@ -6,7 +6,7 @@ export function HeroSection() {
       {/* Background kanji */}
       <div
         className="absolute top-1/2 right-[-2%] -translate-y-1/2 font-serif font-light leading-none pointer-events-none select-none"
-        style={{ fontSize: '360px', color: 'rgba(13,13,18,0.04)', letterSpacing: '-0.05em' }}
+        style={{ fontSize: '360px', color: 'var(--ink)', opacity: 0.04, letterSpacing: '-0.05em' }}
         aria-hidden="true"
       >
         学
@@ -49,7 +49,7 @@ export function HeroSection() {
           <Link
             href="#kaiwa"
             className="inline-flex items-center gap-2 text-sm px-6 py-3.5 rounded-lg border text-ink hover:bg-paper-dark transition-colors"
-            style={{ borderColor: 'rgba(13,13,18,0.1)' }}
+            style={{ borderColor: 'var(--border)' }}
           >
             <span>▶</span> Lihat Demo
           </Link>

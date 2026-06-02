@@ -63,8 +63,8 @@ export function VisaSection() {
         {visaCards.map(({ badge, title, desc, items, accent, badgeBg, badgeColor }) => (
           <div
             key={title}
-            className="bg-white rounded-xl p-6 relative overflow-hidden"
-            style={{ border: '0.5px solid rgba(13,13,18,0.1)' }}
+            className="bg-surface rounded-xl p-6 relative overflow-hidden"
+            style={{ border: '0.5px solid var(--border)' }}
           >
             {/* Top accent bar */}
             <div className="absolute top-0 left-0 right-0 h-[3px]" style={{ background: accent }} />

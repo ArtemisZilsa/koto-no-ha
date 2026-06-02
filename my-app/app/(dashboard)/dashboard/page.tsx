@@ -164,7 +164,7 @@ export default async function DashboardPage() {
       <div className="grid grid-cols-2 gap-4">
         {[
           { title: 'Flashcard Hari Ini', icon: '🃏', href: '#', desc: 'Tidak ada kartu untuk direview hari ini.' },
-          { title: 'Berita Terbaru', icon: '📰', href: '#', desc: 'Baca artikel Jepang terbaru untuk berlatih.' },
+          { title: 'Berita Terbaru', icon: '📰', href: '/berita', desc: 'Baca artikel Jepang terbaru untuk berlatih.' },
           { title: 'Kaiwa Stories', icon: '🗣️', href: '#', desc: 'Latihan percakapan dari situasi nyata.' },
           { title: 'Progres Belajar', icon: '📊', href: '#', desc: 'Lihat statistik dan perkembangan kamu.' },
         ].map(({ title, icon, href, desc }) => (

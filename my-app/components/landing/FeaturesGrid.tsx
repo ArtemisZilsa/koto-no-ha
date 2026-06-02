@@ -54,8 +54,8 @@ export function FeaturesGrid() {
         {features.map(({ icon, title, desc, tag }) => (
           <div
             key={title}
-            className="bg-white rounded-xl p-6 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(13,13,18,0.07)] transition-all duration-200"
-            style={{ border: '0.5px solid rgba(13,13,18,0.1)' }}
+            className="bg-surface rounded-xl p-6 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(13,13,18,0.07)] transition-all duration-200"
+            style={{ border: '0.5px solid var(--border)' }}
           >
             <span className="text-[22px] mb-3.5 block">{icon}</span>
             <div className="font-serif text-[15px] font-semibold text-ink mb-2">{title}</div>

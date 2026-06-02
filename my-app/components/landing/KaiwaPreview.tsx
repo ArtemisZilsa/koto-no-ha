@@ -51,8 +51,8 @@ export function KaiwaPreview() {
                 className="text-[11px] px-3 py-1 rounded-full"
                 style={
                   i === categories.length - 1
-                    ? { background: 'var(--red)', color: 'white', border: '0.5px solid var(--red)' }
-                    : { border: '0.5px solid rgba(13,13,18,0.1)', color: 'var(--muted)' }
+                    ? { background: 'var(--red)', color: 'var(--on-ink)', border: '0.5px solid var(--red)' }
+                    : { border: '0.5px solid var(--border)', color: 'var(--muted)' }
                 }
               >
                 {cat}
@@ -68,11 +68,11 @@ export function KaiwaPreview() {
         </div>
 
         {/* Mock dialog card */}
-        <div className="bg-white rounded-2xl overflow-hidden" style={{ border: '0.5px solid rgba(13,13,18,0.1)' }}>
+        <div className="bg-surface rounded-2xl overflow-hidden" style={{ border: '0.5px solid var(--border)' }}>
           {/* Header */}
           <div
             className="flex items-center justify-between px-5 py-3.5"
-            style={{ borderBottom: '0.5px solid rgba(13,13,18,0.1)' }}
+            style={{ borderBottom: '0.5px solid var(--border)' }}
           >
             <span className="text-[13px] font-medium text-ink">🏢 Di tempat kerja · Skenario rapat</span>
             <span
@@ -105,10 +105,10 @@ export function KaiwaPreview() {
                       : { background: 'var(--red)', borderBottomRightRadius: '3px' }
                   }
                 >
-                  <div className="font-serif text-[13px]" style={{ color: av === 'a' ? 'var(--ink)' : 'white' }}>
+                  <div className="font-serif text-[13px]" style={{ color: av === 'a' ? 'var(--ink)' : 'var(--on-ink)' }}>
                     {text}
                   </div>
-                  <div className="text-[11px] mt-0.5" style={{ color: av === 'a' ? 'var(--muted)' : 'rgba(255,255,255,0.65)' }}>
+                  <div className="text-[11px] mt-0.5" style={{ color: av === 'a' ? 'var(--muted)' : 'var(--on-ink-muted)' }}>
                     {trans}
                   </div>
                 </div>
@@ -119,7 +119,7 @@ export function KaiwaPreview() {
           {/* Vocab chips */}
           <div
             className="flex gap-2 px-5 py-3"
-            style={{ borderTop: '0.5px solid rgba(13,13,18,0.1)' }}
+            style={{ borderTop: '0.5px solid var(--border)' }}
           >
             {vocab.map((v) => (
               <span

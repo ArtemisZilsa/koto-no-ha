@@ -11,7 +11,7 @@ export function Footer() {
   return (
     <footer
       className="px-12 py-7 flex flex-col md:flex-row items-center justify-between gap-4"
-      style={{ borderTop: '0.5px solid rgba(13,13,18,0.1)' }}
+      style={{ borderTop: '0.5px solid var(--border)' }}
     >
       <div className="font-serif text-[18px] font-semibold text-ink">言の葉 · Koto no Ha</div>
 

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const articles = [
   {
     featured: true,
@@ -46,21 +48,22 @@ export function NewsSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr] gap-3.5">
         {articles.map(({ featured, src, cat, title, excerpt, date, chip }) => (
-          <div
+          <Link
             key={title}
-            className="rounded-xl p-5"
+            href="/berita"
+            className="block rounded-xl p-5 no-underline transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(13,13,18,0.08)]"
             style={{
-              background: featured ? 'var(--ink)' : 'white',
-              border: '0.5px solid rgba(13,13,18,0.1)',
+              background: featured ? 'var(--ink-surface)' : 'var(--surface)',
+              border: '0.5px solid var(--border)',
             }}
           >
             {featured && src && (
               <div
                 className="text-[10px] px-2 py-0.5 rounded inline-block mb-2.5"
                 style={{
-                  background: 'rgba(255,255,255,0.08)',
-                  color: 'rgba(247,242,234,0.5)',
-                  border: '0.5px solid rgba(255,255,255,0.1)',
+                  background: 'rgba(247,242,234,0.08)',
+                  color: 'var(--on-ink-muted)',
+                  border: '0.5px solid var(--on-ink-line)',
                 }}
               >
                 {src}
@@ -76,7 +79,7 @@ export function NewsSection() {
             )}
             <div
               className="text-[10px] tracking-[0.1em] uppercase mb-2.5"
-              style={{ color: featured ? 'rgba(200,16,46,0.75)' : 'var(--red)' }}
+              style={{ color: featured ? '#ff6b81' : 'var(--red)' }}
             >
               {cat}
             </div>
@@ -84,25 +87,34 @@ export function NewsSection() {
               className="font-serif font-semibold leading-[1.55] mb-2"
               style={{
                 fontSize: featured ? '16px' : '14px',
-                color: featured ? 'var(--paper)' : 'var(--ink)',
+                color: featured ? 'var(--on-ink)' : 'var(--ink)',
               }}
             >
               {title}
             </div>
             <div
               className="text-[12px] leading-[1.65]"
-              style={{ color: featured ? 'rgba(247,242,234,0.55)' : 'var(--muted)' }}
+              style={{ color: featured ? 'var(--on-ink-muted)' : 'var(--muted)' }}
             >
               {excerpt}
             </div>
             <div
               className="text-[11px] mt-3"
-              style={{ color: featured ? 'rgba(247,242,234,0.4)' : 'var(--muted)' }}
+              style={{ color: featured ? 'var(--on-ink-faint)' : 'var(--muted)' }}
             >
               {date}
             </div>
-          </div>
+          </Link>
         ))}
+      </div>
+
+      <div className="mt-9">
+        <Link
+          href="/berita"
+          className="inline-flex items-center gap-2 text-[13px] font-medium px-6 py-2.5 rounded-lg bg-ink text-paper no-underline hover:opacity-90 transition-opacity"
+        >
+          Lihat Semua Berita →
+        </Link>
       </div>
     </section>
   )

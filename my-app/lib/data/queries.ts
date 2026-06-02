@@ -1,8 +1,9 @@
 import { createClient } from '@/lib/supabase/server'
-import type { Vocab, Kanji, KanjiExampleJson, Grammar, GrammarExampleJson } from '@/lib/types/database.types'
+import type { Vocab, Kanji, KanjiExampleJson, Grammar, GrammarExampleJson, NewsArticle } from '@/lib/types/database.types'
 import type { VocabEntry, KanjiEntry, GrammarEntry, JLPTLevel } from './types'
 
 const PAGE_SIZE = 50
+const NEWS_PAGE_SIZE = 12
 
 export interface PagedResult<T> {
   items: T[]
@@ -159,4 +160,54 @@ export async function getGrammarByLevel(
     pageSize: PAGE_SIZE,
     totalPages: Math.max(1, Math.ceil(total / PAGE_SIZE)),
   }
+}
+
+// ── Berita / News ──────────────────────────────────────────────
+
+/** Kode level JLPT dari level_tag_id (1=N5 … 5=N1). null bila tidak ditandai. */
+export function levelCodeById(levelId: number | null): JLPTLevel | null {
+  if (levelId == null) return null
+  const entry = Object.entries(levelIdByCode).find(([, id]) => id === levelId)
+  return (entry?.[0] as JLPTLevel) ?? null
+}
+
+export async function getNewsList(page = 1): Promise<PagedResult<NewsArticle>> {
+  const supabase = await createClient()
+  const from = (page - 1) * NEWS_PAGE_SIZE
+  const to = from + NEWS_PAGE_SIZE - 1
+
+  const { data, count, error } = await supabase
+    .from('news_articles')
+    .select('*', { count: 'exact' })
+    .order('published_at', { ascending: false })
+    .range(from, to)
+
+  if (error) {
+    console.error('getNewsList error', error)
+    return { items: [], total: 0, page, pageSize: NEWS_PAGE_SIZE, totalPages: 0 }
+  }
+
+  const total = count ?? 0
+  return {
+    items: (data ?? []) as NewsArticle[],
+    total,
+    page,
+    pageSize: NEWS_PAGE_SIZE,
+    totalPages: Math.max(1, Math.ceil(total / NEWS_PAGE_SIZE)),
+  }
+}
+
+export async function getNewsById(id: string): Promise<NewsArticle | null> {
+  const supabase = await createClient()
+  const { data, error } = await supabase
+    .from('news_articles')
+    .select('*')
+    .eq('id', id)
+    .single()
+
+  if (error) {
+    if (error.code !== 'PGRST116') console.error('getNewsById error', error)
+    return null
+  }
+  return data as NewsArticle
 }

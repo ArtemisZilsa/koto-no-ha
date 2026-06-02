@@ -32,8 +32,8 @@ export function ProgressSection() {
 
         {/* Mock dashboard card */}
         <div
-          className="bg-white rounded-2xl p-7"
-          style={{ border: '0.5px solid rgba(13,13,18,0.1)' }}
+          className="bg-surface rounded-2xl p-7"
+          style={{ border: '0.5px solid var(--border)' }}
         >
           {/* User */}
           <div className="flex items-center gap-2.5 mb-6">
@@ -72,7 +72,7 @@ export function ProgressSection() {
           {/* Stats row */}
           <div
             className="flex mt-6 pt-5"
-            style={{ borderTop: '0.5px solid rgba(13,13,18,0.1)' }}
+            style={{ borderTop: '0.5px solid var(--border)' }}
           >
             {[
               { num: '14', label: 'Hari Streak' },
@@ -82,7 +82,7 @@ export function ProgressSection() {
               <div
                 key={label}
                 className="flex-1 text-center"
-                style={i > 0 ? { borderLeft: '0.5px solid rgba(13,13,18,0.1)' } : {}}
+                style={i > 0 ? { borderLeft: '0.5px solid var(--border)' } : {}}
               >
                 <span className="font-serif text-[22px] font-semibold text-ink block">{num}</span>
                 <span className="text-[10px] text-muted">{label}</span>

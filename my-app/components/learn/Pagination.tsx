@@ -66,7 +66,7 @@ export default function Pagination({
                 p === currentPage
                   ? {
                       background: accentColor,
-                      color: '#fff',
+                      color: 'var(--on-ink)',
                       boxShadow: '0 2px 6px rgba(0,0,0,0.18)',
                     }
                   : {

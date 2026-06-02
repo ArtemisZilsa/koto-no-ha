@@ -28,17 +28,17 @@ export function HowItWorks() {
 
       <div
         className="grid grid-cols-1 md:grid-cols-3 mt-10 rounded-xl overflow-hidden"
-        style={{ border: '0.5px solid rgba(13,13,18,0.1)' }}
+        style={{ border: '0.5px solid var(--border)' }}
       >
         {steps.map(({ num, title, desc }, i) => (
           <div
             key={num}
             className="p-8"
-            style={i < steps.length - 1 ? { borderRight: '0.5px solid rgba(13,13,18,0.1)' } : {}}
+            style={i < steps.length - 1 ? { borderRight: '0.5px solid var(--border)' } : {}}
           >
             <div
               className="font-serif text-[48px] font-light leading-none mb-5"
-              style={{ color: 'rgba(13,13,18,0.07)' }}
+              style={{ color: 'var(--ink)', opacity: 0.08 }}
             >
               {num}
             </div>
