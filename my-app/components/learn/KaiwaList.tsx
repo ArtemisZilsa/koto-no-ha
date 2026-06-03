@@ -1,11 +1,5 @@
 import type { KaiwaStory, KaiwaLine } from '@/lib/types/database.types'
-
-const CATEGORY_LABEL: Record<string, { jp: string; id: string; emoji: string }> = {
-  daily: { jp: '日常会話', id: 'Sehari-hari', emoji: '🏠' },
-  work: { jp: '職場', id: 'Tempat Kerja', emoji: '🏢' },
-  biz: { jp: 'ビジネス', id: 'Bisnis Formal', emoji: '💼' },
-  kaigo: { jp: '介護', id: 'Kaigo / Perawatan', emoji: '🏥' },
-}
+import { getCategoryInfo } from '@/lib/data/kaiwaCategories'
 
 interface VocabHi {
   word: string
@@ -98,7 +92,7 @@ export default function KaiwaList({ kaiwa, accentColor }: { kaiwa: KaiwaStory[];
   return (
     <div className="flex flex-col gap-6">
       {kaiwa.map((story) => {
-        const cat = CATEGORY_LABEL[story.category] ?? { jp: '会話', id: 'Percakapan', emoji: '💬' }
+        const cat = getCategoryInfo(story.category)
         // Tentukan sisi tiap baris: pembicara pertama = kiri (a), lainnya = kanan (b)
         const firstSpeaker = story.lines[0]?.speaker
         const vocab = (story.vocab_highlight as unknown as VocabHi[] | null) ?? []

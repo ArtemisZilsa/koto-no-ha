@@ -59,6 +59,22 @@ export function KaiwaPreview() {
               </span>
             ))}
           </div>
+          {/* Pilih level langsung dari landing → /kaiwa?level=X */}
+          <p className="text-[12px] font-medium mb-2.5" style={{ color: 'var(--muted)' }}>
+            Mulai dari level kamu:
+          </p>
+          <div className="flex flex-wrap items-center gap-2 mb-5">
+            {(['N5', 'N4', 'N3', 'N2', 'N1'] as const).map((lvl) => (
+              <Link
+                key={lvl}
+                href={`/kaiwa?level=${lvl}`}
+                className="font-serif text-[13px] font-medium px-4 py-2 rounded-lg no-underline transition-all hover:-translate-y-0.5"
+                style={{ background: 'var(--surface)', color: 'var(--ink)', border: '0.5px solid var(--border)' }}
+              >
+                {lvl}
+              </Link>
+            ))}
+          </div>
           <Link
             href="/kaiwa"
             className="inline-block text-[13px] font-medium px-6 py-2.5 rounded-lg bg-ink text-paper hover:opacity-90 transition-opacity"
