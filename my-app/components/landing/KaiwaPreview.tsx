@@ -60,10 +60,10 @@ export function KaiwaPreview() {
             ))}
           </div>
           <Link
-            href="/register"
+            href="/kaiwa"
             className="inline-block text-[13px] font-medium px-6 py-2.5 rounded-lg bg-ink text-paper hover:opacity-90 transition-opacity"
           >
-            Lihat Semua Cerita
+            Lihat Semua Kaiwa
           </Link>
         </div>
 
