@@ -5,7 +5,7 @@ import { n3Data } from '@/lib/data/n3'
 import { n2Data } from '@/lib/data/n2'
 import { n1Data } from '@/lib/data/n1'
 import type { LevelData, JLPTLevel } from '@/lib/data/types'
-import { getVocabByLevel, getKanjiByLevel, getGrammarByLevel, getKaiwaByLevel } from '@/lib/data/queries'
+import { getVocabByLevel, getKanjiByLevel, getGrammarByLevel, getKaiwaByLevel, getKnownItemIds, getKnownCountByLevel } from '@/lib/data/queries'
 import LevelTabs from '@/components/learn/LevelTabs'
 import InkDivider from '@/components/ui/InkDivider'
 import { HeroBackground } from '@/components/ui/HeroBackground'
@@ -72,6 +72,20 @@ export default async function LevelPage({
     : null
 
   const kaiwaStories = await getKaiwaByLevel(data.level)
+
+  // Status checklist "dikenal" — hanya untuk item di halaman aktif + total per level.
+  const vocabPageIds = (vocabPaged?.items ?? []).map((v) => v.id).filter((x): x is string => !!x)
+  const kanjiPageIds = (kanjiPaged?.items ?? []).map((k) => k.id).filter((x): x is string => !!x)
+
+  const [knownVocabSet, knownKanjiSet, knownVocabTotal, knownKanjiTotal] = await Promise.all([
+    activeTab === 'vocab' ? getKnownItemIds('vocab', vocabPageIds) : Promise.resolve(new Set<string>()),
+    activeTab === 'kanji' ? getKnownItemIds('kanji', kanjiPageIds) : Promise.resolve(new Set<string>()),
+    vocabDbLevels.has(data.level) ? getKnownCountByLevel('vocab', data.level) : Promise.resolve(0),
+    kanjiDbLevels.has(data.level) ? getKnownCountByLevel('kanji', data.level) : Promise.resolve(0),
+  ])
+
+  const knownVocabIds = Array.from(knownVocabSet)
+  const knownKanjiIds = Array.from(knownKanjiSet)
 
   const vocabCount = vocabPaged?.total ?? data.vocab.length
   const kanjiCount = kanjiPaged?.total ?? data.kanji.length
@@ -224,6 +238,10 @@ export default async function LevelPage({
           kaiwaFromDb={kaiwaStories}
           currentPage={pageNum}
           levelSlug={level.toLowerCase()}
+          knownVocabIds={knownVocabIds}
+          knownKanjiIds={knownKanjiIds}
+          knownVocabTotal={knownVocabTotal}
+          knownKanjiTotal={knownKanjiTotal}
         />
       </section>
     </main>

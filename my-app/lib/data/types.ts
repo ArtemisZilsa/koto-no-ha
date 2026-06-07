@@ -9,6 +9,7 @@ export interface KanjiExample {
 }
 
 export interface KanjiEntry {
+  id?: string             // dari DB (opsional untuk legacy data)
   kanji: string           // 日
   hiragana: string        // にち・じつ
   romaji: string          // nichi / jitsu

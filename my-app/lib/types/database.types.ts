@@ -28,6 +28,15 @@ export interface Profile {
   total_xp: number
   is_premium: boolean
   created_at: string
+  last_active_date: string | null
+}
+
+export interface UserItemProgress {
+  id: string
+  user_id: string
+  item_type: 'vocab' | 'kanji'
+  item_id: string
+  known_at: string
 }
 
 export interface Level {
@@ -295,6 +304,17 @@ export interface Database {
         Row: Grammar
         Insert: Omit<Grammar, 'id' | 'created_at'> & Partial<Pick<Grammar, 'id' | 'created_at'>>
         Update: Partial<Omit<Grammar, 'id'>>
+      }
+      user_item_progress: {
+        Row: UserItemProgress
+        Insert: Omit<UserItemProgress, 'id' | 'known_at'> & Partial<Pick<UserItemProgress, 'id' | 'known_at'>>
+        Update: Partial<Omit<UserItemProgress, 'id'>>
+      }
+    }
+    Functions: {
+      mark_item_known: {
+        Args: { p_item_type: string; p_item_id: string; p_xp?: number }
+        Returns: { known: boolean; total_xp: number; streak_days: number }[]
       }
     }
   }

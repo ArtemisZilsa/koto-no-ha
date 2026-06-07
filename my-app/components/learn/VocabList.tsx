@@ -1,9 +1,11 @@
 import type { VocabEntry } from '@/lib/data/types'
 import { Icon } from '@/components/ui/Icon'
+import { KnownToggle } from './KnownToggle'
 
 interface VocabListProps {
   vocab: VocabEntry[]
   accentColor: string
+  knownIds?: Set<string>
 }
 
 const posColors: Record<string, { bg: string; text: string }> = {
@@ -28,7 +30,7 @@ function getPosStyle(pos: string) {
   return posColors.default
 }
 
-export default function VocabList({ vocab, accentColor }: VocabListProps) {
+export default function VocabList({ vocab, accentColor, knownIds }: VocabListProps) {
   if (vocab.length === 0) {
     return (
       <div className="rounded-2xl p-12 text-center" style={{ background: 'var(--surface)', border: '0.5px solid var(--border)' }}>
@@ -71,12 +73,20 @@ export default function VocabList({ vocab, accentColor }: VocabListProps) {
 
               {/* Right – meaning & POS */}
               <div className="flex-1 min-w-0">
-                <span
-                  className="text-[11px] px-2 py-0.5 rounded-full font-medium whitespace-nowrap inline-block"
-                  style={{ background: pos.bg, color: pos.text }}
-                >
-                  {entry.partOfSpeech}
-                </span>
+                <div className="flex items-start justify-between gap-2">
+                  <span
+                    className="text-[11px] px-2 py-0.5 rounded-full font-medium whitespace-nowrap inline-block"
+                    style={{ background: pos.bg, color: pos.text }}
+                  >
+                    {entry.partOfSpeech}
+                  </span>
+                  <KnownToggle
+                    itemType="vocab"
+                    itemId={entry.id}
+                    initialKnown={entry.id ? (knownIds?.has(entry.id) ?? false) : false}
+                    accentColor={accentColor}
+                  />
+                </div>
                 <div className="mt-2 font-serif text-[17px] font-semibold text-ink">
                   {entry.meaning}
                 </div>

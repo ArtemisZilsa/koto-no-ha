@@ -45,6 +45,7 @@ function rowToVocabEntry(row: Vocab): VocabEntry {
 function rowToKanjiEntry(row: Kanji): KanjiEntry {
   const examples = (row.examples as KanjiExampleJson[]) ?? []
   return {
+    id: row.id,
     kanji: row.kanji,
     hiragana: row.hiragana,
     romaji: row.romaji,
@@ -215,6 +216,76 @@ export async function getKaiwaByLevel(level: JLPTLevel): Promise<KaiwaStory[]> {
     return []
   }
   return (data ?? []) as KaiwaStory[]
+}
+
+// ── Progres item (checklist "sudah dikenal") ───────────────────
+
+/**
+ * Ambil himpunan id item (vocab/kanji) yang sudah ditandai "dikenal"
+ * oleh user saat ini, dibatasi pada daftar id yang diberikan (1 halaman).
+ * Mengembalikan Set kosong bila belum login.
+ */
+export async function getKnownItemIds(
+  itemType: 'vocab' | 'kanji',
+  ids: string[],
+): Promise<Set<string>> {
+  if (ids.length === 0) return new Set()
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return new Set()
+
+  const { data, error } = await supabase
+    .from('user_item_progress')
+    .select('item_id')
+    .eq('user_id', user.id)
+    .eq('item_type', itemType)
+    .in('item_id', ids)
+
+  if (error) {
+    console.error('getKnownItemIds error', error)
+    return new Set()
+  }
+  const rows = (data ?? []) as { item_id: string }[]
+  return new Set(rows.map((r) => r.item_id))
+}
+
+/** Hitung total item dikenal untuk satu level (untuk ringkasan "X/Y"). */
+export async function getKnownCountByLevel(
+  itemType: 'vocab' | 'kanji',
+  level: JLPTLevel,
+): Promise<number> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return 0
+
+  const table = itemType === 'vocab' ? 'vocab' : 'kanji'
+  const levelId = levelIdByCode[level]
+
+  // Ambil id item pada level ini, lalu hitung yang dikenal.
+  const { data: itemRows, error: itemErr } = await supabase
+    .from(table)
+    .select('id')
+    .eq('level_id', levelId)
+  if (itemErr || !itemRows) return 0
+  const ids = (itemRows as { id: string }[]).map((r) => r.id)
+  if (ids.length === 0) return 0
+
+  const { count, error } = await supabase
+    .from('user_item_progress')
+    .select('item_id', { count: 'exact', head: true })
+    .eq('user_id', user.id)
+    .eq('item_type', itemType)
+    .in('item_id', ids)
+
+  if (error) {
+    console.error('getKnownCountByLevel error', error)
+    return 0
+  }
+  return count ?? 0
 }
 
 export async function getNewsById(id: string): Promise<NewsArticle | null> {

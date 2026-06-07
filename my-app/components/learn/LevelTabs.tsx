@@ -19,6 +19,10 @@ interface LevelTabsProps {
   kaiwaFromDb: KaiwaStory[]
   currentPage: number
   levelSlug: string
+  knownVocabIds: string[]
+  knownKanjiIds: string[]
+  knownVocabTotal: number
+  knownKanjiTotal: number
 }
 
 export default function LevelTabs({
@@ -30,8 +34,14 @@ export default function LevelTabs({
   kaiwaFromDb,
   currentPage,
   levelSlug,
+  knownVocabIds,
+  knownKanjiIds,
+  knownVocabTotal,
+  knownKanjiTotal,
 }: LevelTabsProps) {
   const basePath = `/learn/${levelSlug}`
+  const knownVocabSet = new Set(knownVocabIds)
+  const knownKanjiSet = new Set(knownKanjiIds)
 
   const vocabItems = vocabFromDb?.items ?? data.vocab
   const vocabCount = vocabFromDb?.total ?? data.vocab.length
@@ -101,16 +111,19 @@ export default function LevelTabs({
       {activeTab === 'kanji' && (
         <>
           {kanjiFromDb && kanjiFromDb.total > 0 && (
-            <div className="mb-4 text-[12px]" style={{ color: 'var(--muted)' }}>
-              Menampilkan{' '}
-              <span className="font-medium" style={{ color: 'var(--ink)' }}>
-                {(kanjiFromDb.page - 1) * kanjiFromDb.pageSize + 1}–
-                {Math.min(kanjiFromDb.page * kanjiFromDb.pageSize, kanjiFromDb.total)}
-              </span>{' '}
-              dari <span className="font-medium" style={{ color: 'var(--ink)' }}>{kanjiFromDb.total}</span> kanji
+            <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px]" style={{ color: 'var(--muted)' }}>
+              <span>
+                Menampilkan{' '}
+                <span className="font-medium" style={{ color: 'var(--ink)' }}>
+                  {(kanjiFromDb.page - 1) * kanjiFromDb.pageSize + 1}–
+                  {Math.min(kanjiFromDb.page * kanjiFromDb.pageSize, kanjiFromDb.total)}
+                </span>{' '}
+                dari <span className="font-medium" style={{ color: 'var(--ink)' }}>{kanjiFromDb.total}</span> kanji
+              </span>
+              <KnownSummary known={knownKanjiTotal} total={kanjiFromDb.total} accentColor={data.accentColor} />
             </div>
           )}
-          <KanjiGrid kanji={kanjiItems} accentColor={data.accentColor} />
+          <KanjiGrid kanji={kanjiItems} accentColor={data.accentColor} knownIds={knownKanjiSet} />
           {kanjiFromDb && (
             <Pagination
               currentPage={currentPage}
@@ -126,16 +139,19 @@ export default function LevelTabs({
       {activeTab === 'vocab' && (
         <>
           {vocabFromDb && vocabFromDb.total > 0 && (
-            <div className="mb-4 text-[12px]" style={{ color: 'var(--muted)' }}>
-              Menampilkan{' '}
-              <span className="font-medium" style={{ color: 'var(--ink)' }}>
-                {(vocabFromDb.page - 1) * vocabFromDb.pageSize + 1}–
-                {Math.min(vocabFromDb.page * vocabFromDb.pageSize, vocabFromDb.total)}
-              </span>{' '}
-              dari <span className="font-medium" style={{ color: 'var(--ink)' }}>{vocabFromDb.total}</span> kosakata
+            <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px]" style={{ color: 'var(--muted)' }}>
+              <span>
+                Menampilkan{' '}
+                <span className="font-medium" style={{ color: 'var(--ink)' }}>
+                  {(vocabFromDb.page - 1) * vocabFromDb.pageSize + 1}–
+                  {Math.min(vocabFromDb.page * vocabFromDb.pageSize, vocabFromDb.total)}
+                </span>{' '}
+                dari <span className="font-medium" style={{ color: 'var(--ink)' }}>{vocabFromDb.total}</span> kosakata
+              </span>
+              <KnownSummary known={knownVocabTotal} total={vocabFromDb.total} accentColor={data.accentColor} />
             </div>
           )}
-          <VocabList vocab={vocabItems} accentColor={data.accentColor} />
+          <VocabList vocab={vocabItems} accentColor={data.accentColor} knownIds={knownVocabSet} />
           {vocabFromDb && (
             <Pagination
               currentPage={currentPage}
@@ -185,5 +201,23 @@ export default function LevelTabs({
         </>
       )}
     </>
+  )
+}
+
+/** Badge ringkasan "X/Y dikenal" dengan bar progres mini. */
+function KnownSummary({ known, total, accentColor }: { known: number; total: number; accentColor: string }) {
+  if (total <= 0) return null
+  const pct = Math.round((known / total) * 100)
+  return (
+    <span
+      className="inline-flex items-center gap-2 rounded-full px-2.5 py-1"
+      style={{ background: 'var(--green-bg)', color: 'var(--green)' }}
+      title={`${known} dari ${total} sudah kamu kenal (${pct}%)`}
+    >
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M20 6 9 17l-5-5" />
+      </svg>
+      <span className="font-medium tabular-nums">{known}/{total} dikenal</span>
+    </span>
   )
 }

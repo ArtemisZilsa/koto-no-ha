@@ -1,12 +1,14 @@
 import type { KanjiEntry } from '@/lib/data/types'
 import { Icon } from '@/components/ui/Icon'
+import { KnownToggle } from './KnownToggle'
 
 interface KanjiGridProps {
   kanji: KanjiEntry[]
   accentColor: string
+  knownIds?: Set<string>
 }
 
-export default function KanjiGrid({ kanji, accentColor }: KanjiGridProps) {
+export default function KanjiGrid({ kanji, accentColor, knownIds }: KanjiGridProps) {
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {kanji.map((entry) => (
@@ -80,6 +82,19 @@ export default function KanjiGrid({ kanji, accentColor }: KanjiGridProps) {
                 <div className="text-[12px]" style={{ color: 'var(--ink)' }}>{ex.meaning}</div>
               </div>
             ))}
+          </div>
+
+          {/* Footer – checklist "sudah dikenal" */}
+          <div
+            className="px-5 py-3 flex justify-end"
+            style={{ background: 'var(--surface)', borderTop: '0.5px solid var(--border)' }}
+          >
+            <KnownToggle
+              itemType="kanji"
+              itemId={entry.id}
+              initialKnown={entry.id ? (knownIds?.has(entry.id) ?? false) : false}
+              accentColor={accentColor}
+            />
           </div>
         </div>
       ))}
