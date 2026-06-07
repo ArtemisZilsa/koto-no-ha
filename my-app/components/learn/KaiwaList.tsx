@@ -1,5 +1,6 @@
 import type { KaiwaStory, KaiwaLine } from '@/lib/types/database.types'
 import { getCategoryInfo } from '@/lib/data/kaiwaCategories'
+import { Icon } from '@/components/ui/Icon'
 
 interface VocabHi {
   word: string
@@ -108,8 +109,8 @@ export default function KaiwaList({ kaiwa, accentColor }: { kaiwa: KaiwaStory[];
               className="flex items-center justify-between px-5 py-3.5"
               style={{ borderBottom: '0.5px solid var(--border)' }}
             >
-              <span className="font-serif text-[15px] font-medium" style={{ color: 'var(--ink)' }}>
-                {cat.emoji} {story.title}
+              <span className="inline-flex items-center gap-2 font-serif text-[15px] font-medium" style={{ color: 'var(--ink)' }}>
+                <Icon name={cat.icon} className="w-4 h-4 shrink-0" style={{ color: accentColor }} /> {story.title}
               </span>
               <span
                 className="text-[10px] px-2.5 py-1 rounded-full whitespace-nowrap"

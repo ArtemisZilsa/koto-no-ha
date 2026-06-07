@@ -8,6 +8,7 @@ import type { LevelData, JLPTLevel } from '@/lib/data/types'
 import { getVocabByLevel, getKanjiByLevel, getGrammarByLevel, getKaiwaByLevel } from '@/lib/data/queries'
 import LevelTabs from '@/components/learn/LevelTabs'
 import InkDivider from '@/components/ui/InkDivider'
+import { HeroBackground } from '@/components/ui/HeroBackground'
 
 type Params = { level: string }
 type SearchParams = { tab?: string; page?: string }
@@ -84,14 +85,25 @@ export default async function LevelPage({
       {/* ── Hero Section ────────────────────────────────────────────── */}
       <section
         className="relative overflow-hidden px-8 py-16"
-        style={{
-          background: `linear-gradient(135deg, ${data.accentBg} 0%, var(--paper) 65%)`,
-          borderBottom: '0.5px solid var(--border)',
-        }}
+        style={{ borderBottom: '0.5px solid var(--border)' }}
       >
+        {/* Foto latar: panorama Kyoto saat senja */}
+        <HeroBackground
+          src="/images/hero-learn.jpg"
+          alt="Panorama Kyoto saat senja"
+          priority
+          overlay={0.86}
+        />
+        {/* Tint aksen per-level di atas foto */}
+        <div
+          className="absolute inset-0 pointer-events-none -z-10"
+          style={{ background: `linear-gradient(135deg, ${data.accentBg} 0%, transparent 70%)`, opacity: 0.6 }}
+          aria-hidden
+        />
+
         {/* Watermark kanji raksasa di belakang */}
         <span
-          className="absolute right-0 top-1/2 -translate-y-1/2 font-serif select-none pointer-events-none"
+          className="absolute right-0 top-1/2 -translate-y-1/2 font-serif select-none pointer-events-none float-soft"
           style={{
             fontSize: 'clamp(180px, 28vw, 320px)',
             lineHeight: 1,

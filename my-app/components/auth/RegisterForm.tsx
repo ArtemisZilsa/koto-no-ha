@@ -29,6 +29,12 @@ export function RegisterForm() {
         </div>
       )}
 
+      {state?.message && (
+        <div className="rounded-lg bg-teal-bg border border-[rgba(13,148,136,0.2)] px-4 py-3 text-sm" style={{ color: 'var(--teal)' }}>
+          {state.message}
+        </div>
+      )}
+
       <Input
         id="email"
         name="email"

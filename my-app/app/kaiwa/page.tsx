@@ -7,6 +7,8 @@ import ThemeGrid, { type ThemeCount } from '@/components/kaiwa/ThemeGrid'
 import { getKaiwaByLevel } from '@/lib/data/queries'
 import { CATEGORY_ORDER, getCategoryInfo } from '@/lib/data/kaiwaCategories'
 import type { JLPTLevel } from '@/lib/data/types'
+import { Icon } from '@/components/ui/Icon'
+import { HeroBackground } from '@/components/ui/HeroBackground'
 
 export const metadata: Metadata = {
   title: 'Kaiwa Stories — Percakapan Bahasa Jepang | Koto no Ha',
@@ -48,18 +50,29 @@ export default async function KaiwaPage({
     <>
       <Nav />
       <main className="pt-[60px] min-h-screen">
-        <section className="px-5 md:px-12 py-12 max-w-3xl mx-auto">
-          <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
-            会話 · Kaiwa Stories
-          </p>
-          <h1 className="font-serif text-[28px] md:text-[38px] font-semibold text-ink leading-[1.2] mb-3 tracking-tight">
-            Latihan Percakapan
-          </h1>
-          <p className="text-[15px] text-muted max-w-[560px] leading-[1.8] mb-8">
-            Pilih level, lalu pilih tema percakapan. Setiap baris dilengkapi cara baca
-            (hiragana &amp; romaji) dan terjemahan Indonesia, beserta kosakata penting.
-          </p>
+        {/* Hero dengan foto latar */}
+        <div className="relative overflow-hidden" style={{ borderBottom: '0.5px solid var(--border)' }}>
+          <HeroBackground
+            src="/images/hero-kaiwa.jpg"
+            alt="Terowongan bunga sakura di sepanjang sungai Meguro"
+            priority
+            overlay={0.84}
+          />
+          <div className="px-5 md:px-12 pt-12 pb-10 max-w-3xl mx-auto relative">
+            <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
+              会話 · Kaiwa Stories
+            </p>
+            <h1 className="font-serif text-[28px] md:text-[38px] font-semibold text-ink leading-[1.2] mb-3 tracking-tight">
+              Latihan Percakapan
+            </h1>
+            <p className="text-[15px] text-muted max-w-[560px] leading-[1.8]">
+              Pilih level, lalu pilih tema percakapan. Setiap baris dilengkapi cara baca
+              (hiragana &amp; romaji) dan terjemahan Indonesia, beserta kosakata penting.
+            </p>
+          </div>
+        </div>
 
+        <section className="px-5 md:px-12 py-12 max-w-3xl mx-auto">
           {/* Langkah 1: Pemilih level (selalu tampil; klik mereset tema) */}
           <div className="mb-8">
             <p className="text-[12px] font-medium mb-2.5" style={{ color: 'var(--muted)' }}>
@@ -104,8 +117,8 @@ export default async function KaiwaPage({
               >
                 ← Semua Tema
               </Link>
-              <h2 className="font-serif text-[20px] font-semibold text-ink mb-1">
-                {themeInfo!.emoji} {themeInfo!.id}
+              <h2 className="inline-flex items-center gap-2 font-serif text-[20px] font-semibold text-ink mb-1">
+                <Icon name={themeInfo!.icon} className="w-5 h-5" style={{ color: active.accent }} /> {themeInfo!.id}
               </h2>
               <p className="text-[12px] mb-6" style={{ color: 'var(--muted)' }}>
                 {active.code} · {themeInfo!.jp} · {filtered.length} dialog

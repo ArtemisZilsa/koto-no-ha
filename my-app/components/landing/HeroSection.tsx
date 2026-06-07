@@ -1,73 +1,112 @@
 import Link from 'next/link'
+import { AnimatedKanji } from '@/components/ui/AnimatedKanji'
+import { Reveal } from '@/components/ui/Reveal'
+import { Icon } from '@/components/ui/Icon'
+import { HeroBackground } from '@/components/ui/HeroBackground'
 
 export function HeroSection() {
   return (
     <section className="min-h-screen flex items-center px-5 md:px-12 pt-24 pb-16 relative overflow-hidden">
-      {/* Background kanji */}
+      {/* Foto latar: Gunung Fuji & sakura, ditutup lapisan washi */}
+      <HeroBackground
+        src="/images/hero-home.jpg"
+        alt="Gunung Fuji dengan bunga sakura"
+        priority
+        overlay={0.8}
+      />
+
+      {/* Latar grid halus (gaya background-animation modern, opacity rendah) */}
       <div
-        className="absolute top-1/2 right-[-2%] -translate-y-1/2 font-serif font-light leading-none pointer-events-none select-none"
-        style={{ fontSize: 'clamp(200px, 45vw, 360px)', color: 'var(--ink)', opacity: 0.04, letterSpacing: '-0.05em' }}
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            'linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px)',
+          backgroundSize: '56px 56px',
+          maskImage: 'radial-gradient(ellipse 70% 60% at 70% 50%, black 0%, transparent 75%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 70% 60% at 70% 50%, black 0%, transparent 75%)',
+          opacity: 0.5,
+        }}
         aria-hidden="true"
-      >
-        学
-      </div>
+      />
+
+      {/* Kanji beranimasi (digambar ala sumi-e) */}
+      <AnimatedKanji
+        char="学"
+        fontSize="clamp(200px, 45vw, 360px)"
+        fillOpacity={0.05}
+        className="absolute top-1/2 right-[-2%] -translate-y-1/2 float-soft"
+      />
 
       <div className="relative z-10 max-w-[580px]">
         {/* Badge */}
-        <div
-          className="inline-flex items-center gap-2 text-[11px] tracking-[0.09em] uppercase mb-8 px-3 py-1 rounded-full"
-          style={{
-            color: 'var(--red)',
-            border: '0.5px solid rgba(200,16,46,0.3)',
-          }}
-        >
-          <span className="w-1.5 h-1.5 rounded-full animate-pulse-dot" style={{ background: 'var(--red)' }} />
-          Platform Bahasa Jepang · Untuk Indonesia
-        </div>
+        <Reveal delay={0}>
+          <div
+            className="inline-flex items-center gap-2 text-[11px] tracking-[0.09em] uppercase mb-8 px-3 py-1 rounded-full"
+            style={{
+              color: 'var(--red)',
+              border: '0.5px solid rgba(200,16,46,0.3)',
+            }}
+          >
+            <span className="w-1.5 h-1.5 rounded-full animate-pulse-dot" style={{ background: 'var(--red)' }} />
+            Platform Bahasa Jepang · Untuk Indonesia
+          </div>
+        </Reveal>
 
         {/* Title */}
-        <h1 className="font-serif text-[36px] md:text-[54px] font-semibold leading-[1.15] text-ink mb-2 tracking-tight">
-          Bahasa Jepang<br />dari Kata ke Dunia
-        </h1>
-        <p className="font-serif text-lg font-light text-muted italic mb-6">
-          言葉から世界へ
-        </p>
-        <p className="text-[15px] text-muted leading-[1.8] mb-9 max-w-[460px]">
-          Dari N5 hingga N1, dari SSW hingga level bisnis — pelajari bahasa Jepang
-          dengan metode terstruktur, interaktif, dan dirancang untuk orang Indonesia
-          yang ingin benar-benar fasih.
-        </p>
+        <Reveal delay={90}>
+          <h1 className="text-[36px] md:text-[54px] font-semibold leading-[1.15] mb-2 tracking-tight">
+            <span className="font-display text-sweep">Bahasa Jepang</span>
+            <br />
+            <span className="font-serif text-ink">dari Kata ke Dunia</span>
+          </h1>
+        </Reveal>
+        <Reveal delay={160}>
+          <p className="font-serif text-lg font-light text-muted italic mb-6">
+            言葉から世界へ
+          </p>
+        </Reveal>
+        <Reveal delay={220}>
+          <p className="text-[15px] text-muted leading-[1.8] mb-9 max-w-[460px]">
+            Dari N5 hingga N1, dari SSW hingga level bisnis — pelajari bahasa Jepang
+            dengan metode terstruktur, interaktif, dan dirancang untuk orang Indonesia
+            yang ingin benar-benar fasih.
+          </p>
+        </Reveal>
 
         {/* CTA buttons */}
-        <div className="flex items-center gap-3 mb-12">
-          <Link
-            href="/register"
-            className="text-sm font-medium px-8 py-3.5 rounded-lg bg-ink text-paper hover:opacity-90 hover:-translate-y-px transition-all"
-          >
-            Mulai Belajar Gratis
-          </Link>
-          <Link
-            href="#kaiwa"
-            className="inline-flex items-center gap-2 text-sm px-6 py-3.5 rounded-lg border text-ink hover:bg-paper-dark transition-colors"
-            style={{ borderColor: 'var(--border)' }}
-          >
-            <span>▶</span> Lihat Demo
-          </Link>
-        </div>
+        <Reveal delay={290}>
+          <div className="flex items-center gap-3 mb-12">
+            <Link
+              href="/register"
+              className="text-sm font-medium px-8 py-3.5 rounded-lg bg-ink text-paper hover:opacity-90 hover:-translate-y-px transition-all"
+            >
+              Mulai Belajar Gratis
+            </Link>
+            <Link
+              href="#kaiwa"
+              className="inline-flex items-center gap-2 text-sm px-6 py-3.5 rounded-lg border text-ink hover:bg-paper-dark transition-colors"
+              style={{ borderColor: 'var(--border)' }}
+            >
+              <Icon name="play" className="w-3.5 h-3.5" /> Lihat Demo
+            </Link>
+          </div>
+        </Reveal>
 
         {/* Stats */}
-        <div className="flex gap-9">
-          {[
-            { num: '12K+', label: 'Pengguna Aktif' },
-            { num: '8 Level', label: 'N5 hingga Bisnis' },
-            { num: '500+', label: 'Cerita Kaiwa' },
-          ].map(({ num, label }) => (
-            <div key={label}>
-              <span className="font-serif text-[26px] font-semibold text-ink block">{num}</span>
-              <span className="text-[11px] text-muted tracking-[0.04em]">{label}</span>
-            </div>
-          ))}
-        </div>
+        <Reveal delay={360}>
+          <div className="flex gap-9">
+            {[
+              { num: '12K+', label: 'Pengguna Aktif' },
+              { num: '8 Level', label: 'N5 hingga Bisnis' },
+              { num: '500+', label: 'Cerita Kaiwa' },
+            ].map(({ num, label }) => (
+              <div key={label}>
+                <span className="font-serif text-[26px] font-semibold text-ink block">{num}</span>
+                <span className="text-[11px] text-muted tracking-[0.04em]">{label}</span>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
 
       {/* Scroll hint */}

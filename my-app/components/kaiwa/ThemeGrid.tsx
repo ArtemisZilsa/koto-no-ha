@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { getCategoryInfo } from '@/lib/data/kaiwaCategories'
+import { Icon } from '@/components/ui/Icon'
 
 export interface ThemeCount {
   category: string
@@ -32,14 +33,14 @@ export default function ThemeGrid({
           <Link
             key={category}
             href={`/kaiwa?level=${levelSlug}&theme=${category}`}
-            className="flex items-center gap-4 rounded-xl p-5 no-underline transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(13,13,18,0.08)]"
+            className="flex items-center gap-4 rounded-xl p-5 no-underline hover-lift"
             style={{ background: 'var(--surface)', border: '0.5px solid var(--border)' }}
           >
             <span
-              className="w-12 h-12 rounded-xl shrink-0 flex items-center justify-center text-[22px]"
-              style={{ background: `${accentColor}18` }}
+              className="w-12 h-12 rounded-xl shrink-0 flex items-center justify-center"
+              style={{ background: `${accentColor}18`, color: accentColor }}
             >
-              {info.emoji}
+              <Icon name={info.icon} className="w-6 h-6" />
             </span>
             <div className="min-w-0">
               <div className="font-serif text-[16px] font-semibold text-ink leading-tight">

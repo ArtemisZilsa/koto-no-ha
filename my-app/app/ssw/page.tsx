@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Nav } from '@/components/nav/Nav'
 import { Footer } from '@/components/landing/Footer'
+import { Icon, type IconName } from '@/components/ui/Icon'
+import { Reveal } from '@/components/ui/Reveal'
+import { HeroBackground } from '@/components/ui/HeroBackground'
 
 export const metadata: Metadata = {
   title: 'Panduan SSW / Tokutei Ginou | Koto no Ha',
@@ -10,21 +13,21 @@ export const metadata: Metadata = {
 
 // 14 sektor SSW resmi (Tokutei Ginou). Catatan: tahun 2024 pemerintah Jepang
 // menambah beberapa bidang baru; data ini mencakup sektor utama yang berjalan.
-const sectors: { jp: string; id: string; emoji: string }[] = [
-  { jp: '介護', id: 'Perawatan Lansia (Kaigo)', emoji: '🧑‍⚕️' },
-  { jp: 'ビルクリーニング', id: 'Kebersihan Gedung', emoji: '🧹' },
-  { jp: '素形材・産業機械・電気電子', id: 'Manufaktur Mesin & Elektronik', emoji: '⚙️' },
-  { jp: '建設', id: 'Konstruksi', emoji: '🏗️' },
-  { jp: '造船・舶用工業', id: 'Galangan Kapal', emoji: '🚢' },
-  { jp: '自動車整備', id: 'Perawatan Otomotif', emoji: '🚗' },
-  { jp: '航空', id: 'Penerbangan (Ground & Maintenance)', emoji: '✈️' },
-  { jp: '宿泊', id: 'Perhotelan', emoji: '🏨' },
-  { jp: '農業', id: 'Pertanian', emoji: '🌾' },
-  { jp: '漁業', id: 'Perikanan', emoji: '🎣' },
-  { jp: '飲食料品製造業', id: 'Produksi Makanan & Minuman', emoji: '🍱' },
-  { jp: '外食業', id: 'Industri Restoran', emoji: '🍜' },
-  { jp: '自動車運送業', id: 'Transportasi / Sopir', emoji: '🚚' },
-  { jp: '鉄道', id: 'Perkeretaapian', emoji: '🚆' },
+const sectors: { jp: string; id: string; icon: IconName }[] = [
+  { jp: '介護', id: 'Perawatan Lansia (Kaigo)', icon: 'heart-pulse' },
+  { jp: 'ビルクリーニング', id: 'Kebersihan Gedung', icon: 'brush' },
+  { jp: '素形材・産業機械・電気電子', id: 'Manufaktur Mesin & Elektronik', icon: 'cog' },
+  { jp: '建設', id: 'Konstruksi', icon: 'hard-hat' },
+  { jp: '造船・舶用工業', id: 'Galangan Kapal', icon: 'ship' },
+  { jp: '自動車整備', id: 'Perawatan Otomotif', icon: 'car' },
+  { jp: '航空', id: 'Penerbangan (Ground & Maintenance)', icon: 'plane' },
+  { jp: '宿泊', id: 'Perhotelan', icon: 'hotel' },
+  { jp: '農業', id: 'Pertanian', icon: 'wheat' },
+  { jp: '漁業', id: 'Perikanan', icon: 'fish' },
+  { jp: '飲食料品製造業', id: 'Produksi Makanan & Minuman', icon: 'utensils' },
+  { jp: '外食業', id: 'Industri Restoran', icon: 'bowl' },
+  { jp: '自動車運送業', id: 'Transportasi / Sopir', icon: 'truck' },
+  { jp: '鉄道', id: 'Perkeretaapian', icon: 'train' },
 ]
 
 const requirements: { title: string; desc: string }[] = [
@@ -87,10 +90,16 @@ export default function SSWPage() {
         {/* Hero */}
         <section
           className="px-5 md:px-12 py-14 relative overflow-hidden"
-          style={{ background: 'linear-gradient(135deg, var(--red-bg) 0%, var(--paper) 65%)', borderBottom: '0.5px solid var(--border)' }}
+          style={{ borderBottom: '0.5px solid var(--border)' }}
         >
+          <HeroBackground
+            src="/images/hero-ssw.jpg"
+            alt="Jalan tradisional Kyoto dengan pagoda"
+            priority
+            overlay={0.84}
+          />
           <span
-            className="absolute right-0 top-1/2 -translate-y-1/2 font-serif select-none pointer-events-none"
+            className="absolute right-0 top-1/2 -translate-y-1/2 font-serif select-none pointer-events-none float-soft"
             style={{ fontSize: 'clamp(160px, 30vw, 300px)', lineHeight: 1, color: 'var(--ink)', opacity: 0.05, right: '-3%' }}
             aria-hidden
           >
@@ -119,10 +128,15 @@ export default function SSWPage() {
               {sectors.map((s, i) => (
                 <div
                   key={s.jp}
-                  className="flex items-center gap-3 rounded-xl px-4 py-3"
+                  className="flex items-center gap-3 rounded-xl px-4 py-3 hover-lift"
                   style={{ background: 'var(--surface)', border: '0.5px solid var(--border)' }}
                 >
-                  <span className="text-[18px] shrink-0">{s.emoji}</span>
+                  <span
+                    className="inline-flex items-center justify-center w-9 h-9 rounded-lg shrink-0"
+                    style={{ background: 'var(--red-bg)', color: 'var(--red)' }}
+                  >
+                    <Icon name={s.icon} className="w-[18px] h-[18px]" />
+                  </span>
                   <div>
                     <div className="font-serif text-[14px] font-medium text-ink leading-tight">{s.id}</div>
                     <div className="text-[12px]" style={{ color: 'var(--muted)' }}>{s.jp}</div>

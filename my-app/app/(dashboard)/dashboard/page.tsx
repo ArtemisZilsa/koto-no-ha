@@ -1,6 +1,8 @@
 import { createClient } from '@/lib/supabase/server'
 import type { Profile } from '@/lib/types/database.types'
 import Link from 'next/link'
+import { Icon, type IconName } from '@/components/ui/Icon'
+import { Reveal } from '@/components/ui/Reveal'
 
 export const metadata = {
   title: 'Dashboard — Koto no Ha',
@@ -37,42 +39,48 @@ export default async function DashboardPage() {
 
       {/* Stats row */}
       <div className="grid grid-cols-3 gap-4 mb-10">
-        {[
+        {([
           {
             label: 'Streak Harian',
             value: `${profile?.streak_days ?? 0} hari`,
-            icon: '🔥',
+            icon: 'flame' as IconName,
             color: 'var(--red)',
             bg: 'var(--red-bg)',
           },
           {
             label: 'Total XP',
             value: `${profile?.total_xp ?? 0} XP`,
-            icon: '⭐',
+            icon: 'star' as IconName,
             color: 'var(--gold)',
             bg: 'var(--gold-bg)',
           },
           {
             label: 'Level Saat Ini',
             value: profile?.levels?.code ?? 'N5',
-            icon: '📚',
+            icon: 'book' as IconName,
             color: 'var(--teal)',
             bg: 'var(--teal-bg)',
           },
-        ].map(({ label, value, icon, color, bg }) => (
-          <div
+        ]).map(({ label, value, icon, color, bg }, i) => (
+          <Reveal
             key={label}
+            delay={i * 80}
             className="rounded-xl p-5 flex items-center gap-4"
             style={{ background: bg, border: `0.5px solid ${color}20` }}
           >
-            <span className="text-2xl">{icon}</span>
+            <span
+              className="inline-flex items-center justify-center w-10 h-10 rounded-lg shrink-0"
+              style={{ background: `${color}1a`, color }}
+            >
+              <Icon name={icon} className="w-5 h-5" />
+            </span>
             <div>
               <div className="font-serif text-xl font-semibold" style={{ color }}>
                 {value}
               </div>
               <div className="text-xs text-muted">{label}</div>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
 
@@ -135,12 +143,12 @@ export default async function DashboardPage() {
             <Link
               key={level}
               href={href}
-              className="relative overflow-hidden rounded-2xl p-6 hover:-translate-y-1 hover:shadow-lg transition-all no-underline"
+              className="relative overflow-hidden rounded-2xl p-6 hover-lift no-underline"
               style={{ background: bg, border: `0.5px solid ${color}30` }}
             >
               {/* Background kanji watermark — clamped inside card, won't overflow */}
               <span
-                className="absolute -right-2 -bottom-3 font-serif select-none pointer-events-none leading-none"
+                className="absolute -right-2 -bottom-3 font-serif select-none pointer-events-none leading-none float-soft"
                 style={{ fontSize: 'clamp(56px, 7vw, 80px)', color: `${color}18`, zIndex: 0 }}
                 aria-hidden
               >
@@ -162,22 +170,25 @@ export default async function DashboardPage() {
 
       {/* Other sections */}
       <div className="grid grid-cols-2 gap-4">
-        {[
-          { title: 'Flashcard Hari Ini', icon: '🃏', href: '#', desc: 'Tidak ada kartu untuk direview hari ini.' },
-          { title: 'Berita Terbaru', icon: '📰', href: '/berita', desc: 'Baca artikel Jepang terbaru untuk berlatih.' },
-          { title: 'Kaiwa Stories', icon: '🗣️', href: '#', desc: 'Latihan percakapan dari situasi nyata.' },
-          { title: 'Progres Belajar', icon: '📊', href: '#', desc: 'Lihat statistik dan perkembangan kamu.' },
-        ].map(({ title, icon, href, desc }) => (
+        {([
+          { title: 'Flashcard Hari Ini', icon: 'cards' as IconName, href: '#', desc: 'Tidak ada kartu untuk direview hari ini.' },
+          { title: 'Berita Terbaru', icon: 'newspaper' as IconName, href: '/berita', desc: 'Baca artikel Jepang terbaru untuk berlatih.' },
+          { title: 'Kaiwa Stories', icon: 'mic' as IconName, href: '#', desc: 'Latihan percakapan dari situasi nyata.' },
+          { title: 'Progres Belajar', icon: 'bar-chart' as IconName, href: '#', desc: 'Lihat statistik dan perkembangan kamu.' },
+        ]).map(({ title, icon, href, desc }, i) => (
+          <Reveal key={title} delay={(i % 2) * 80}>
           <Link
-            key={title}
             href={href}
-            className="rounded-xl p-6 hover:-translate-y-0.5 hover:shadow-md transition-all no-underline"
-            style={{ background: 'var(--surface)', border: '0.5px solid var(--border)' }}
+            className="block h-full rounded-xl p-6 hover-lift no-underline koto-bordered"
+            style={{ background: 'var(--surface)' }}
           >
-            <span className="text-xl mb-3 block">{icon}</span>
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg mb-3 text-ink" style={{ background: 'var(--paper-dark)' }}>
+              <Icon name={icon} className="w-5 h-5" />
+            </span>
             <div className="font-serif text-[15px] font-semibold text-ink mb-1">{title}</div>
             <div className="text-[12px] text-muted">{desc}</div>
           </Link>
+          </Reveal>
         ))}
       </div>
     </main>

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Icon } from '@/components/ui/Icon'
 
 const categories = ['Kehidupan Sehari-hari', 'Tempat Kerja', 'Rumah Sakit', 'Bisnis Formal', 'Kaigo / Perawatan']
 
@@ -90,7 +91,9 @@ export function KaiwaPreview() {
             className="flex items-center justify-between px-5 py-3.5"
             style={{ borderBottom: '0.5px solid var(--border)' }}
           >
-            <span className="text-[13px] font-medium text-ink">🏢 Di tempat kerja · Skenario rapat</span>
+            <span className="inline-flex items-center gap-1.5 text-[13px] font-medium text-ink">
+              <Icon name="building" className="w-4 h-4" /> Di tempat kerja · Skenario rapat
+            </span>
             <span
               className="text-[10px] px-2 py-0.5 rounded"
               style={{ background: 'var(--gold-bg)', color: 'var(--gold)' }}

@@ -1,9 +1,11 @@
 import Link from 'next/link'
+import { Reveal } from '@/components/ui/Reveal'
+import { Icon } from '@/components/ui/Icon'
 
 const articles = [
   {
     featured: true,
-    src: '📰 NHK Web Easy · Hari Ini',
+    src: 'NHK Web Easy · Hari Ini',
     cat: 'Ekonomi',
     title: '日本の物価上昇が続く中、政府は新しい対策を発表した',
     excerpt:
@@ -36,22 +38,24 @@ const articles = [
 export function NewsSection() {
   return (
     <section id="berita" className="px-5 md:px-12 py-16 md:py-22" style={{ background: 'var(--paper-dark)' }}>
-      <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
-        Konten Terkini
-      </p>
-      <h2 className="font-serif text-[26px] md:text-[36px] font-semibold text-ink leading-[1.25] mb-4 tracking-tight">
-        Belajar dari Berita Jepang Asli
-      </h2>
-      <p className="text-[15px] text-muted max-w-[540px] leading-[1.8] mb-12">
-        Artikel dari NHK Web Easy. Kata sulit otomatis ditandai sesuai level JLPT kamu untuk belajar secara kontekstual.
-      </p>
+      <Reveal>
+        <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
+          Konten Terkini
+        </p>
+        <h2 className="font-serif text-[26px] md:text-[36px] font-semibold text-ink leading-[1.25] mb-4 tracking-tight">
+          Belajar dari Berita Jepang Asli
+        </h2>
+        <p className="text-[15px] text-muted max-w-[540px] leading-[1.8] mb-12">
+          Artikel dari NHK Web Easy. Kata sulit otomatis ditandai sesuai level JLPT kamu untuk belajar secara kontekstual.
+        </p>
+      </Reveal>
 
       <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr] gap-3.5">
-        {articles.map(({ featured, src, cat, title, excerpt, date, chip }) => (
+        {articles.map(({ featured, src, cat, title, excerpt, date, chip }, i) => (
+          <Reveal key={title} delay={i * 80}>
           <Link
-            key={title}
             href="/berita"
-            className="block rounded-xl p-5 no-underline transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(13,13,18,0.08)]"
+            className="block h-full rounded-xl p-5 no-underline hover-lift"
             style={{
               background: featured ? 'var(--ink-surface)' : 'var(--surface)',
               border: '0.5px solid var(--border)',
@@ -59,14 +63,14 @@ export function NewsSection() {
           >
             {featured && src && (
               <div
-                className="text-[10px] px-2 py-0.5 rounded inline-block mb-2.5"
+                className="inline-flex items-center gap-1.5 text-[10px] px-2 py-0.5 rounded mb-2.5"
                 style={{
                   background: 'rgba(247,242,234,0.08)',
                   color: 'var(--on-ink-muted)',
                   border: '0.5px solid var(--on-ink-line)',
                 }}
               >
-                {src}
+                <Icon name="newspaper" className="w-3 h-3" /> {src}
               </div>
             )}
             {!featured && chip && (
@@ -105,6 +109,7 @@ export function NewsSection() {
               {date}
             </div>
           </Link>
+          </Reveal>
         ))}
       </div>
 

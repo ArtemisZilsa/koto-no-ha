@@ -1,21 +1,22 @@
 import type { KaiwaCategory } from '@/lib/types/database.types'
+import type { IconName } from '@/components/ui/Icon'
 
 export interface KaiwaCategoryInfo {
   jp: string
   id: string
-  emoji: string
+  icon: IconName
 }
 
 /** Label tema kaiwa (kategori) — dipakai bersama oleh KaiwaList & ThemeGrid. */
 export const CATEGORY_LABEL: Record<string, KaiwaCategoryInfo> = {
-  daily: { jp: '日常会話', id: 'Sehari-hari', emoji: '🏠' },
-  work: { jp: '職場', id: 'Tempat Kerja', emoji: '🏢' },
-  biz: { jp: 'ビジネス', id: 'Bisnis Formal', emoji: '💼' },
-  kaigo: { jp: '介護', id: 'Kaigo / Perawatan', emoji: '🏥' },
+  daily: { jp: '日常会話', id: 'Sehari-hari', icon: 'home' },
+  work: { jp: '職場', id: 'Tempat Kerja', icon: 'building' },
+  biz: { jp: 'ビジネス', id: 'Bisnis Formal', icon: 'briefcase' },
+  kaigo: { jp: '介護', id: 'Kaigo / Perawatan', icon: 'heart-pulse' },
 }
 
 /** Fallback bila kategori tak dikenal. */
-export const CATEGORY_FALLBACK: KaiwaCategoryInfo = { jp: '会話', id: 'Percakapan', emoji: '💬' }
+export const CATEGORY_FALLBACK: KaiwaCategoryInfo = { jp: '会話', id: 'Percakapan', icon: 'message' }
 
 export function getCategoryInfo(category: string): KaiwaCategoryInfo {
   return CATEGORY_LABEL[category] ?? CATEGORY_FALLBACK

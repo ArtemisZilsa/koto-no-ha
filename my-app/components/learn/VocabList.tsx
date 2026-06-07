@@ -1,4 +1,5 @@
 import type { VocabEntry } from '@/lib/data/types'
+import { Icon } from '@/components/ui/Icon'
 
 interface VocabListProps {
   vocab: VocabEntry[]
@@ -31,7 +32,9 @@ export default function VocabList({ vocab, accentColor }: VocabListProps) {
   if (vocab.length === 0) {
     return (
       <div className="rounded-2xl p-12 text-center" style={{ background: 'var(--surface)', border: '0.5px solid var(--border)' }}>
-        <div className="text-4xl mb-3">📭</div>
+        <div className="flex justify-center mb-3" style={{ color: 'var(--muted)' }}>
+          <Icon name="book" className="w-9 h-9" />
+        </div>
         <p className="text-muted text-sm">Belum ada kosakata untuk level ini.</p>
       </div>
     )
@@ -90,8 +93,8 @@ export default function VocabList({ vocab, accentColor }: VocabListProps) {
                 }}
               >
                 <div className="flex items-start gap-2">
-                  <span className="text-[10px] tracking-widest uppercase font-medium mt-0.5" style={{ color: 'var(--gold)' }}>
-                    💡 Penggunaan
+                  <span className="inline-flex items-center gap-1 text-[10px] tracking-widest uppercase font-medium mt-0.5" style={{ color: 'var(--gold)' }}>
+                    <Icon name="sparkles" className="w-3 h-3" /> Penggunaan
                   </span>
                 </div>
                 <p className="text-[13px] leading-relaxed text-ink mt-1">{entry.usage}</p>
@@ -112,8 +115,8 @@ export default function VocabList({ vocab, accentColor }: VocabListProps) {
                   borderTop: '0.5px solid var(--border)',
                 }}
               >
-                <div className="text-[10px] tracking-widest uppercase font-medium text-muted mb-1">
-                  📖 Makna Lengkap
+                <div className="inline-flex items-center gap-1 text-[10px] tracking-widest uppercase font-medium text-muted mb-1">
+                  <Icon name="reading" className="w-3 h-3" /> Makna Lengkap
                 </div>
                 <p className="text-[13px] leading-relaxed text-ink">{entry.fullMeaning}</p>
               </div>

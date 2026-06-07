@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Reveal } from '@/components/ui/Reveal'
 
 const visaCards = [
   {
@@ -51,22 +52,23 @@ const visaCards = [
 export function VisaSection() {
   return (
     <section id="visa" className="px-5 md:px-12 py-16 md:py-22">
-      <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
-        Visa & Ketenagakerjaan
-      </p>
-      <h2 className="font-serif text-[26px] md:text-[36px] font-semibold text-ink leading-[1.25] mb-4 tracking-tight">
-        SSW, Tokutei Ginou & Gijinkoku<br />dalam Bahasa Indonesia
-      </h2>
-      <p className="text-[15px] text-muted max-w-[540px] leading-[1.8] mb-12">
-        Panduan lengkap status visa kerja di Jepang — syarat, prosedur, dan tips lulus — semuanya tersedia di platform ini.
-      </p>
+      <Reveal>
+        <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
+          Visa & Ketenagakerjaan
+        </p>
+        <h2 className="font-serif text-[26px] md:text-[36px] font-semibold text-ink leading-[1.25] mb-4 tracking-tight">
+          SSW, Tokutei Ginou & Gijinkoku<br />dalam Bahasa Indonesia
+        </h2>
+        <p className="text-[15px] text-muted max-w-[540px] leading-[1.8] mb-12">
+          Panduan lengkap status visa kerja di Jepang — syarat, prosedur, dan tips lulus — semuanya tersedia di platform ini.
+        </p>
+      </Reveal>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
-        {visaCards.map(({ badge, title, desc, items, accent, badgeBg, badgeColor }) => (
+        {visaCards.map(({ badge, title, desc, items, accent, badgeBg, badgeColor }, i) => (
+          <Reveal key={title} delay={i * 80}>
           <div
-            key={title}
-            className="bg-surface rounded-xl p-6 relative overflow-hidden"
-            style={{ border: '0.5px solid var(--border)' }}
+            className="bg-surface rounded-xl p-6 relative overflow-hidden hover-lift h-full koto-bordered"
           >
             {/* Top accent bar */}
             <div className="absolute top-0 left-0 right-0 h-[3px]" style={{ background: accent }} />
@@ -88,6 +90,7 @@ export function VisaSection() {
               ))}
             </ul>
           </div>
+          </Reveal>
         ))}
       </div>
 

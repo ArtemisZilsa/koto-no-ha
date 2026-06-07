@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { AnimatedKanji } from '@/components/ui/AnimatedKanji'
 
 export function CTASection() {
   return (
@@ -6,14 +7,14 @@ export function CTASection() {
       className="px-5 md:px-12 py-16 md:py-24 text-center relative overflow-hidden"
       style={{ background: 'var(--ink-surface)' }}
     >
-      {/* Background character */}
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif font-light leading-none pointer-events-none select-none"
-        style={{ fontSize: '240px', color: 'rgba(247,242,234,0.025)' }}
-        aria-hidden="true"
-      >
-        言
-      </div>
+      {/* Background character — ditulis ala sumi-e */}
+      <AnimatedKanji
+        char="言"
+        fontSize="240px"
+        color="#f7f2ea"
+        fillOpacity={0.03}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 float-soft"
+      />
 
       <h2 className="font-serif text-[30px] md:text-[42px] font-semibold leading-tight mb-3 relative" style={{ color: 'var(--on-ink)' }}>
         Mulai Perjalananmu Hari Ini

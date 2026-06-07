@@ -1,4 +1,5 @@
 import type { KanjiEntry } from '@/lib/data/types'
+import { Icon } from '@/components/ui/Icon'
 
 interface KanjiGridProps {
   kanji: KanjiEntry[]
@@ -64,7 +65,7 @@ export default function KanjiGrid({ kanji, accentColor }: KanjiGridProps) {
             className="px-5 py-3 flex items-start gap-2"
             style={{ background: 'var(--gold-bg)', borderBottom: '0.5px solid rgba(201,150,60,0.2)' }}
           >
-            <span className="text-sm mt-0.5">💡</span>
+            <span className="mt-0.5 shrink-0" style={{ color: 'var(--gold)' }}><Icon name="sparkles" className="w-4 h-4" /></span>
             <p className="text-[12px] leading-relaxed" style={{ color: 'var(--ink)' }}>
               {entry.hint}
             </p>

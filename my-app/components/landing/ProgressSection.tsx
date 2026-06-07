@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { Reveal } from '@/components/ui/Reveal'
+import { Icon } from '@/components/ui/Icon'
 
 const skills = [
   { name: '漢字 Kanji', pct: 72, color: 'var(--red)' },
@@ -12,7 +14,7 @@ export function ProgressSection() {
     <section className="px-5 md:px-12 py-16 md:py-22" style={{ background: 'var(--paper-dark)' }}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Text */}
-        <div>
+        <Reveal as="div">
           <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
             Dashboard Belajar
           </p>
@@ -28,12 +30,13 @@ export function ProgressSection() {
           >
             Coba Gratis Sekarang
           </Link>
-        </div>
+        </Reveal>
 
         {/* Mock dashboard card */}
-        <div
-          className="bg-surface rounded-2xl p-7"
-          style={{ border: '0.5px solid var(--border)' }}
+        <Reveal
+          as="div"
+          delay={120}
+          className="bg-surface rounded-2xl p-7 koto-bordered"
         >
           {/* User */}
           <div className="flex items-center gap-2.5 mb-6">
@@ -46,7 +49,9 @@ export function ProgressSection() {
                 className="text-[10px] px-2 py-0.5 rounded mt-0.5 inline-block"
                 style={{ background: 'var(--red-bg)', color: 'var(--red)' }}
               >
-                🔥 14 Hari Streak &nbsp;|&nbsp; N2 Target
+                <span className="inline-flex items-center gap-1">
+                  <Icon name="flame" className="w-3 h-3" /> 14 Hari Streak &nbsp;|&nbsp; N2 Target
+                </span>
               </div>
             </div>
           </div>
@@ -61,8 +66,8 @@ export function ProgressSection() {
                 </div>
                 <div className="h-1.5 rounded-full overflow-hidden" style={{ background: 'var(--paper-dark)' }}>
                   <div
-                    className="h-full rounded-full transition-all"
-                    style={{ width: `${pct}%`, background: color }}
+                    className="h-full rounded-full progress-fill"
+                    style={{ ['--bar-w' as string]: `${pct}%`, background: color }}
                   />
                 </div>
               </div>
@@ -89,7 +94,7 @@ export function ProgressSection() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )
