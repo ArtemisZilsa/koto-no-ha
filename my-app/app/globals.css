@@ -368,14 +368,15 @@ html.dark .glass {
    ============================================================ */
 
 /* — Reveal: muncul naik halus saat masuk viewport — */
-@keyframes fade-rise {
+/* Reveal: konten geser masuk dari kiri (left → center) + fade saat scroll. */
+@keyframes fade-in-left {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateX(-28px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 .reveal {
@@ -383,7 +384,7 @@ html.dark .glass {
   will-change: transform, opacity;
 }
 .reveal.is-visible {
-  animation: fade-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: fade-in-left 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-delay: var(--reveal-delay, 0ms);
 }
 

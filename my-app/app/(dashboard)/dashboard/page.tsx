@@ -30,12 +30,12 @@ export default async function DashboardPage() {
   return (
     <main className="px-8 py-10 max-w-5xl mx-auto">
       {/* Welcome */}
-      <div className="mb-10">
+      <Reveal className="mb-10">
         <h1 className="font-serif text-3xl font-semibold text-ink mb-1">
           こんにちは、{displayName}！
         </h1>
         <p className="text-muted text-sm">Selamat datang di Koto no Ha. Mari lanjutkan belajar.</p>
-      </div>
+      </Reveal>
 
       {/* Stats row */}
       <div className="grid grid-cols-3 gap-4 mb-10">
@@ -86,7 +86,7 @@ export default async function DashboardPage() {
 
       {/* JLPT Level Quick Access */}
       <div className="mb-8">
-        <h2 className="font-serif text-lg font-semibold text-ink mb-4">Materi Belajar JLPT</h2>
+        <Reveal as="h2" className="font-serif text-lg font-semibold text-ink mb-4">Materi Belajar JLPT</Reveal>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
           {[
             {
@@ -139,11 +139,11 @@ export default async function DashboardPage() {
               href: '/learn/n1',
               counts: '250 kanji · 200 kosakata · 30 pola',
             },
-          ].map(({ level, name, subtitle, bgKanji, color, bg, href, counts }) => (
+          ].map(({ level, name, subtitle, bgKanji, color, bg, href, counts }, i) => (
+            <Reveal key={level} delay={i * 70}>
             <Link
-              key={level}
               href={href}
-              className="relative overflow-hidden rounded-2xl p-6 hover-lift no-underline"
+              className="relative block h-full overflow-hidden rounded-2xl p-6 hover-lift no-underline"
               style={{ background: bg, border: `0.5px solid ${color}30` }}
             >
               {/* Background kanji watermark — clamped inside card, won't overflow */}
@@ -164,6 +164,7 @@ export default async function DashboardPage() {
                 <div className="text-[11px]" style={{ color: `${color}cc` }}>{counts}</div>
               </div>
             </Link>
+            </Reveal>
           ))}
         </div>
       </div>

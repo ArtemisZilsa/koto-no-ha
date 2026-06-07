@@ -13,7 +13,7 @@ interface RevealProps {
 }
 
 /**
- * Membungkus konten dengan animasi "fade-rise" saat masuk viewport.
+ * Membungkus konten dengan animasi geser-dari-kiri (fade-in-left) saat masuk viewport.
  * Memakai IntersectionObserver (tanpa dependency). Animasi dimatikan
  * otomatis lewat CSS di prefers-reduced-motion (lihat globals.css).
  */
