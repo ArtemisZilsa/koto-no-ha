@@ -33,8 +33,8 @@ export default async function BeritaPage({
             Berita Jepang Asli
           </h1>
           <p className="text-[15px] text-muted max-w-[560px] leading-[1.8] mb-10">
-            Artikel dari NHK Web Easy dengan furigana. Kata sulit ditandai sesuai level JLPT
-            kamu untuk belajar secara kontekstual. Klik artikel untuk membaca selengkapnya.
+            Artikel dari NHK Web Easy lengkap dengan furigana. Kata-kata sulit ditandai sesuai
+            level JLPT kamu, jadi belajarnya langsung dari konteks. Klik artikel untuk membaca selengkapnya.
           </p>
 
           {items.length === 0 ? (

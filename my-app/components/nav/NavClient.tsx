@@ -14,11 +14,14 @@ export function NavClient({ user }: NavClientProps) {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 md:px-12 h-[60px]"
+      className="glass fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 md:px-12 h-[60px]"
       style={{
         background: 'var(--nav-bg)',
-        backdropFilter: 'blur(14px)',
         borderBottom: '0.5px solid var(--border)',
+        borderLeft: 'none',
+        borderRight: 'none',
+        borderTop: 'none',
+        borderRadius: 0,
       }}
     >
       {/* Logo */}
@@ -101,8 +104,8 @@ export function NavClient({ user }: NavClientProps) {
       {/* Mobile menu */}
       {menuOpen && (
         <div
-          className="absolute top-[60px] left-0 right-0 bg-paper border-b px-5 py-4 flex flex-col gap-3 md:hidden"
-          style={{ borderColor: 'var(--border)' }}
+          className="glass absolute top-[60px] left-0 right-0 px-5 py-4 flex flex-col gap-3 md:hidden"
+          style={{ borderRadius: 0, background: 'var(--nav-bg)' }}
         >
           {[
             { href: '/#fitur', label: 'Belajar' },

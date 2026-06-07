@@ -37,7 +37,7 @@ const requirements: { title: string; desc: string }[] = [
   },
   {
     title: 'Ujian Keterampilan (技能試験)',
-    desc: 'Lulus ujian skill sesuai sektor (Skill Measurement Test). Bisa diikuti di Indonesia atau Jepang.',
+    desc: 'Lulus ujian keterampilan sesuai sektor (Skill Measurement Test). Bisa diikuti di Indonesia maupun Jepang.',
   },
   {
     title: 'Usia & Kesehatan',
@@ -76,8 +76,8 @@ const tiers: { tag: string; name: string; points: string[]; accent: string }[] =
 
 const steps: { num: string; title: string; desc: string }[] = [
   { num: '01', title: 'Belajar Bahasa', desc: 'Capai level N4 / JFT-Basic dan pelajari kosakata sektor tujuan.' },
-  { num: '02', title: 'Lulus Ujian', desc: 'Ikuti ujian bahasa & ujian keterampilan sektor (skill test).' },
-  { num: '03', title: 'Cari Penerima Kerja', desc: 'Dapatkan tawaran dari perusahaan Jepang atau lewat agen tersertifikasi (SO/LPK).' },
+  { num: '02', title: 'Lulus Ujian', desc: 'Ikuti ujian bahasa dan ujian keterampilan sesuai sektor.' },
+  { num: '03', title: 'Cari Perusahaan Penerima', desc: 'Dapatkan tawaran kerja dari perusahaan Jepang atau lewat agen resmi (SO/LPK).' },
   { num: '04', title: 'Kontrak & Dokumen', desc: 'Tandatangani kontrak kerja dan siapkan dokumen COE (Certificate of Eligibility).' },
   { num: '05', title: 'Visa & Berangkat', desc: 'Ajukan visa di kedutaan, ikuti orientasi pra-keberangkatan, lalu berangkat ke Jepang.' },
 ]
@@ -114,7 +114,7 @@ export default function SSWPage() {
             </h1>
             <p className="text-[15px] text-muted max-w-[620px] leading-[1.8]">
               SSW (Tokutei Ginou) adalah visa kerja Jepang untuk mengisi kekurangan tenaga kerja
-              di 14 sektor. Berikut ringkasan padat: sektor, syarat, perbedaan tingkat, dan alur prosesnya.
+              di 14 sektor. Di sini kamu bisa lihat ringkasannya: daftar sektor, syarat, perbedaan tiap tingkat, dan alur prosesnya.
             </p>
           </div>
         </section>

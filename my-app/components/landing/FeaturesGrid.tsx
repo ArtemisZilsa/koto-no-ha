@@ -6,48 +6,48 @@ const features: { icon: IconName; accent: string; bg: string; title: string; des
     icon: 'bar-chart',
     accent: 'var(--teal)',
     bg: 'var(--teal-bg)',
-    title: 'Progress Tracking Real-Time',
-    desc: 'Pantau kemajuan Kanji, Bunpo, Dokkai, dan Choukai secara terpisah. Algoritma SRS otomatis menjadwalkan ulang materi yang perlu diulang.',
-    tag: 'Kanji · Bunpo · Dokkai · Choukai',
+    title: 'Pantau Kemajuan Belajar',
+    desc: 'Lihat perkembangan Kanji, tata bahasa, membaca, dan menyimak secara terpisah. Sistem pengulangan otomatis (SRS) menjadwalkan kembali materi yang perlu kamu ulang.',
+    tag: 'Kanji · Tata Bahasa · Membaca · Menyimak',
   },
   {
     icon: 'newspaper',
     accent: 'var(--red)',
     bg: 'var(--red-bg)',
     title: 'Berita Jepang Terkini',
-    desc: 'Baca berita dari NHK Web Easy dan sumber terpercaya langsung di platform. Kosakata sulit otomatis ditandai sesuai level JLPT kamu.',
-    tag: 'Update Harian · Level-Adaptive',
+    desc: 'Baca berita dari NHK Web Easy dan sumber tepercaya langsung di sini. Kata-kata sulit otomatis ditandai sesuai level JLPT kamu.',
+    tag: 'Diperbarui Tiap Hari · Sesuai Level',
   },
   {
     icon: 'building',
     accent: 'var(--gold)',
     bg: 'var(--gold-bg)',
-    title: 'Informasi SSW & Visa Jepang',
-    desc: 'Panduan lengkap Tokutei Ginou, Gijinkoku, dan peraturan ketenagakerjaan Jepang terbaru dalam bahasa Indonesia yang mudah dipahami.',
-    tag: 'SSW · TG · Gijinkoku · Peraturan',
+    title: 'Info SSW & Visa Jepang',
+    desc: 'Panduan lengkap soal Tokutei Ginou, Gijinkoku, dan aturan kerja terbaru di Jepang, dijelaskan dengan bahasa Indonesia yang gampang dipahami.',
+    tag: 'SSW · TG · Gijinkoku · Aturan Kerja',
   },
   {
     icon: 'mic',
-    accent: 'var(--teal)',
-    bg: 'var(--teal-bg)',
-    title: 'Kaiwa Stories',
-    desc: '500+ cerita percakapan dari situasi sehari-hari hingga bisnis. Audio native speaker untuk melatih pendengaran dan intonasi alami.',
-    tag: 'Audio · Dialog · Konteks Nyata',
+    accent: 'var(--green)',
+    bg: 'var(--green-bg)',
+    title: 'Latihan Percakapan (Kaiwa)',
+    desc: 'Lebih dari 500 cerita percakapan, mulai dari obrolan sehari-hari sampai situasi bisnis. Lengkap dengan audio penutur asli untuk melatih pendengaran dan intonasi.',
+    tag: 'Audio · Dialog · Situasi Nyata',
   },
   {
     icon: 'reading',
     accent: 'var(--red)',
     bg: 'var(--red-bg)',
-    title: 'Latihan Dokkai',
-    desc: 'Teks bacaan autentik N5–N1 dengan pertanyaan pemahaman bergaya JLPT, kosakata kunci, dan penjelasan grammar yang terperinci.',
-    tag: 'N5 → N1 · JLPT-Style',
+    title: 'Latihan Membaca (Dokkai)',
+    desc: 'Bacaan asli level N5–N1 dengan soal pemahaman bergaya JLPT, kosakata penting, dan penjelasan tata bahasa yang rinci.',
+    tag: 'N5 → N1 · Gaya JLPT',
   },
   {
     icon: 'cards',
-    accent: 'var(--gold)',
-    bg: 'var(--gold-bg)',
-    title: 'Flashcard Cerdas (SRS)',
-    desc: 'Kartu Kanji dan kosakata dengan algoritma Spaced Repetition. Belajar lebih sedikit, ingat lebih lama. Dapat dikustomisasi per level.',
+    accent: 'var(--green)',
+    bg: 'var(--green-bg)',
+    title: 'Kartu Hafalan Pintar (SRS)',
+    desc: 'Kartu Kanji dan kosakata dengan sistem pengulangan terjadwal. Belajar lebih sedikit, tapi ingatannya bertahan lebih lama. Bisa diatur per level.',
     tag: 'SRS · Kanji · Kosakata',
   },
 ]
@@ -63,7 +63,7 @@ export function FeaturesGrid() {
           Semua yang Kamu Butuhkan<br />dalam Satu Tempat
         </h2>
         <p className="text-[15px] text-muted max-w-[540px] leading-[1.8] mb-12">
-          Dari latihan soal JLPT hingga percakapan bisnis level — dirancang khusus untuk pelajar Indonesia.
+          Dari latihan soal JLPT sampai percakapan bisnis — semuanya dirancang khusus untuk pelajar Indonesia.
         </p>
       </Reveal>
 
@@ -75,7 +75,7 @@ export function FeaturesGrid() {
               style={{ border: '0.5px solid var(--border)' }}
             >
               <span
-                className="inline-flex items-center justify-center w-11 h-11 rounded-xl mb-4"
+                className="glass inline-flex items-center justify-center w-11 h-11 rounded-xl mb-4"
                 style={{ background: bg, color: accent }}
               >
                 <Icon name={icon} className="w-5 h-5" />

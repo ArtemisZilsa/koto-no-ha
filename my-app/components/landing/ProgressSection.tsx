@@ -16,13 +16,13 @@ export function ProgressSection() {
         {/* Text */}
         <Reveal as="div">
           <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
-            Dashboard Belajar
+            Halaman Progres
           </p>
           <h2 className="font-serif text-[26px] md:text-[36px] font-semibold text-ink leading-[1.25] mb-4 tracking-tight">
             Lihat Kemajuanmu<br />Setiap Hari
           </h2>
           <p className="text-[15px] text-muted leading-[1.8] mb-6 max-w-[460px]">
-            Tracking terpisah untuk tiap skill. Streak harian, XP, dan laporan mingguan menjaga konsistensimu.
+            Pantau setiap kemampuan secara terpisah. Streak harian, poin XP, dan laporan mingguan membantumu tetap konsisten.
           </p>
           <Link
             href="/register"

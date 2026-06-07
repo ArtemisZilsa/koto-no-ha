@@ -6,12 +6,12 @@ const visaCards = [
     type: 'ssw',
     badge: 'SSW · 特定技能',
     title: 'Specified Skilled Worker',
-    desc: 'Visa kerja untuk sektor tertentu yang membutuhkan keahlian teknis dan kemampuan bahasa Jepang minimum N4.',
+    desc: 'Visa kerja untuk sektor tertentu yang membutuhkan keahlian teknis dan kemampuan bahasa Jepang minimal N4.',
     items: [
-      'Syarat JLPT N4 atau ujian sektoral',
-      '14 sektor industri tersedia',
-      'Durasi visa hingga 5 tahun (SSW1)',
-      'Panduan ujian sektoral tersedia',
+      'Butuh JLPT N4 atau lulus ujian keahlian sektor',
+      'Tersedia di 14 sektor industri',
+      'Masa berlaku visa hingga 5 tahun (SSW1)',
+      'Dilengkapi panduan ujian per sektor',
     ],
     accent: 'var(--red)',
     badgeBg: 'var(--red-bg)',
@@ -21,12 +21,12 @@ const visaCards = [
     type: 'tg',
     badge: 'TG2 · 特定技能2号',
     title: 'Tokutei Ginou 2 (SSW2)',
-    desc: 'Perpanjangan SSW dengan hak membawa keluarga dan durasi tidak terbatas, untuk pekerja yang memenuhi syarat.',
+    desc: 'Kelanjutan dari SSW dengan hak membawa keluarga dan masa tinggal tanpa batas, bagi pekerja yang memenuhi syarat.',
     items: [
-      'Bawa keluarga diizinkan',
-      'Perpanjangan indefinite',
-      'Syarat keahlian lebih tinggi',
-      'Jalur menuju PR (Permanent Resident)',
+      'Boleh membawa keluarga',
+      'Bisa diperpanjang tanpa batas waktu',
+      'Butuh keahlian tingkat lebih tinggi',
+      'Bisa jadi jalan menuju izin tinggal tetap',
     ],
     accent: 'var(--gold)',
     badgeBg: 'var(--gold-bg)',
@@ -36,12 +36,12 @@ const visaCards = [
     type: 'gk',
     badge: 'GK · 技人国',
     title: 'Gijutsu · Jinbunchishiki',
-    desc: 'Visa untuk insinyur, spesialis IT, dan tenaga ahli dengan kualifikasi profesional atau gelar sarjana terkait.',
+    desc: 'Visa untuk insinyur, tenaga IT, dan profesional lain yang punya keahlian khusus atau gelar sarjana terkait.',
     items: [
       'Cocok untuk lulusan IT / Teknik',
-      'Tidak ada batasan sektor',
-      'Dapat diperpanjang terus-menerus',
-      'Syarat bahasa lebih fleksibel',
+      'Tidak terbatas pada sektor tertentu',
+      'Bisa diperpanjang terus-menerus',
+      'Syarat bahasa lebih longgar',
     ],
     accent: 'var(--teal)',
     badgeBg: 'var(--teal-bg)',
@@ -60,7 +60,7 @@ export function VisaSection() {
           SSW, Tokutei Ginou & Gijinkoku<br />dalam Bahasa Indonesia
         </h2>
         <p className="text-[15px] text-muted max-w-[540px] leading-[1.8] mb-12">
-          Panduan lengkap status visa kerja di Jepang — syarat, prosedur, dan tips lulus — semuanya tersedia di platform ini.
+          Panduan lengkap soal visa kerja di Jepang — mulai dari syarat, prosedur, sampai tips agar lolos — semuanya ada di sini.
         </p>
       </Reveal>
 

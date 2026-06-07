@@ -102,17 +102,17 @@ export default async function DashboardPage() {
             {
               level: 'N4',
               name: 'Pemula',
-              subtitle: 'Perluasan Kemampuan',
+              subtitle: 'Memperluas Kemampuan',
               bgKanji: '語',
-              color: 'var(--gold)',
-              bg: 'var(--gold-bg)',
+              color: 'var(--green)',
+              bg: 'var(--green-bg)',
               href: '/learn/n4',
               counts: '200 kosakata',
             },
             {
               level: 'N3',
               name: 'Menengah',
-              subtitle: 'Penguasaan Bahasa',
+              subtitle: 'Mulai Lebih Mahir',
               bgKanji: '読',
               color: 'var(--teal)',
               bg: 'var(--teal-bg)',
@@ -122,7 +122,7 @@ export default async function DashboardPage() {
             {
               level: 'N2',
               name: 'Lanjutan',
-              subtitle: 'Penguasaan Lanjutan',
+              subtitle: 'Tingkat Lanjutan',
               bgKanji: '究',
               color: 'var(--gold)',
               bg: 'var(--gold-bg)',
@@ -132,7 +132,7 @@ export default async function DashboardPage() {
             {
               level: 'N1',
               name: 'Mahir',
-              subtitle: 'Tingkat Mahir',
+              subtitle: 'Tingkat Tertinggi',
               bgKanji: '極',
               color: 'var(--red)',
               bg: 'var(--red-bg)',
@@ -171,10 +171,10 @@ export default async function DashboardPage() {
       {/* Other sections */}
       <div className="grid grid-cols-2 gap-4">
         {([
-          { title: 'Flashcard Hari Ini', icon: 'cards' as IconName, href: '#', desc: 'Tidak ada kartu untuk direview hari ini.' },
-          { title: 'Berita Terbaru', icon: 'newspaper' as IconName, href: '/berita', desc: 'Baca artikel Jepang terbaru untuk berlatih.' },
-          { title: 'Kaiwa Stories', icon: 'mic' as IconName, href: '#', desc: 'Latihan percakapan dari situasi nyata.' },
-          { title: 'Progres Belajar', icon: 'bar-chart' as IconName, href: '#', desc: 'Lihat statistik dan perkembangan kamu.' },
+          { title: 'Kartu Hafalan Hari Ini', icon: 'cards' as IconName, href: '#', desc: 'Belum ada kartu yang perlu diulang hari ini.' },
+          { title: 'Berita Terbaru', icon: 'newspaper' as IconName, href: '/berita', desc: 'Baca artikel Jepang terbaru untuk latihan.' },
+          { title: 'Latihan Percakapan', icon: 'mic' as IconName, href: '#', desc: 'Berlatih percakapan dari situasi sehari-hari.' },
+          { title: 'Progres Belajar', icon: 'bar-chart' as IconName, href: '#', desc: 'Lihat statistik dan perkembangan belajarmu.' },
         ]).map(({ title, icon, href, desc }, i) => (
           <Reveal key={title} delay={(i % 2) * 80}>
           <Link

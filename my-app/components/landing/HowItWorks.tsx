@@ -4,17 +4,17 @@ const steps = [
   {
     num: '01',
     title: 'Tentukan Level & Tujuan',
-    desc: 'Mulai dari placement test singkat atau pilih level langsung. Platform membuat jalur belajar yang dipersonalisasi berdasarkan target kamu.',
+    desc: 'Ikuti tes penempatan singkat atau langsung pilih level. Sistem akan menyusun jalur belajar yang sesuai dengan targetmu.',
   },
   {
     num: '02',
-    title: 'Belajar dengan Sistem Terstruktur',
-    desc: 'Ikuti lesson, latihan soal, dan kaiwa stories secara berurutan. Flashcard SRS memastikan kamu tidak lupa materi yang sudah dipelajari.',
+    title: 'Belajar Secara Bertahap',
+    desc: 'Kerjakan materi, latihan soal, dan percakapan secara berurutan. Kartu hafalan (SRS) memastikan kamu tidak lupa apa yang sudah dipelajari.',
   },
   {
     num: '03',
-    title: 'Pantau & Tingkatkan Terus',
-    desc: 'Dashboard tracking menunjukkan persis di mana kamu perlu fokus. Target mingguan dan streak harian menjaga konsistensi belajarmu.',
+    title: 'Pantau & Terus Berkembang',
+    desc: 'Halaman progres menunjukkan dengan jelas bagian mana yang perlu kamu perkuat. Target mingguan dan streak harian menjaga semangat belajarmu.',
   },
 ]
 

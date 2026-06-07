@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google'
 import './globals.css'
 import { ThemeScript } from '@/components/theme/ThemeScript'
-import { SakuraPetals } from '@/components/effects/SakuraPetals'
+import { AmbientEffects } from '@/components/effects/AmbientEffects'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -59,7 +59,7 @@ export default function RootLayout({
         <ThemeScript />
       </head>
       <body className="min-h-screen">
-        <SakuraPetals />
+        <AmbientEffects />
         {children}
       </body>
     </html>

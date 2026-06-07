@@ -46,7 +46,7 @@ export function NewsSection() {
           Belajar dari Berita Jepang Asli
         </h2>
         <p className="text-[15px] text-muted max-w-[540px] leading-[1.8] mb-12">
-          Artikel dari NHK Web Easy. Kata sulit otomatis ditandai sesuai level JLPT kamu untuk belajar secara kontekstual.
+          Artikel dari NHK Web Easy. Kata-kata sulit otomatis ditandai sesuai level JLPT kamu, jadi kamu bisa belajar langsung dari konteksnya.
         </p>
       </Reveal>
 

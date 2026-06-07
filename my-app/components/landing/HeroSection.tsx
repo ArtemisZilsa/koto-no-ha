@@ -15,6 +15,9 @@ export function HeroSection() {
         overlay={0.8}
       />
 
+      {/* Kabut gradien bergerak (aurora) — termasuk nuansa hijau */}
+      <div className="aurora" aria-hidden="true" />
+
       {/* Latar grid halus (gaya background-animation modern, opacity rendah) */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -42,11 +45,8 @@ export function HeroSection() {
         {/* Badge */}
         <Reveal delay={0}>
           <div
-            className="inline-flex items-center gap-2 text-[11px] tracking-[0.09em] uppercase mb-8 px-3 py-1 rounded-full"
-            style={{
-              color: 'var(--red)',
-              border: '0.5px solid rgba(200,16,46,0.3)',
-            }}
+            className="glass inline-flex items-center gap-2 text-[11px] tracking-[0.09em] uppercase mb-8 px-3.5 py-1.5 rounded-full"
+            style={{ color: 'var(--red)' }}
           >
             <span className="w-1.5 h-1.5 rounded-full animate-pulse-dot" style={{ background: 'var(--red)' }} />
             Platform Bahasa Jepang · Untuk Indonesia
@@ -68,9 +68,9 @@ export function HeroSection() {
         </Reveal>
         <Reveal delay={220}>
           <p className="text-[15px] text-muted leading-[1.8] mb-9 max-w-[460px]">
-            Dari N5 hingga N1, dari SSW hingga level bisnis — pelajari bahasa Jepang
-            dengan metode terstruktur, interaktif, dan dirancang untuk orang Indonesia
-            yang ingin benar-benar fasih.
+            Dari N5 sampai N1, dari SSW sampai level bisnis — belajar bahasa Jepang
+            secara terstruktur dan interaktif, dirancang khusus untuk orang Indonesia
+            yang ingin benar-benar lancar.
           </p>
         </Reveal>
 
@@ -88,7 +88,7 @@ export function HeroSection() {
               className="inline-flex items-center gap-2 text-sm px-6 py-3.5 rounded-lg border text-ink hover:bg-paper-dark transition-colors"
               style={{ borderColor: 'var(--border)' }}
             >
-              <Icon name="play" className="w-3.5 h-3.5" /> Lihat Demo
+              <Icon name="play" className="w-3.5 h-3.5" /> Lihat Contoh
             </Link>
           </div>
         </Reveal>

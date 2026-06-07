@@ -7,6 +7,9 @@ export function CTASection() {
       className="px-5 md:px-12 py-16 md:py-24 text-center relative overflow-hidden"
       style={{ background: 'var(--ink-surface)' }}
     >
+      {/* Kabut gradien bergerak (aurora, nuansa hijau) di latar gelap */}
+      <div className="aurora" aria-hidden="true" style={{ opacity: 0.5 }} />
+
       {/* Background character — ditulis ala sumi-e */}
       <AnimatedKanji
         char="言"
@@ -20,7 +23,7 @@ export function CTASection() {
         Mulai Perjalananmu Hari Ini
       </h2>
       <p className="text-[15px] mb-9 relative" style={{ color: 'var(--on-ink-muted)' }}>
-        Gratis untuk fitur dasar. Upgrade kapan saja.
+        Fitur dasar gratis selamanya. Tingkatkan ke versi lengkap kapan saja.
       </p>
       <Link
         href="/register"

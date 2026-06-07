@@ -18,6 +18,10 @@
   --gold-bg: #f9f0e0;
   --teal: #1a6b6b;
   --teal-bg: #e3f0f0;
+  /* — Aksen hijau (matcha/bambu) — */
+  --green: #2f7d4f;
+  --green-bg: #e6f1e8;
+  --green-soft: #5aa676;
   --text: #1a1a22;
   --muted: #6b6b7a;
   --border: rgba(13, 13, 18, 0.1);
@@ -51,6 +55,10 @@ html.dark {
   --gold-bg: #2a2218;
   --teal: #3da3a3;
   --teal-bg: #142525;
+  /* — Aksen hijau (matcha) di malam hari — */
+  --green: #5cbf85;
+  --green-bg: #142a1c;
+  --green-soft: #7fd0a0;
   --text: #e8e2d4;
   --muted: #8c8a86;
   --border: rgba(240, 235, 224, 0.12);
@@ -88,6 +96,8 @@ html.dark { color-scheme: dark; }
   --color-gold-bg: var(--gold-bg);
   --color-teal: var(--teal);
   --color-teal-bg: var(--teal-bg);
+  --color-green: var(--green);
+  --color-green-bg: var(--green-bg);
   --color-koto-text: var(--text);
   --color-muted: var(--muted);
   --color-surface: var(--surface);
@@ -180,6 +190,130 @@ body {
     transform: translateY(110vh) translateX(-20px) rotate(360deg);
     opacity: 0;
   }
+}
+
+/* — Layer efek umum (dipakai sakura/maple/fireflies) — */
+.fx-layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 40;
+}
+
+/* — Momiji (紅葉) — daun maple jatuh — */
+.maple-leaf {
+  position: absolute;
+  top: -8%;
+  width: 14px;
+  height: 14px;
+  opacity: 0.4;
+  will-change: transform;
+  /* Bentuk daun maple via clip-path bintang lima-runcing */
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background: linear-gradient(135deg, var(--gold) 0%, var(--red) 100%);
+  animation-name: maple-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes maple-fall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 0.5; }
+  50% { transform: translateY(45vh) translateX(-50px) rotate(200deg); }
+  90% { opacity: 0.5; }
+  100% {
+    transform: translateY(110vh) translateX(30px) rotate(400deg);
+    opacity: 0;
+  }
+}
+
+/* — Hotaru (蛍) — kunang-kunang / partikel cahaya mengambang — */
+.firefly {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  background: var(--green-soft);
+  box-shadow: 0 0 8px 2px color-mix(in srgb, var(--green-soft) 70%, transparent);
+  opacity: 0;
+  will-change: transform, opacity;
+  animation-name: firefly-drift, firefly-glow;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+}
+@keyframes firefly-drift {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(24px, -30px); }
+  50%  { transform: translate(-18px, -54px); }
+  75%  { transform: translate(30px, -84px); }
+  100% { transform: translate(0, -110px); }
+}
+@keyframes firefly-glow {
+  0%, 100% { opacity: 0; }
+  20%, 80% { opacity: 0.85; }
+  50% { opacity: 0.3; }
+}
+
+/* — Aurora / kabut gradien bergerak (latar dekoratif, termasuk hijau) — */
+.aurora {
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  background:
+    radial-gradient(40% 50% at 20% 30%, color-mix(in srgb, var(--green) 26%, transparent) 0%, transparent 60%),
+    radial-gradient(45% 55% at 80% 25%, color-mix(in srgb, var(--teal) 22%, transparent) 0%, transparent 60%),
+    radial-gradient(50% 50% at 60% 80%, color-mix(in srgb, var(--gold) 18%, transparent) 0%, transparent 60%);
+  filter: blur(40px);
+  opacity: 0.7;
+  will-change: transform;
+  animation: aurora-drift 24s ease-in-out infinite alternate;
+}
+@keyframes aurora-drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(3%, -2%, 0) scale(1.08); }
+  100% { transform: translate3d(-3%, 2%, 0) scale(1.04); }
+}
+
+/* — Liquid Glass: kaca cair (blur + transparansi + kilau tepi) — */
+.glass {
+  background: color-mix(in srgb, var(--surface) 55%, transparent);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+  box-shadow:
+    0 8px 32px rgba(13, 13, 18, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+html.dark .glass {
+  background: color-mix(in srgb, var(--surface) 50%, transparent);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+/* Kilau cair yang menyapu pelan di permukaan kaca */
+.glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.12) 48%, transparent 66%);
+  background-size: 250% 100%;
+  animation: glass-sheen 9s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes glass-sheen {
+  0%, 100% { background-position: 180% 0; }
+  50% { background-position: -80% 0; }
+}
+
+/* — Utility gradasi hijau (untuk teks/aksen) — */
+.green-gradient {
+  background-image: linear-gradient(120deg, var(--green) 0%, var(--teal) 55%, var(--green-soft) 100%);
 }
 
 /* ============================================================
@@ -319,7 +453,15 @@ html.dark .hover-lift:hover {
 
 /* Hormati preferensi gerak berkurang — matikan animasi & sembunyikan */
 @media (prefers-reduced-motion: reduce) {
-  .sakura-layer {
+  .sakura-layer,
+  .fx-layer {
+    display: none;
+  }
+  .aurora {
+    animation: none;
+  }
+  .glass::after {
+    animation: none;
     display: none;
   }
   .reveal,
