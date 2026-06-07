@@ -35,15 +35,18 @@ export async function toggleItemKnown(
   }
 
   if (next) {
-    // Cast: tipe Database hand-maintained belum punya generic Functions lengkap
-    // untuk inferensi rpc supabase-js. Argumen & hasil tetap divalidasi di RPC.
+    // Cast pada CLIENT (bukan metode rpc) supaya `this` tetap terikat ke client.
+    // Tipe Database hand-maintained belum punya generic Functions lengkap untuk
+    // inferensi rpc supabase-js; argumen & hasil tetap divalidasi di dalam RPC.
     type MarkKnownRow = { known: boolean; total_xp: number; streak_days: number }
-    const rpc = supabase.rpc as unknown as (
-      fn: 'mark_item_known',
-      args: { p_item_type: ItemType; p_item_id: string; p_xp: number },
-    ) => Promise<{ data: MarkKnownRow[] | null; error: { message: string } | null }>
+    const db = supabase as unknown as {
+      rpc: (
+        fn: 'mark_item_known',
+        args: { p_item_type: ItemType; p_item_id: string; p_xp: number },
+      ) => Promise<{ data: MarkKnownRow[] | null; error: { message: string } | null }>
+    }
 
-    const { data, error } = await rpc('mark_item_known', {
+    const { data, error } = await db.rpc('mark_item_known', {
       p_item_type: itemType,
       p_item_id: itemId,
       p_xp: 5,
