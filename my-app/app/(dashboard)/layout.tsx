@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { logout } from '@/app/actions/auth'
 import ThemeToggle from '@/components/theme/ThemeToggle'
+import AnimationToggle from '@/components/theme/AnimationToggle'
 
 export default async function DashboardLayout({
   children,
@@ -62,6 +63,7 @@ export default async function DashboardLayout({
             ))}
           </div>
           <ThemeToggle />
+          <AnimationToggle />
           <span className="text-[12px] hidden md:inline" style={{ color: 'var(--muted)' }}>{user.email}</span>
           <form action={logout}>
             <button

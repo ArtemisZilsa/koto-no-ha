@@ -4,6 +4,8 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { logout } from '@/app/actions/auth'
 import type { User } from '@supabase/supabase-js'
+import ThemeToggle from '@/components/theme/ThemeToggle'
+import AnimationToggle from '@/components/theme/AnimationToggle'
 
 interface NavClientProps {
   user: User | null
@@ -51,8 +53,10 @@ export function NavClient({ user }: NavClientProps) {
         ))}
       </ul>
 
-      {/* Auth buttons */}
+      {/* Auth buttons + toggle tema & animasi */}
       <div className="hidden md:flex items-center gap-2">
+        <ThemeToggle />
+        <AnimationToggle />
         {user ? (
           <>
             <Link
@@ -123,7 +127,15 @@ export function NavClient({ user }: NavClientProps) {
               {label}
             </Link>
           ))}
-          <div className="flex gap-2 pt-2 border-t" style={{ borderColor: 'var(--border)' }}>
+          {/* Toggle tampilan: tema & animasi */}
+          <div className="flex items-center justify-between pt-2 border-t" style={{ borderColor: 'var(--border)' }}>
+            <span className="text-sm text-muted">Tampilan</span>
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <AnimationToggle />
+            </div>
+          </div>
+          <div className="flex gap-2 pt-1">
             <Link href="/login" className="flex-1 text-center text-sm py-2 rounded-lg border text-ink" style={{ borderColor: 'var(--border)' }}>
               Masuk
             </Link>

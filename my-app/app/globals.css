@@ -502,6 +502,30 @@ html.dark .hover-lift:hover {
   }
 }
 
+/* — Matikan animasi via toggle pengguna (class di <html>) —
+   Setara dengan prefers-reduced-motion, tapi dikontrol manual. — */
+html.no-anim .sakura-layer,
+html.no-anim .fx-layer {
+  display: none;
+}
+html.no-anim .aurora { animation: none; }
+html.no-anim .glass::after { animation: none; display: none; }
+html.no-anim .reveal,
+html.no-anim .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+html.no-anim .kanji-stroke { stroke-dashoffset: 0; animation: none; }
+html.no-anim .kanji-fill { opacity: var(--kanji-fill-opacity, 1); animation: none; }
+html.no-anim .text-sweep { animation: none; }
+html.no-anim .float-soft { animation: none; }
+html.no-anim .hero-photo { animation: none; }
+html.no-anim .hover-lift { transition: box-shadow 200ms ease; }
+html.no-anim .hover-lift:hover { transform: none; }
+html.no-anim .animate-pulse-dot { animation: none; }
+html.no-anim .progress-fill { transition: none; width: var(--bar-w, 0%); }
+
 /* — Sumi-e ink stroke utility: pakai dengan <hr> atau divider element — */
 .ink-stroke {
   height: 1px;
