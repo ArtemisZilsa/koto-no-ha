@@ -11,41 +11,38 @@ interface KanjiGridProps {
 export default function KanjiGrid({ kanji, accentColor, knownIds }: KanjiGridProps) {
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {kanji.map((entry) => (
+      {kanji.map((entry, idx) => (
         <div
-          key={entry.kanji}
-          className="rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200"
+          key={entry.id ?? entry.kanji}
+          className="rounded-2xl overflow-hidden shadow-sm hover-lift"
           style={{ border: '0.5px solid var(--border)' }}
         >
-          {/* Top – dark kanji display */}
+          {/* Top – panel kanji bergradien (hijau/biru bergantian), teks kontras tinggi */}
           <div
-            className="relative flex flex-col items-center justify-center py-6 px-4"
-            style={{ background: 'var(--ink)' }}
+            className={`kanji-panel ${idx % 2 === 0 ? 'kanji-panel-green' : 'kanji-panel-blue'} relative flex flex-col items-center justify-center py-7 px-4`}
           >
-            {/* Stroke count badge */}
+            {/* Stroke count badge — kaca tipis agar terbaca di atas gradien */}
             <span
-              className="absolute top-3 right-3 text-[10px] px-2 py-0.5 rounded-full font-sans"
+              className="absolute top-3 right-3 z-10 text-[10px] px-2 py-0.5 rounded-full font-sans font-medium"
               style={{
-                background: `${accentColor}30`,
-                color: accentColor,
-                border: `0.5px solid ${accentColor}60`,
+                background: 'rgba(255,255,255,0.18)',
+                color: '#ffffff',
+                border: '0.5px solid rgba(255,255,255,0.35)',
+                backdropFilter: 'blur(4px)',
               }}
             >
               {entry.strokeCount} goresan
             </span>
 
-            {/* Big kanji */}
-            <span
-              className="font-serif leading-none select-none"
-              style={{ fontSize: '72px', color: 'var(--paper)' }}
-            >
+            {/* Big kanji — selalu putih + bayangan agar jelas */}
+            <span className="kanji-glyph font-serif leading-none select-none relative z-10" style={{ fontSize: '72px' }}>
               {entry.kanji}
             </span>
 
             {/* JLPT badge */}
             <span
-              className="mt-2 text-[10px] tracking-widest uppercase"
-              style={{ color: `${accentColor}cc` }}
+              className="relative z-10 mt-2 text-[10px] tracking-widest uppercase font-medium"
+              style={{ color: 'rgba(255,255,255,0.85)' }}
             >
               {entry.jlptLevel}
             </span>

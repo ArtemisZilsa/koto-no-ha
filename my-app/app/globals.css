@@ -277,6 +277,51 @@ body {
   100% { transform: translate3d(-3%, 2%, 0) scale(1.04); }
 }
 
+/* — Panel kanji bergradien (hijau / biru) dgn teks kontras tinggi — */
+.kanji-panel {
+  position: relative;
+  overflow: hidden;
+  background-size: 180% 180%;
+  animation: kanji-gradient 10s ease infinite;
+}
+.kanji-panel-green {
+  background-image: linear-gradient(135deg, #0f5132 0%, #2f7d4f 45%, #1a6b6b 100%);
+}
+.kanji-panel-blue {
+  background-image: linear-gradient(135deg, #15314f 0%, #1f6f8b 50%, #2f7d8f 100%);
+}
+@keyframes kanji-gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+/* Teks kanji selalu terang & kontras di atas gradien (light & dark). */
+.kanji-glyph {
+  color: #ffffff;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+/* Kilau menyapu (gaya 21st.dev) di permukaan panel kanji. */
+.kanji-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.18) 50%, transparent 65%);
+  background-size: 250% 100%;
+  animation: kanji-sheen 6s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes kanji-sheen {
+  0%, 100% { background-position: 160% 0; }
+  50% { background-position: -60% 0; }
+}
+/* Kanji muncul (pop-in) saat kartu masuk viewport — sekali. */
+@keyframes glyph-pop {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+.kanji-glyph {
+  animation: glyph-pop 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 /* — Liquid Glass: kaca cair (blur + transparansi + kilau tepi) — */
 .glass {
   background: color-mix(in srgb, var(--surface) 55%, transparent);
@@ -464,6 +509,9 @@ html.dark .hover-lift:hover {
     animation: none;
     display: none;
   }
+  .kanji-panel { animation: none; }
+  .kanji-panel::after { animation: none; display: none; }
+  .kanji-glyph { animation: none; opacity: 1; transform: none; }
   .reveal,
   .reveal.is-visible {
     opacity: 1;
@@ -510,6 +558,9 @@ html.no-anim .fx-layer {
 }
 html.no-anim .aurora { animation: none; }
 html.no-anim .glass::after { animation: none; display: none; }
+html.no-anim .kanji-panel { animation: none; }
+html.no-anim .kanji-panel::after { animation: none; display: none; }
+html.no-anim .kanji-glyph { animation: none; opacity: 1; transform: none; }
 html.no-anim .reveal,
 html.no-anim .reveal.is-visible {
   opacity: 1;
