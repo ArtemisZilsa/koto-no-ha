@@ -74,7 +74,7 @@ export function AnimatedKanji({
     >
       {/* Sapuan kuas tinta yang "digambar" di belakang kanji */}
       <svg
-        className="absolute inset-0 w-full h-full overflow-visible"
+        className="absolute inset-0 w-full h-full"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
         style={{ color, opacity: 0.18, ...vars }}

@@ -29,12 +29,13 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      {/* Kanji beranimasi (digambar ala sumi-e) */}
+      {/* Kanji beranimasi (digambar ala sumi-e) — hanya tampil di layar lebar
+          agar tidak meluber & memicu scroll horizontal di HP */}
       <AnimatedKanji
         char="学"
-        fontSize="clamp(200px, 45vw, 360px)"
+        fontSize="clamp(220px, 32vw, 360px)"
         fillOpacity={0.05}
-        className="absolute top-1/2 right-[-2%] -translate-y-1/2 float-soft"
+        className="hidden md:block absolute top-1/2 right-0 -translate-y-1/2 float-soft max-w-[45vw]"
       />
 
       <div className="relative z-10 max-w-[580px]">
@@ -75,7 +76,7 @@ export function HeroSection() {
 
         {/* CTA buttons */}
         <Reveal delay={290}>
-          <div className="flex items-center gap-3 mb-12">
+          <div className="flex flex-wrap items-center gap-3 mb-12">
             <Link
               href="/register"
               className="text-sm font-medium px-8 py-3.5 rounded-lg bg-ink text-paper hover:opacity-90 hover:-translate-y-px transition-all"
@@ -94,7 +95,7 @@ export function HeroSection() {
 
         {/* Stats */}
         <Reveal delay={360}>
-          <div className="flex gap-9">
+          <div className="flex flex-wrap gap-x-9 gap-y-4">
             {[
               { num: '12K+', label: 'Pengguna Aktif' },
               { num: '8 Level', label: 'N5 hingga Bisnis' },
