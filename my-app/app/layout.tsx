@@ -32,6 +32,10 @@ export const metadata: Metadata = {
     statusBarStyle: 'default',
     title: 'Koto no Ha',
   },
+  // Verifikasi kepemilikan situs untuk Google Search Console.
+  verification: {
+    google: 'UNkyFGw554wUmbQ5wLhqomwWir47S8dJjA55BLlPvEQ',
+  },
 }
 
 export const viewport: Viewport = {
