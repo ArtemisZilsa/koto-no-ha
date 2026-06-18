@@ -39,6 +39,7 @@ export function NavClient({ user }: NavClientProps) {
           { href: '/#fitur', label: 'Belajar' },
           { href: '/#level', label: 'Level' },
           { href: '/kaiwa', label: 'Kaiwa' },
+          { href: '/quiz', label: 'Kuis' },
           { href: '/ssw', label: 'SSW / TG' },
           { href: '/berita', label: 'Berita' },
         ].map(({ href, label }) => (

@@ -1,7 +1,17 @@
+import Link from 'next/link'
 import { Icon, type IconName } from '@/components/ui/Icon'
 import { Reveal } from '@/components/ui/Reveal'
 
-const features: { icon: IconName; accent: string; bg: string; title: string; desc: string; tag: string }[] = [
+const features: { icon: IconName; accent: string; bg: string; title: string; desc: string; tag: string; href?: string }[] = [
+  {
+    icon: 'play',
+    accent: 'var(--gold)',
+    bg: 'var(--gold-bg)',
+    title: 'Kuis Kanji Interaktif',
+    desc: 'Uji hafalan Kanji lewat kuis pilihan ganda yang seru: 10 soal, timer, streak, dan confetti. Kumpulkan XP yang langsung masuk ke akunmu.',
+    tag: 'Main Sekarang →',
+    href: '/quiz',
+  },
   {
     icon: 'bar-chart',
     accent: 'var(--teal)',
@@ -68,12 +78,9 @@ export function FeaturesGrid() {
       </Reveal>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
-        {features.map(({ icon, accent, bg, title, desc, tag }, i) => (
-          <Reveal key={title} delay={(i % 3) * 80}>
-            <div
-              className="bg-surface rounded-xl p-6 hover-lift h-full"
-              style={{ border: '0.5px solid var(--border)' }}
-            >
+        {features.map(({ icon, accent, bg, title, desc, tag, href }, i) => {
+          const inner = (
+            <>
               <span
                 className="glass inline-flex items-center justify-center w-11 h-11 rounded-xl mb-4"
                 style={{ background: bg, color: accent }}
@@ -92,9 +99,26 @@ export function FeaturesGrid() {
               >
                 {tag}
               </span>
-            </div>
-          </Reveal>
-        ))}
+            </>
+          )
+          return (
+            <Reveal key={title} delay={(i % 3) * 80}>
+              {href ? (
+                <Link
+                  href={href}
+                  className="block bg-surface rounded-xl p-6 hover-lift h-full no-underline cursor-pointer"
+                  style={{ border: `0.5px solid ${accent}40` }}
+                >
+                  {inner}
+                </Link>
+              ) : (
+                <div className="bg-surface rounded-xl p-6 hover-lift h-full" style={{ border: '0.5px solid var(--border)' }}>
+                  {inner}
+                </div>
+              )}
+            </Reveal>
+          )
+        })}
       </div>
     </section>
   )
