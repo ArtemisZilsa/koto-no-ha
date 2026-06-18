@@ -2,6 +2,14 @@
 'use server'
 
 import { createClient } from '@/lib/supabase/server'
+import { getQuizPool } from '@/lib/data/queries'
+import type { QuizItem, QuizMode } from '@/lib/data/quiz'
+import type { JLPTLevel } from '@/lib/data/types'
+
+/** Ambil kolam item kuis (kanji/kosakata) dari DB sesuai mode & level. */
+export async function loadQuizPool(mode: QuizMode, level: JLPTLevel): Promise<QuizItem[]> {
+  return getQuizPool(mode, level)
+}
 
 export interface AwardXpResult {
   /** true bila XP berhasil disimpan ke akun (user login). */

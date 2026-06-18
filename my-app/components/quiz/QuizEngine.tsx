@@ -3,7 +3,8 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { pickQuizSet, buildOptions, type QuizKanji } from '@/lib/data/quizKanji'
+import { buildRounds, MODE_LABEL, type QuizItem, type QuizMode, type QuizRound } from '@/lib/data/quiz'
+import type { JLPTLevel } from '@/lib/data/types'
 import type { AwardXpResult } from '@/app/actions/quiz'
 import TimerBar from './TimerBar'
 import StreakCounter from './StreakCounter'
@@ -19,14 +20,13 @@ const STREAK_MULT_AT = 3
 const STREAK_MULT = 1.5
 const FEEDBACK_MS = 1500
 
-interface Round {
-  kanji: QuizKanji
-  options: QuizKanji[]
-}
-
-interface KanjiQuizProps {
+interface QuizEngineProps {
+  pool: QuizItem[]
+  mode: QuizMode
+  level: JLPTLevel
   isLoggedIn: boolean
   awardAction: (xp: number) => Promise<AwardXpResult>
+  onExit: () => void
 }
 
 function isReducedMotion(): boolean {
@@ -37,13 +37,17 @@ function isReducedMotion(): boolean {
   )
 }
 
-function makeRounds(): Round[] {
-  return pickQuizSet(TOTAL_Q).map((k) => ({ kanji: k, options: buildOptions(k) }))
+function promptFontSize(len: number): number {
+  if (len <= 1) return 84
+  if (len <= 2) return 72
+  if (len <= 3) return 56
+  if (len <= 5) return 42
+  return 32
 }
 
-export default function KanjiQuiz({ isLoggedIn, awardAction }: KanjiQuizProps) {
+export default function QuizEngine({ pool, mode, level, isLoggedIn, awardAction, onExit }: QuizEngineProps) {
   const [reduced, setReduced] = useState(false)
-  const [rounds, setRounds] = useState<Round[]>([])
+  const [rounds, setRounds] = useState<QuizRound[]>([])
   const [index, setIndex] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
   const [answered, setAnswered] = useState(false)
@@ -60,11 +64,10 @@ export default function KanjiQuiz({ isLoggedIn, awardAction }: KanjiQuizProps) {
   const advanceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const answerRef = useRef<(id: string | null) => void>(() => {})
 
-  // Inisialisasi di klien (random → hindari mismatch hydration).
   useEffect(() => {
     setReduced(isReducedMotion())
-    setRounds(makeRounds())
-  }, [])
+    setRounds(buildRounds(pool, TOTAL_Q))
+  }, [pool])
 
   const round = rounds[index]
 
@@ -92,7 +95,7 @@ export default function KanjiQuiz({ isLoggedIn, awardAction }: KanjiQuizProps) {
       setSelected(pickedId)
 
       const elapsed = (performance.now() - startRef.current) / 1000
-      const isCorrect = pickedId === round.kanji.id
+      const isCorrect = pickedId === round.item.id
 
       let gained = 0
       if (isCorrect) {
@@ -121,12 +124,10 @@ export default function KanjiQuiz({ isLoggedIn, awardAction }: KanjiQuizProps) {
     [answered, round, streak, xp, index, rounds.length, finish],
   )
 
-  // Selalu pegang versi terbaru untuk dipanggil dari rAF.
   useEffect(() => {
     answerRef.current = handleAnswer
   }, [handleAnswer])
 
-  // Timer per soal (requestAnimationFrame).
   useEffect(() => {
     if (!round || done || answered) return
     startRef.current = performance.now()
@@ -136,7 +137,7 @@ export default function KanjiQuiz({ isLoggedIn, awardAction }: KanjiQuizProps) {
       const f = Math.max(0, 1 - elapsed / TIME_PER_Q)
       setFraction(f)
       if (f <= 0) {
-        answerRef.current(null) // waktu habis = salah
+        answerRef.current(null)
         return
       }
       rafRef.current = requestAnimationFrame(tick)
@@ -147,14 +148,13 @@ export default function KanjiQuiz({ isLoggedIn, awardAction }: KanjiQuizProps) {
     }
   }, [index, round, done, answered])
 
-  // Bersih-bersih timeout saat unmount.
   useEffect(() => () => {
     if (advanceRef.current) clearTimeout(advanceRef.current)
   }, [])
 
   const retry = useCallback(() => {
     if (advanceRef.current) clearTimeout(advanceRef.current)
-    setRounds(makeRounds())
+    setRounds(buildRounds(pool, TOTAL_Q))
     setIndex(0)
     setSelected(null)
     setAnswered(false)
@@ -165,9 +165,8 @@ export default function KanjiQuiz({ isLoggedIn, awardAction }: KanjiQuizProps) {
     setDone(false)
     setAward(null)
     setFraction(1)
-  }, [])
+  }, [pool])
 
-  // Loading (sebelum rounds siap di klien)
   if (rounds.length === 0) {
     return (
       <div className="w-full max-w-[480px] mx-auto h-[420px] rounded-2xl animate-pulse" style={{ background: 'var(--surface)', border: '0.5px solid var(--border)' }} />
@@ -187,24 +186,31 @@ export default function KanjiQuiz({ isLoggedIn, awardAction }: KanjiQuizProps) {
         savedStreak={award?.streakDays}
         reduced={reduced}
         onRetry={retry}
+        onExit={onExit}
       />
     )
   }
 
-  const optionState = (o: QuizKanji): OptionState => {
+  const optionState = (o: QuizItem): OptionState => {
     if (!answered || !round) return 'idle'
-    if (o.id === round.kanji.id) return selected === o.id ? 'correct' : 'revealCorrect'
+    if (o.id === round.item.id) return selected === o.id ? 'correct' : 'revealCorrect'
     if (o.id === selected) return 'wrong'
     return 'idle'
   }
 
+  const promptLabel = mode === 'kanji' ? 'Apa arti kanji ini?' : 'Apa arti kata ini?'
+
   return (
     <div className="w-full max-w-[480px] mx-auto">
-      {/* Header: progress + XP */}
+      {/* Header */}
       <div className="flex items-center justify-between mb-2.5">
-        <span className="text-[12px] text-muted">
-          Soal <span className="font-semibold text-ink tabular-nums">{index + 1}</span> dari {rounds.length}
-        </span>
+        <button
+          type="button"
+          onClick={onExit}
+          className="text-[12px] text-muted hover:text-koto-text transition-colors cursor-pointer"
+        >
+          ← {MODE_LABEL[mode].id} · {level}
+        </button>
         <div className="flex items-center gap-3">
           <StreakCounter streak={streak} reduced={reduced} />
           <div className="inline-flex items-center gap-1 text-[12px]" style={{ color: 'var(--gold)' }}>
@@ -222,6 +228,12 @@ export default function KanjiQuiz({ isLoggedIn, awardAction }: KanjiQuizProps) {
         </div>
       </div>
 
+      <div className="flex items-center justify-between mb-2 text-[12px] text-muted">
+        <span>
+          Soal <span className="font-semibold text-ink tabular-nums">{index + 1}</span> dari {rounds.length}
+        </span>
+      </div>
+
       <div className="mb-4">
         <TimerBar fraction={fraction} reduced={reduced} />
       </div>
@@ -237,28 +249,29 @@ export default function KanjiQuiz({ isLoggedIn, awardAction }: KanjiQuizProps) {
           className="relative rounded-2xl p-7 mb-4"
           style={{ background: 'var(--surface)', border: '0.5px solid var(--border)', boxShadow: 'var(--shadow-card)' }}
         >
-          {/* Level badge */}
           <span
             className="absolute top-3.5 right-3.5 text-[10px] font-medium px-2.5 py-0.5 rounded-full"
             style={{ background: 'var(--gold-bg)', color: 'var(--gold)' }}
           >
-            {round.kanji.level}
+            {round.item.level}
           </span>
 
-          {/* Kanji + furigana + romaji */}
           <div className="text-center py-3 select-none">
             <div className="text-[13px] mb-1" style={{ color: 'var(--muted)' }}>
-              {round.kanji.furigana}
+              {round.item.reading}
             </div>
-            <div className="font-serif font-semibold text-ink leading-none" style={{ fontSize: '84px' }}>
-              {round.kanji.kanji}
+            <div
+              className="font-serif font-semibold text-ink leading-none break-all"
+              style={{ fontSize: `${promptFontSize(round.item.prompt.length)}px` }}
+            >
+              {round.item.prompt}
             </div>
             <div className="text-[12px] tracking-wide mt-2" style={{ color: 'var(--gold)' }}>
-              {round.kanji.romaji}
+              {round.item.romaji}
             </div>
           </div>
           <p className="text-center text-[12.5px] mt-1" style={{ color: 'var(--muted)' }}>
-            Apa arti kanji ini?
+            {promptLabel}
           </p>
         </motion.div>
       </AnimatePresence>

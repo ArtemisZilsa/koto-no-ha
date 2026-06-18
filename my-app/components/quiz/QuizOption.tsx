@@ -4,12 +4,12 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 import confetti from 'canvas-confetti'
-import type { QuizKanji } from '@/lib/data/quizKanji'
+import type { QuizItem } from '@/lib/data/quiz'
 
 export type OptionState = 'idle' | 'correct' | 'wrong' | 'revealCorrect'
 
 interface QuizOptionProps {
-  option: QuizKanji
+  option: QuizItem
   state: OptionState
   disabled: boolean
   reduced?: boolean

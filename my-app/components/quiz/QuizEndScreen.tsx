@@ -18,6 +18,7 @@ interface QuizEndScreenProps {
   savedStreak?: number
   reduced?: boolean
   onRetry: () => void
+  onExit?: () => void
 }
 
 const CONFETTI_COLORS = ['#c9963c', '#2f7d4f', '#c8102e', '#d4a957']
@@ -35,6 +36,7 @@ export default function QuizEndScreen({
   savedStreak,
   reduced,
   onRetry,
+  onExit,
 }: QuizEndScreenProps) {
   const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0
   const [shownXp, setShownXp] = useState(reduced ? totalXp : 0)
@@ -151,12 +153,20 @@ export default function QuizEndScreen({
         >
           <Icon name="play" className="w-4 h-4" /> Coba Lagi
         </button>
-        <Link
-          href="/dashboard"
-          className="text-[14px] px-5 py-2.5 rounded-xl no-underline text-ink hover:bg-paper-dark transition-colors"
-          style={{ border: '0.5px solid var(--border)' }}
-        >
-          Dashboard
+        {onExit && (
+          <button
+            type="button"
+            onClick={onExit}
+            className="text-[14px] px-5 py-2.5 rounded-xl cursor-pointer text-ink hover:bg-paper-dark transition-colors"
+            style={{ border: '0.5px solid var(--border)' }}
+          >
+            Ganti Level
+          </button>
+        )}
+      </div>
+      <div className="mt-3">
+        <Link href="/dashboard" className="text-[12px] text-muted no-underline hover:text-koto-text transition-colors">
+          Ke Dashboard
         </Link>
       </div>
     </motion.div>

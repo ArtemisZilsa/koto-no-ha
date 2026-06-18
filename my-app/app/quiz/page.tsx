@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 import { Nav } from '@/components/nav/Nav'
 import { Footer } from '@/components/landing/Footer'
 import { createClient } from '@/lib/supabase/server'
-import KanjiQuiz from '@/components/quiz/KanjiQuiz'
-import { awardQuizXp } from '@/app/actions/quiz'
+import QuizApp from '@/components/quiz/QuizApp'
+import { awardQuizXp, loadQuizPool } from '@/app/actions/quiz'
 
 export const metadata: Metadata = {
   title: 'Kuis Kanji | Koto no Ha',
@@ -31,12 +31,13 @@ export default async function QuizPage() {
               Uji Hafalan Kanji-mu
             </h1>
             <p className="text-[13.5px] text-muted leading-[1.7]">
-              10 soal pilihan ganda level N5. Jawab cepat untuk bonus XP, jaga streak-mu, dan
+              Pilih jenis (Kanji / Kosakata) dan level — 10 soal acak dari database. Jawab cepat untuk
+              bonus XP, jaga streak-mu, dan
               {user ? ' XP otomatis masuk ke akunmu.' : ' masuk untuk menyimpan XP ke akun.'}
             </p>
           </div>
 
-          <KanjiQuiz isLoggedIn={!!user} awardAction={awardQuizXp} />
+          <QuizApp isLoggedIn={!!user} awardAction={awardQuizXp} loadAction={loadQuizPool} />
         </section>
       </main>
       <Footer />

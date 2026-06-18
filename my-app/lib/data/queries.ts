@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import type { Vocab, Kanji, KanjiExampleJson, Grammar, GrammarExampleJson, NewsArticle, KaiwaStory } from '@/lib/types/database.types'
 import type { VocabEntry, KanjiEntry, GrammarEntry, JLPTLevel } from './types'
+import type { QuizItem, QuizMode } from './quiz'
 
 const PAGE_SIZE = 50
 const NEWS_PAGE_SIZE = 12
@@ -168,6 +169,78 @@ export async function getKnownVocabCountByField(field: string): Promise<number> 
     return 0
   }
   return count ?? 0
+}
+
+/**
+ * Ambil "kolam" item untuk kuis (kanji/kosakata) dari level tertentu.
+ * Mengambil jendela acak (random offset) agar tiap sesi bervariasi, lalu
+ * komponen kuis mengacak & memilih 10 soal + distraktor dari kolam ini.
+ */
+export async function getQuizPool(
+  mode: QuizMode,
+  level: JLPTLevel,
+  size = 60,
+): Promise<QuizItem[]> {
+  const supabase = await createClient()
+  const levelId = levelIdByCode[level]
+  const table = mode === 'kanji' ? 'kanji' : 'vocab'
+
+  const { count } = await supabase
+    .from(table)
+    .select('id', { count: 'exact', head: true })
+    .eq('level_id', levelId)
+
+  const total = count ?? 0
+  if (total === 0) return []
+  const max = Math.max(0, total - size)
+  const offset = max > 0 ? Math.floor(Math.random() * (max + 1)) : 0
+
+  if (mode === 'kanji') {
+    const { data, error } = await supabase
+      .from('kanji')
+      .select('id, kanji, hiragana, romaji, meaning')
+      .eq('level_id', levelId)
+      .order('order_index')
+      .range(offset, offset + size - 1)
+    if (error || !data) {
+      console.error('getQuizPool kanji error', error)
+      return []
+    }
+    const rows = data as unknown as {
+      id: string; kanji: string; hiragana: string; romaji: string; meaning: string
+    }[]
+    return rows.map((r) => ({
+      id: r.id,
+      prompt: r.kanji,
+      reading: r.hiragana,
+      romaji: r.romaji,
+      meaning: r.meaning,
+      level,
+    }))
+  }
+
+  const { data, error } = await supabase
+    .from('vocab')
+    .select('id, word, hiragana, romaji, meaning, part_of_speech')
+    .eq('level_id', levelId)
+    .order('order_index')
+    .range(offset, offset + size - 1)
+  if (error || !data) {
+    console.error('getQuizPool vocab error', error)
+    return []
+  }
+  const rows = data as unknown as {
+    id: string; word: string; hiragana: string; romaji: string; meaning: string; part_of_speech: string
+  }[]
+  return rows.map((r) => ({
+    id: r.id,
+    prompt: r.word,
+    reading: r.hiragana,
+    romaji: r.romaji,
+    meaning: r.meaning,
+    level,
+    pos: r.part_of_speech,
+  }))
 }
 
 export async function getKanjiByLevel(
