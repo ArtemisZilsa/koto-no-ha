@@ -35,6 +35,8 @@ export type IconName =
   | 'bowl'
   | 'truck'
   | 'train'
+  | 'lock'
+  | 'chevron-right'
 
 // Setiap entri = isi <svg> (paths). Stroke diwarnai currentColor.
 const PATHS: Record<IconName, React.ReactNode> = {
@@ -219,6 +221,15 @@ const PATHS: Record<IconName, React.ReactNode> = {
       <rect width="16" height="16" x="4" y="3" rx="2" />
       <path d="M4 11h16M12 3v8M8 19l-2 3M18 22l-2-3M8 15h.01M16 15h.01" />
     </>
+  ),
+  lock: (
+    <>
+      <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+    </>
+  ),
+  'chevron-right': (
+    <path d="m9 18 6-6-6-6" />
   ),
 }
 

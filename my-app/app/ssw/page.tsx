@@ -1,34 +1,17 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { Nav } from '@/components/nav/Nav'
 import { Footer } from '@/components/landing/Footer'
-import { Icon, type IconName } from '@/components/ui/Icon'
+import { Icon } from '@/components/ui/Icon'
 import { Reveal } from '@/components/ui/Reveal'
 import { HeroBackground } from '@/components/ui/HeroBackground'
+import { sswSectors } from '@/lib/data/sswSectors'
 
 export const metadata: Metadata = {
   title: 'Panduan SSW / Tokutei Ginou | Koto no Ha',
   description:
     'Panduan lengkap visa kerja SSW (Specified Skilled Worker / Tokutei Ginou): 14 sektor, syarat JLPT & ujian keahlian, perbedaan SSW i & ii, dan alur prosesnya.',
 }
-
-// 14 sektor SSW resmi (Tokutei Ginou). Catatan: tahun 2024 pemerintah Jepang
-// menambah beberapa bidang baru; data ini mencakup sektor utama yang berjalan.
-const sectors: { jp: string; id: string; icon: IconName }[] = [
-  { jp: '介護', id: 'Perawatan Lansia (Kaigo)', icon: 'heart-pulse' },
-  { jp: 'ビルクリーニング', id: 'Kebersihan Gedung', icon: 'brush' },
-  { jp: '素形材・産業機械・電気電子', id: 'Manufaktur Mesin & Elektronik', icon: 'cog' },
-  { jp: '建設', id: 'Konstruksi', icon: 'hard-hat' },
-  { jp: '造船・舶用工業', id: 'Galangan Kapal', icon: 'ship' },
-  { jp: '自動車整備', id: 'Perawatan Otomotif', icon: 'car' },
-  { jp: '航空', id: 'Penerbangan (Ground & Maintenance)', icon: 'plane' },
-  { jp: '宿泊', id: 'Perhotelan', icon: 'hotel' },
-  { jp: '農業', id: 'Pertanian', icon: 'wheat' },
-  { jp: '漁業', id: 'Perikanan', icon: 'fish' },
-  { jp: '飲食料品製造業', id: 'Produksi Makanan & Minuman', icon: 'utensils' },
-  { jp: '外食業', id: 'Industri Restoran', icon: 'bowl' },
-  { jp: '自動車運送業', id: 'Transportasi / Sopir', icon: 'truck' },
-  { jp: '鉄道', id: 'Perkeretaapian', icon: 'train' },
-]
 
 const requirements: { title: string; desc: string }[] = [
   {
@@ -120,32 +103,92 @@ export default function SSWPage() {
         </section>
 
         <div className="max-w-4xl mx-auto px-5 md:px-12 py-12 flex flex-col gap-14">
-          {/* 14 Sektor */}
+          {/* 14 Sektor — hub belajar kosakata per bidang */}
           <section>
-            <h2 className="font-serif text-[22px] md:text-[26px] font-semibold text-ink mb-1">14 Sektor Industri</h2>
-            <p className="text-[13px] text-muted mb-6">Bidang kerja yang membuka kuota SSW.</p>
+            <h2 className="font-serif text-[22px] md:text-[26px] font-semibold text-ink mb-1">Belajar Kosakata per Bidang</h2>
+            <p className="text-[13px] text-muted mb-6">
+              Kosakata istilah khusus (専門用語) untuk tiap sektor SSW. Pilih bidang untuk mulai belajar
+              — bidang lain menyusul.
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-              {sectors.map((s, i) => (
-                <div
-                  key={s.jp}
-                  className="flex items-center gap-3 rounded-xl px-4 py-3 hover-lift"
-                  style={{ background: 'var(--surface)', border: '0.5px solid var(--border)' }}
-                >
-                  <span
-                    className="inline-flex items-center justify-center w-9 h-9 rounded-lg shrink-0"
-                    style={{ background: 'var(--red-bg)', color: 'var(--red)' }}
+              {sswSectors.map((s, i) => {
+                const num = String(i + 1).padStart(2, '0')
+
+                // Isi kartu (dipakai untuk versi aktif & terkunci)
+                const inner = (
+                  <>
+                    {/* Watermark kanji samar di pojok */}
+                    <span
+                      className="absolute -right-1 -bottom-2 font-serif select-none pointer-events-none leading-none"
+                      style={{ fontSize: '46px', color: `${s.accent}14`, zIndex: 0 }}
+                      aria-hidden
+                    >
+                      {s.bgKanji}
+                    </span>
+                    <span
+                      className="relative inline-flex items-center justify-center w-9 h-9 rounded-lg shrink-0 z-[1]"
+                      style={{ background: s.accentBg, color: s.accent }}
+                    >
+                      <Icon name={s.icon} className="w-[18px] h-[18px]" />
+                    </span>
+                    <div className="relative z-[1] min-w-0">
+                      <div className="font-serif text-[14px] font-medium text-ink leading-tight">{s.label}</div>
+                      <div className="text-[12px]" style={{ color: 'var(--muted)' }}>{s.jp}</div>
+                    </div>
+                    <div className="relative z-[1] ml-auto flex items-center gap-2 shrink-0">
+                      {s.status === 'active' ? (
+                        <>
+                          <span
+                            className="text-[10px] font-medium px-2 py-0.5 rounded-full whitespace-nowrap"
+                            style={{ background: s.accentBg, color: s.accent }}
+                          >
+                            300 kosakata
+                          </span>
+                          <Icon name="chevron-right" className="w-4 h-4" style={{ color: s.accent }} />
+                        </>
+                      ) : (
+                        <span
+                          className="inline-flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-full whitespace-nowrap"
+                          style={{ background: 'var(--paper-dark)', color: 'var(--muted)' }}
+                        >
+                          <Icon name="lock" className="w-3 h-3" aria-hidden />
+                          Segera hadir
+                        </span>
+                      )}
+                    </div>
+                  </>
+                )
+
+                return s.status === 'active' ? (
+                  <Link
+                    key={s.slug}
+                    href={`/learn/bidang/${s.slug}`}
+                    aria-label={`Belajar kosakata bidang ${s.label}`}
+                    className="relative flex items-center gap-3 rounded-xl px-4 py-3 overflow-hidden hover-lift no-underline cursor-pointer transition-shadow focus-visible:outline-none focus-visible:ring-2"
+                    style={{
+                      background: 'var(--surface)',
+                      border: `0.5px solid ${s.accent}40`,
+                    }}
                   >
-                    <Icon name={s.icon} className="w-[18px] h-[18px]" />
-                  </span>
-                  <div>
-                    <div className="font-serif text-[14px] font-medium text-ink leading-tight">{s.id}</div>
-                    <div className="text-[12px]" style={{ color: 'var(--muted)' }}>{s.jp}</div>
+                    {inner}
+                  </Link>
+                ) : (
+                  <div
+                    key={s.slug}
+                    aria-disabled="true"
+                    title="Segera hadir"
+                    className="relative flex items-center gap-3 rounded-xl px-4 py-3 overflow-hidden cursor-not-allowed select-none"
+                    style={{
+                      background: 'var(--surface)',
+                      border: '0.5px solid var(--border)',
+                      opacity: 0.6,
+                    }}
+                  >
+                    {inner}
+                    <span className="sr-only">{num}</span>
                   </div>
-                  <span className="ml-auto text-[11px] tabular-nums" style={{ color: 'var(--border-strong)' }}>
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </section>
 

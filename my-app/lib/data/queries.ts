@@ -21,6 +21,9 @@ const levelIdByCode: Record<JLPTLevel, number> = {
   N1: 5,
 }
 
+/** level_id untuk track SSW (Tokutei Ginou). Vocab-nya dibedakan per `field` (bidang). */
+const SSW_LEVEL_ID = 6
+
 function rowToVocabEntry(row: Vocab): VocabEntry {
   return {
     id: row.id,
@@ -99,6 +102,72 @@ export async function getVocabByLevel(
     pageSize: PAGE_SIZE,
     totalPages: Math.max(1, Math.ceil(total / PAGE_SIZE)),
   }
+}
+
+/**
+ * Kosakata satu bidang SSW (mis. 'kaigo'). Disimpan di tabel vocab dengan
+ * level_id = SSW (6) dan kolom `field` sebagai pembeda bidang.
+ */
+export async function getVocabByField(
+  field: string,
+  page = 1,
+): Promise<PagedResult<VocabEntry>> {
+  const supabase = await createClient()
+  const from = (page - 1) * PAGE_SIZE
+  const to = from + PAGE_SIZE - 1
+
+  const { data, count, error } = await supabase
+    .from('vocab')
+    .select('*', { count: 'exact' })
+    .eq('level_id', SSW_LEVEL_ID)
+    .eq('field', field)
+    .order('order_index')
+    .range(from, to)
+
+  if (error) {
+    console.error('getVocabByField error', error)
+    return { items: [], total: 0, page, pageSize: PAGE_SIZE, totalPages: 0 }
+  }
+
+  const total = count ?? 0
+  return {
+    items: (data ?? []).map(rowToVocabEntry),
+    total,
+    page,
+    pageSize: PAGE_SIZE,
+    totalPages: Math.max(1, Math.ceil(total / PAGE_SIZE)),
+  }
+}
+
+/** Hitung total vocab "dikenal" untuk satu bidang SSW (ringkasan "X/Y"). */
+export async function getKnownVocabCountByField(field: string): Promise<number> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return 0
+
+  const { data: itemRows, error: itemErr } = await supabase
+    .from('vocab')
+    .select('id')
+    .eq('level_id', SSW_LEVEL_ID)
+    .eq('field', field)
+  if (itemErr || !itemRows) return 0
+  const ids = (itemRows as { id: string }[]).map((r) => r.id)
+  if (ids.length === 0) return 0
+
+  const { count, error } = await supabase
+    .from('user_item_progress')
+    .select('item_id', { count: 'exact', head: true })
+    .eq('user_id', user.id)
+    .eq('item_type', 'vocab')
+    .in('item_id', ids)
+
+  if (error) {
+    console.error('getKnownVocabCountByField error', error)
+    return 0
+  }
+  return count ?? 0
 }
 
 export async function getKanjiByLevel(

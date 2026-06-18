@@ -182,6 +182,8 @@ export interface Vocab {
   example_hiragana: string
   example_meaning: string
   order_index: number
+  /** Sub-bidang untuk vocab non-JLPT (mis. SSW: 'kaigo'). NULL untuk N5..N1. */
+  field: string | null
   created_at: string
 }
 

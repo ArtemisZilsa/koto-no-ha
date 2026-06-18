@@ -9,9 +9,9 @@ const levels = [
 ]
 
 const special = [
-  { code: 'SSW', name: 'Tokutei Ginou' },
-  { code: 'TG', name: 'Gijinkoku' },
-  { code: 'BIZ', name: 'Bisnis' },
+  { code: 'SSW', name: 'Tokutei Ginou', href: '/ssw' },
+  { code: 'TG', name: 'Gijinkoku', href: '/ssw' },
+  { code: 'BIZ', name: 'Bisnis', href: '#level-biz' },
 ]
 
 export function LevelStrip() {
@@ -49,7 +49,7 @@ export function LevelStrip() {
       {special.map((s) => (
         <Link
           key={s.code}
-          href={`#level-${s.code.toLowerCase()}`}
+          href={s.href}
           className="flex flex-col items-center gap-1 px-6 py-4 min-w-[80px] hover:bg-white/[0.06] transition-colors no-underline"
           style={{ borderRight: '0.5px solid var(--on-ink-line)' }}
         >

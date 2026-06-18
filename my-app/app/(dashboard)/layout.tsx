@@ -51,6 +51,7 @@ export default async function DashboardLayout({
               { label: 'N3', href: '/learn/n3' },
               { label: 'N2', href: '/learn/n2' },
               { label: 'N1', href: '/learn/n1' },
+              { label: 'SSW', href: '/ssw' },
             ].map(({ label, href }) => (
               <Link
                 key={label}
