@@ -1,10 +1,9 @@
 import Link from 'next/link'
 
 const links = [
-  { href: '#', label: 'Tentang' },
-  { href: '#', label: 'Kebijakan Privasi' },
-  { href: '#', label: 'Kontak' },
-  { href: '#', label: 'Blog' },
+  { href: '/tentang', label: 'Tentang' },
+  { href: '/kebijakan-privasi', label: 'Kebijakan Privasi' },
+  { href: '/kontak', label: 'Kontak' },
 ]
 
 export function Footer() {
@@ -24,7 +23,6 @@ export function Footer() {
           </li>
         ))}
       </ul>
-
       <div className="text-[11px] text-muted">© 2026 Koto no Ha. Made in Japan 🇯🇵</div>
     </footer>
   )

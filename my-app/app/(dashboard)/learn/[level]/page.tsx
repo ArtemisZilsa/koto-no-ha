@@ -23,7 +23,7 @@ const legacyDataMap: Record<string, LevelData> = {
 
 const vocabDbLevels = new Set<JLPTLevel>(['N5', 'N4', 'N3', 'N2', 'N1'])
 const kanjiDbLevels = new Set<JLPTLevel>(['N5', 'N4', 'N3', 'N2', 'N1'])
-const grammarDbLevels = new Set<JLPTLevel>(['N5', 'N4', 'N3'])
+const grammarDbLevels = new Set<JLPTLevel>(['N5', 'N4', 'N3', 'N1'])
 
 // Karakter jepang ornamen pojok hero
 const levelOrnaments: Record<JLPTLevel, string> = {

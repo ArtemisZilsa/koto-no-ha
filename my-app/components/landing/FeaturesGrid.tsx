@@ -41,8 +41,8 @@ const features: { icon: IconName; accent: string; bg: string; title: string; des
     accent: 'var(--green)',
     bg: 'var(--green-bg)',
     title: 'Latihan Percakapan (Kaiwa)',
-    desc: 'Lebih dari 500 cerita percakapan, mulai dari obrolan sehari-hari sampai situasi bisnis. Lengkap dengan audio penutur asli untuk melatih pendengaran dan intonasi.',
-    tag: 'Audio · Dialog · Situasi Nyata',
+    desc: 'Cerita percakapan per tema, mulai dari obrolan sehari-hari sampai situasi bisnis. Setiap dialog dilengkapi furigana, romaji, dan terjemahan Indonesia.',
+    tag: 'Dialog · Furigana · Terjemahan',
   },
   {
     icon: 'reading',
@@ -76,7 +76,6 @@ export function FeaturesGrid() {
           Dari latihan soal JLPT sampai percakapan bisnis — semuanya dirancang khusus untuk pelajar Indonesia.
         </p>
       </Reveal>
-
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
         {features.map(({ icon, accent, bg, title, desc, tag, href }, i) => {
           const inner = (
