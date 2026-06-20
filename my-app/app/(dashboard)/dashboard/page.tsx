@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Icon, type IconName } from '@/components/ui/Icon'
 import { Reveal } from '@/components/ui/Reveal'
 import { sswSectors } from '@/lib/data/sswSectors'
+import { NeonGridBackground } from '@/components/effects/NeonGridBackground'
 
 export const metadata = {
   title: 'Dashboard — Koto no Ha',
@@ -29,7 +30,9 @@ export default async function DashboardPage() {
   const displayName = profile?.full_name ?? profile?.username ?? user?.email?.split('@')[0] ?? 'Pelajar'
 
   return (
-    <main className="px-8 py-10 max-w-5xl mx-auto">
+    <main className="relative z-10 px-5 md:px-8 py-10 max-w-5xl mx-auto">
+      <NeonGridBackground />
+
       {/* Welcome */}
       <Reveal className="mb-10">
         <h1 className="font-serif text-3xl font-semibold text-ink mb-1">
@@ -267,28 +270,65 @@ export default async function DashboardPage() {
         </div>
       </div>
 
-      {/* Other sections */}
-      <div className="grid grid-cols-2 gap-4">
-        {([
-          { title: 'Kartu Hafalan Hari Ini', icon: 'cards' as IconName, href: '#', desc: 'Belum ada kartu yang perlu diulang hari ini.' },
-          { title: 'Berita Terbaru', icon: 'newspaper' as IconName, href: '/berita', desc: 'Baca artikel Jepang terbaru untuk latihan.' },
-          { title: 'Latihan Percakapan', icon: 'mic' as IconName, href: '#', desc: 'Berlatih percakapan dari situasi sehari-hari.' },
-          { title: 'Progres Belajar', icon: 'bar-chart' as IconName, href: '#', desc: 'Lihat statistik dan perkembangan belajarmu.' },
-        ]).map(({ title, icon, href, desc }, i) => (
-          <Reveal key={title} delay={(i % 2) * 80}>
-          <Link
-            href={href}
-            className="block h-full rounded-xl p-6 hover-lift no-underline koto-bordered"
-            style={{ background: 'var(--surface)' }}
-          >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg mb-3 text-ink" style={{ background: 'var(--paper-dark)' }}>
-              <Icon name={icon} className="w-5 h-5" />
-            </span>
-            <div className="font-serif text-[15px] font-semibold text-ink mb-1">{title}</div>
-            <div className="text-[12px] text-muted">{desc}</div>
-          </Link>
-          </Reveal>
-        ))}
+      {/* Latihan & aktivitas — kartu persegi panjang, menumpuk ke bawah */}
+      <div>
+        <Reveal as="h2" className="font-serif text-lg font-semibold text-ink mb-4">
+          Latihan &amp; Aktivitas
+        </Reveal>
+        <div className="flex flex-col gap-3">
+          {([
+            { title: 'Latihan Membaca (Dokkai)', icon: 'reading' as IconName, href: '/dokkai', desc: 'Bacaan N5–N1 dengan furigana, romaji, terjemahan Indonesia, dan soal pemahaman.', live: true, accent: 'var(--teal)', bg: 'var(--teal-bg)' },
+            { title: 'Latihan Percakapan (Kaiwa)', icon: 'mic' as IconName, href: '/kaiwa', desc: 'Dialog per tema, lengkap dengan cara baca (hiragana & romaji) dan terjemahan.', live: true, accent: 'var(--green)', bg: 'var(--green-bg)' },
+            { title: 'Berita Jepang Terkini', icon: 'newspaper' as IconName, href: '/berita', desc: 'Baca artikel Jepang terbaru untuk latihan membaca sesuai level.', live: true, accent: 'var(--red)', bg: 'var(--red-bg)' },
+            { title: 'Kartu Hafalan (SRS)', icon: 'cards' as IconName, href: '#', desc: 'Pengulangan terjadwal kanji & kosakata agar ingatan bertahan lama.', live: false, accent: 'var(--gold)', bg: 'var(--gold-bg)' },
+            { title: 'Progres Belajar', icon: 'bar-chart' as IconName, href: '#', desc: 'Statistik dan perkembangan belajarmu secara menyeluruh.', live: false, accent: 'var(--teal)', bg: 'var(--teal-bg)' },
+          ]).map(({ title, icon, href, desc, live, accent, bg }, i) => {
+            const inner = (
+              <>
+                <span
+                  className="inline-flex items-center justify-center w-11 h-11 rounded-xl shrink-0"
+                  style={{ background: bg, color: accent }}
+                >
+                  <Icon name={icon} className="w-5 h-5" />
+                </span>
+                <div className="min-w-0 flex-1">
+                  <div className="font-serif text-[15px] font-semibold text-ink mb-0.5">{title}</div>
+                  <div className="text-[12.5px] text-muted leading-relaxed">{desc}</div>
+                </div>
+                {live ? (
+                  <Icon name="chevron-right" className="w-4 h-4 shrink-0" style={{ color: accent }} />
+                ) : (
+                  <span
+                    className="text-[10px] px-2 py-0.5 rounded-full shrink-0 whitespace-nowrap"
+                    style={{ background: 'var(--paper-dark)', color: 'var(--muted)' }}
+                  >
+                    Segera hadir
+                  </span>
+                )}
+              </>
+            )
+            return (
+              <Reveal key={title} delay={i * 60}>
+                {live ? (
+                  <Link
+                    href={href}
+                    className="flex items-center gap-4 rounded-2xl p-5 hover-lift no-underline koto-bordered"
+                    style={{ background: 'var(--surface)' }}
+                  >
+                    {inner}
+                  </Link>
+                ) : (
+                  <div
+                    className="flex items-center gap-4 rounded-2xl p-5 koto-bordered"
+                    style={{ background: 'var(--surface)', opacity: 0.85 }}
+                  >
+                    {inner}
+                  </div>
+                )}
+              </Reveal>
+            )
+          })}
+        </div>
       </div>
     </main>
   )

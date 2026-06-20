@@ -1,10 +1,11 @@
 import { createClient } from '@/lib/supabase/server'
-import type { Vocab, Kanji, KanjiExampleJson, Grammar, GrammarExampleJson, NewsArticle, KaiwaStory } from '@/lib/types/database.types'
+import type { Vocab, Kanji, KanjiExampleJson, Grammar, GrammarExampleJson, NewsArticle, KaiwaStory, DokkaPassage } from '@/lib/types/database.types'
 import type { VocabEntry, KanjiEntry, GrammarEntry, JLPTLevel } from './types'
 import type { QuizItem, QuizMode } from './quiz'
 
 const PAGE_SIZE = 50
 const NEWS_PAGE_SIZE = 12
+const DOKKAI_PAGE_SIZE = 12
 
 export interface PagedResult<T> {
   items: T[]
@@ -358,6 +359,56 @@ export async function getKaiwaByLevel(level: JLPTLevel): Promise<KaiwaStory[]> {
     return []
   }
   return (data ?? []) as KaiwaStory[]
+}
+
+// ── Dokkai / Latihan Membaca ───────────────────────────────────
+
+/** Daftar bacaan dokkai untuk satu level JLPT, dengan paginasi. */
+export async function getDokkaiByLevel(
+  level: JLPTLevel,
+  page = 1,
+): Promise<PagedResult<DokkaPassage>> {
+  const supabase = await createClient()
+  const levelId = levelIdByCode[level]
+  const from = (page - 1) * DOKKAI_PAGE_SIZE
+  const to = from + DOKKAI_PAGE_SIZE - 1
+
+  const { data, count, error } = await supabase
+    .from('dokkai_passages')
+    .select('*', { count: 'exact' })
+    .eq('level_id', levelId)
+    .order('order_index')
+    .range(from, to)
+
+  if (error) {
+    console.error('getDokkaiByLevel error', error)
+    return { items: [], total: 0, page, pageSize: DOKKAI_PAGE_SIZE, totalPages: 0 }
+  }
+
+  const total = count ?? 0
+  return {
+    items: (data ?? []) as DokkaPassage[],
+    total,
+    page,
+    pageSize: DOKKAI_PAGE_SIZE,
+    totalPages: Math.max(1, Math.ceil(total / DOKKAI_PAGE_SIZE)),
+  }
+}
+
+/** Satu bacaan dokkai berdasarkan id. Null bila tidak ditemukan. */
+export async function getDokkaiById(id: string): Promise<DokkaPassage | null> {
+  const supabase = await createClient()
+  const { data, error } = await supabase
+    .from('dokkai_passages')
+    .select('*')
+    .eq('id', id)
+    .single()
+
+  if (error) {
+    if (error.code !== 'PGRST116') console.error('getDokkaiById error', error)
+    return null
+  }
+  return data as DokkaPassage
 }
 
 // ── Progres item (checklist "sudah dikenal") ───────────────────

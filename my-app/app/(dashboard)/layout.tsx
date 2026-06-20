@@ -44,6 +44,13 @@ export default async function DashboardLayout({
           >
             Dashboard
           </Link>
+          <Link
+            href="/dokkai"
+            className="text-[13px] transition-colors no-underline hidden sm:inline"
+            style={{ color: 'var(--muted)' }}
+          >
+            Dokkai
+          </Link>
           <div className="flex items-center gap-0.5 md:gap-1 shrink-0">
             {[
               { label: 'N5', href: '/learn/n5' },

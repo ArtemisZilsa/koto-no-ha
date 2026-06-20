@@ -121,15 +121,41 @@ export interface KaiwaStory {
   is_premium: boolean
 }
 
+/** Satu kalimat bacaan dokkai — memenuhi aturan konten (kanji+furigana+romaji+terjemahan). */
+export interface DokkaiSentence {
+  jp: string        // teks Jepang (mengandung kanji)
+  furigana: string  // cara baca penuh (hiragana)
+  romaji: string    // cara baca romaji
+  id: string        // terjemahan Bahasa Indonesia
+}
+
+/** Catatan kosakata penting pada bacaan dokkai. */
+export interface DokkaiVocabNote {
+  word: string
+  reading: string
+  romaji: string
+  meaning: string   // arti Bahasa Indonesia
+}
+
+/** Soal pemahaman pilihan ganda untuk satu bacaan dokkai. */
+export interface DokkaiQuestion {
+  q: string            // pertanyaan (Bahasa Indonesia; boleh mengutip kalimat Jepang)
+  options: string[]    // 4 pilihan
+  answer: number       // index jawaban benar (0-3)
+  explanation: string  // penjelasan (Bahasa Indonesia)
+}
+
 export interface DokkaPassage {
   id: string
   level_id: number
   title: string
   text_content: string
+  content_json: DokkaiSentence[] | null
   vocab_notes: Json | null
   questions: Json | null
   source: string | null
   is_premium: boolean
+  order_index: number
 }
 
 export interface UserProgress {
