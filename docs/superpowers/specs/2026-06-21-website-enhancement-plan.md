@@ -42,10 +42,14 @@
 3. **Polish kualitas** — *Estetika + robust*
    - `app/not-found.tsx` (404 bergaya sumi-e) & `app/error.tsx` (boundary global).
 
+4. **Halaman Progres Belajar (`/progress`)** ✅ — *Estetika + Animasi + Fitur*
+   - RPC `get_progress_overview` (migrasi `032`): profil, mastery per level, ringkasan SRS,
+     heatmap aktivitas dalam satu round-trip.
+   - Ring XP + rank (入門→名人), streak, bar penguasaan per level, gauge SRS, heatmap aktivitas.
+   - Mengaktifkan kartu dashboard "Progres Belajar" + link "Progres" di header dashboard.
+
 ### Tahap 2 — kandidat iterasi berikutnya
 
-- **Halaman Progres Belajar (`/progress`)**: grafik XP/streak, ringkasan per skill & level
-  (data dari `user_item_progress`, `user_flashcard_progress`, `profiles`).
 - **Audio (TTS) untuk kana/kaiwa/kosakata** via Web Speech API (`ja-JP`).
 - **Kuis Kana** & mode "ketik romaji".
 - **Loading skeleton** (`loading.tsx`) untuk dashboard/learn/dokkai.

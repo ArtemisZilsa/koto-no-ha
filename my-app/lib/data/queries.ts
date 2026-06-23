@@ -4,6 +4,8 @@ import type { VocabEntry, KanjiEntry, GrammarEntry, JLPTLevel } from './types'
 import type { QuizItem, QuizMode } from './quiz'
 import type { SrsCard, SrsType } from './srs'
 import { SRS_SESSION_SIZE } from './srs'
+import type { ProgressOverview } from './progress'
+import { EMPTY_OVERVIEW } from './progress'
 
 const PAGE_SIZE = 50
 const NEWS_PAGE_SIZE = 12
@@ -594,6 +596,37 @@ export async function getDueCount(): Promise<number> {
     return 0
   }
   return count ?? 0
+}
+
+// ── Progres Belajar ────────────────────────────────────────────
+
+/**
+ * Ringkasan progres belajar user saat ini (profil, mastery per level,
+ * ringkasan SRS, heatmap aktivitas) dalam satu round-trip via RPC.
+ * Mengembalikan struktur nol bila anon / belum ada data / error.
+ */
+export async function getProgressOverview(days = 119): Promise<ProgressOverview> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return EMPTY_OVERVIEW
+
+  // Cast pada CLIENT (pola sama awardQuizXp): tipe Database hand-maintained
+  // belum punya generic Functions untuk inferensi rpc.
+  const db = supabase as unknown as {
+    rpc: (
+      fn: 'get_progress_overview',
+      args: { p_days: number },
+    ) => Promise<{ data: ProgressOverview | null; error: { message: string } | null }>
+  }
+
+  const { data, error } = await db.rpc('get_progress_overview', { p_days: days })
+  if (error || !data) {
+    console.error('get_progress_overview error', error)
+    return EMPTY_OVERVIEW
+  }
+  return data
 }
 
 export async function getNewsById(id: string): Promise<NewsArticle | null> {

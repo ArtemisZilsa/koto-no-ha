@@ -45,6 +45,13 @@ export default async function DashboardLayout({
             Dashboard
           </Link>
           <Link
+            href="/progress"
+            className="text-[13px] transition-colors no-underline hidden sm:inline"
+            style={{ color: 'var(--muted)' }}
+          >
+            Progres
+          </Link>
+          <Link
             href="/dokkai"
             className="text-[13px] transition-colors no-underline hidden sm:inline"
             style={{ color: 'var(--muted)' }}
