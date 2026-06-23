@@ -2,6 +2,10 @@ import { createClient } from '@/lib/supabase/server'
 import type { Vocab, Kanji, KanjiExampleJson, Grammar, GrammarExampleJson, NewsArticle, KaiwaStory, DokkaPassage } from '@/lib/types/database.types'
 import type { VocabEntry, KanjiEntry, GrammarEntry, JLPTLevel } from './types'
 import type { QuizItem, QuizMode } from './quiz'
+import type { SrsCard, SrsType } from './srs'
+import { SRS_SESSION_SIZE } from './srs'
+import type { ProgressOverview } from './progress'
+import { EMPTY_OVERVIEW } from './progress'
 
 const PAGE_SIZE = 50
 const NEWS_PAGE_SIZE = 12
@@ -479,6 +483,150 @@ export async function getKnownCountByLevel(
     return 0
   }
   return count ?? 0
+}
+
+// ── SRS / Kartu Hafalan ────────────────────────────────────────
+
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+type FlashcardRow = {
+  id: string
+  card_type: 'kanji' | 'vocab' | 'grammar'
+  front: string
+  back: string
+  reading: string | null
+  example_sentence: string | null
+}
+
+/**
+ * Susun satu sesi kartu hafalan untuk level & jenis tertentu.
+ * - Login: utamakan kartu "due" (jatuh tempo), lalu isi kartu baru hingga `size`.
+ * - Anon: ambil kartu acak (latihan tanpa simpan progres).
+ * Pool per level kecil (≤50 kartu) sehingga aman diambil seluruhnya lalu disaring.
+ */
+export async function getSrsSession(
+  level: JLPTLevel,
+  type: SrsType,
+  size = SRS_SESSION_SIZE,
+): Promise<SrsCard[]> {
+  const supabase = await createClient()
+  const levelId = levelIdByCode[level]
+
+  let query = supabase
+    .from('flashcards')
+    .select('id, card_type, front, back, reading, example_sentence')
+    .eq('level_id', levelId)
+  if (type !== 'all') query = query.eq('card_type', type)
+
+  const { data, error } = await query
+  if (error || !data) {
+    console.error('getSrsSession error', error)
+    return []
+  }
+
+  const rows = data as FlashcardRow[]
+  const toCard = (r: FlashcardRow): SrsCard => ({
+    id: r.id,
+    type: r.card_type === 'kanji' ? 'kanji' : 'vocab',
+    front: r.front,
+    back: r.back,
+    reading: r.reading,
+    example: r.example_sentence,
+    level,
+  })
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
+  // Anon → acak penuh.
+  if (!user) return shuffle(rows.map(toCard)).slice(0, size)
+
+  // Login → utamakan kartu due, lalu kartu baru.
+  const ids = rows.map((r) => r.id)
+  const { data: progress } = await supabase
+    .from('user_flashcard_progress')
+    .select('flashcard_id, next_review_at')
+    .eq('user_id', user.id)
+    .in('flashcard_id', ids)
+
+  const now = Date.now()
+  const dueById = new Map<string, boolean>()
+  for (const p of (progress ?? []) as { flashcard_id: string; next_review_at: string }[]) {
+    dueById.set(p.flashcard_id, new Date(p.next_review_at).getTime() <= now)
+  }
+
+  const due: SrsCard[] = []
+  const fresh: SrsCard[] = []
+  const later: SrsCard[] = []
+  for (const r of rows) {
+    if (!dueById.has(r.id)) fresh.push(toCard(r))
+    else if (dueById.get(r.id)) due.push(toCard(r))
+    else later.push(toCard(r))
+  }
+
+  // due (acak) → kartu baru (acak) → sisanya (belum jatuh tempo) sebagai cadangan.
+  const ordered = [...shuffle(due), ...shuffle(fresh), ...shuffle(later)]
+  return ordered.slice(0, size)
+}
+
+/** Jumlah kartu yang jatuh tempo hari ini untuk user saat ini (0 bila anon). */
+export async function getDueCount(): Promise<number> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return 0
+
+  const { count, error } = await supabase
+    .from('user_flashcard_progress')
+    .select('id', { count: 'exact', head: true })
+    .eq('user_id', user.id)
+    .lte('next_review_at', new Date().toISOString())
+
+  if (error) {
+    console.error('getDueCount error', error)
+    return 0
+  }
+  return count ?? 0
+}
+
+// ── Progres Belajar ────────────────────────────────────────────
+
+/**
+ * Ringkasan progres belajar user saat ini (profil, mastery per level,
+ * ringkasan SRS, heatmap aktivitas) dalam satu round-trip via RPC.
+ * Mengembalikan struktur nol bila anon / belum ada data / error.
+ */
+export async function getProgressOverview(days = 119): Promise<ProgressOverview> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return EMPTY_OVERVIEW
+
+  // Cast pada CLIENT (pola sama awardQuizXp): tipe Database hand-maintained
+  // belum punya generic Functions untuk inferensi rpc.
+  const db = supabase as unknown as {
+    rpc: (
+      fn: 'get_progress_overview',
+      args: { p_days: number },
+    ) => Promise<{ data: ProgressOverview | null; error: { message: string } | null }>
+  }
+
+  const { data, error } = await db.rpc('get_progress_overview', { p_days: days })
+  if (error || !data) {
+    console.error('get_progress_overview error', error)
+    return EMPTY_OVERVIEW
+  }
+  return data
 }
 
 export async function getNewsById(id: string): Promise<NewsArticle | null> {

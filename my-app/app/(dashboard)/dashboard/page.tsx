@@ -277,11 +277,12 @@ export default async function DashboardPage() {
         </Reveal>
         <div className="flex flex-col gap-3">
           {([
+            { title: 'Hiragana & Katakana (Kana)', icon: 'brush' as IconName, href: '/kana', desc: 'Aksara dasar Jepang — gojūon, dakuten, dan yōon dengan kartu interaktif & mode latihan.', live: true, accent: 'var(--teal)', bg: 'var(--teal-bg)' },
+            { title: 'Kartu Hafalan (SRS)', icon: 'cards' as IconName, href: '/srs', desc: 'Pengulangan terjadwal kanji & kosakata agar ingatan bertahan lama. XP & streak masuk akun.', live: true, accent: 'var(--gold)', bg: 'var(--gold-bg)' },
             { title: 'Latihan Membaca (Dokkai)', icon: 'reading' as IconName, href: '/dokkai', desc: 'Bacaan N5–N1 dengan furigana, romaji, terjemahan Indonesia, dan soal pemahaman.', live: true, accent: 'var(--teal)', bg: 'var(--teal-bg)' },
             { title: 'Latihan Percakapan (Kaiwa)', icon: 'mic' as IconName, href: '/kaiwa', desc: 'Dialog per tema, lengkap dengan cara baca (hiragana & romaji) dan terjemahan.', live: true, accent: 'var(--green)', bg: 'var(--green-bg)' },
             { title: 'Berita Jepang Terkini', icon: 'newspaper' as IconName, href: '/berita', desc: 'Baca artikel Jepang terbaru untuk latihan membaca sesuai level.', live: true, accent: 'var(--red)', bg: 'var(--red-bg)' },
-            { title: 'Kartu Hafalan (SRS)', icon: 'cards' as IconName, href: '#', desc: 'Pengulangan terjadwal kanji & kosakata agar ingatan bertahan lama.', live: false, accent: 'var(--gold)', bg: 'var(--gold-bg)' },
-            { title: 'Progres Belajar', icon: 'bar-chart' as IconName, href: '#', desc: 'Statistik dan perkembangan belajarmu secara menyeluruh.', live: false, accent: 'var(--teal)', bg: 'var(--teal-bg)' },
+            { title: 'Progres Belajar', icon: 'bar-chart' as IconName, href: '/progress', desc: 'XP & rank, streak, penguasaan tiap level, ringkasan SRS, dan heatmap aktivitas.', live: true, accent: 'var(--teal)', bg: 'var(--teal-bg)' },
           ]).map(({ title, icon, href, desc, live, accent, bg }, i) => {
             const inner = (
               <>

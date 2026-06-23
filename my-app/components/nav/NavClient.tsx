@@ -37,9 +37,10 @@ export function NavClient({ user }: NavClientProps) {
       <ul className="hidden md:flex items-center gap-7 list-none">
         {[
           { href: '/#fitur', label: 'Belajar' },
-          { href: '/#level', label: 'Level' },
+          { href: '/kana', label: 'Kana' },
           { href: '/kaiwa', label: 'Kaiwa' },
           { href: '/quiz', label: 'Kuis' },
+          { href: '/srs', label: 'Hafalan' },
           { href: '/ssw', label: 'SSW / TG' },
           { href: '/berita', label: 'Berita' },
         ].map(({ href, label }) => (
@@ -114,8 +115,10 @@ export function NavClient({ user }: NavClientProps) {
         >
           {[
             { href: '/#fitur', label: 'Belajar' },
-            { href: '/#level', label: 'Level' },
+            { href: '/kana', label: 'Kana' },
             { href: '/kaiwa', label: 'Kaiwa' },
+            { href: '/quiz', label: 'Kuis' },
+            { href: '/srs', label: 'Hafalan' },
             { href: '/ssw', label: 'SSW / TG' },
             { href: '/berita', label: 'Berita' },
           ].map(({ href, label }) => (
