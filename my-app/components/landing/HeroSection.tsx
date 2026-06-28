@@ -18,7 +18,7 @@ export function HeroSection() {
       {/* Kabut gradien bergerak (aurora) — termasuk nuansa hijau */}
       <div className="aurora" aria-hidden="true" />
 
-      {/* Latar grid halus (gaya background-animation modern, opacity rendah) */}
+      {/* Latar grid halus */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -32,8 +32,6 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      {/* Kanji beranimasi (digambar ala sumi-e) — hanya tampil di layar lebar
-          agar tidak meluber & memicu scroll horizontal di HP */}
       <AnimatedKanji
         char="学"
         fontSize="clamp(220px, 32vw, 360px)"
@@ -97,9 +95,9 @@ export function HeroSection() {
         <Reveal delay={360}>
           <div className="flex flex-wrap gap-x-9 gap-y-4">
             {[
-              { num: '12K+', label: 'Pengguna Aktif' },
               { num: '8 Level', label: 'N5 hingga Bisnis' },
-              { num: '500+', label: 'Cerita Kaiwa' },
+              { num: 'SRS', label: 'Sistem Pengulangan Cerdas' },
+              { num: 'Gratis', label: 'Daftar Tanpa Biaya' },
             ].map(({ num, label }) => (
               <div key={label}>
                 <span className="font-serif text-[26px] font-semibold text-ink block">{num}</span>

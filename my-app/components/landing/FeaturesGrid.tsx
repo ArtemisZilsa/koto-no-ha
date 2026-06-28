@@ -41,8 +41,8 @@ const features: { icon: IconName; accent: string; bg: string; title: string; des
     accent: 'var(--green)',
     bg: 'var(--green-bg)',
     title: 'Latihan Percakapan (Kaiwa)',
-    desc: 'Lebih dari 500 cerita percakapan, mulai dari obrolan sehari-hari sampai situasi bisnis. Lengkap dengan audio penutur asli untuk melatih pendengaran dan intonasi.',
-    tag: 'Audio · Dialog · Situasi Nyata',
+    desc: 'Cerita percakapan sehari-hari dari N5 hingga bisnis, lengkap dengan furigana, romaji, dan terjemahan Indonesia agar mudah dipahami.',
+    tag: 'Dialog · Furigana · Terjemahan',
   },
   {
     icon: 'reading',

@@ -56,6 +56,19 @@ export function NavClient({ user }: NavClientProps) {
 
       {/* Auth buttons + toggle tema & animasi */}
       <div className="hidden md:flex items-center gap-2">
+        <a
+          href="https://www.instagram.com/kotobanoha"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram @kotobanoha"
+          className="inline-flex items-center justify-center w-8 h-8 rounded-lg text-muted hover:text-koto-text transition-colors"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
         <ThemeToggle />
         <AnimationToggle />
         {user ? (
@@ -132,6 +145,19 @@ export function NavClient({ user }: NavClientProps) {
           <div className="flex items-center justify-between pt-2 border-t" style={{ borderColor: 'var(--border)' }}>
             <span className="text-sm text-muted">Tampilan</span>
             <div className="flex items-center gap-2">
+              <a
+                href="https://www.instagram.com/kotobanoha"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram @kotobanoha"
+                className="inline-flex items-center justify-center w-8 h-8 rounded-lg text-muted hover:text-koto-text transition-colors"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+                </svg>
+              </a>
               <ThemeToggle />
               <AnimationToggle />
             </div>

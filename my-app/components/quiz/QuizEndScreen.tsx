@@ -41,6 +41,14 @@ export default function QuizEndScreen({
   const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0
   const [shownXp, setShownXp] = useState(reduced ? totalXp : 0)
 
+  const whatsappUrl =
+    'https://wa.me/?text=' +
+    encodeURIComponent(
+      'Aku baru dapat skor ' + accuracy + '% di Kuis Kanji Koto no Ha!\n' +
+      'Benar: ' + correct + '/' + total + ' soal, XP: +' + totalXp + '\n\n' +
+      'Coba juga: https://kotonohalearnjapanese.netlify.app/quiz'
+    )
+
   // XP count-up 0 → total
   useEffect(() => {
     if (reduced) {
@@ -164,7 +172,22 @@ export default function QuizEndScreen({
           </button>
         )}
       </div>
+
+      {/* Tombol Bagikan ke WhatsApp */}
       <div className="mt-3">
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-[13px] px-4 py-2 rounded-xl text-white hover:opacity-90 transition-opacity"
+          style={{ background: '#25D366' }}
+        >
+          <span aria-hidden="true">&#9993;</span>
+          Bagikan ke WhatsApp
+        </a>
+      </div>
+
+      <div className="mt-2">
         <Link href="/dashboard" className="text-[12px] text-muted no-underline hover:text-koto-text transition-colors">
           Ke Dashboard
         </Link>
