@@ -19,7 +19,7 @@ Next.js app di `my-app/` · Live: https://kotonohalearnjapanese.netlify.app/
 ## Fase 2 — Sosial & Komunitas
 
 - [x] Tambahkan link Instagram (@kotobanoha) di navbar (desktop + mobile) dan footer
-- [ ] Tambahkan tombol "Bagikan ke WhatsApp" di halaman quiz hasil (setelah skor tampil)
+- [x] Tambahkan tombol "Bagikan ke WhatsApp" di halaman quiz hasil (setelah skor tampil)
 - [ ] Tambahkan Open Graph meta tags di layout.tsx untuk preview link yang bagus
 
 ---

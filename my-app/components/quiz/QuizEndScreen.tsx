@@ -41,15 +41,13 @@ export default function QuizEndScreen({
   const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0
   const [shownXp, setShownXp] = useState(reduced ? totalXp : 0)
 
-  const whatsappUrl =
-    'https://wa.me/?text=' +
-    encodeURIComponent(
-      'Aku baru dapat skor ' + accuracy + '% di Kuis Kanji Koto no Ha!\n' +
-      'Benar: ' + correct + '/' + total + ' soal, XP: +' + totalXp + '\n\n' +
-      'Coba juga: https://kotonohalearnjapanese.netlify.app/quiz'
-    )
+  const whatsappText =
+    'Aku baru dapat skor ' + accuracy + '% di Kuis Kanji Koto no Ha!\n' +
+    'Benar: ' + correct + '/' + total + ' soal, XP: +' + totalXp + '\n\n' +
+    'Coba juga: https://kotonohalearnjapanese.netlify.app/quiz'
+  const whatsappUrl = 'https://wa.me/?text=' + encodeURIComponent(whatsappText)
 
-  // XP count-up 0 → total
+  // XP count-up 0 -> total
   useEffect(() => {
     if (reduced) {
       setShownXp(totalXp)
@@ -90,7 +88,7 @@ export default function QuizEndScreen({
       <p className="text-[11px] tracking-[0.14em] uppercase mb-1" style={{ color: 'var(--gold)' }}>
         Hasil Kuis
       </p>
-      <h2 className="font-serif text-[24px] font-semibold text-ink mb-5">お疲れさま！</h2>
+      <h2 className="font-serif text-[24px] font-semibold text-ink mb-5">Otsukaresama!</h2>
 
       {/* Gauge akurasi */}
       <div className="relative w-[130px] h-[130px] mx-auto mb-5">
@@ -119,9 +117,9 @@ export default function QuizEndScreen({
       {/* Statistik */}
       <div className="grid grid-cols-3 gap-2 mb-6">
         {[
-          { label: 'Benar', value: `${correct}/${total}`, color: 'var(--green)' },
-          { label: 'XP', value: `+${shownXp}`, color: 'var(--gold)' },
-          { label: 'Streak Tertinggi', value: `${bestStreak}`, color: 'var(--red)' },
+          { label: 'Benar', value: correct + '/' + total, color: 'var(--green)' },
+          { label: 'XP', value: '+' + shownXp, color: 'var(--gold)' },
+          { label: 'Streak Tertinggi', value: String(bestStreak), color: 'var(--red)' },
         ].map((s) => (
           <div key={s.label} className="rounded-xl py-3" style={{ background: 'var(--paper-dark)' }}>
             <div className="font-serif text-[18px] font-semibold tabular-nums" style={{ color: s.color }}>
@@ -139,15 +137,19 @@ export default function QuizEndScreen({
             <Icon name="sparkles" className="w-3.5 h-3.5" />
             XP ditambahkan ke akunmu
             {typeof savedTotalXp === 'number' && (
-              <span className="text-muted">· total {savedTotalXp} XP{typeof savedStreak === 'number' ? ` · streak ${savedStreak}` : ''}</span>
+              <span className="text-muted">
+                {typeof savedStreak === 'number'
+                  ? '- total ' + savedTotalXp + ' XP - streak ' + savedStreak
+                  : '- total ' + savedTotalXp + ' XP'}
+              </span>
             )}
           </span>
         ) : isLoggedIn ? (
           <span className="text-muted">XP belum tersimpan. Coba lagi nanti.</span>
         ) : (
           <span className="text-muted">
-            <Link href="/login" className="underline" style={{ color: 'var(--gold)' }}>Masuk</Link>{' '}
-            untuk menyimpan XP &amp; streak ke akunmu.
+            <Link href="/login" className="underline" style={{ color: 'var(--gold)' }}>Masuk</Link>
+            {' untuk menyimpan XP & streak ke akunmu.'}
           </span>
         )}
       </div>
@@ -182,7 +184,6 @@ export default function QuizEndScreen({
           className="inline-flex items-center gap-1.5 text-[13px] px-4 py-2 rounded-xl text-white hover:opacity-90 transition-opacity"
           style={{ background: '#25D366' }}
         >
-          <span aria-hidden="true">&#9993;</span>
           Bagikan ke WhatsApp
         </a>
       </div>
