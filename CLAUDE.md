@@ -20,16 +20,16 @@ Next.js app di `my-app/` · Live: https://kotonohalearnjapanese.netlify.app/
 
 - [x] Tambahkan link Instagram (@kotobanoha) di navbar (desktop + mobile) dan footer
 - [x] Tambahkan tombol "Bagikan ke WhatsApp" di halaman quiz hasil (setelah skor tampil)
-- [ ] Tambahkan Open Graph meta tags di layout.tsx untuk preview link yang bagus
+- [x] Tambahkan Open Graph meta tags di layout.tsx untuk preview link yang bagus
 
 ---
 
 ## Fase 3 — Konten N3 (Vocab)
 
-Status: 112/600 vocab N3 sudah ada. Target: 600 kata eksklusif N3.
+Status: 392/600 vocab N3 sudah ada. Target: 600 kata eksklusif N3.
 
-- [ ] Tambah batch vocab N3 (kelompok A — Pekerjaan & Tempat Kerja, 80 kata)
-- [ ] Tambah batch vocab N3 (kelompok B — Kehidupan Sehari-hari, 80 kata)
+- [x] Tambah batch vocab N3 (kelompok A — Pekerjaan & Tempat Kerja, 80 kata)
+- [x] Tambah batch vocab N3 (kelompok B — Kehidupan Sehari-hari, 80 kata)
 - [ ] Tambah batch vocab N3 (kelompok C — Perasaan & Ekspresi, 60 kata)
 - [ ] Tambah batch vocab N3 (kelompok D — Kesehatan & Kaigo, 80 kata)
 - [ ] Tambah batch vocab N3 (kelompok E — Berita/Media, 60 kata)

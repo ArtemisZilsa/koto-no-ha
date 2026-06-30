@@ -36,6 +36,21 @@ export const metadata: Metadata = {
   verification: {
     google: 'UNkyFGw554wUmbQ5wLhqomwWir47S8dJjA55BLlPvEQ',
   },
+  openGraph: {
+    title: '言の葉 | Koto no Ha — Belajar Bahasa Jepang',
+    description:
+      'Platform belajar bahasa Jepang untuk orang Indonesia. Dari N5 hingga N1, SSW, dan level bisnis. Kanji, grammar, kaiwa, dan dokkai dalam satu tempat.',
+    url: 'https://kotonohalearnjapanese.netlify.app',
+    siteName: 'Koto no Ha',
+    locale: 'id_ID',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: '言の葉 | Koto no Ha — Belajar Bahasa Jepang',
+    description:
+      'Platform belajar bahasa Jepang untuk orang Indonesia. Dari N5 hingga N1, SSW, dan level bisnis.',
+  },
 }
 
 export const viewport: Viewport = {
