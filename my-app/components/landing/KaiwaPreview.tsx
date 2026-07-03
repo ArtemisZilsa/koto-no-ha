@@ -42,8 +42,8 @@ export function KaiwaPreview() {
             Belajar Bicara Jepang<br />dari Cerita Nyata
           </h2>
           <p className="text-[15px] text-muted leading-[1.8] mb-6 max-w-[460px]">
-            Ratusan dialog dari situasi nyata — mulai dari belanja di konbini sampai rapat bisnis formal.
-            Lengkap dengan audio penutur asli dan terjemahan sesuai konteks.
+            Dialog dari situasi nyata yang beneran dipakai orang Jepang sehari-hari — koleksi yang terus berkembang.
+            Lengkap dengan cara baca (hiragana &amp; romaji) dan terjemahan sesuai konteks.
           </p>
           <div className="flex flex-wrap gap-2 mb-7">
             {categories.map((cat, i) => (

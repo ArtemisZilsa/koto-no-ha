@@ -1,13 +1,18 @@
+import { Nav } from '@/components/nav/Nav'
+import { Footer } from '@/components/landing/Footer'
+
 export const metadata = {
   title: 'Kontak — Koto no Ha',
-  description: 'Hubungi tim Koto no Ha untuk pertanyaan, saran, atau laporan masalah.',
+  description: 'Hubungi Koto no Ha untuk pertanyaan, saran, atau laporan masalah.',
 }
 
 export default function KontakPage() {
   return (
+    <>
+    <Nav />
     <main className="min-h-screen px-5 md:px-12 pt-28 pb-20 max-w-[720px] mx-auto">
       <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
-        Hubungi Kami
+        Hubungi Aku
       </p>
       <h1 className="font-serif text-[30px] md:text-[40px] font-semibold text-ink leading-[1.2] mb-6 tracking-tight">
         Kontak
@@ -15,7 +20,7 @@ export default function KontakPage() {
 
       <div className="space-y-8 text-[15px] text-muted leading-[1.85]">
         <p>
-          Ada pertanyaan tentang fitur, laporan bug, atau sekadar ingin menyapa? Kami senang mendengar darimu.
+          Ada pertanyaan tentang fitur, laporan bug, atau sekadar ingin menyapa? Aku senang mendengar darimu.
         </p>
 
         <div
@@ -32,7 +37,7 @@ export default function KontakPage() {
             >
               @kotobanoha
             </a>
-            <p className="text-xs text-muted mt-0.5">Cara tercepat untuk menghubungi kami — DM terbuka.</p>
+            <p className="text-xs text-muted mt-0.5">Cara tercepat untuk menghubungiku — DM terbuka.</p>
           </div>
 
           <div style={{ borderTop: '0.5px solid var(--border)', paddingTop: '1rem' }}>
@@ -43,7 +48,7 @@ export default function KontakPage() {
             >
               halo@kotonoha.id
             </a>
-            <p className="text-xs text-muted mt-0.5">Kami berusaha membalas dalam 1–3 hari kerja.</p>
+            <p className="text-xs text-muted mt-0.5">Aku berusaha membalas dalam 1–3 hari kerja.</p>
           </div>
         </div>
 
@@ -52,5 +57,7 @@ export default function KontakPage() {
         </p>
       </div>
     </main>
+    <Footer />
+    </>
   )
 }

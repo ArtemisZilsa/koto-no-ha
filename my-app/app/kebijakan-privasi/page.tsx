@@ -1,10 +1,15 @@
+import { Nav } from '@/components/nav/Nav'
+import { Footer } from '@/components/landing/Footer'
+
 export const metadata = {
   title: 'Kebijakan Privasi — Koto no Ha',
-  description: 'Kebijakan privasi Koto no Ha: bagaimana kami mengumpulkan, menggunakan, dan melindungi data kamu.',
+  description: 'Kebijakan privasi Koto no Ha: bagaimana aku mengumpulkan, menggunakan, dan melindungi data kamu.',
 }
 
 export default function KebijakanPrivasiPage() {
   return (
+    <>
+    <Nav />
     <main className="min-h-screen px-5 md:px-12 pt-28 pb-20 max-w-[720px] mx-auto">
       <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
         Legal
@@ -16,9 +21,9 @@ export default function KebijakanPrivasiPage() {
 
       <div className="space-y-8 text-[15px] text-muted leading-[1.85]">
         <section>
-          <h2 className="font-serif text-[18px] font-semibold text-ink mb-3">1. Data yang Kami Kumpulkan</h2>
+          <h2 className="font-serif text-[18px] font-semibold text-ink mb-3">1. Data yang Aku Kumpulkan</h2>
           <p>
-            Saat kamu mendaftar, kami menyimpan alamat email dan progress belajarmu (kanji, vocab, dan grammar yang sudah dipelajari). Kami tidak mengumpulkan data sensitif seperti nomor telepon, alamat fisik, atau informasi pembayaran.
+            Saat kamu mendaftar, aku menyimpan alamat email dan progress belajarmu (kanji, vocab, dan grammar yang sudah dipelajari). Aku tidak mengumpulkan data sensitif seperti nomor telepon, alamat fisik, atau informasi pembayaran.
           </p>
         </section>
 
@@ -32,7 +37,7 @@ export default function KebijakanPrivasiPage() {
             <li>Menyimpan dan menampilkan progress belajarmu</li>
             <li>Menjadwalkan ulang materi dengan sistem SRS</li>
           </ul>
-          <p className="mt-3">Kami tidak menjual atau berbagi data kamu ke pihak ketiga untuk tujuan pemasaran.</p>
+          <p className="mt-3">Aku tidak menjual atau berbagi data kamu ke pihak ketiga untuk tujuan pemasaran.</p>
         </section>
 
         <section>
@@ -46,17 +51,19 @@ export default function KebijakanPrivasiPage() {
         <section>
           <h2 className="font-serif text-[18px] font-semibold text-ink mb-3">4. Hak Kamu</h2>
           <p>
-            Kamu berhak untuk meminta penghapusan akun dan seluruh data yang terkait kapan saja. Hubungi kami melalui halaman Kontak untuk mengajukan permintaan tersebut.
+            Kamu berhak untuk meminta penghapusan akun dan seluruh data yang terkait kapan saja. Hubungi aku melalui halaman Kontak untuk mengajukan permintaan tersebut.
           </p>
         </section>
 
         <section>
           <h2 className="font-serif text-[18px] font-semibold text-ink mb-3">5. Perubahan Kebijakan</h2>
           <p>
-            Jika kebijakan ini berubah secara signifikan, kami akan memberi tahu pengguna terdaftar melalui email atau notifikasi di dalam aplikasi.
+            Jika kebijakan ini berubah secara signifikan, aku akan memberi tahu pengguna terdaftar melalui email atau notifikasi di dalam aplikasi.
           </p>
         </section>
       </div>
     </main>
+    <Footer />
+    </>
   )
 }
