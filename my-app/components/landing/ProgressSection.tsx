@@ -15,9 +15,17 @@ export function ProgressSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Text */}
         <Reveal as="div">
-          <p className="text-[11px] tracking-[0.12em] uppercase mb-3" style={{ color: 'var(--red)' }}>
-            Halaman Progres
-          </p>
+          <div className="flex items-center gap-2 mb-3">
+            <p className="text-[11px] tracking-[0.12em] uppercase" style={{ color: 'var(--red)' }}>
+              Halaman Progres
+            </p>
+            <span
+              className="text-[10px] px-2 py-0.5 rounded-full shrink-0 whitespace-nowrap"
+              style={{ background: 'var(--surface)', color: 'var(--muted)', border: '0.5px solid var(--border)' }}
+            >
+              Segera hadir
+            </span>
+          </div>
           <h2 className="font-serif text-[26px] md:text-[36px] font-semibold text-ink leading-[1.25] mb-4 tracking-tight">
             Lihat Kemajuanmu<br />Setiap Hari
           </h2>

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Icon, type IconName } from '@/components/ui/Icon'
 import { Reveal } from '@/components/ui/Reveal'
 
-const features: { icon: IconName; accent: string; bg: string; title: string; desc: string; tag: string; href?: string }[] = [
+const features: { icon: IconName; accent: string; bg: string; title: string; desc: string; tag: string; href?: string; soon?: boolean }[] = [
   {
     icon: 'play',
     accent: 'var(--gold)',
@@ -19,6 +19,7 @@ const features: { icon: IconName; accent: string; bg: string; title: string; des
     title: 'Pantau Kemajuan Belajar',
     desc: 'Lihat perkembangan Kanji, tata bahasa, membaca, dan menyimak secara terpisah. Sistem pengulangan otomatis (SRS) menjadwalkan kembali materi yang perlu kamu ulang.',
     tag: 'Kanji · Tata Bahasa · Membaca · Menyimak',
+    soon: true,
   },
   {
     icon: 'newspaper',
@@ -59,6 +60,7 @@ const features: { icon: IconName; accent: string; bg: string; title: string; des
     title: 'Kartu Hafalan Pintar (SRS)',
     desc: 'Kartu Kanji dan kosakata dengan sistem pengulangan terjadwal. Belajar lebih sedikit, tapi ingatannya bertahan lebih lama. Bisa diatur per level.',
     tag: 'SRS · Kanji · Kosakata',
+    soon: true,
   },
 ]
 
@@ -78,7 +80,7 @@ export function FeaturesGrid() {
       </Reveal>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
-        {features.map(({ icon, accent, bg, title, desc, tag, href }, i) => {
+        {features.map(({ icon, accent, bg, title, desc, tag, href, soon }, i) => {
           const inner = (
             <>
               <span
@@ -87,7 +89,17 @@ export function FeaturesGrid() {
               >
                 <Icon name={icon} className="w-5 h-5" />
               </span>
-              <div className="font-serif text-[15px] font-semibold text-ink mb-2">{title}</div>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="font-serif text-[15px] font-semibold text-ink">{title}</span>
+                {soon && (
+                  <span
+                    className="text-[10px] px-2 py-0.5 rounded-full shrink-0 whitespace-nowrap"
+                    style={{ background: 'var(--paper-dark)', color: 'var(--muted)' }}
+                  >
+                    Segera hadir
+                  </span>
+                )}
+              </div>
               <div className="text-[12.5px] text-muted leading-[1.75]">{desc}</div>
               <span
                 className="inline-block mt-3 text-[10px] tracking-[0.05em] px-2.5 py-0.5 rounded-full"

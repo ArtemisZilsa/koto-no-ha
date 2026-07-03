@@ -1,7 +1,13 @@
 import Link from 'next/link'
 import { Icon } from '@/components/ui/Icon'
 
-const categories = ['Kehidupan Sehari-hari', 'Tempat Kerja', 'Rumah Sakit', 'Bisnis Formal', 'Kaigo / Perawatan']
+const categories = [
+  { label: 'Kehidupan Sehari-hari', code: 'daily' },
+  { label: 'Tempat Kerja', code: 'work' },
+  { label: 'Rumah Sakit', code: 'hospital' },
+  { label: 'Bisnis Formal', code: 'biz' },
+  { label: 'Kaigo / Perawatan', code: 'kaigo' },
+]
 
 const lines = [
   {
@@ -46,18 +52,19 @@ export function KaiwaPreview() {
             Lengkap dengan cara baca (hiragana &amp; romaji) dan terjemahan sesuai konteks.
           </p>
           <div className="flex flex-wrap gap-2 mb-7">
-            {categories.map((cat, i) => (
-              <span
-                key={cat}
-                className="text-[11px] px-3 py-1 rounded-full"
+            {categories.map(({ label, code }, i) => (
+              <Link
+                key={code}
+                href={`/kaiwa?level=N5&theme=${code}`}
+                className="text-[11px] px-3 py-1 rounded-full no-underline transition-all hover:-translate-y-0.5"
                 style={
                   i === categories.length - 1
                     ? { background: 'var(--red)', color: 'var(--on-ink)', border: '0.5px solid var(--red)' }
                     : { border: '0.5px solid var(--border)', color: 'var(--muted)' }
                 }
               >
-                {cat}
-              </span>
+                {label}
+              </Link>
             ))}
           </div>
           {/* Pilih level langsung dari landing → /kaiwa?level=X */}

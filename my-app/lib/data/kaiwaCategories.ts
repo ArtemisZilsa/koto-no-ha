@@ -11,6 +11,7 @@ export interface KaiwaCategoryInfo {
 export const CATEGORY_LABEL: Record<string, KaiwaCategoryInfo> = {
   daily: { jp: '日常会話', id: 'Sehari-hari', icon: 'home' },
   work: { jp: '職場', id: 'Tempat Kerja', icon: 'building' },
+  hospital: { jp: '病院', id: 'Rumah Sakit', icon: 'hospital' },
   biz: { jp: 'ビジネス', id: 'Bisnis Formal', icon: 'briefcase' },
   kaigo: { jp: '介護', id: 'Kaigo / Perawatan', icon: 'heart-pulse' },
 }
@@ -23,4 +24,4 @@ export function getCategoryInfo(category: string): KaiwaCategoryInfo {
 }
 
 /** Urutan tampilan tema yang konsisten. */
-export const CATEGORY_ORDER: KaiwaCategory[] = ['daily', 'work', 'biz', 'kaigo']
+export const CATEGORY_ORDER: KaiwaCategory[] = ['daily', 'work', 'hospital', 'biz', 'kaigo']

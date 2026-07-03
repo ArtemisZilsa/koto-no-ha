@@ -13,7 +13,7 @@ export type LessonType = 'grammar' | 'vocab' | 'kanji' | 'choukai' | 'dokkai'
 export type QuestionType = 'grammar' | 'vocab' | 'kanji' | 'choukai' | 'dokkai'
 export type SkillType = 'kanji' | 'bunpo' | 'dokkai' | 'choukai'
 export type VisaType = 'SSW' | 'TG' | 'GK'
-export type KaiwaCategory = 'daily' | 'work' | 'biz' | 'kaigo'
+export type KaiwaCategory = 'daily' | 'work' | 'hospital' | 'biz' | 'kaigo'
 export type LevelCode = 'N5' | 'N4' | 'N3' | 'N2' | 'N1' | 'SSW' | 'BIZ'
 
 // ─── Table Row Types ──────────────────────────────────────────────────────────
