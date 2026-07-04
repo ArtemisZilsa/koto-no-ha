@@ -2,6 +2,7 @@
 
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
+import { validatePasswordStrength, isPasswordPwned } from '@/lib/auth/passwordPolicy'
 
 type AuthState = { error?: string; message?: string } | undefined
 
@@ -39,8 +40,16 @@ export async function register(prevState: AuthState, formData: FormData) {
     return { error: 'Password tidak cocok. Silakan coba lagi.' }
   }
 
-  if (password.length < 6) {
-    return { error: 'Password minimal 6 karakter.' }
+  const strengthError = validatePasswordStrength(password)
+  if (strengthError) {
+    return { error: strengthError }
+  }
+
+  if (await isPasswordPwned(password)) {
+    return {
+      error:
+        'Password ini pernah muncul di kebocoran data di internet. Demi keamananmu, pakai kombinasi lain yang belum pernah kamu pakai di situs mana pun.',
+    }
   }
 
   const supabase = await createClient()

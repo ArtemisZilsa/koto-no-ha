@@ -45,15 +45,21 @@ export function RegisterForm() {
         required
       />
 
-      <Input
-        id="password"
-        name="password"
-        type="password"
-        label="Password"
-        placeholder="Minimal 6 karakter"
-        autoComplete="new-password"
-        required
-      />
+      <div className="flex flex-col gap-1.5">
+        <Input
+          id="password"
+          name="password"
+          type="password"
+          label="Password"
+          placeholder="Min. 8 karakter, ada huruf & angka"
+          autoComplete="new-password"
+          required
+        />
+        <p className="text-xs text-muted">
+          Minimal 8 karakter dengan kombinasi huruf dan angka. Password yang pernah bocor di internet
+          akan ditolak otomatis.
+        </p>
+      </div>
 
       <Input
         id="confirm"
