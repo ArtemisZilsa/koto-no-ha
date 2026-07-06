@@ -29,8 +29,8 @@ export function NavClient({ user }: NavClientProps) {
       {/* Logo */}
       <Link href="/" className="flex items-center gap-2.5 no-underline">
         <span className="font-serif text-[22px] font-semibold text-ink tracking-tight">言の葉</span>
-        <div className="w-px h-[22px]" style={{ background: 'var(--border)' }} />
-        <span className="text-[11px] text-muted tracking-[0.12em] uppercase">Koto no Ha</span>
+        <div className="w-px h-[22px] hidden min-[400px]:block" style={{ background: 'var(--border)' }} />
+        <span className="hidden min-[400px]:inline text-[11px] text-muted tracking-[0.12em] uppercase">Koto no Ha</span>
       </Link>
 
       {/* Desktop nav links */}
@@ -110,9 +110,10 @@ export function NavClient({ user }: NavClientProps) {
 
       {/* Mobile hamburger */}
       <button
-        className="md:hidden flex flex-col gap-1.5 p-1"
+        className="md:hidden flex flex-col gap-1.5 p-2 -mr-2"
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Toggle menu"
+        aria-expanded={menuOpen}
       >
         <span className={`block w-5 h-0.5 bg-ink transition-transform ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
         <span className={`block w-5 h-0.5 bg-ink transition-opacity ${menuOpen ? 'opacity-0' : ''}`} />
@@ -122,13 +123,14 @@ export function NavClient({ user }: NavClientProps) {
       {/* Mobile menu */}
       {menuOpen && (
         <div
-          className="glass absolute top-[60px] left-0 right-0 px-5 py-4 flex flex-col gap-3 md:hidden"
+          className="glass absolute top-[60px] left-0 right-0 px-5 py-4 flex flex-col gap-3 md:hidden max-h-[calc(100dvh-60px)] overflow-y-auto"
           style={{ borderRadius: 0, background: 'var(--nav-bg)' }}
         >
           {[
             { href: '/#fitur', label: 'Belajar' },
             { href: '/#level', label: 'Level' },
             { href: '/kaiwa', label: 'Kaiwa' },
+            { href: '/quiz', label: 'Kuis' },
             { href: '/ssw', label: 'SSW / TG' },
             { href: '/berita', label: 'Berita' },
           ].map(({ href, label }) => (
@@ -163,12 +165,41 @@ export function NavClient({ user }: NavClientProps) {
             </div>
           </div>
           <div className="flex gap-2 pt-1">
-            <Link href="/login" className="flex-1 text-center text-sm py-2 rounded-lg border text-ink" style={{ borderColor: 'var(--border)' }}>
-              Masuk
-            </Link>
-            <Link href="/register" className="flex-1 text-center text-sm py-2 rounded-lg bg-ink text-paper">
-              Daftar
-            </Link>
+            {user ? (
+              <>
+                <Link
+                  href="/dashboard"
+                  onClick={() => setMenuOpen(false)}
+                  className="flex-1 text-center text-sm py-2 rounded-lg border text-ink"
+                  style={{ borderColor: 'var(--border)' }}
+                >
+                  Dashboard
+                </Link>
+                <form action={logout} className="flex-1">
+                  <button type="submit" className="w-full text-center text-sm py-2 rounded-lg bg-ink text-paper">
+                    Keluar
+                  </button>
+                </form>
+              </>
+            ) : (
+              <>
+                <Link
+                  href="/login"
+                  onClick={() => setMenuOpen(false)}
+                  className="flex-1 text-center text-sm py-2 rounded-lg border text-ink"
+                  style={{ borderColor: 'var(--border)' }}
+                >
+                  Masuk
+                </Link>
+                <Link
+                  href="/register"
+                  onClick={() => setMenuOpen(false)}
+                  className="flex-1 text-center text-sm py-2 rounded-lg bg-ink text-paper"
+                >
+                  Daftar
+                </Link>
+              </>
+            )}
           </div>
         </div>
       )}
