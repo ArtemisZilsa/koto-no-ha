@@ -27,7 +27,7 @@ const features: { icon: IconName; accent: string; bg: string; title: string; des
     bg: 'var(--red-bg)',
     title: 'Berita Jepang Terkini',
     desc: 'Baca berita dari NHK Web Easy dan sumber tepercaya langsung di sini. Kata-kata sulit otomatis ditandai sesuai level JLPT kamu.',
-    tag: 'Diperbarui Tiap Hari · Sesuai Level',
+    tag: 'Diperbarui Berkala · Sesuai Level',
   },
   {
     icon: 'building',

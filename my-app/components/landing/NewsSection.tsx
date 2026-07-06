@@ -5,7 +5,7 @@ import { Icon } from '@/components/ui/Icon'
 const articles = [
   {
     featured: true,
-    src: 'NHK Web Easy · Hari Ini',
+    src: 'NHK Web Easy',
     cat: 'Ekonomi',
     title: '日本の物価上昇が続く中、政府は新しい対策を発表した',
     excerpt:
