@@ -39,6 +39,20 @@ export interface UserItemProgress {
   known_at: string
 }
 
+/** Progres SRS flashcard per user (polymorphic ke vocab/kanji). */
+export interface UserSrsProgress {
+  id: string
+  user_id: string
+  item_type: 'vocab' | 'kanji'
+  item_id: string
+  interval_days: number
+  ease_factor: number
+  next_review_at: string
+  review_count: number
+  lapse_count: number
+  last_reviewed_at: string | null
+}
+
 export interface Level {
   id: number
   code: LevelCode
@@ -119,6 +133,28 @@ export interface KaiwaStory {
   lines: KaiwaLine[]
   vocab_highlight: Json | null
   is_premium: boolean
+  /** Profesi pemilik pelajaran; null = dialog lepas, ditelusuri lewat tema. */
+  job_slug: string | null
+  /** Nomor urut dalam silabus profesi. null bila dialog lepas. */
+  lesson_no: number | null
+  /** Satu kalimat: apa yang bisa dilakukan pelajar setelah pelajaran ini. */
+  goal: string | null
+}
+
+/**
+ * Satu profesi dalam silabus kaiwa.
+ *
+ * `sector_slug` menunjuk ke bidang SSW di `lib/data/sswSectors.ts` — daftar
+ * bidangnya tinggal di kode, bukan di database, supaya tidak ada dua sumber
+ * kebenaran (nilai yang sama juga dipakai kolom `vocab.field`).
+ */
+export interface KaiwaJob {
+  slug: string
+  sector_slug: string
+  jp: string
+  label: string
+  summary: string | null
+  sort_order: number
 }
 
 /** Satu kalimat bacaan dokkai — memenuhi aturan konten (kanji+furigana+romaji+terjemahan). */
@@ -134,6 +170,13 @@ export interface DokkaiVocabNote {
   word: string
   reading: string
   romaji: string
+  meaning: string   // arti Bahasa Indonesia
+}
+
+/** Kata vocab (dari tabel `vocab`) yang disorot di reader dokkai sesuai level user. */
+export interface DokkaiHighlightWord {
+  word: string
+  reading: string   // hiragana
   meaning: string   // arti Bahasa Indonesia
 }
 
@@ -298,6 +341,11 @@ export interface Database {
         Insert: Omit<KaiwaStory, 'id'> & Partial<Pick<KaiwaStory, 'id'>>
         Update: Partial<Omit<KaiwaStory, 'id'>>
       }
+      kaiwa_jobs: {
+        Row: KaiwaJob
+        Insert: KaiwaJob
+        Update: Partial<Omit<KaiwaJob, 'slug'>>
+      }
       dokkai_passages: {
         Row: DokkaPassage
         Insert: Omit<DokkaPassage, 'id'> & Partial<Pick<DokkaPassage, 'id'>>
@@ -337,6 +385,11 @@ export interface Database {
         Row: UserItemProgress
         Insert: Omit<UserItemProgress, 'id' | 'known_at'> & Partial<Pick<UserItemProgress, 'id' | 'known_at'>>
         Update: Partial<Omit<UserItemProgress, 'id'>>
+      }
+      user_srs_progress: {
+        Row: UserSrsProgress
+        Insert: Omit<UserSrsProgress, 'id'> & Partial<Pick<UserSrsProgress, 'id'>>
+        Update: Partial<Omit<UserSrsProgress, 'id'>>
       }
     }
     Functions: {

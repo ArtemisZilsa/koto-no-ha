@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getDokkaiById } from '@/lib/data/queries'
+import { getDokkaiById, getDokkaiHighlightWords } from '@/lib/data/queries'
 import type { DokkaiVocabNote, DokkaiQuestion } from '@/lib/types/database.types'
 import DokkaiReader from '@/components/dokkai/DokkaiReader'
 import VocabNotes from '@/components/dokkai/VocabNotes'
@@ -30,6 +30,13 @@ export default async function DokkaiDetailPage({ params }: { params: Promise<{ i
   const meta = levelMetaById[passage.level_id] ?? { code: '', accent: 'var(--gold)' }
   const vocab = (passage.vocab_notes as unknown as DokkaiVocabNote[] | null) ?? []
   const questions = (passage.questions as unknown as DokkaiQuestion[] | null) ?? []
+
+  // Kata vocab sesuai level user (fallback: level bacaan) yang muncul di teks —
+  // difilter di server agar payload ke client tetap kecil.
+  const { words: allLevelWords, levelCode } = await getDokkaiHighlightWords(passage.level_id)
+  const jpText =
+    passage.content_json?.map((s) => s.jp).join('\n') ?? passage.text_content
+  const highlightWords = allLevelWords.filter((w) => jpText.includes(w.word)).slice(0, 150)
 
   return (
     <main className="relative z-10 px-5 md:px-8 py-10 max-w-2xl mx-auto">
@@ -66,6 +73,8 @@ export default async function DokkaiDetailPage({ params }: { params: Promise<{ i
           sentences={passage.content_json}
           fallbackText={passage.text_content}
           accentColor={meta.accent}
+          highlightWords={highlightWords}
+          highlightLevel={levelCode}
         />
       </section>
 

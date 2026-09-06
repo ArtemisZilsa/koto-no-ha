@@ -6,9 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "audio": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file=.env.local tools/generate-kaiwa-audio.mts",
+    "audio:dry": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file=.env.local tools/generate-kaiwa-audio.mts --dry-run",
+    "typecheck:audio": "tsc -p tsconfig.audio.json",
+    "seed:kaiwa": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file=.env.local tools/seed-kaiwa-lessons.mts"
   },
   "dependencies": {
+    "@elevenlabs/elevenlabs-js": "^2.65.0",
     "@supabase/ssr": "^0.10.3",
     "@supabase/supabase-js": "^2.106.2",
     "canvas-confetti": "^1.9.4",

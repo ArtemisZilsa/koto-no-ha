@@ -9,9 +9,9 @@ const visaCards = [
     desc: 'Visa kerja untuk sektor tertentu yang membutuhkan keahlian teknis dan kemampuan bahasa Jepang minimal N4.',
     items: [
       'Butuh JLPT N4 atau lulus ujian keahlian sektor',
-      'Tersedia di 14 sektor industri',
+      'Tersedia di 16 bidang industri',
       'Masa berlaku visa hingga 5 tahun (SSW1)',
-      'Dilengkapi panduan ujian per sektor',
+      'Ringkasan syarat & alur prosesnya ada di sini',
     ],
     accent: 'var(--red)',
     badgeBg: 'var(--red-bg)',
@@ -99,7 +99,7 @@ export function VisaSection() {
           href="/ssw"
           className="inline-flex items-center gap-2 text-[13px] font-medium px-6 py-2.5 rounded-lg bg-ink text-paper no-underline hover:opacity-90 transition-opacity"
         >
-          Panduan Lengkap SSW (14 Sektor) →
+          Panduan Lengkap SSW (16 Bidang) →
         </Link>
       </div>
     </section>

@@ -84,7 +84,7 @@ export function HeroSection() {
         </Reveal>
         <Reveal delay={220}>
           <p className="text-[15px] text-muted leading-[1.8] mb-9 max-w-[460px]">
-            Dari N5 sampai N1, dari SSW sampai level bisnis — belajar bahasa Jepang
+            Dari N5 sampai N1, plus kosakata kerja SSW — belajar bahasa Jepang
             secara terstruktur dan interaktif, dirancang khusus untuk orang Indonesia
             yang ingin benar-benar lancar.
           </p>
@@ -113,7 +113,7 @@ export function HeroSection() {
         <Reveal delay={360}>
           <div className="flex flex-wrap gap-x-9 gap-y-4">
             {[
-              { num: '8 Level', label: 'N5 hingga Bisnis' },
+              { num: '6 Level', label: 'N5 sampai N1 + SSW' },
               { num: '40+', label: 'Dialog dari Situasi Nyata' },
               { num: 'Gratis', label: 'Daftar Tanpa Biaya' },
             ].map(({ num, label }) => (

@@ -1,7 +1,8 @@
 import { createClient } from '@/lib/supabase/server'
-import type { Vocab, Kanji, KanjiExampleJson, Grammar, GrammarExampleJson, NewsArticle, KaiwaStory, DokkaPassage } from '@/lib/types/database.types'
+import type { Vocab, Kanji, KanjiExampleJson, Grammar, GrammarExampleJson, NewsArticle, KaiwaStory, KaiwaJob, KaiwaCategory, DokkaPassage, DokkaiHighlightWord, UserSrsProgress } from '@/lib/types/database.types'
 import type { VocabEntry, KanjiEntry, GrammarEntry, JLPTLevel } from './types'
 import type { QuizItem, QuizMode } from './quiz'
+import { withResolvedAudio } from './kaiwaAudio'
 
 const PAGE_SIZE = 50
 const NEWS_PAGE_SIZE = 12
@@ -343,7 +344,14 @@ export async function getNewsList(page = 1): Promise<PagedResult<NewsArticle>> {
 
 // ── Kaiwa / Percakapan ─────────────────────────────────────────
 
-/** Semua kaiwa untuk satu level JLPT (tanpa paginasi — biasanya 5 per level). */
+/**
+ * Kaiwa lepas untuk satu level JLPT — yang ditelusuri lewat tema.
+ *
+ * Pelajaran yang bagian dari silabus profesi (`job_slug` terisi) sengaja
+ * DIKELUARKAN: urutannya bermakna, dan mencampurnya ke daftar tema akan
+ * menampilkan pelajaran 14 sebelum pelajaran 2. Silabus dibaca lewat
+ * getKaiwaLessons().
+ */
 export async function getKaiwaByLevel(level: JLPTLevel): Promise<KaiwaStory[]> {
   const supabase = await createClient()
   const levelId = levelIdByCode[level]
@@ -352,13 +360,116 @@ export async function getKaiwaByLevel(level: JLPTLevel): Promise<KaiwaStory[]> {
     .from('kaiwa_stories')
     .select('*')
     .eq('level_id', levelId)
+    .is('job_slug', null)
     .order('title')
 
   if (error) {
     console.error('getKaiwaByLevel error', error)
     return []
   }
-  return (data ?? []) as KaiwaStory[]
+  // `lines[].audio` disimpan sebagai path storage; rakit jadi URL publik di sini.
+  return ((data ?? []) as KaiwaStory[]).map(withResolvedAudio)
+}
+
+// ── Kaiwa per profesi (silabus) ────────────────────────────────
+
+/** Satu profesi beserta jumlah pelajaran yang sudah terisi. */
+export interface KaiwaJobWithCount extends KaiwaJob {
+  lessonCount: number
+}
+
+/**
+ * Semua profesi, lengkap dengan jumlah pelajarannya.
+ *
+ * Jumlah dihitung lewat satu query agregat terpisah, bukan N+1 per profesi:
+ * daftar profesi akan tumbuh, dan halaman hub memuat semuanya sekaligus.
+ */
+export async function getKaiwaJobs(): Promise<KaiwaJobWithCount[]> {
+  const supabase = await createClient()
+
+  const [jobsRes, lessonsRes] = await Promise.all([
+    supabase.from('kaiwa_jobs').select('*').order('sector_slug').order('sort_order'),
+    supabase.from('kaiwa_stories').select('job_slug').not('job_slug', 'is', null),
+  ])
+
+  if (jobsRes.error) {
+    console.error('getKaiwaJobs error', jobsRes.error)
+    return []
+  }
+  if (lessonsRes.error) console.error('getKaiwaJobs count error', lessonsRes.error)
+
+  const counts = new Map<string, number>()
+  for (const row of (lessonsRes.data ?? []) as { job_slug: string | null }[]) {
+    if (row.job_slug) counts.set(row.job_slug, (counts.get(row.job_slug) ?? 0) + 1)
+  }
+
+  return ((jobsRes.data ?? []) as KaiwaJob[]).map((job) => ({
+    ...job,
+    lessonCount: counts.get(job.slug) ?? 0,
+  }))
+}
+
+/** Satu profesi berdasarkan slug. null bila tidak ada. */
+export async function getKaiwaJob(slug: string): Promise<KaiwaJob | null> {
+  const supabase = await createClient()
+
+  const { data, error } = await supabase.from('kaiwa_jobs').select('*').eq('slug', slug).maybeSingle()
+
+  if (error) {
+    console.error('getKaiwaJob error', error)
+    return null
+  }
+  return (data as KaiwaJob | null) ?? null
+}
+
+/**
+ * Silabus satu profesi, urut nomor pelajaran.
+ *
+ * `lines` sengaja tidak diambil: daftar silabus hanya butuh judul dan sasaran,
+ * sedangkan satu profesi bisa memuat ratusan baris dialog.
+ */
+export async function getKaiwaLessons(jobSlug: string): Promise<KaiwaLessonSummary[]> {
+  const supabase = await createClient()
+
+  const { data, error } = await supabase
+    .from('kaiwa_stories')
+    .select('id, lesson_no, title, goal, level_id, category')
+    .eq('job_slug', jobSlug)
+    .order('lesson_no')
+
+  if (error) {
+    console.error('getKaiwaLessons error', error)
+    return []
+  }
+  return (data ?? []) as KaiwaLessonSummary[]
+}
+
+/** Baris ringkas untuk daftar silabus — tanpa isi dialog. */
+export interface KaiwaLessonSummary {
+  id: string
+  lesson_no: number
+  title: string
+  goal: string | null
+  level_id: number
+  category: KaiwaCategory
+}
+
+/** Satu pelajaran dalam silabus profesi. null bila nomornya tidak ada. */
+export async function getKaiwaLesson(jobSlug: string, lessonNo: number): Promise<KaiwaStory | null> {
+  const supabase = await createClient()
+
+  const { data, error } = await supabase
+    .from('kaiwa_stories')
+    .select('*')
+    .eq('job_slug', jobSlug)
+    .eq('lesson_no', lessonNo)
+    .maybeSingle()
+
+  if (error) {
+    console.error('getKaiwaLesson error', error)
+    return null
+  }
+  return data ? withResolvedAudio(data as KaiwaStory) : null
 }
 
 // ── Dokkai / Latihan Membaca ───────────────────────────────────
@@ -409,6 +520,54 @@ export async function getDokkaiById(id: string): Promise<DokkaPassage | null> {
     return null
   }
   return data as DokkaPassage
+}
+
+/**
+ * Kata vocab untuk disorot di reader dokkai, sesuai level user.
+ * Level ditentukan dari `profiles.current_level_id` bila user login dan valid
+ * (N5–N1); bila tidak (tamu / belum diatur), jatuh kembali ke level bacaan.
+ * Mengembalikan juga kode level (mis. "N3") untuk label di UI.
+ */
+export async function getDokkaiHighlightWords(
+  passageLevelId: number,
+): Promise<{ words: DokkaiHighlightWord[]; levelCode: JLPTLevel | null }> {
+  const supabase = await createClient()
+
+  let levelId = passageLevelId
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (user) {
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('current_level_id')
+      .eq('id', user.id)
+      .single()
+    const userLevel = (profile as { current_level_id: number | null } | null)?.current_level_id
+    if (userLevel && userLevel >= 1 && userLevel <= 5) levelId = userLevel
+  }
+
+  const levelCode = (Object.entries(levelIdByCode).find(([, id]) => id === levelId)?.[0] ??
+    null) as JLPTLevel | null
+  if (!levelCode) return { words: [], levelCode: null }
+
+  const { data, error } = await supabase
+    .from('vocab')
+    .select('word, hiragana, meaning')
+    .eq('level_id', levelId)
+
+  if (error) {
+    console.error('getDokkaiHighlightWords error', error)
+    return { words: [], levelCode }
+  }
+
+  const rows = (data ?? []) as { word: string; hiragana: string; meaning: string }[]
+  return {
+    words: rows
+      .filter((r) => r.word && r.word.length >= 2)
+      .map((r) => ({ word: r.word, reading: r.hiragana, meaning: r.meaning })),
+    levelCode,
+  }
 }
 
 // ── Progres item (checklist "sudah dikenal") ───────────────────
@@ -494,4 +653,129 @@ export async function getNewsById(id: string): Promise<NewsArticle | null> {
     return null
   }
   return data as NewsArticle
+}
+
+/* ─── Sesi flashcard SRS ──────────────────────────────────────────────────────
+ * Kartu jatuh tempo (due) diambil lebih dulu, lalu sisanya diisi kartu baru
+ * (belum pernah direview) urut order_index. Untuk tamu (belum login) semua
+ * kartu dianggap baru dan progres tidak disimpan.
+ */
+
+export type FlashcardItemType = 'vocab' | 'kanji'
+
+export type FlashcardStudyItem =
+  | { itemType: 'vocab'; isNew: boolean; entry: VocabEntry }
+  | { itemType: 'kanji'; isNew: boolean; entry: KanjiEntry }
+
+export interface FlashcardSession {
+  items: FlashcardStudyItem[]
+  /** Jumlah kartu due yang masuk sesi ini. */
+  dueCount: number
+  /** Jumlah kartu baru yang masuk sesi ini. */
+  newCount: number
+  /** false = tamu; progres tidak akan tersimpan. */
+  signedIn: boolean
+}
+
+const SESSION_SIZE = 20
+const DUE_FETCH_LIMIT = 200
+
+export async function getFlashcardSession(
+  level: JLPTLevel,
+  itemType: FlashcardItemType = 'vocab',
+  limit = SESSION_SIZE,
+): Promise<FlashcardSession> {
+  const supabase = await createClient()
+  const levelId = levelIdByCode[level]
+  const table = itemType === 'vocab' ? 'vocab' : 'kanji'
+
+  const toItem = (row: Vocab | Kanji, isNew: boolean): FlashcardStudyItem =>
+    itemType === 'vocab'
+      ? { itemType: 'vocab', isNew, entry: rowToVocabEntry(row as Vocab) }
+      : { itemType: 'kanji', isNew, entry: rowToKanjiEntry(row as Kanji) }
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
+  const items: FlashcardStudyItem[] = []
+  let studiedIds: string[] = []
+
+  if (user) {
+    // 1) Kartu jatuh tempo milik user (semua level, difilter level di bawah).
+    const { data: dueRows, error: dueError } = await supabase
+      .from('user_srs_progress')
+      .select('item_id, next_review_at')
+      .eq('user_id', user.id)
+      .eq('item_type', itemType)
+      .lte('next_review_at', new Date().toISOString())
+      .order('next_review_at')
+      .limit(DUE_FETCH_LIMIT)
+
+    if (dueError) console.error('getFlashcardSession due error', dueError)
+
+    const dueIds = ((dueRows ?? []) as Pick<UserSrsProgress, 'item_id'>[]).map(
+      (r) => r.item_id,
+    )
+
+    if (dueIds.length > 0) {
+      const { data: dueContent, error: contentError } = await supabase
+        .from(table)
+        .select('*')
+        .eq('level_id', levelId)
+        .in('id', dueIds)
+
+      if (contentError) console.error('getFlashcardSession content error', contentError)
+
+      // Pertahankan urutan jatuh tempo (paling telat lebih dulu).
+      const byId = new Map(((dueContent ?? []) as (Vocab | Kanji)[]).map((r) => [r.id, r]))
+      for (const id of dueIds) {
+        if (items.length >= limit) break
+        const row = byId.get(id)
+        if (row) items.push(toItem(row, false))
+      }
+    }
+
+    // 2) Semua item yang sudah pernah direview → dikecualikan dari kartu baru.
+    const { data: studiedRows, error: studiedError } = await supabase
+      .from('user_srs_progress')
+      .select('item_id')
+      .eq('user_id', user.id)
+      .eq('item_type', itemType)
+
+    if (studiedError) console.error('getFlashcardSession studied error', studiedError)
+    studiedIds = ((studiedRows ?? []) as Pick<UserSrsProgress, 'item_id'>[]).map(
+      (r) => r.item_id,
+    )
+  }
+
+  const dueCount = items.length
+
+  // 3) Isi sisa slot dengan kartu baru urut order_index.
+  if (items.length < limit) {
+    let query = supabase
+      .from(table)
+      .select('*')
+      .eq('level_id', levelId)
+      .order('order_index')
+      .limit(limit - items.length)
+
+    if (studiedIds.length > 0) {
+      query = query.not('id', 'in', `(${studiedIds.join(',')})`)
+    }
+
+    const { data: newRows, error: newError } = await query
+    if (newError) console.error('getFlashcardSession new error', newError)
+
+    for (const row of (newRows ?? []) as (Vocab | Kanji)[]) {
+      items.push(toItem(row, true))
+    }
+  }
+
+  return {
+    items,
+    dueCount,
+    newCount: items.length - dueCount,
+    signedIn: Boolean(user),
+  }
 }

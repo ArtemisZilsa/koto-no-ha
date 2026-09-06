@@ -10,7 +10,7 @@ import { sswSectors } from '@/lib/data/sswSectors'
 export const metadata: Metadata = {
   title: 'Panduan SSW / Tokutei Ginou | Koto no Ha',
   description:
-    'Panduan lengkap visa kerja SSW (Specified Skilled Worker / Tokutei Ginou): 14 sektor, syarat JLPT & ujian keahlian, perbedaan SSW i & ii, dan alur prosesnya.',
+    'Panduan lengkap visa kerja SSW (Specified Skilled Worker / Tokutei Ginou): 16 bidang, syarat JLPT & ujian keahlian, perbedaan SSW i & ii, dan alur prosesnya.',
 }
 
 const requirements: { title: string; desc: string }[] = [
@@ -41,7 +41,7 @@ const tiers: { tag: string; name: string; points: string[]; accent: string }[] =
       'Durasi maksimal 5 tahun (diperpanjang per 1/6/12 bulan)',
       'Tidak boleh membawa keluarga',
       'Syarat: JLPT N4/JFT-Basic + ujian keterampilan',
-      'Tersedia di seluruh 14 sektor',
+      'Tersedia di seluruh 16 bidang',
     ],
   },
   {
@@ -97,13 +97,13 @@ export default function SSWPage() {
             </h1>
             <p className="text-[15px] text-muted max-w-[620px] leading-[1.8]">
               SSW (Tokutei Ginou) adalah visa kerja Jepang untuk mengisi kekurangan tenaga kerja
-              di 14 sektor. Di sini kamu bisa lihat ringkasannya: daftar sektor, syarat, perbedaan tiap tingkat, dan alur prosesnya.
+              di 16 bidang. Di sini kamu bisa lihat ringkasannya: daftar bidang, syarat, perbedaan tiap tingkat, dan alur prosesnya.
             </p>
           </div>
         </section>
 
         <div className="max-w-4xl mx-auto px-5 md:px-12 py-12 flex flex-col gap-14">
-          {/* 14 Sektor — hub belajar kosakata per bidang */}
+          {/* 16 Bidang — hub belajar kosakata per bidang */}
           <section>
             <h2 className="font-serif text-[22px] md:text-[26px] font-semibold text-ink mb-1">Belajar Kosakata per Bidang</h2>
             <p className="text-[13px] text-muted mb-6">

@@ -73,6 +73,32 @@ export default async function KaiwaPage({
         </div>
 
         <section className="px-5 md:px-12 py-12 max-w-3xl mx-auto">
+          {/* Dua cara masuk: per tema (di halaman ini) atau per profesi (silabus). */}
+          <Link
+            href="/kaiwa/kerja"
+            className="flex items-center gap-4 rounded-xl p-5 mb-8 no-underline hover-lift"
+            style={{ background: 'var(--surface)', border: '0.5px solid var(--border)' }}
+          >
+            <span
+              className="w-12 h-12 rounded-xl shrink-0 flex items-center justify-center"
+              style={{ background: 'var(--teal-bg)', color: 'var(--teal)' }}
+            >
+              <Icon name="briefcase" className="w-6 h-6" />
+            </span>
+            <div className="min-w-0">
+              <div className="font-serif text-[16px] font-semibold text-ink leading-tight">
+                Kaiwa per Profesi
+              </div>
+              <div className="text-[12px] mt-0.5 leading-[1.7]" style={{ color: 'var(--muted)' }}>
+                Silabus berurutan untuk satu pekerjaan — dari hari pertama masuk kerja.
+                Dikelompokkan per bidang SSW.
+              </div>
+            </div>
+            <span className="ml-auto text-[18px] shrink-0" style={{ color: 'var(--teal)' }}>
+              →
+            </span>
+          </Link>
+
           {/* Langkah 1: Pemilih level (selalu tampil; klik mereset tema) */}
           <div className="mb-8">
             <p className="text-[12px] font-medium mb-2.5" style={{ color: 'var(--muted)' }}>

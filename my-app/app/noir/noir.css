@@ -1,0 +1,645 @@
+/* ============================================================
+   /noir — halaman bergaya sinema hitam-putih.
+   Bahasa visual: cahaya keras, bayangan bertepi tajam, tanpa lengkung.
+   Token di bawah ini berdiri sendiri dan TIDAK ikut berganti saat
+   tema terang/gelap situs berubah — halaman ini selalu malam.
+   ============================================================ */
+
+.noirRoot {
+  --pitch: #050506;
+  --bitumen: #08080a;
+  --slate: #14161a;
+  --ash: #24272d;
+  --smoke: #4a4f57;
+  --silver: #9aa0a8;
+  --chalk: #e8e6e1;
+  --mark: #c8102e;
+  --gas: #c9963c;
+
+  --spine: 38%;
+  --gutter: clamp(1.25rem, 6vw, 6rem);
+  --bar: clamp(48px, 7svh, 76px);
+
+  --font-display: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
+  --font-jp: var(--font-noto-serif-jp), serif;
+
+  position: relative;
+  background: var(--bitumen);
+  color: var(--chalk);
+  font-family: var(--font-display);
+  overflow-x: clip;
+}
+
+/* Layout global menempatkan <AmbientEffects /> (kelopak sakura, daun maple,
+   kunang-kunang) di dalam <body>. Semua itu akan melayang di atas halaman ini
+   dan merusak bahasa visualnya, jadi disembunyikan khusus di rute ini saja. */
+body:has(.noirRoot) .fx-layer {
+  display: none;
+}
+
+/* Butiran film — textures #1 Film grain (fine) */
+.noirRoot::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Vignette — background-techniques C8 */
+.noirRoot::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 39;
+  pointer-events: none;
+  background: radial-gradient(ellipse 130% 110% at 50% 45%, transparent 62%, rgba(5, 5, 6, 0.6) 100%);
+}
+
+.noirRoot ::selection {
+  background: var(--mark);
+  color: var(--chalk);
+}
+
+/* — Garis kapur tipis (Custom: tidak ada padanan non-gradien di pustaka) — */
+.noirRule {
+  border: 0;
+  border-top: 1px solid var(--ash);
+  margin: 0;
+}
+
+/* — Label kecil huruf besar, dipakai di bilah atas/bawah dan penanda adegan — */
+.noirLabel {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--smoke);
+}
+
+/* ============================================================
+   Adegan 1 — Tanda
+   Hero #4 Letterbox Cinema · masuk: camera-shots #10 curtain wipe
+   ============================================================ */
+
+.noirHero {
+  position: relative;
+  height: 100svh;
+  display: grid;
+  grid-template-rows: var(--bar) 1fr var(--bar);
+}
+
+.noirBar {
+  background: var(--pitch);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 var(--gutter);
+  position: relative;
+  z-index: 5;
+}
+
+.noirBar nav {
+  display: flex;
+  gap: clamp(0.9rem, 2.5vw, 2.25rem);
+}
+
+.noirBar a {
+  color: var(--smoke);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.noirBar a:hover,
+.noirBar a:focus-visible {
+  color: var(--chalk);
+}
+
+.noirBrand {
+  color: var(--silver);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.noirBrand b {
+  font-family: var(--font-jp);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  color: var(--chalk);
+}
+
+.noirFrame {
+  position: relative;
+  overflow: hidden;
+  background: var(--bitumen);
+}
+
+/* camera-shots #10 — bukaan membuka dari tengah.
+   Sengaja animasi CSS murni, bukan IntersectionObserver: ini elemen terpenting
+   di layar pertama, jadi tidak boleh bergantung pada JavaScript untuk terlihat. */
+.noirStage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  animation: noirOpen 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes noirOpen {
+  from { clip-path: inset(0 50% 0 50%); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+.noirWord {
+  font-family: var(--font-jp);
+  font-weight: 400;
+  font-size: clamp(4rem, 21vw, 19rem);
+  line-height: 0.86;
+  letter-spacing: 0.02em;
+  color: var(--chalk);
+  margin: 0;
+  text-align: center;
+  user-select: none;
+}
+
+.noirWordSub {
+  margin: clamp(0.75rem, 2vh, 1.5rem) 0 0;
+  text-align: center;
+  color: var(--silver);
+  font-size: clamp(0.75rem, 1.4vw, 0.95rem);
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+/* interaction-effects #37 Flashlight reveal — diadaptasi bertepi keras.
+   Tanpa gradasi lembut: cahaya Lang punya tepi pisau. */
+.noirShade {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(
+    circle var(--r, 30vmin) at var(--mx, 44%) var(--my, 47%),
+    transparent 0,
+    transparent 97%,
+    rgba(201, 150, 60, 0.14) 98%,
+    rgba(5, 5, 6, 0.93) 99%,
+    rgba(5, 5, 6, 0.93) 100%
+  );
+}
+
+/* Baris bawah tetap di atas bayangan — ini instruksi, harus selalu terbaca. */
+.noirLower {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: clamp(1.5rem, 5vh, 3.5rem);
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  pointer-events: none;
+}
+
+.noirLower p {
+  margin: 0;
+  max-width: 30ch;
+  font-size: clamp(0.9rem, 1.7vw, 1.15rem);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--chalk);
+}
+
+.noirLower p em {
+  font-style: normal;
+  color: var(--mark);
+}
+
+/* visual-elements #8 Corner Brackets */
+.noirBracket {
+  position: absolute;
+  width: clamp(18px, 3vw, 34px);
+  height: clamp(18px, 3vw, 34px);
+  border: 1px solid var(--ash);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.noirBracket[data-c='tl'] { top: clamp(1rem, 3vh, 2rem); left: var(--gutter); border-right: 0; border-bottom: 0; }
+.noirBracket[data-c='tr'] { top: clamp(1rem, 3vh, 2rem); right: var(--gutter); border-left: 0; border-bottom: 0; }
+.noirBracket[data-c='bl'] { bottom: clamp(1rem, 3vh, 2rem); left: var(--gutter); border-right: 0; border-top: 0; }
+.noirBracket[data-c='br'] { bottom: clamp(1rem, 3vh, 2rem); right: var(--gutter); border-left: 0; border-top: 0; }
+
+/* ============================================================
+   Adegan 2 — Yang Hilang
+   Quote #40 / QP-1 · masuk: camera-shots #2 fade from black (3 detik)
+   ============================================================ */
+
+.noirVoid {
+  min-height: 92svh;
+  display: grid;
+  align-items: center;
+  padding-inline: var(--gutter);
+}
+
+.noirVoid p {
+  margin: 0 0 0 var(--spine);
+  max-width: 24ch;
+  font-size: clamp(1.4rem, 3.4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.26;
+  color: var(--chalk);
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+
+.noirVoid.is-in p {
+  opacity: 1;
+}
+
+@media (max-width: 820px) {
+  .noirVoid p { margin-left: 0; }
+}
+
+/* ============================================================
+   Adegan 3 — Dua Jalur
+   Category Map #15 / CM-4 · masuk: camera-shots #7 split diopter open
+   ============================================================ */
+
+.noirTracks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  padding: clamp(4rem, 10vh, 9rem) var(--gutter);
+}
+
+@media (min-width: 820px) {
+  .noirTracks { grid-template-columns: 1fr 1fr; }
+  /* Ketidaksejajaran yang disengaja: dua penyelidikan yang tak pernah bertemu. */
+  .noirTracks > :nth-child(2) { margin-top: 14vh; }
+}
+
+.noirTracks > :nth-child(1) { clip-path: inset(0 100% 0 0); }
+.noirTracks > :nth-child(2) { clip-path: inset(0 0 0 100%); }
+
+.noirTracks.is-in > * {
+  clip-path: inset(0);
+  transition: clip-path 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.noirTrackHead {
+  margin: 0 0 clamp(1.25rem, 3vh, 2.25rem);
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  color: var(--chalk);
+}
+
+.noirTrackHead span {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+/* interaction-effects #24 Accordion unfold */
+.noirRow {
+  border-top: 1px solid var(--ash);
+}
+
+.noirRow:last-child {
+  border-bottom: 1px solid var(--ash);
+}
+
+.noirRow > button {
+  width: 100%;
+  background: none;
+  border: 0;
+  padding: clamp(0.9rem, 2vh, 1.4rem) 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  font: inherit;
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  font-weight: 300;
+  color: var(--silver);
+  text-align: left;
+  transition: color 0.3s;
+}
+
+.noirRow > button:hover,
+.noirRow > button:focus-visible {
+  color: var(--chalk);
+}
+
+.noirRow > button span {
+  flex: none;
+  color: var(--smoke);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+}
+
+.noirRow[data-open='true'] > button { color: var(--chalk); }
+
+.noirRow > div {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s 0.1s;
+}
+
+.noirRow[data-open='true'] > div {
+  max-height: 14rem;
+  opacity: 1;
+}
+
+.noirRow > div p {
+  margin: 0 0 clamp(1rem, 2.5vh, 1.6rem);
+  max-width: 44ch;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--smoke);
+}
+
+/* ============================================================
+   Adegan 4 — Suara
+   Scroll Story #41 / SS-3 · masuk: interaction-effects #40 split line reveal
+   ============================================================ */
+
+.noirVoice {
+  padding: clamp(4rem, 12vh, 10rem) var(--gutter);
+  max-width: 62ch;
+  margin-left: var(--spine);
+}
+
+@media (max-width: 820px) {
+  .noirVoice { margin-left: 0; }
+}
+
+.noirLine {
+  overflow: hidden;
+}
+
+.noirLine > span {
+  display: block;
+  transform: translateY(105%);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: calc(var(--i) * 0.09s);
+}
+
+.noirVoice.is-in .noirLine > span {
+  transform: translateY(0);
+}
+
+.noirJa {
+  font-family: var(--font-jp);
+  font-size: clamp(1.15rem, 2.4vw, 1.7rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--chalk);
+}
+
+.noirId {
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--smoke);
+  margin-bottom: clamp(1rem, 2.5vh, 1.75rem);
+}
+
+.noirNote {
+  margin: clamp(2rem, 5vh, 3.5rem) 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--ash);
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--smoke);
+  max-width: 46ch;
+}
+
+/* ============================================================
+   Adegan 5 — Berkas
+   Article Grid #1 / AG-4 · masuk: camera-shots #20 jump cut stagger
+   ============================================================ */
+
+.noirWall {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  background: var(--ash);
+  border-top: 1px solid var(--ash);
+  border-bottom: 1px solid var(--ash);
+}
+
+.noirFile {
+  background: var(--bitumen);
+  padding: clamp(1.5rem, 3.5vw, 3rem) clamp(1.25rem, 2.5vw, 2.25rem);
+  display: block;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.35s ease, color 0.35s ease;
+}
+
+.noirWall.is-in .noirFile { opacity: 1; transform: none; }
+.noirWall.is-in .noirFile:nth-child(1) { transition-delay: 0s; }
+.noirWall.is-in .noirFile:nth-child(2) { transition-delay: 0.05s; }
+.noirWall.is-in .noirFile:nth-child(3) { transition-delay: 0.1s; }
+.noirWall.is-in .noirFile:nth-child(4) { transition-delay: 0.15s; }
+.noirWall.is-in .noirFile:nth-child(5) { transition-delay: 0.2s; }
+
+/* Ukuran sengaja tidak sama — ini dinding bukti, bukan kisi kartu. */
+.noirFile:nth-child(1) { grid-column: span 3; }
+.noirFile:nth-child(2) { grid-column: span 3; }
+.noirFile:nth-child(3) { grid-column: span 2; }
+.noirFile:nth-child(4) { grid-column: span 2; }
+.noirFile:nth-child(5) { grid-column: span 2; }
+
+@media (max-width: 820px) {
+  .noirWall { grid-template-columns: 1fr; }
+  .noirFile { grid-column: span 1 !important; }
+}
+
+/* interaction-effects #4 diadaptasi: satu berkas disorot, sisanya masuk bayangan.
+   Pustaka memakai blur; blur dilarang di bahasa visual ini, jadi memakai cahaya. */
+.noirWall:hover .noirFile,
+.noirWall:focus-within .noirFile {
+  color: var(--smoke);
+}
+
+.noirWall .noirFile:hover,
+.noirWall .noirFile:focus-visible {
+  background: var(--slate);
+  color: var(--chalk);
+}
+
+.noirFileCode {
+  display: block;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: inherit;
+  margin-bottom: clamp(0.75rem, 2vh, 1.25rem);
+}
+
+.noirFile:hover .noirFileCode { color: var(--chalk); }
+.noirFile[data-mark='true']:hover .noirFileCode { color: var(--mark); }
+
+.noirFileMeta {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 2;
+  color: inherit;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   Adegan 6 — jeda kosong
+   Visual Break #39 / VB-4 · tanpa animasi masuk, memang tidak ada yang datang
+   ============================================================ */
+
+.noirHold {
+  min-height: 78svh;
+  display: grid;
+  align-items: end;
+  padding: 0 var(--gutter) clamp(4rem, 12vh, 10rem);
+}
+
+.noirHold p {
+  margin: 0 0 0 calc(var(--spine) + 6vw);
+  max-width: 36ch;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--smoke);
+}
+
+@media (max-width: 820px) {
+  .noirHold p { margin-left: 0; }
+}
+
+/* ============================================================
+   Adegan 7 — Putusan
+   Newsletter/CTA #32 / NC-6 · masuk: interaction-effects #41 highlight wipe
+   ============================================================ */
+
+.noirVerdict {
+  min-height: 62svh;
+  display: grid;
+  align-content: center;
+  gap: clamp(1.5rem, 4vh, 2.75rem);
+  padding-inline: var(--gutter);
+}
+
+.noirVerdict > * { margin-left: var(--spine); }
+
+@media (max-width: 820px) {
+  .noirVerdict > * { margin-left: 0; }
+}
+
+.noirSweep {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 5rem);
+  font-weight: 200;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  background-image: linear-gradient(90deg, var(--chalk) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background-position 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.noirVerdict.is-in .noirSweep { background-position: 0 0; }
+
+.noirGo {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1.6rem;
+  border: 1px solid var(--ash);
+  color: var(--chalk);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  transition: border-color 0.35s, background 0.35s;
+}
+
+.noirGo:hover,
+.noirGo:focus-visible {
+  border-color: var(--mark);
+  background: var(--slate);
+}
+
+.noirGo i {
+  font-style: normal;
+  width: 22px;
+  height: 1px;
+  background: var(--mark);
+  display: inline-block;
+}
+
+/* ============================================================
+   Adegan 8 — Footer · Footer #48 / FT-2, membalik bilah pembuka
+   ============================================================ */
+
+.noirFoot {
+  height: var(--bar);
+  background: var(--pitch);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 var(--gutter);
+}
+
+.noirFoot a {
+  color: var(--smoke);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.noirFoot a:hover,
+.noirFoot a:focus-visible { color: var(--chalk); }
+
+.noirRoot :focus-visible {
+  outline: 1px solid var(--mark);
+  outline-offset: 3px;
+}
+
+/* ============================================================
+   Gerak dikurangi — semua efek berhenti di keadaan yang terbaca.
+   Cahaya hero diparkir penuh sehingga tidak ada teks yang tertutup.
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .noirRoot *,
+  .noirRoot *::before,
+  .noirRoot *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+
+  .noirStage,
+  .noirTracks > * { clip-path: none !important; }
+
+  .noirVoid p { opacity: 1 !important; }
+  .noirLine > span { transform: none !important; }
+  .noirFile { opacity: 1 !important; transform: none !important; }
+  .noirSweep { background-position: 0 0 !important; }
+  .noirShade { background: none !important; }
+}

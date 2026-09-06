@@ -18,6 +18,11 @@ export type IconName =
   | 'layers'
   | 'sparkles'
   | 'play'
+  | 'pause'
+  | 'repeat'
+  | 'repeat-one'
+  | 'gauge'
+  | 'timer'
   | 'message'
   | 'briefcase'
   | 'home'
@@ -36,6 +41,7 @@ export type IconName =
   | 'bowl'
   | 'truck'
   | 'train'
+  | 'tree'
   | 'lock'
   | 'chevron-right'
 
@@ -110,6 +116,42 @@ const PATHS: Record<IconName, React.ReactNode> = {
   ),
   play: (
     <polygon points="6 3 20 12 6 21 6 3" />
+  ),
+  pause: (
+    <>
+      <rect x="14" y="4" width="4" height="16" rx="1" />
+      <rect x="6" y="4" width="4" height="16" rx="1" />
+    </>
+  ),
+  repeat: (
+    <>
+      <path d="m17 2 4 4-4 4" />
+      <path d="M3 11v-1a4 4 0 0 1 4-4h14" />
+      <path d="m7 22-4-4 4-4" />
+      <path d="M21 13v1a4 4 0 0 1-4 4H3" />
+    </>
+  ),
+  'repeat-one': (
+    <>
+      <path d="m17 2 4 4-4 4" />
+      <path d="M3 11v-1a4 4 0 0 1 4-4h14" />
+      <path d="m7 22-4-4 4-4" />
+      <path d="M21 13v1a4 4 0 0 1-4 4H3" />
+      <path d="M11 10h1v4" />
+    </>
+  ),
+  gauge: (
+    <>
+      <path d="m12 14 4-4" />
+      <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+    </>
+  ),
+  timer: (
+    <>
+      <line x1="10" x2="14" y1="2" y2="2" />
+      <line x1="12" x2="15" y1="14" y2="11" />
+      <circle cx="12" cy="14" r="8" />
+    </>
   ),
   message: (
     <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z" />
@@ -229,6 +271,9 @@ const PATHS: Record<IconName, React.ReactNode> = {
       <rect width="16" height="16" x="4" y="3" rx="2" />
       <path d="M4 11h16M12 3v8M8 19l-2 3M18 22l-2-3M8 15h.01M16 15h.01" />
     </>
+  ),
+  tree: (
+    <path d="M12 3 15 9H13L17 15H15L19 19H13V22H11V19H5L9 15H7L11 9H9Z" />
   ),
   lock: (
     <>

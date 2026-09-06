@@ -1,8 +1,12 @@
 import type { IconName } from '@/components/ui/Icon'
 
 /**
- * 14 sektor SSW (Tokutei Ginou) — satu sumber kebenaran untuk hub /ssw dan
+ * 16 bidang SSW (Tokutei Ginou) — satu sumber kebenaran untuk hub /ssw dan
  * halaman kosakata per-bidang (/learn/bidang/[slug]).
+ *
+ * Jumlahnya 16 sejak Juni 2024: 12 bidang hasil penggabungan 2022, ditambah
+ * 自動車運送業, 鉄道, 林業, dan 木材産業. Angka "14 sektor" yang beredar luas
+ * mengacu pada daftar lama sebelum penggabungan — jangan dipakai lagi.
  *
  * `slug` dipakai sebagai segmen URL DAN nilai kolom `vocab.field`.
  * Bidang `status: 'active'` punya kosakata & bisa diklik; 'soon' = terkunci.
@@ -42,6 +46,8 @@ const SEED: SectorSeed[] = [
   { slug: 'food-service', jp: '外食業', label: 'Industri Restoran', icon: 'bowl', bgKanji: '外', status: 'soon' },
   { slug: 'road-transport', jp: '自動車運送業', label: 'Transportasi / Sopir', icon: 'truck', bgKanji: '運', status: 'soon' },
   { slug: 'railway', jp: '鉄道', label: 'Perkeretaapian', icon: 'train', bgKanji: '鉄', status: 'soon' },
+  { slug: 'forestry', jp: '林業', label: 'Kehutanan', icon: 'tree', bgKanji: '林', status: 'soon' },
+  { slug: 'wood-industry', jp: '木材産業', label: 'Industri Kayu', icon: 'layers', bgKanji: '木', status: 'soon' },
 ]
 
 export const sswSectors: SswSector[] = SEED.map((s, i) => ({

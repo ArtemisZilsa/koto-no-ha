@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "noEmit": true, "skipLibCheck": true },
+  "include": ["components/flashcard/FlashCard.tsx", "lib/data/types.ts", "next-env.d.ts"]
+}

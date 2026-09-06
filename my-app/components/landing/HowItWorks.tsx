@@ -3,18 +3,18 @@ import { Reveal } from '@/components/ui/Reveal'
 const steps = [
   {
     num: '01',
-    title: 'Tentukan Level & Tujuan',
-    desc: 'Ikuti tes penempatan singkat atau langsung pilih level. Sistem akan menyusun jalur belajar yang sesuai dengan targetmu.',
+    title: 'Pilih Level & Tujuan',
+    desc: 'Pilih sendiri mau mulai dari mana, N5 sampai N1 atau langsung kosakata kerja SSW. Belum yakin di level mana? Coba kuisnya dulu buat ngukur.',
   },
   {
     num: '02',
     title: 'Belajar Secara Bertahap',
-    desc: 'Kerjakan materi, latihan soal, dan percakapan secara berurutan. Kartu hafalan (SRS) memastikan kamu tidak lupa apa yang sudah dipelajari.',
+    desc: 'Kerjakan kosakata, kanji, dan tata bahasa per level, lalu latih lewat percakapan dan bacaan dokkai. Semuanya bisa kamu buka kapan saja, tanpa urutan yang mengunci.',
   },
   {
     num: '03',
     title: 'Pantau & Terus Berkembang',
-    desc: 'Halaman progres menunjukkan dengan jelas bagian mana yang perlu kamu perkuat. Target mingguan dan streak harian menjaga semangat belajarmu.',
+    desc: 'Uji hafalanmu lewat kuis — XP-nya masuk ke akunmu dan streak harian ikut jalan. Halaman progres detail dan kartu hafalan SRS lagi aku garap.',
   },
 ]
 

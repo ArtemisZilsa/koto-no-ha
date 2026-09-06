@@ -1,6 +1,7 @@
-import type { KaiwaStory, KaiwaLine } from '@/lib/types/database.types'
+import type { KaiwaStory } from '@/lib/types/database.types'
 import { getCategoryInfo } from '@/lib/data/kaiwaCategories'
 import { Icon } from '@/components/ui/Icon'
+import KaiwaDialogue from '@/components/kaiwa/KaiwaDialogue'
 
 interface VocabHi {
   word: string
@@ -27,60 +28,6 @@ function VocabHighlights({ vocab }: { vocab: VocabHi[] }) {
   )
 }
 
-function DialogueLine({ line, side, accentColor }: { line: KaiwaLine; side: 'a' | 'b'; accentColor: string }) {
-  const isA = side === 'a'
-  return (
-    <div className={`flex gap-2.5 items-start ${isA ? '' : 'flex-row-reverse'}`}>
-      <div
-        className="w-[34px] h-[34px] rounded-full shrink-0 flex items-center justify-center text-[11px] font-medium"
-        style={
-          isA
-            ? { background: 'var(--ink)', color: 'var(--paper)' }
-            : { background: `${accentColor}1f`, color: accentColor }
-        }
-      >
-        {line.speaker}
-      </div>
-      <div
-        className="max-w-[80%] rounded-[12px] px-3.5 py-2.5"
-        style={
-          isA
-            ? { background: 'var(--paper-dark)', borderBottomLeftRadius: '3px' }
-            : { background: accentColor, borderBottomRightRadius: '3px' }
-        }
-      >
-        {/* Teks Jepang */}
-        <div className="font-serif text-[15px] leading-snug" style={{ color: isA ? 'var(--ink)' : 'var(--on-ink)' }}>
-          {line.text}
-        </div>
-        {/* Cara baca: hiragana */}
-        {line.reading && (
-          <div className="text-[12px] mt-1" style={{ color: isA ? 'var(--muted)' : 'var(--on-ink-muted)' }}>
-            {line.reading}
-          </div>
-        )}
-        {/* Cara baca: romaji */}
-        {line.romaji && (
-          <div className="text-[11px] italic mt-0.5" style={{ color: isA ? 'var(--muted)' : 'var(--on-ink-muted)' }}>
-            {line.romaji}
-          </div>
-        )}
-        {/* Terjemahan Indonesia */}
-        <div
-          className="text-[12.5px] mt-1.5 pt-1.5"
-          style={{
-            color: isA ? 'var(--ink)' : 'var(--on-ink)',
-            borderTop: `0.5px solid ${isA ? 'var(--border)' : 'var(--on-ink-line)'}`,
-            opacity: 0.9,
-          }}
-        >
-          {line.trans}
-        </div>
-      </div>
-    </div>
-  )
-}
-
 export default function KaiwaList({ kaiwa, accentColor }: { kaiwa: KaiwaStory[]; accentColor: string }) {
   if (!kaiwa || kaiwa.length === 0) {
     return (
@@ -94,8 +41,6 @@ export default function KaiwaList({ kaiwa, accentColor }: { kaiwa: KaiwaStory[];
     <div className="flex flex-col gap-6">
       {kaiwa.map((story) => {
         const cat = getCategoryInfo(story.category)
-        // Tentukan sisi tiap baris: pembicara pertama = kiri (a), lainnya = kanan (b)
-        const firstSpeaker = story.lines[0]?.speaker
         const vocab = (story.vocab_highlight as unknown as VocabHi[] | null) ?? []
 
         return (
@@ -120,17 +65,8 @@ export default function KaiwaList({ kaiwa, accentColor }: { kaiwa: KaiwaStory[];
               </span>
             </div>
 
-            {/* Dialog */}
-            <div className="p-5 flex flex-col gap-4">
-              {story.lines.map((line, i) => (
-                <DialogueLine
-                  key={i}
-                  line={line}
-                  side={line.speaker === firstSpeaker ? 'a' : 'b'}
-                  accentColor={accentColor}
-                />
-              ))}
-            </div>
+            {/* Dialog + pemutar shadowing (client component) */}
+            <KaiwaDialogue lines={story.lines} accentColor={accentColor} title={story.title} />
 
             {/* Kosakata penting */}
             <VocabHighlights vocab={vocab} />

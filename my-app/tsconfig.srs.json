@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "noEmit": true, "skipLibCheck": true },
+  "include": [
+    "lib/data/srs.ts",
+    "lib/data/queries.ts",
+    "app/actions/flashcard.ts",
+    "lib/types/database.types.ts",
+    "next-env.d.ts"
+  ]
+}
