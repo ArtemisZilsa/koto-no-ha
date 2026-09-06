@@ -85,6 +85,22 @@ bukan taksonomi industri Jepang milik situs itu.
 
 ---
 
+## Fase 8 — Kaiwa Lepas (Telusur per Tema)
+
+Dialog `job_slug IS NULL`, muncul di `/kaiwa?level=&theme=`. Terpisah dari
+silabus profesi Fase 7 supaya urutan pelajaran tidak tercampur.
+
+- [x] 80 dialog baru, 16 per level N5–N1 (migrasi 048–052). Total lepas: 41 → 121
+- [x] Sebaran kategori per level: daily 5, work 3, hospital 3, biz 2, kaigo 3
+- [x] Panjang: 12–13 baris, 54–163 kata Jepang per dialog (ambang minimal 50 kata)
+- [x] Lubang terbesar tertutup: kategori `hospital` naik dari 1 → 16 dialog
+- [x] `seed-kaiwa-lessons.mts` kini membaca daftar kolom dari SQL-nya sendiri,
+      jadi satu skrip melayani seed silabus (9 kolom) dan seed lepas (6 kolom);
+      validasi ambang 50 kata dihitung dari romaji
+- [ ] Audio 1.037 baris lepas (butuh `ELEVENLABS_API_KEY`, lalu `npm run audio`)
+
+---
+
 ## Catatan Teknis
 
 - Build: `cd my-app && npm run build`

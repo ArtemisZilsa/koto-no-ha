@@ -16,14 +16,15 @@
  *   # 2. Baru tulis ke database.
  *   npm run seed:kaiwa -- --file supabase/migrations/046_seed_kaiwa_kaigo_shokuin_1.sql
  *
- * Idempoten: memakai upsert pada (job_slug, lesson_no), jadi menjalankan ulang
- * batch yang sama tidak menggandakan baris — dan memperbaiki isi pelajaran
- * cukup dengan mengedit file migrasinya lalu menjalankan ulang.
+ * Idempoten: upsert pada (job_slug, lesson_no) untuk seed silabus, atau pada
+ * (level_id, title) untuk seed dialog lepas. Menjalankan ulang batch yang sama
+ * tidak menggandakan baris — memperbaiki isi cukup edit file lalu jalankan lagi.
  *
- * Batasannya disengaja: skrip ini HANYA memahami bentuk INSERT yang dipakai
- * seed pelajaran kaiwa (sembilan kolom, urutan tetap, seperti pada 046). Ia
- * bukan parser SQL umum; kalau bentuknya berubah, ia berhenti dengan galat,
- * bukan menebak.
+ * Batasannya disengaja: skrip ini HANYA memahami satu pernyataan INSERT INTO
+ * kaiwa_stories dengan daftar kolom eksplisit. Kolomnya dibaca dari SQL-nya
+ * sendiri, jadi seed silabus (9 kolom) dan seed dialog lepas (6 kolom) sama-sama
+ * jalan. Ia bukan parser SQL umum; bentuk lain berhenti dengan galat, bukan
+ * ditebak.
  */
 
 import { readFileSync } from 'node:fs'
@@ -31,28 +32,16 @@ import { createClient } from '@supabase/supabase-js'
 
 // ── Bentuk baris yang dituju ─────────────────────────────────────────────────
 
-const COLUMNS = [
-  'level_id',
-  'job_slug',
-  'lesson_no',
-  'title',
-  'goal',
-  'category',
-  'lines',
-  'vocab_highlight',
-  'is_premium',
-] as const
+/** Kolom yang isinya JSON; sisanya diperlakukan sebagai skalar. */
+const JSON_COLUMNS = new Set(['lines', 'vocab_highlight'])
+/** Kolom angka. `lesson_no` boleh absen (seed dialog lepas tidak punya silabus). */
+const NUMBER_COLUMNS = new Set(['level_id', 'lesson_no'])
 
-type Row = {
+type Row = Record<string, unknown> & {
   level_id: number
-  job_slug: string
-  lesson_no: number
   title: string
-  goal: string
-  category: string
   lines: unknown[]
   vocab_highlight: unknown[]
-  is_premium: boolean
 }
 
 // ── Parsing ──────────────────────────────────────────────────────────────────
@@ -185,31 +174,47 @@ function parseTuples(sql: string): string[] {
   return tuples
 }
 
-function toRow(tuple: string, index: number): Row {
+/**
+ * Daftar kolom dibaca dari pernyataan INSERT-nya sendiri, bukan dipatok di
+ * skrip: seed silabus memakai sembilan kolom (dengan job_slug/lesson_no/goal),
+ * seed dialog lepas hanya enam. Satu parser melayani keduanya.
+ */
+function parseColumns(sql: string): string[] {
+  const m = /INSERT\s+INTO\s+[\w.]+\s*\(([^)]+)\)/i.exec(sql)
+  if (!m) throw new Error('tidak menemukan daftar kolom di pernyataan INSERT')
+  return m[1]!.split(',').map((c) => c.trim())
+}
+
+function toRow(columns: string[], tuple: string, index: number): Row {
   const parts = splitTuple(tuple)
-  if (parts.length !== COLUMNS.length) {
+  if (parts.length !== columns.length) {
     throw new Error(
-      `tuple #${index + 1}: ada ${parts.length} kolom, seharusnya ${COLUMNS.length} (${COLUMNS.join(', ')})`,
+      `tuple #${index + 1}: ada ${parts.length} nilai, seharusnya ${columns.length} (${columns.join(', ')})`,
     )
   }
-  const [levelId, jobSlug, lessonNo, title, goal, category, lines, vocab, premium] = parts as [
-    string, string, string, string, string, string, string, string, string,
-  ]
 
-  return {
-    level_id: Number(levelId),
-    job_slug: unquote(jobSlug),
-    lesson_no: Number(lessonNo),
-    title: unquote(title),
-    goal: unquote(goal),
-    category: unquote(category),
-    lines: JSON.parse(unquote(lines)) as unknown[],
-    vocab_highlight: JSON.parse(unquote(vocab)) as unknown[],
-    is_premium: premium.trim().toLowerCase() === 'true',
-  }
+  const row: Record<string, unknown> = {}
+  columns.forEach((col, i) => {
+    const raw = parts[i]!
+    if (JSON_COLUMNS.has(col)) row[col] = JSON.parse(unquote(raw)) as unknown[]
+    else if (NUMBER_COLUMNS.has(col)) row[col] = Number(raw)
+    else if (/^(true|false)$/i.test(raw.trim())) row[col] = raw.trim().toLowerCase() === 'true'
+    else row[col] = unquote(raw)
+  })
+  return row as Row
 }
 
 // ── Validasi ─────────────────────────────────────────────────────────────────
+
+/** Ambang panjang dialog, dihitung dari romaji (Jepang tidak pakai spasi). */
+const MIN_WORDS = 50
+
+function countWords(row: Row): number {
+  return row.lines.reduce((n, raw) => {
+    const romaji = (raw as Record<string, unknown>).romaji
+    return n + (typeof romaji === 'string' ? romaji.trim().split(/\s+/).filter(Boolean).length : 0)
+  }, 0)
+}
 
 /**
  * Aturan konten Koto no Ha: setiap baris dialog wajib punya kelima bidangnya.
@@ -218,12 +223,16 @@ function toRow(tuple: string, index: number): Row {
  */
 function validate(row: Row): string[] {
   const errs: string[] = []
-  const where = `${row.job_slug} #${row.lesson_no}`
+  const where = row.job_slug ? `${row.job_slug} #${row.lesson_no}` : `L${row.level_id} "${row.title}"`
 
   if (!Number.isInteger(row.level_id) || row.level_id < 1) errs.push(`${where}: level_id tidak sah`)
-  if (!Number.isInteger(row.lesson_no)) errs.push(`${where}: lesson_no tidak sah`)
+  if (row.job_slug && !Number.isInteger(row.lesson_no)) errs.push(`${where}: lesson_no tidak sah`)
   if (!row.title) errs.push(`${where}: title kosong`)
   if (row.lines.length === 0) errs.push(`${where}: tidak ada baris dialog`)
+
+  // Dialog terlalu pendek tidak memberi konteks yang cukup untuk shadowing.
+  const words = countWords(row)
+  if (words < MIN_WORDS) errs.push(`${where}: hanya ${words} kata, minimal ${MIN_WORDS}`)
 
   row.lines.forEach((raw, i) => {
     const line = raw as Record<string, unknown>
@@ -257,15 +266,19 @@ if (!args.includes('--file') || !fileArg) {
   process.exit(1)
 }
 
-const rows = parseTuples(readFileSync(fileArg, 'utf8')).map(toRow)
+const sql = readFileSync(fileArg, 'utf8')
+const columns = parseColumns(sql)
+const rows = parseTuples(sql).map((t, i) => toRow(columns, t, i))
 const problems = rows.flatMap(validate)
 
 console.log(`Berkas   : ${fileArg}`)
 console.log(`Pelajaran: ${rows.length}`)
 console.log(`Baris    : ${rows.reduce((n, r) => n + r.lines.length, 0)}`)
 console.log(`Kosakata : ${rows.reduce((n, r) => n + r.vocab_highlight.length, 0)}`)
+console.log(`Kolom    : ${columns.join(', ')}`)
 for (const r of rows) {
-  console.log(`  #${String(r.lesson_no).padStart(2)} · L${r.level_id} · ${r.lines.length} baris · ${r.title}`)
+  const no = r.job_slug ? `#${String(r.lesson_no).padStart(2)} ` : ''
+  console.log(`  ${no}L${r.level_id} · ${r.lines.length} baris · ${countWords(r)} kata · ${r.title}`)
 }
 
 if (problems.length > 0) {
@@ -290,7 +303,7 @@ if (!url || !key) {
 const supabase = createClient(url, key, { auth: { persistSession: false } })
 const { error } = await supabase
   .from('kaiwa_stories')
-  .upsert(rows, { onConflict: 'job_slug,lesson_no' })
+  .upsert(rows, { onConflict: columns.includes('job_slug') ? 'job_slug,lesson_no' : 'level_id,title' })
 
 if (error) {
   console.error('Gagal menulis:', error.message)
