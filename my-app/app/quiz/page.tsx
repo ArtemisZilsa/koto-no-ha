@@ -7,6 +7,7 @@ import QuizApp from '@/components/quiz/QuizApp'
 import { awardQuizXp, loadQuizPool } from '@/app/actions/quiz'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/quiz' },
   title: 'Kuis Kanji | Koto no Ha',
   description:
     'Kuis Kanji pilihan ganda interaktif — 10 soal, skor, streak, dan XP. Latih hafalan Kanji N5 dengan cara yang seru.',

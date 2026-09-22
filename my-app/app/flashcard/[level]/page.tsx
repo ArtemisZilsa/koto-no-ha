@@ -32,6 +32,7 @@ export async function generateMetadata({
   const parsed = parseLevel(level)
   if (!parsed) return { title: 'Flashcard | Koto no Ha' }
   return {
+    alternates: { canonical: `/flashcard/${parsed.toLowerCase()}` },
     title: `Flashcard ${parsed} — ${LEVELS[parsed].name} | Koto no Ha`,
     description: `Belajar kosakata dan kanji ${parsed} dengan flashcard SRS: kartu jatuh tempo diulang otomatis, tandai "Tahu" atau "Ulangi".`,
   }

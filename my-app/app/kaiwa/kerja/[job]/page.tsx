@@ -6,6 +6,7 @@ import { Footer } from '@/components/landing/Footer'
 import { getKaiwaJob, getKaiwaLessons, levelCodeById } from '@/lib/data/queries'
 import { getSswSector } from '@/lib/data/sswSectors'
 import { Icon } from '@/components/ui/Icon'
+import { JsonLd, SITE_NAME, absoluteUrl, breadcrumbJsonLd } from '@/lib/seo'
 
 type Params = Promise<{ job: string }>
 
@@ -15,6 +16,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!job) return { title: 'Profesi tidak ditemukan | Koto no Ha' }
 
   return {
+    alternates: { canonical: `/kaiwa/kerja/${job.slug}` },
     title: `${job.label} (${job.jp}) — Kaiwa Kerja | Koto no Ha`,
     description:
       job.summary ??
@@ -34,6 +36,33 @@ export default async function KaiwaJobPage({ params }: { params: Params }) {
     <>
       <Nav />
       <main className="pt-[60px] min-h-screen">
+        <JsonLd
+          data={[
+            breadcrumbJsonLd([
+              { name: 'Beranda', path: '/' },
+              { name: 'Kaiwa Kerja', path: '/kaiwa/kerja' },
+              { name: job.label, path: `/kaiwa/kerja/${job.slug}` },
+            ]),
+            {
+              '@context': 'https://schema.org',
+              '@type': 'Course',
+              name: `Kaiwa Kerja: ${job.label} (${job.jp})`,
+              description:
+                job.summary ?? `Latihan percakapan kerja bahasa Jepang untuk profesi ${job.label}, disusun berurutan.`,
+              url: absoluteUrl(`/kaiwa/kerja/${job.slug}`),
+              inLanguage: ['id', 'ja'],
+              isAccessibleForFree: true,
+              provider: { '@type': 'EducationalOrganization', name: SITE_NAME, sameAs: absoluteUrl('/') },
+              numberOfLessons: lessons.length,
+              hasCourseInstance: {
+                '@type': 'CourseInstance',
+                courseMode: 'online',
+                courseWorkload: `${lessons.length} pelajaran`,
+              },
+              offers: { '@type': 'Offer', price: 0, priceCurrency: 'IDR', category: 'Free' },
+            },
+          ]}
+        />
         <section className="px-5 md:px-12 py-10 max-w-3xl mx-auto">
           <Link
             href="/kaiwa/kerja"

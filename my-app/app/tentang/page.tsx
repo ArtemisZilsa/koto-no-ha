@@ -3,6 +3,7 @@ import { Nav } from '@/components/nav/Nav'
 import { Footer } from '@/components/landing/Footer'
 
 export const metadata = {
+  alternates: { canonical: '/tentang' },
   title: 'Tentang — Koto no Ha',
   description: 'Cerita di balik Koto no Ha — platform belajar bahasa Jepang untuk orang Indonesia, disusun langsung dari pengalaman tinggal dan kerja di Jepang.',
 }

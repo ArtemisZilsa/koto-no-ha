@@ -156,6 +156,14 @@ Tokutei Ginou (B2B), paywall/gating berbayar, switcher bahasa UI multi-negara.
 
 ---
 
+## SEO & GEO (22 Sep 2026)
+
+- `lib/seo.tsx`: nama/deskripsi situs + builder JSON-LD (Organization, WebSite, Breadcrumb, FAQ, LearningResource) dan komponen `<JsonLd>`.
+- Halaman publik baru **wajib** punya `alternates: { canonical }` di metadata. Jangan isi `openGraph.title/url` di layout, karena Next mengisinya dari title tiap halaman.
+- Rute publik baru → tambahkan ke `app/sitemap.ts`. Rute privat → tambahkan ke `PRIVATE` di `app/robots.ts`.
+- FAQ ada di `lib/data/faq.ts`, dipakai di homepage dan `/llms.txt`. Perbarui kalau fitur atau jumlah konten berubah.
+- Gambar OG default: `app/opengraph-image.tsx`.
+
 ## Catatan Teknis
 
 - Build: `cd my-app && npm run build`

@@ -5,8 +5,10 @@ import { Footer } from '@/components/landing/Footer'
 import PracticeProgress from '@/components/practice/PracticeProgress'
 import { getPracticeProgress, getPracticeTotals } from '@/lib/data/queries'
 import { CATEGORY_META, PRACTICE_CATEGORIES, PRACTICE_LEVELS, setCount } from '@/lib/data/practice'
+import { JsonLd, breadcrumbJsonLd } from '@/lib/seo'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/latihan' },
   title: 'Soal Latihan N5–N3 | Koto no Ha',
   description:
     'Soal latihan pilihan ganda kosakata, tata bahasa, dan kanji JLPT N5–N3, dibagi per set dengan koreksi langsung dan progres tersimpan.',
@@ -20,12 +22,13 @@ export default async function LatihanPage() {
     <>
       <Nav />
       <main className="pt-[60px] min-h-screen">
+        <JsonLd data={breadcrumbJsonLd([{ name: 'Beranda', path: '/' }, { name: 'Soal Latihan', path: '/latihan' }])} />
         <section className="px-5 md:px-12 py-12 md:py-16 max-w-5xl mx-auto">
           <p className="text-[11px] tracking-[0.14em] uppercase mb-2" style={{ color: 'var(--crimson)' }}>
             練習問題 · Soal Latihan
           </p>
           <h1 className="font-serif text-[28px] md:text-[34px] font-semibold leading-tight mb-3" style={{ color: 'var(--text)' }}>
-            Latihan per Set
+            Soal Latihan JLPT N5–N3 per Set
           </h1>
           <p className="text-[14px] leading-[1.7] max-w-[620px] mb-12" style={{ color: 'var(--muted)' }}>
             Set kosakata berisi {CATEGORY_META.kosakata.setSize} soal, tata bahasa {CATEGORY_META.tata_bahasa.setSize} soal,

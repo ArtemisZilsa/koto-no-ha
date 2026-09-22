@@ -11,6 +11,7 @@ import { Icon } from '@/components/ui/Icon'
 import { HeroBackground } from '@/components/ui/HeroBackground'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/kaiwa' },
   title: 'Kaiwa Stories — Percakapan Bahasa Jepang | Koto no Ha',
   description:
     'Latihan percakapan (kaiwa) bahasa Jepang N5–N1 per tema, dengan cara baca (hiragana & romaji) dan terjemahan Indonesia.',
