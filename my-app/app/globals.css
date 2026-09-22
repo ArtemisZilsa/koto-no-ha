@@ -14,6 +14,11 @@
   --paper-warm: #faf6ef;
   --red: #c8102e;
   --red-bg: #f7e8eb;
+  /* Brand Fase 9 (soal latihan): crimson / off-white / hitam */
+  --crimson: #b3122e;
+  --brand-bg: #fafafa;
+  --brand-ink: #111111;
+  --brand-line: rgba(17, 17, 17, 0.12);
   --gold: #c9963c;
   --gold-bg: #f9f0e0;
   --teal: #1a6b6b;
@@ -51,6 +56,10 @@ html.dark {
   --paper-warm: #1c1c26;
   --red: #e63856;
   --red-bg: #2a1620;
+  --crimson: #e0405c;
+  --brand-bg: #16161d;
+  --brand-ink: #fafafa;
+  --brand-line: rgba(250, 250, 250, 0.14);
   --gold: #d4a957;
   --gold-bg: #2a2218;
   --teal: #3da3a3;

@@ -53,6 +53,16 @@ export interface UserSrsProgress {
   last_reviewed_at: string | null
 }
 
+export interface UserPracticeAnswer {
+  id: number
+  user_id: string
+  category: 'kosakata' | 'tata_bahasa' | 'kanji'
+  level: 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
+  item_id: string
+  is_correct: boolean
+  answered_at: string
+}
+
 export interface Level {
   id: number
   code: LevelCode
@@ -390,6 +400,11 @@ export interface Database {
         Row: UserSrsProgress
         Insert: Omit<UserSrsProgress, 'id'> & Partial<Pick<UserSrsProgress, 'id'>>
         Update: Partial<Omit<UserSrsProgress, 'id'>>
+      }
+      user_practice_answers: {
+        Row: UserPracticeAnswer
+        Insert: Omit<UserPracticeAnswer, 'id' | 'answered_at'> & Partial<Pick<UserPracticeAnswer, 'answered_at'>>
+        Update: never
       }
     }
     Functions: {
