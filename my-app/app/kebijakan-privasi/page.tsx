@@ -2,6 +2,7 @@ import { Nav } from '@/components/nav/Nav'
 import { Footer } from '@/components/landing/Footer'
 
 export const metadata = {
+  alternates: { canonical: '/kebijakan-privasi' },
   title: 'Kebijakan Privasi — Koto no Ha',
   description: 'Kebijakan privasi Koto no Ha: bagaimana aku mengumpulkan, menggunakan, dan melindungi data kamu.',
 }

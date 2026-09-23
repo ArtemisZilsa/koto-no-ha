@@ -2,6 +2,17 @@ import { createClient } from '@/lib/supabase/server'
 import type { Vocab, Kanji, KanjiExampleJson, Grammar, GrammarExampleJson, NewsArticle, KaiwaStory, KaiwaJob, KaiwaCategory, DokkaPassage, DokkaiHighlightWord, UserSrsProgress } from '@/lib/types/database.types'
 import type { VocabEntry, KanjiEntry, GrammarEntry, JLPTLevel } from './types'
 import type { QuizItem, QuizMode } from './quiz'
+import {
+  CATEGORY_META,
+  PRACTICE_CATEGORIES,
+  PRACTICE_LEVELS,
+  buildQuestions,
+  setCount,
+  type PracticeCategory,
+  type PracticeProgressRow,
+  type PracticeQuestion,
+  type SourceItem,
+} from './practice'
 import { withResolvedAudio } from './kaiwaAudio'
 
 const PAGE_SIZE = 50
@@ -778,4 +789,112 @@ export async function getFlashcardSession(
     newCount: items.length - dueCount,
     signedIn: Boolean(user),
   }
+}
+
+// ─── Soal latihan (Fase 9 #2/#3) ─────────────────────────────────────────────
+
+type PracticeSourceRow = { id: string; prompt: string; reading: string | null; meaning: string; group: string | null }
+
+/** Semua item satu kategori+level, urut tetap (order_index, id) supaya set stabil. */
+async function getPracticeSource(category: PracticeCategory, level: JLPTLevel): Promise<SourceItem[]> {
+  const supabase = await createClient()
+  const levelId = levelIdByCode[level]
+  let rows: PracticeSourceRow[] = []
+
+  if (category === 'kosakata') {
+    const { data, error } = await supabase
+      .from('vocab')
+      .select('id, word, hiragana, meaning, part_of_speech')
+      .eq('level_id', levelId)
+      .is('field', null)
+      .order('order_index')
+      .order('id')
+      .limit(2000)
+    if (error) console.error('getPracticeSource vocab error', error)
+    rows = ((data ?? []) as unknown as { id: string; word: string; hiragana: string; meaning: string; part_of_speech: string }[])
+      .map((r) => ({ id: r.id, prompt: r.word, reading: r.hiragana, meaning: r.meaning, group: r.part_of_speech }))
+  } else if (category === 'kanji') {
+    const { data, error } = await supabase
+      .from('kanji')
+      .select('id, kanji, hiragana, meaning')
+      .eq('level_id', levelId)
+      .order('order_index')
+      .order('id')
+      .limit(2000)
+    if (error) console.error('getPracticeSource kanji error', error)
+    rows = ((data ?? []) as unknown as { id: string; kanji: string; hiragana: string; meaning: string }[])
+      .map((r) => ({ id: r.id, prompt: r.kanji, reading: r.hiragana, meaning: r.meaning, group: null }))
+  } else {
+    const { data, error } = await supabase
+      .from('grammar')
+      .select('id, pattern, reading, meaning')
+      .eq('level_id', levelId)
+      .order('order_index')
+      .order('id')
+      .limit(2000)
+    if (error) console.error('getPracticeSource grammar error', error)
+    rows = ((data ?? []) as unknown as { id: string; pattern: string; reading: string; meaning: string }[])
+      .map((r) => ({ id: r.id, prompt: r.pattern, reading: r.reading, meaning: r.meaning, group: null }))
+  }
+
+  return rows.map((r) => ({ id: r.id, prompt: r.prompt, reading: r.reading ?? undefined, meaning: r.meaning, group: r.group ?? undefined }))
+}
+
+export interface PracticeSet {
+  category: PracticeCategory
+  level: JLPTLevel
+  setNo: number
+  totalSets: number
+  questions: PracticeQuestion[]
+}
+
+/** Set ke-`setNo` (mulai 1). null bila set di luar jangkauan. */
+export async function getPracticeSet(
+  category: PracticeCategory,
+  level: JLPTLevel,
+  setNo: number,
+): Promise<PracticeSet | null> {
+  const source = await getPracticeSource(category, level)
+  const size = CATEGORY_META[category].setSize
+  const totalSets = setCount(category, source.length)
+  if (!Number.isInteger(setNo) || setNo < 1 || setNo > totalSets) return null
+  const targets = source.slice((setNo - 1) * size, setNo * size)
+  return { category, level, setNo, totalSets, questions: buildQuestions(targets, source, category, level) }
+}
+
+/** Jumlah item per kategori+level (tanpa login), untuk daftar set. */
+export async function getPracticeTotals(): Promise<Record<PracticeCategory, Record<string, number>>> {
+  const supabase = await createClient()
+  const out = { kosakata: {}, tata_bahasa: {}, kanji: {} } as Record<PracticeCategory, Record<string, number>>
+  await Promise.all(
+    PRACTICE_LEVELS.flatMap((level) =>
+      PRACTICE_CATEGORIES.map(async (category) => {
+        const table = category === 'kosakata' ? 'vocab' : category === 'kanji' ? 'kanji' : 'grammar'
+        let q = supabase.from(table).select('id', { count: 'exact', head: true }).eq('level_id', levelIdByCode[level])
+        if (category === 'kosakata') q = q.is('field', null)
+        const { count } = await q
+        out[category][level] = count ?? 0
+      }),
+    ),
+  )
+  return out
+}
+
+/** Progress user login per kategori+level (RPC get_practice_progress). [] bila belum login. */
+export async function getPracticeProgress(): Promise<PracticeProgressRow[]> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return []
+
+  const db = supabase as unknown as {
+    rpc: (fn: 'get_practice_progress') => Promise<{ data: PracticeProgressRow[] | null; error: { message: string } | null }>
+  }
+  const { data, error } = await db.rpc('get_practice_progress')
+  if (error) {
+    console.error('get_practice_progress error', error)
+    return []
+  }
+  return data ?? []
 }

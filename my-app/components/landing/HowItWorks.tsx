@@ -14,7 +14,7 @@ const steps = [
   {
     num: '03',
     title: 'Pantau & Terus Berkembang',
-    desc: 'Uji hafalanmu lewat kuis — XP-nya masuk ke akunmu dan streak harian ikut jalan. Halaman progres detail dan kartu hafalan SRS lagi aku garap.',
+    desc: 'Uji hafalanmu lewat soal latihan dan kuis. Progres per kategori tersimpan di dashboard, XP dan streak harian ikut jalan, dan kartu hafalan SRS mengulang kata yang mulai lupa.',
   },
 ]
 

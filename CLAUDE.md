@@ -129,11 +129,11 @@ jangan buat route atau skema duplikat. Aturan "jangan ubah struktur route" tetap
 
 Urutan eksekusi:
 
-- [ ] **#2 Progress tracking per kategori** (PR terpisah, ada perubahan skema). Tabel jawaban soal
+- [x] **#2 Progress tracking per kategori** (PR terpisah, ada perubahan skema). DIKERJAKAN 22 Sep 2026 di branch `fitur/progress-latihan` (menunggu review): tabel `user_practice_answers` + RPC `get_practice_progress` (migrasi 053, sudah diterapkan di Supabase), progress bar di `/dashboard` dan `/latihan`. Tabel jawaban soal
       (user_id, question_id, kategori kosakata/tata_bahasa/kanji, level N5–N3, benar/salah, timestamp) + RLS.
       Fungsi agregasi % per kategori per level (mis. "Kosakata N4: 62% dari 1200 soal"). Progress bar
       crimson di dashboard, update langsung setelah satu set selesai.
-- [ ] **#3 UX kuis/drill reusable**. Komponen menerima array soal (pertanyaan, 4 opsi, jawaban benar),
+- [x] **#3 UX kuis/drill reusable**. DIKERJAKAN 22 Sep 2026 di PR yang sama: `components/practice/PracticeDrill.tsx`, rute `/latihan/[kategori]/[level]/[set]`; `/latihan` sementara berupa daftar set sederhana (dirombak di #5). Komponen menerima array soal (pertanyaan, 4 opsi, jawaban benar),
       satu soal per layar, "Soal 3/30", tombol "Berikutnya" muncul setelah menjawab. Feedback inline
       hijau/merah tanpa modal. Timer per soal = toggle, **default OFF**. Layar ringkasan (jumlah benar,
       kategori lemah, ulangi/lanjut). Setiap jawaban dicatat ke tabel #2.
@@ -155,6 +155,14 @@ Urutan eksekusi:
 Tokutei Ginou (B2B), paywall/gating berbayar, switcher bahasa UI multi-negara.
 
 ---
+
+## SEO & GEO (22 Sep 2026)
+
+- `lib/seo.tsx`: nama/deskripsi situs + builder JSON-LD (Organization, WebSite, Breadcrumb, FAQ, LearningResource) dan komponen `<JsonLd>`.
+- Halaman publik baru **wajib** punya `alternates: { canonical }` di metadata. Jangan isi `openGraph.title/url` di layout, karena Next mengisinya dari title tiap halaman.
+- Rute publik baru → tambahkan ke `app/sitemap.ts`. Rute privat → tambahkan ke `PRIVATE` di `app/robots.ts`.
+- FAQ ada di `lib/data/faq.ts`, dipakai di homepage dan `/llms.txt`. Perbarui kalau fitur atau jumlah konten berubah.
+- Gambar OG default: `app/opengraph-image.tsx`.
 
 ## Catatan Teknis
 

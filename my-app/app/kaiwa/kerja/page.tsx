@@ -8,6 +8,7 @@ import { Icon } from '@/components/ui/Icon'
 import { HeroBackground } from '@/components/ui/HeroBackground'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/kaiwa/kerja' },
   title: 'Kaiwa per Profesi — Percakapan Kerja di Jepang | Koto no Ha',
   description:
     'Latihan percakapan kerja bahasa Jepang per profesi, disusun berurutan dari hari pertama masuk kerja. Dikelompokkan menurut 16 bidang SSW (Tokutei Ginou).',

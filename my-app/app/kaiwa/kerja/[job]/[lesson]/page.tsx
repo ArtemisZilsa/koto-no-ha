@@ -7,6 +7,7 @@ import KaiwaDialogue from '@/components/kaiwa/KaiwaDialogue'
 import { getKaiwaJob, getKaiwaLesson, getKaiwaLessons, levelCodeById } from '@/lib/data/queries'
 import { getSswSector } from '@/lib/data/sswSectors'
 import { Icon } from '@/components/ui/Icon'
+import { JsonLd, breadcrumbJsonLd, learningResourceJsonLd } from '@/lib/seo'
 
 type Params = Promise<{ job: string; lesson: string }>
 
@@ -31,6 +32,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!job || !lesson) return { title: 'Pelajaran tidak ditemukan | Koto no Ha' }
 
   return {
+    alternates: { canonical: `/kaiwa/kerja/${job.slug}/${lessonNo}` },
     title: `第${lessonNo}課 ${lesson.title} — ${job.label} | Koto no Ha`,
     description: lesson.goal ?? `Percakapan kerja bahasa Jepang untuk profesi ${job.label}.`,
   }
@@ -63,6 +65,24 @@ export default async function KaiwaLessonPage({ params }: { params: Params }) {
     <>
       <Nav />
       <main className="pt-[60px] min-h-screen">
+        <JsonLd
+          data={[
+            breadcrumbJsonLd([
+              { name: 'Beranda', path: '/' },
+              { name: 'Kaiwa Kerja', path: '/kaiwa/kerja' },
+              { name: job.label, path: `/kaiwa/kerja/${job.slug}` },
+              { name: `第${lessonNo}課 ${lesson.title}`, path: `/kaiwa/kerja/${job.slug}/${lessonNo}` },
+            ]),
+            learningResourceJsonLd({
+              name: `第${lessonNo}課 ${lesson.title} — ${job.label}`,
+              description: lesson.goal ?? `Percakapan kerja bahasa Jepang untuk profesi ${job.label}.`,
+              path: `/kaiwa/kerja/${job.slug}/${lessonNo}`,
+              level: level ?? 'N5',
+              resourceType: 'Dialog percakapan',
+              teaches: `Percakapan kerja bahasa Jepang untuk ${job.label} (${job.jp})`,
+            }),
+          ]}
+        />
         <section className="px-5 md:px-12 py-10 max-w-3xl mx-auto">
           <Link
             href={`/kaiwa/kerja/${job.slug}`}

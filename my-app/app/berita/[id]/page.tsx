@@ -22,6 +22,7 @@ export async function generateMetadata({
   const article = await getNewsById(id)
   if (!article) return { title: 'Berita tidak ditemukan | Koto no Ha' }
   return {
+    alternates: { canonical: `/berita/${article.id}` },
     title: `${article.title_id ?? article.title_jp} | Koto no Ha`,
     description: article.title_id ?? article.title_jp,
   }

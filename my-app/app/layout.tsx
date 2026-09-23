@@ -4,6 +4,8 @@ import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google'
 import './globals.css'
 import { ThemeScript } from '@/components/theme/ThemeScript'
 import { AmbientEffects } from '@/components/effects/AmbientEffects'
+import { SITE_URL } from '@/lib/site'
+import { JsonLd, SITE_DESCRIPTION, SITE_NAME, organizationJsonLd, websiteJsonLd } from '@/lib/seo'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -23,33 +25,59 @@ const notoSerifJP = Noto_Serif_JP({
 })
 
 export const metadata: Metadata = {
+  // Semua URL relatif (canonical, og:image) di-resolve terhadap domain ini.
+  metadataBase: new URL(SITE_URL),
   title: '言の葉 | Koto no Ha — Belajar Bahasa Jepang',
-  description:
-    'Platform belajar bahasa Jepang untuk orang Indonesia. Dari N5 hingga N1, SSW, dan level bisnis. Kanji, grammar, kaiwa, dan dokkai dalam satu tempat.',
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  authors: [{ name: 'Zilsa', url: `${SITE_URL}/tentang` }],
+  creator: 'Zilsa',
+  publisher: SITE_NAME,
+  category: 'education',
+  keywords: [
+    'belajar bahasa Jepang',
+    'JLPT N5',
+    'JLPT N4',
+    'JLPT N3',
+    'soal latihan JLPT',
+    'kanji',
+    'kosakata bahasa Jepang',
+    'tata bahasa Jepang',
+    'kaiwa',
+    'Tokutei Ginou',
+    'SSW kaigo',
+  ],
   manifest: '/manifest.webmanifest',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
     title: 'Koto no Ha',
   },
+  formatDetection: { telephone: false },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
+  },
   // Verifikasi kepemilikan situs untuk Google Search Console.
   verification: {
     google: 'UNkyFGw554wUmbQ5wLhqomwWir47S8dJjA55BLlPvEQ',
   },
+  // Sengaja tanpa title/description/url: objek ini diwarisi semua halaman.
+  // Next.js mengisi og:title/og:description dari title/description tiap halaman.
   openGraph: {
-    title: '言の葉 | Koto no Ha — Belajar Bahasa Jepang',
-    description:
-      'Platform belajar bahasa Jepang untuk orang Indonesia. Dari N5 hingga N1, SSW, dan level bisnis. Kanji, grammar, kaiwa, dan dokkai dalam satu tempat.',
-    url: 'https://kotonohalearnjapanese.netlify.app',
-    siteName: 'Koto no Ha',
+    siteName: SITE_NAME,
     locale: 'id_ID',
     type: 'website',
   },
   twitter: {
-    card: 'summary',
-    title: '言の葉 | Koto no Ha — Belajar Bahasa Jepang',
-    description:
-      'Platform belajar bahasa Jepang untuk orang Indonesia. Dari N5 hingga N1, SSW, dan level bisnis.',
+    card: 'summary_large_image',
   },
 }
 
@@ -78,6 +106,7 @@ export default function RootLayout({
         <ThemeScript />
       </head>
       <body className="min-h-screen">
+        <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
         <AmbientEffects />
         {children}
       </body>

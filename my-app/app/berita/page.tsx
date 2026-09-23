@@ -6,6 +6,7 @@ import { BeritaCard } from '@/components/berita/BeritaCard'
 import { getNewsList } from '@/lib/data/queries'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/berita' },
   title: 'Berita Jepang | Koto no Ha',
   description: 'Belajar bahasa Jepang dari berita asli NHK Web Easy, ditandai sesuai level JLPT.',
 }

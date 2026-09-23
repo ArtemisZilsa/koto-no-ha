@@ -2,6 +2,7 @@ import { Nav } from '@/components/nav/Nav'
 import { Footer } from '@/components/landing/Footer'
 
 export const metadata = {
+  alternates: { canonical: '/kontak' },
   title: 'Kontak — Koto no Ha',
   description: 'Hubungi Koto no Ha untuk pertanyaan, saran, atau laporan masalah.',
 }

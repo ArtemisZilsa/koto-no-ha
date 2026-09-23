@@ -5,6 +5,8 @@ import { Icon, type IconName } from '@/components/ui/Icon'
 import { Reveal } from '@/components/ui/Reveal'
 import { sswSectors } from '@/lib/data/sswSectors'
 import { NeonGridBackground } from '@/components/effects/NeonGridBackground'
+import PracticeProgress from '@/components/practice/PracticeProgress'
+import { getPracticeProgress } from '@/lib/data/queries'
 
 export const metadata = {
   title: 'Dashboard — Koto no Ha',
@@ -26,6 +28,7 @@ export default async function DashboardPage() {
     .single()
 
   const profile = profileRaw as ProfileWithLevel | null
+  const practiceProgress = await getPracticeProgress()
 
   const displayName = profile?.full_name ?? profile?.username ?? user?.email?.split('@')[0] ?? 'Pelajar'
 
@@ -270,6 +273,31 @@ export default async function DashboardPage() {
         </div>
       </div>
 
+      {/* ── Progres soal latihan per kategori (Fase 9 #2) ───────────── */}
+      <div className="mb-10">
+        <div className="flex items-end justify-between gap-3 mb-5">
+          <div>
+            <Reveal as="h2" className="font-serif text-lg font-semibold text-ink">
+              Progres Soal Latihan
+            </Reveal>
+            <p className="text-[12px] text-muted mt-0.5">
+              Persentase soal yang sudah pernah kamu jawab benar, per kategori dan level.
+            </p>
+          </div>
+          <Link
+            href="/latihan"
+            className="shrink-0 inline-flex items-center gap-1 text-[12px] no-underline hover:opacity-80 transition-opacity"
+            style={{ color: 'var(--crimson)' }}
+          >
+            Mulai latihan
+            <Icon name="chevron-right" className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+        <div className="rounded-2xl p-6 md:p-8" style={{ background: 'var(--surface)', border: '1px solid var(--brand-line)' }}>
+          <PracticeProgress rows={practiceProgress} />
+        </div>
+      </div>
+
       {/* Latihan & aktivitas — kartu persegi panjang, menumpuk ke bawah */}
       <div>
         <Reveal as="h2" className="font-serif text-lg font-semibold text-ink mb-4">
@@ -281,7 +309,7 @@ export default async function DashboardPage() {
             { title: 'Latihan Percakapan (Kaiwa)', icon: 'mic' as IconName, href: '/kaiwa', desc: 'Dialog per tema, lengkap dengan cara baca (hiragana & romaji) dan terjemahan.', live: true, accent: 'var(--green)', bg: 'var(--green-bg)' },
             { title: 'Berita Jepang Terkini', icon: 'newspaper' as IconName, href: '/berita', desc: 'Baca artikel Jepang terbaru untuk latihan membaca sesuai level.', live: true, accent: 'var(--red)', bg: 'var(--red-bg)' },
             { title: 'Kartu Hafalan (SRS)', icon: 'cards' as IconName, href: '#', desc: 'Pengulangan terjadwal kanji & kosakata agar ingatan bertahan lama.', live: false, accent: 'var(--gold)', bg: 'var(--gold-bg)' },
-            { title: 'Progres Belajar', icon: 'bar-chart' as IconName, href: '#', desc: 'Statistik dan perkembangan belajarmu secara menyeluruh.', live: false, accent: 'var(--teal)', bg: 'var(--teal-bg)' },
+            { title: 'Soal Latihan N5–N3', icon: 'bar-chart' as IconName, href: '/latihan', desc: 'Set pilihan ganda kosakata, tata bahasa, dan kanji dengan koreksi langsung. Progres tersimpan otomatis.', live: true, accent: 'var(--crimson)', bg: 'var(--red-bg)' },
           ]).map(({ title, icon, href, desc, live, accent, bg }, i) => {
             const inner = (
               <>

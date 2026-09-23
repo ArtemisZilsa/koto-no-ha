@@ -7,6 +7,7 @@ import { HeroBackground } from '@/components/ui/HeroBackground'
 import { sswSectors } from '@/lib/data/sswSectors'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/ssw' },
   title: 'Panduan SSW / Tokutei Ginou | Koto no Ha',
   description:
     'Panduan lengkap visa kerja SSW (Specified Skilled Worker / Tokutei Ginou): 16 bidang, syarat JLPT & ujian keahlian, perbedaan SSW i & ii, dan alur prosesnya.',
