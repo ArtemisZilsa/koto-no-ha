@@ -40,7 +40,7 @@ export function AnimatedKanji({
     const el = ref.current
     if (!el) return
     if (typeof IntersectionObserver === 'undefined') {
-      setPlay(true)
+      queueMicrotask(() => setPlay(true))
       return
     }
     const io = new IntersectionObserver(
