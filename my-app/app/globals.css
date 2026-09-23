@@ -390,34 +390,39 @@ body {
   animation: glyph-pop 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* — Liquid Glass: kaca cair (blur + transparansi + kilau tepi) — */
-.glass {
-  background: color-mix(in srgb, var(--surface) 55%, transparent);
-  backdrop-filter: blur(16px) saturate(1.4);
-  -webkit-backdrop-filter: blur(16px) saturate(1.4);
-  border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
-  box-shadow:
-    0 8px 32px rgba(13, 13, 18, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  position: relative;
-  overflow: hidden;
-}
-html.dark .glass {
-  background: color-mix(in srgb, var(--surface) 50%, transparent);
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
-}
-/* Kilau cair yang menyapu pelan di permukaan kaca */
-.glass::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.12) 48%, transparent 66%);
-  background-size: 250% 100%;
-  animation: glass-sheen 9s ease-in-out infinite;
-  pointer-events: none;
+/* — Liquid Glass: kaca cair (blur + transparansi + kilau tepi) —
+   Harus di dalam @layer components: CSS di luar layer selalu menang atas
+   utility Tailwind (yang ada di @layer utilities), sehingga `position:
+   relative` di sini dulu membatalkan `fixed`/`absolute` pada navbar. */
+@layer components {
+  .glass {
+    background: color-mix(in srgb, var(--surface) 55%, transparent);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+    backdrop-filter: blur(16px) saturate(1.4);
+    border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+    box-shadow:
+      0 8px 32px rgba(13, 13, 18, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+  html.dark .glass {
+    background: color-mix(in srgb, var(--surface) 50%, transparent);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+  /* Kilau cair yang menyapu pelan di permukaan kaca */
+  .glass::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.12) 48%, transparent 66%);
+    background-size: 250% 100%;
+    animation: glass-sheen 9s ease-in-out infinite;
+    pointer-events: none;
+  }
 }
 @keyframes glass-sheen {
   0%, 100% { background-position: 180% 0; }
