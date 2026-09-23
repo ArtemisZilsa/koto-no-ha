@@ -16,6 +16,21 @@
   `git diff` terhadap `origin/master` (override: `--base=<ref>`).
 - **C1 — cache `/kaiwa` vs `/kaiwa?level=N5`** (Day 2): lihat analisis di
   bawah dan PR terbuka.
+- **Perbaikan CI di luar antrean** (Day 2, atas permintaan langsung Zilsa di
+  chat): Zilsa menanyakan kegagalan run CI di `master` yang disebut di
+  laporan hari ini (lihat "Catatan penting" di bawah). Root cause
+  ditelusuri dari log job: `npm run build` gagal karena `next/font/google`
+  (Inter, Noto Sans/Serif JP di `app/layout.tsx`) gagal mengunduh berkas
+  font dari Google saat build — runner CI tidak punya cache, jadi satu
+  hiccup jaringan menggagalkan seluruh build. PR `[teknis] Retry npm run
+  build di CI untuk redam flake fetch Google Fonts` (merge `824cfe0`):
+  bungkus step `npm run build` di `kaiwa-ci.yml` dengan retry 3x. Tidak
+  mengubah cara aplikasi memuat font maupun `netlify.toml`/Vercel (di luar
+  kendali repo). **Dampak untuk program ini**: `kaiwa-ci.yml` (dipakai
+  sebagai gerbang auto-merge teknis program kaiwa-30d) sekarang lebih
+  tahan terhadap flake ini — kalau gerbang teknis gagal di run berikutnya
+  dan pesannya "Module not found" di berkas font Google, itu bukan
+  masalah kode kaiwa, cek apakah retry-nya sudah jalan 3x.
 
 ## Analisis C1 (Day 2)
 
