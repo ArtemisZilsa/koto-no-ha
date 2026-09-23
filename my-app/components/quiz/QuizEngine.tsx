@@ -65,8 +65,10 @@ export default function QuizEngine({ pool, mode, level, isLoggedIn, awardAction,
   const answerRef = useRef<(id: string | null) => void>(() => {})
 
   useEffect(() => {
-    setReduced(isReducedMotion())
-    setRounds(buildRounds(pool, TOTAL_Q))
+    queueMicrotask(() => {
+      setReduced(isReducedMotion())
+      setRounds(buildRounds(pool, TOTAL_Q))
+    })
   }, [pool])
 
   const round = rounds[index]
@@ -131,7 +133,7 @@ export default function QuizEngine({ pool, mode, level, isLoggedIn, awardAction,
   useEffect(() => {
     if (!round || done || answered) return
     startRef.current = performance.now()
-    setFraction(1)
+    queueMicrotask(() => setFraction(1))
     const tick = (now: number) => {
       const elapsed = (now - startRef.current) / 1000
       const f = Math.max(0, 1 - elapsed / TIME_PER_Q)

@@ -5,6 +5,18 @@ Next.js app di `my-app/` · Live: https://kotonohalearnjapanese.netlify.app/
 
 ---
 
+## Aturan Kerja — Auto-push
+
+- Setiap pekerjaan yang selesai **langsung di-commit dan di-push**, tanpa perlu diminta.
+- Sebelum commit: `tsc --noEmit` (strict) dan `npm run build` harus lulus. Kalau gagal, perbaiki dulu. Jangan push kode rusak.
+- Perubahan kecil/fix/konten: commit ke `master` lalu push (Netlify auto-deploy).
+- Fitur baru yang ditandai **PR terpisah** (contoh: perubahan skema database, fitur baru besar di Fase 9):
+  push ke branch `fitur/<nama>` lalu buka PR. **Jangan merge atau auto-merge**, karena user yang mereview.
+- Hanya stage file yang memang diubah di sesi itu. Jangan `git add -A`, dan jangan ikutkan file lokal user seperti `deploy.bat`.
+- Setelah push, laporkan ke user: hash commit, branch/PR, dan daftar perubahan per file dalam bahasa sederhana.
+
+---
+
 ## Fase 1 — Audit & Perbaikan UI (SELESAI)
 
 - [x] Hapus stat palsu `12K+ Pengguna Aktif` dan `500+ Cerita Kaiwa` dari HeroSection
@@ -98,6 +110,49 @@ silabus profesi Fase 7 supaya urutan pelajaran tidak tercampur.
       jadi satu skrip melayani seed silabus (9 kolom) dan seed lepas (6 kolom);
       validasi ambang 50 kata dihitung dari romaji
 - [ ] Audio 1.037 baris lepas (butuh `ELEVENLABS_API_KEY`, lalu `npm run audio`)
+
+---
+
+## Fase 9 — Fitur Soal Latihan (adaptasi dari LMS Japany)
+
+Fokus: produksi soal latihan N5–N3 terstruktur (target 8.000 kosakata, 400 tata bahasa,
+560 kanji; sampai ~19 Jan 2027). Keenam fitur di bawah dipilih karena langsung menopang
+soal latihan itu. Elemen B2B atau korporat milik Japany tidak diambil.
+
+**Brand system (wajib untuk semua fitur Fase 9):** crimson `#B3122E`, off-white `#FAFAFA`,
+hitam `#111111` saja. Noto Serif JP untuk teks Jepang. Tanpa emoji, gradient, drop-shadow.
+Whitespace lega. (Pengecualian: hijau/merah untuk feedback benar/salah di kuis.)
+
+**Reuse dulu sebelum membuat yang baru.** Sudah ada: `/quiz` (kuis kanji), `app/(dashboard)/dashboard`,
+XP/streak via `user_item_progress` + RPC `mark_item_known` / `award_quiz_xp`. Perluas yang ada,
+jangan buat route atau skema duplikat. Aturan "jangan ubah struktur route" tetap berlaku.
+
+Urutan eksekusi:
+
+- [ ] **#2 Progress tracking per kategori** (PR terpisah, ada perubahan skema). Tabel jawaban soal
+      (user_id, question_id, kategori kosakata/tata_bahasa/kanji, level N5–N3, benar/salah, timestamp) + RLS.
+      Fungsi agregasi % per kategori per level (mis. "Kosakata N4: 62% dari 1200 soal"). Progress bar
+      crimson di dashboard, update langsung setelah satu set selesai.
+- [ ] **#3 UX kuis/drill reusable**. Komponen menerima array soal (pertanyaan, 4 opsi, jawaban benar),
+      satu soal per layar, "Soal 3/30", tombol "Berikutnya" muncul setelah menjawab. Feedback inline
+      hijau/merah tanpa modal. Timer per soal = toggle, **default OFF**. Layar ringkasan (jumlah benar,
+      kategori lemah, ulangi/lanjut). Setiap jawaban dicatat ke tabel #2.
+      Format set: 30 soal kosakata, 10 tata bahasa, 20 kanji.
+- [ ] **#1 Tes penempatan `/tes-level`** (PR terpisah). 15–20 soal campuran, kesulitan naik N5→N3.
+      Skor dipetakan ke rekomendasi N5/N4/N3, lalu user diarahkan ke set latihan yang sesuai.
+      Hasil (level, skor, tanggal) disimpan per user_id.
+- [ ] **#5 Katalog `/latihan`**. Grid kartu per set (judul, kategori, level, jumlah soal, progress %).
+      Filter kategori + level bisa digabung. Pagination/lazy load. Set yang 100% ditandai halus
+      lewat warna border/teks, tanpa badge.
+- [ ] **#4 Goal-setting di dashboard**. Perluas `/dashboard` yang sudah ada: target level (N5–N2) +
+      fokus (kosakata/tata bahasa/idiom/kaiwa), disimpan per user. Blok "Rekomendasi untukmu" menampilkan
+      set yang belum dikerjakan sesuai goal. Pre-fill target level dari hasil #1.
+- [ ] **#6 Statistik personal**. Widget dashboard: total soal dikerjakan, streak harian, kategori dengan
+      akurasi tertinggi/terendah. Reuse data #2, tanpa skema baru. Tampilkan angka besar + label kecil,
+      tanpa grafik. Streak reset kalau satu hari kalender penuh tanpa soal. **Tanpa leaderboard.**
+
+**DITUNDA (jangan dikerjakan):** leaderboard/ranking antar-user, katalog per-industri gaya
+Tokutei Ginou (B2B), paywall/gating berbayar, switcher bahasa UI multi-negara.
 
 ---
 

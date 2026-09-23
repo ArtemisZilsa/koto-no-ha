@@ -60,7 +60,7 @@ const features: { icon: IconName; accent: string; bg: string; title: string; des
     title: 'Kartu Hafalan Pintar (SRS)',
     desc: 'Kartu Kanji dan kosakata dengan sistem pengulangan terjadwal. Belajar lebih sedikit, tapi ingatannya bertahan lebih lama. Bisa diatur per level.',
     tag: 'SRS · Kanji · Kosakata',
-    soon: true,
+    href: '/flashcard/n5',
   },
 ]
 

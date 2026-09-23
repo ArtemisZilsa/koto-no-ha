@@ -27,7 +27,7 @@ export function Reveal({ children, delay = 0, as, className = '', style }: Revea
     if (!el) return
     // Jika IO tak tersedia, tampilkan langsung.
     if (typeof IntersectionObserver === 'undefined') {
-      setVisible(true)
+      queueMicrotask(() => setVisible(true))
       return
     }
     const io = new IntersectionObserver(
