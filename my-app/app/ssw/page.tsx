@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { Nav } from '@/components/nav/Nav'
 import { Footer } from '@/components/landing/Footer'
 import { Icon } from '@/components/ui/Icon'
-import { Reveal } from '@/components/ui/Reveal'
 import { HeroBackground } from '@/components/ui/HeroBackground'
 import { sswSectors } from '@/lib/data/sswSectors'
 

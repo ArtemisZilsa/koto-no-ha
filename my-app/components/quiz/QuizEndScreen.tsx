@@ -50,7 +50,7 @@ export default function QuizEndScreen({
   // XP count-up 0 -> total
   useEffect(() => {
     if (reduced) {
-      setShownXp(totalXp)
+      queueMicrotask(() => setShownXp(totalXp))
       return
     }
     const controls = animate(0, totalXp, {

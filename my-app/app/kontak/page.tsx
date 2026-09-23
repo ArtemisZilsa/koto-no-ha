@@ -54,7 +54,7 @@ export default function KontakPage() {
         </div>
 
         <p className="text-sm">
-          Untuk permintaan penghapusan data, silakan kirim email dengan subjek <strong className="text-ink">"Hapus Akun Saya"</strong> beserta alamat email yang digunakan saat mendaftar.
+          Untuk permintaan penghapusan data, silakan kirim email dengan subjek <strong className="text-ink">&quot;Hapus Akun Saya&quot;</strong> beserta alamat email yang digunakan saat mendaftar.
         </p>
       </div>
     </main>
