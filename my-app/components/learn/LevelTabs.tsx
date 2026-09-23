@@ -120,7 +120,7 @@ export default function LevelTabs({
                 </span>{' '}
                 dari <span className="font-medium" style={{ color: 'var(--ink)' }}>{kanjiFromDb.total}</span> kanji
               </span>
-              <KnownSummary known={knownKanjiTotal} total={kanjiFromDb.total} accentColor={data.accentColor} />
+              <KnownSummary known={knownKanjiTotal} total={kanjiFromDb.total} />
             </div>
           )}
           <KanjiGrid kanji={kanjiItems} accentColor={data.accentColor} knownIds={knownKanjiSet} />
@@ -148,7 +148,7 @@ export default function LevelTabs({
                 </span>{' '}
                 dari <span className="font-medium" style={{ color: 'var(--ink)' }}>{vocabFromDb.total}</span> kosakata
               </span>
-              <KnownSummary known={knownVocabTotal} total={vocabFromDb.total} accentColor={data.accentColor} />
+              <KnownSummary known={knownVocabTotal} total={vocabFromDb.total} />
             </div>
           )}
           <VocabList vocab={vocabItems} accentColor={data.accentColor} knownIds={knownVocabSet} />
@@ -205,7 +205,7 @@ export default function LevelTabs({
 }
 
 /** Badge ringkasan "X/Y dikenal" dengan bar progres mini. */
-function KnownSummary({ known, total, accentColor }: { known: number; total: number; accentColor: string }) {
+function KnownSummary({ known, total }: { known: number; total: number }) {
   if (total <= 0) return null
   const pct = Math.round((known / total) * 100)
   return (

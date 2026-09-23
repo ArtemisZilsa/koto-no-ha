@@ -85,7 +85,7 @@ export default function FlashcardSession({
         className="max-w-md mx-auto rounded-2xl px-6 py-10 text-center"
         style={{ background: 'var(--surface)', border: '0.5px solid var(--border)' }}
       >
-        <p className="font-serif text-xl text-ink mb-2">Belum ada kartu 🎉</p>
+        <p className="font-serif text-xl text-ink mb-2">Belum ada kartu</p>
         <p className="text-sm mb-6" style={{ color: 'var(--muted)' }}>
           Tidak ada kartu jatuh tempo atau kartu baru untuk sesi ini. Coba lagi nanti,
           atau pelajari materi lain dulu.

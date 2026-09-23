@@ -20,8 +20,13 @@ const HYOUGEN = [
   { jp: '温故知新', romaji: 'Onko chishin', id: 'Belajar dari yang lama, temukan yang baru' },
 ]
 
+// Fungsi biasa (bukan komponen) — dipanggil per request untuk memilih tagline acak.
+function pickHyougen() {
+  return HYOUGEN[Math.floor(Math.random() * HYOUGEN.length)]
+}
+
 export function HeroSection() {
-  const hyougen = HYOUGEN[Math.floor(Math.random() * HYOUGEN.length)]
+  const hyougen = pickHyougen()
 
   return (
     <section className="min-h-screen flex items-center px-5 md:px-12 pt-24 pb-16 relative overflow-hidden">
