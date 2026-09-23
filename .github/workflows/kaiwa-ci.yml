@@ -1,0 +1,43 @@
+name: Kaiwa CI
+
+# Gerbang otomatis untuk perubahan di my-app/: build (termasuk typecheck),
+# lint, dan validator konten kaiwa (npm run validate:kaiwa). Dipakai sebagai
+# bukti "gerbang lulus" sebelum PR teknis di-auto-merge (lihat
+# scheduler/kaiwa-30d/STATE.md) — validator sendiri tidak pernah menulis ke
+# Supabase, hanya membaca migrasi di repo.
+
+on:
+  pull_request:
+    paths:
+      - 'my-app/**'
+      - '.github/workflows/kaiwa-ci.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'my-app/**'
+      - '.github/workflows/kaiwa-ci.yml'
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: my-app
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # validate:kaiwa membandingkan diff terhadap origin/master
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: my-app/package-lock.json
+
+      - run: npm ci
+
+      - run: npm run lint
+
+      - run: npm run build
+
+      - run: npm run validate:kaiwa -- --base=origin/master

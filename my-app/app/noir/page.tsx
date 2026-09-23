@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     locale: 'id_ID',
     type: 'website',
   },
+  // Halaman eksperimen visual: jangan diindeks Google.
+  robots: { index: false, follow: false },
 }
 
 export default function Noir() {

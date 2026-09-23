@@ -10,7 +10,8 @@
     "audio": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file=.env.local tools/generate-kaiwa-audio.mts",
     "audio:dry": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file=.env.local tools/generate-kaiwa-audio.mts --dry-run",
     "typecheck:audio": "tsc -p tsconfig.audio.json",
-    "seed:kaiwa": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file=.env.local tools/seed-kaiwa-lessons.mts"
+    "seed:kaiwa": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file=.env.local tools/seed-kaiwa-lessons.mts",
+    "validate:kaiwa": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON tools/validate-kaiwa.mts"
   },
   "dependencies": {
     "@elevenlabs/elevenlabs-js": "^2.65.0",
