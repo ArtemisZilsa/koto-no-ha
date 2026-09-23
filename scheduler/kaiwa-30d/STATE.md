@@ -102,12 +102,22 @@ deployment Netlify/Vercel), bukan pengecekan isi halaman langsung.
 - PR #2 (`[teknis] Day 1 — Audit data kaiwa + validator konten + CI`):
   **merged** ke master (`5ca031f`) pada 22–23 Sep 2026.
 - PR #7 (`[teknis] Day 2 — C1: paksa dynamic rendering eksplisit di /kaiwa`):
-  dibuka hari ini. Gerbang lokal lulus: `tsc --noEmit` bersih, `npm run
-  lint` bersih, `npm run build` sukses (`/kaiwa` tetap `ƒ` Dynamic), `npm
-  run validate:kaiwa -- --base=origin/master` lulus (67 warning data lama,
-  tidak ada error baru — sama seperti Day 1). Menunggu status deploy
-  preview dari GitHub sebelum diputuskan auto-merge (lihat batasan
-  verifikasi di atas).
+  dibuka dan **di-merge** hari ini (`7356eff`). Gerbang lokal lulus:
+  `tsc --noEmit` bersih, `npm run lint` bersih, `npm run build` sukses
+  (`/kaiwa` tetap `ƒ` Dynamic), `npm run validate:kaiwa -- --base=origin/master`
+  lulus (67 warning data lama, tidak ada error baru). Di level PR: `ci`
+  GitHub Actions sukses, Netlify deploy-preview "ready", Vercel deployment
+  sukses — auto-merge dilakukan berdasar gerbang ini (isi halaman tidak
+  bisa dicek langsung dari sandbox, lihat batasan verifikasi di atas).
+  **Cek pasca-merge**: `kaiwa-ci.yml` pada push ke `master` di commit
+  `7356eff` juga sukses penuh (npm ci, lint, build, validate:kaiwa).
+  Ditemukan juga bahwa run CI push sebelumnya di `master`
+  (`e4fed74`, merge PR #3 "fitur/progress-latihan", bukan bagian program
+  ini) **gagal** di step `npm run build` pukul 12:23 — tapi build yang
+  sama persis kini sukses di commit setelahnya tanpa perubahan terkait,
+  jadi kemungkinan flake CI, bukan regresi nyata. Tidak diambil tindakan
+  karena bukan cakupan program kaiwa-30d dan sudah "sembuh sendiri" di
+  commit berikutnya.
 - PR konten: tidak ada (belum masuk antrean E, mulai Day 4).
 - PR lain di luar program ini: #1 (`claude/website-enhancement-plan-7qxgmb`,
   fitur Kana+SRS, dibuka 21 Jun 2026) dan #6 (`fitur/loading-publik`, dari
@@ -115,10 +125,7 @@ deployment Netlify/Vercel), bukan pengecekan isi halaman langsung.
 
 ## Antrean berikutnya (Day 3)
 
-1. Cek status PR #7 (merge kalau gerbang deploy sudah lulus/terverifikasi
-   cukup, atau tetap tunggu review kalau masih ragu) dan cek produksi
-   sebisa mungkin.
+1. Mulai `git fetch origin master` + `list_pull_requests` dulu untuk
+   menangkap perubahan dari sumber lain sejak Day 2.
 2. Lanjut ke **C2** (angka statis "40+ dialog" → hitung otomatis dari data)
    di `HeroSection.tsx` dan `KaiwaPreview.tsx`.
-3. Mulai `git fetch origin master` + `list_pull_requests` dulu untuk
-   menangkap perubahan dari sumber lain sejak Day 2.
