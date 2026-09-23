@@ -17,6 +17,13 @@ export const metadata: Metadata = {
     'Latihan percakapan (kaiwa) bahasa Jepang N5–N1 per tema, dengan cara baca (hiragana & romaji) dan terjemahan Indonesia.',
 }
 
+// `searchParams` dan `cookies()` (lewat createClient() di getKaiwaByLevel)
+// sudah membuat rute ini dynamic secara implisit, tapi deklarasi eksplisit
+// ini memaksa header Cache-Control no-store pada setiap respons — jaga-jaga
+// agar `/kaiwa` tanpa parameter tidak pernah disajikan dari cache CDN/edge
+// yang basi (lihat AUDIT.md §7).
+export const dynamic = 'force-dynamic'
+
 const LEVELS: { code: JLPTLevel; name: string; accent: string }[] = [
   { code: 'N5', name: 'Dasar', accent: 'var(--red)' },
   { code: 'N4', name: 'Pemula', accent: 'var(--gold)' },
