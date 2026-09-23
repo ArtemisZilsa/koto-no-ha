@@ -41,20 +41,38 @@
   Kehidupan, (4) Manufaktur, (5) Konstruksi, (6) Pertanian. Restoran
   di-skip (penerimaan ditutup sejak 13 Apr 2026).
 
-## Temuan blocking — perlu perhatian Zilsa (bukan bagian antrean 30 hari)
+## Temuan blocking — resolusi
 
-`npm run lint` gagal di `master` HEAD (5fe8e85) karena 8 error pre-existing
-di 6 file yang tidak terkait kaiwa sama sekali (detail: AUDIT.md §8). Selama
-ini belum diperbaiki, gerbang auto-merge teknis (Aturan Keras #2, butuh
-"lint/typecheck lulus") **tidak akan pernah terpenuhi**, jadi PR teknis dari
-program ini akan menunggu review manual, bukan auto-merge, sampai ini
-dibereskan.
+`npm run lint` gagal di `master` HEAD (5fe8e85) saat PR #2 dibuka, karena 8
+error pre-existing di 6 file tak terkait kaiwa (detail: AUDIT.md §8).
+**Sudah dibereskan** oleh proses lain di luar program ini — PR #4
+(`claude/magical-galileo-ajl9m4`, commit `2b4720c` "Fix pre-existing lint
+errors blocking auto-merge gate" + `b203794`) — merge ke `master` sebagai
+`b5d7279` pada 23 Sep 2026. Gerbang auto-merge teknis kini bisa benar-benar
+berfungsi.
+
+**Catatan penting untuk run berikutnya**: repo ini juga dikerjakan oleh
+agen/sesi terjadwal lain di luar program 30-hari-kaiwa ini (setidaknya satu
+task perbaikan situs umum — lihat commit-commit non-kaiwa di riwayat
+`master`, mis. perbaikan navbar, halaman 404, `/noir` noindex). `master`
+bisa berubah signifikan antar-run karena sumber lain, bukan cuma dari
+program ini. Selalu `git fetch`+baca ulang state sebelum menyimpulkan apa
+yang sudah/belum ada.
 
 ## PR
 
-- Dibuka hari ini: 1 PR teknis (AUDIT.md, STATE.md, validator, CI workflow).
-  Tidak di-auto-merge — lint gagal di baseline (lihat atas), jadi salah satu
-  syarat auto-merge tidak terpenuhi hari ini.
+- PR #2 (`[teknis] Day 1 — Audit data kaiwa + validator konten + CI`):
+  dibuka 22 Sep, awalnya tertahan karena lint baseline gagal (lihat atas).
+  Zilsa (atau otomasi lain) meng-update branch dengan merge `master`
+  terbaru pada 23 Sep, yang membawa masuk fix lint dari PR #4. Setelah itu
+  semua gerbang lulus (`ci` GitHub Actions: build+lint+validate:kaiwa
+  sukses; deploy preview Netlify — kedua proyek — dan Vercel: ready/sukses)
+  — **di-merge ke master** (`5ca031f`) hari ini. **Verifikasi produksi
+  setelah merge tidak bisa dilakukan langsung** dari sesi ini (WebFetch ke
+  domain Netlify diblokir kebijakan jaringan sandbox) — diandalkan pada: PR
+  ini tidak menyentuh kode halaman sama sekali (murni audit/state/
+  validator/CI), deploy preview commit yang sama sudah "ready" sebelum
+  merge, dan `ci` tetap sukses pada push ke `master` setelahnya.
 - PR konten: tidak ada (Day 1 belum masuk antrean E).
 - PR lama di luar program ini: #1 (`claude/website-enhancement-plan-7qxgmb`,
   dibuka 21 Jun 2026, fitur Kana+SRS) — bukan bagian program 30 hari, tidak
@@ -63,4 +81,6 @@ dibereskan.
 ## Antrean berikutnya (Day 2)
 
 Lanjut ke **C1** (cache `/kaiwa` tanpa parameter) — baca dokumentasi Next.js
-16 lokal dulu sebelum mengubah kode cache/revalidate.
+16 lokal dulu sebelum mengubah kode cache/revalidate. Mulai dengan
+`git fetch origin master` untuk menangkap perubahan dari sumber lain sejak
+Day 1.
