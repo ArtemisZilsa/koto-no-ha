@@ -1,7 +1,7 @@
 # State — Program 30 Hari Kaiwa
 
 - `start_date`: 2026-09-22 (JST)
-- Hari ini: **Day 2 / 30**
+- Hari ini: **Day 3 / 30**
 - Rem darurat: **tidak aktif** (0 PR konten terbuka dari program ini)
 
 ## Item selesai
@@ -31,6 +31,8 @@
   tahan terhadap flake ini — kalau gerbang teknis gagal di run berikutnya
   dan pesannya "Module not found" di berkas font Google, itu bukan
   masalah kode kaiwa, cek apakah retry-nya sudah jalan 3x.
+- **C2 — angka statis "40+ dialog"** (Day 3): lihat detail di bawah dan PR
+  #11 (merged).
 
 ## Analisis C1 (Day 2)
 
@@ -69,14 +71,41 @@ dari sesi ini — hanya bisa dicek lewat status check GitHub (`ci` Actions +
 status deploy Netlify/Vercel yang dilaporkan API GitHub sebagai "ready").
 Sama seperti keterbatasan yang dicatat di PR #2 (Day 1).
 
+## Analisis C2 (Day 3)
+
+Grep menyeluruh untuk pola `40+`/`dialog` di seluruh `my-app/`: angka statis
+yang ditemukan **hanya satu**, di `components/landing/HeroSection.tsx`
+("40+" untuk stat "Dialog dari Situasi Nyata"). `KaiwaPreview.tsx` (yang
+disebut AUDIT.md §7 sebagai kemungkinan lokasi kedua) ternyata **tidak**
+punya angka statis — isinya cuma satu kartu dialog contoh (mock, bukan klaim
+angka) dengan data hardcoded untuk ilustrasi UI, jadi tidak perlu disentuh.
+
+**Perubahan**: tambah `getKaiwaDialogCount()` di `lib/data/queries.ts` —
+`COUNT(*)` pada `kaiwa_stories` dengan `job_slug IS NULL` (dialog lepas,
+konsisten dengan definisi yang sudah dipakai `getKaiwaByLevel`), pakai
+`{ count: 'exact', head: true }` supaya tidak menarik baris. `HeroSection`
+diubah jadi async server component, memanggil fungsi itu, lalu membulatkan
+hasilnya ke bawah ke kelipatan 10 (`formatDialogStat`, mis. 121 → "120+")
+sebelum ditampilkan — supaya klaim "X+" selalu valid tanpa perlu commit baru
+tiap kali ada dialog ditambah lewat program E nanti.
+
+**Gerbang lokal**: `tsc --noEmit` (strict) bersih, `npm run lint` bersih,
+`npm run build` sukses (`/` tetap `ƒ` Dynamic — tidak berubah, halaman ini
+sudah dynamic sejak ada tagline acak), `npm run validate:kaiwa --
+--base=origin/master` lolos (67 warning data lama, sama seperti baseline,
+tidak ada error baru — PR ini tidak menyentuh file migrasi kaiwa).
+
+**Keterbatasan verifikasi**: sama seperti Day 1–2, sandbox tidak bisa
+`WebFetch`/curl domain `*.netlify.app` maupun akses Supabase langsung,
+sehingga verifikasi isi deploy preview & produksi mengandalkan status check
+GitHub (lihat bagian PR di bawah).
+
 ## Belum selesai / lanjutan
 
 - **B lanjutan**: cek (2) hiragana↔kanji dan (3) romaji-dari-skrip — butuh
   tokenizer morfologis (kuromoji atau setara), karena partikel は/へ/を
   tidak bisa dikonversi benar dari pemetaan karakter polos. Lihat komentar
   di `tools/validate-kaiwa.mts`.
-- **C2** (Day 3, teknis): angka statis "40+ dialog" di `HeroSection.tsx`
-  dan `KaiwaPreview.tsx` — hitung otomatis dari data kaiwa.
 - **C3** (Day 4–7, teknis): SEO halaman kaiwa — title/description/og:title/
   og:url/canonical unik per level dan tema (saat ini og:title dan og:url
   ikut default dari layout, sama dengan beranda).
@@ -133,14 +162,40 @@ deployment Netlify/Vercel), bukan pengecekan isi halaman langsung.
   jadi kemungkinan flake CI, bukan regresi nyata. Tidak diambil tindakan
   karena bukan cakupan program kaiwa-30d dan sudah "sembuh sendiri" di
   commit berikutnya.
+- PR #11 (`[teknis] Day 3 — C2: hitung stat "40+ Dialog" otomatis dari
+  data`): dibuka dan **di-merge** hari ini (`762267f` → merge `51eac0f`).
+  Gerbang lokal lulus (lihat "Analisis C2" di atas). Di level PR: `ci`
+  GitHub Actions sukses, Vercel deployment sukses, **dua** deploy preview
+  Netlify ("remarkable-rabanadas-91dc48" dan "kotonohalearnjapanese" —
+  tampaknya dua project Netlify terhubung ke repo yang sama, keduanya
+  perlu hijau) sama-sama "ready" — auto-merge dilakukan berdasar gerbang
+  ini (isi halaman tidak bisa dicek langsung, `WebFetch` ke domain
+  `*.netlify.app` diblokir kebijakan jaringan sandbox). **Cek pasca-merge**:
+  workflow `Kaiwa CI` pada push ke `master` di commit `51eac0f` (merge
+  PR #11) dipantau sampai selesai — **sukses penuh** (npm ci, lint, build,
+  validate:kaiwa). Tidak ada revert yang diperlukan.
 - PR konten: tidak ada (belum masuk antrean E, mulai Day 4).
 - PR lain di luar program ini: #1 (`claude/website-enhancement-plan-7qxgmb`,
   fitur Kana+SRS, dibuka 21 Jun 2026) dan #6 (`fitur/loading-publik`, dari
-  sesi lain, dibuka 23 Sep 2026) — tidak disentuh.
+  sesi lain, dibuka 23 Sep 2026) — tidak disentuh. Per `list_pull_requests`
+  awal sesi Day 3, PR #1 sudah tidak muncul di daftar open (kemungkinan
+  ditutup/di-merge oleh sesi/agen lain di luar program ini) — belum
+  diverifikasi lebih jauh karena di luar cakupan.
 
-## Antrean berikutnya (Day 3)
+## Antrean berikutnya (Day 4)
 
 1. Mulai `git fetch origin master` + `list_pull_requests` dulu untuk
-   menangkap perubahan dari sumber lain sejak Day 2.
-2. Lanjut ke **C2** (angka statis "40+ dialog" → hitung otomatis dari data)
-   di `HeroSection.tsx` dan `KaiwaPreview.tsx`.
+   menangkap perubahan dari sumber lain sejak Day 3.
+2. **C3** (teknis, Day 4–7): SEO halaman kaiwa — title/description/
+   og:title/og:url/canonical unik per level & tema di `app/kaiwa/page.tsx`
+   (`generateMetadata` dinamis dari `searchParams`, lihat AUDIT.md §7).
+3. Day 4 juga membuka antrean **D** (migrasi format glosarium, 1 PR per
+   level, kategori KONTEN — wajib PR, jangan auto-merge) dan **E1**
+   (perpanjang dialog di bawah ambang panjang, kategori KONTEN). Cek dulu
+   rem darurat (jumlah PR konten terbuka) sebelum membuka PR konten baru;
+   batas tetap 1 PR teknis + 1 PR konten per run (plus maks 1 PR migrasi
+   format tambahan selama Day 4–8, sesuai Aturan Keras #5).
+4. E1 harus ditulis sebagai migrasi SQL **baru** (UPDATE by
+   level_id+title, atau INSERT ... ON CONFLICT DO UPDATE) untuk 35 dari 41
+   dialog pendek yang tidak punya file migrasi sumber di repo — lihat
+   AUDIT.md §4, jangan mengedit file yang tidak ada.
