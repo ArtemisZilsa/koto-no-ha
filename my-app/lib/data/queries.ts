@@ -363,6 +363,26 @@ export async function getNewsList(page = 1): Promise<PagedResult<NewsArticle>> {
  * menampilkan pelajaran 14 sebelum pelajaran 2. Silabus dibaca lewat
  * getKaiwaLessons().
  */
+/**
+ * Total dialog kaiwa lepas (semua level, `job_slug IS NULL`) — dipakai untuk
+ * angka statistik di landing page supaya tidak perlu diperbarui manual tiap
+ * kali ada dialog baru.
+ */
+export async function getKaiwaDialogCount(): Promise<number> {
+  const supabase = await createClient()
+
+  const { count, error } = await supabase
+    .from('kaiwa_stories')
+    .select('id', { count: 'exact', head: true })
+    .is('job_slug', null)
+
+  if (error) {
+    console.error('getKaiwaDialogCount error', error)
+    return 0
+  }
+  return count ?? 0
+}
+
 export async function getKaiwaByLevel(level: JLPTLevel): Promise<KaiwaStory[]> {
   const supabase = await createClient()
   const levelId = levelIdByCode[level]
