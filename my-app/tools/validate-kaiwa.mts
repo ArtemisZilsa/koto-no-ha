@@ -286,29 +286,44 @@ function checkRequiredFields(row: Row): string[] {
   return problems
 }
 
-const HIRAGANA_ONLY = /^[぀-ゟ・ー\s]+$/
-const ROMAJI_IN_PARENS_TAIL = /\([a-zA-Z][a-zA-Z\s'-]*\)\s*$/
+const KANA_ONLY_WORD = /^[぀-ゟ゠-ヿー・〜~\s]+$/
+const BARE_ROMAJI = /^[a-zA-Z][a-zA-Z\s'-]*$/
+const KANJI_READING = /^[^()]+ · [a-zA-Z][a-zA-Z\s'-]*$/
 
 /**
  * Cek (4): bentuk field `reading` pada glosarium.
  *
- * Standar transisi menuju Fase D: `reading` berisi hiragana lalu romaji
- * dalam kurung di akhir (mis. "うごかす (ugokasu)"), atau — untuk kata yang
- * penulisannya sudah kana — cukup romaji dalam kurung. Yang DITOLAK: romaji
- * telanjang tanpa kurung (mis. "shuumatsu") atau hiragana polos tanpa romaji
- * sama sekali, karena keduanya kehilangan salah satu informasi yang standar
- * Fase D mewajibkan keduanya hadir.
+ * Standar Fase D (keputusan Day 4, lihat catatan di 040/048_seed_kaiwa*.sql):
+ * komponen render (`KaiwaList.tsx`, `app/kaiwa/kerja/[job]/[lesson]/page.tsx`)
+ * SUDAH membungkus `reading` dalam kurungnya sendiri — "word (reading) —
+ * meaning". Jadi `reading` yang tersimpan TIDAK boleh punya kurung sendiri
+ * (itu akan jadi kurung ganda saat dirender):
+ *   - kata berkanji: "よみ · romaji" (titik tengah, tanpa kurung)
+ *   - kata kana-saja (word tidak punya kanji): cukup "romaji" telanjang
+ * Yang DITOLAK: kurung apa pun di dalam `reading`, hiragana polos tanpa
+ * romaji, atau romaji telanjang untuk kata yang justru punya kanji (butuh
+ * yomi juga).
  */
 function checkGlossaryFormat(row: Row): string[] {
   const problems: string[] = []
   ;(row.vocab_highlight ?? []).forEach((raw, i) => {
     const v = raw as Record<string, unknown>
+    const word = typeof v.word === 'string' ? v.word.trim() : ''
     const reading = typeof v.reading === 'string' ? v.reading.trim() : ''
     if (!reading) return // sudah ditangkap checkRequiredFields
-    if (HIRAGANA_ONLY.test(reading)) {
-      problems.push(`kosakata ${i + 1} "${v.word}": reading hiragana tanpa romaji ("${reading}")`)
-    } else if (!ROMAJI_IN_PARENS_TAIL.test(reading)) {
-      problems.push(`kosakata ${i + 1} "${v.word}": reading romaji tanpa kurung, bukan format standar ("${reading}")`)
+    if (reading.includes('(') || reading.includes(')')) {
+      problems.push(
+        `kosakata ${i + 1} "${v.word}": reading masih pakai kurung sendiri, jadi kurung ganda saat dirender ("${reading}")`
+      )
+      return
+    }
+    const isKanaOnlyWord = KANA_ONLY_WORD.test(word)
+    if (isKanaOnlyWord) {
+      if (!BARE_ROMAJI.test(reading)) {
+        problems.push(`kosakata ${i + 1} "${v.word}": kata kana-saja seharusnya reading = romaji saja ("${reading}")`)
+      }
+    } else if (!KANJI_READING.test(reading)) {
+      problems.push(`kosakata ${i + 1} "${v.word}": kata berkanji seharusnya reading = "yomi · romaji" ("${reading}")`)
     }
   })
   return problems
