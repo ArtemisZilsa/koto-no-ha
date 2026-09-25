@@ -10,13 +10,6 @@ import type { JLPTLevel } from '@/lib/data/types'
 import { Icon } from '@/components/ui/Icon'
 import { HeroBackground } from '@/components/ui/HeroBackground'
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/kaiwa' },
-  title: 'Kaiwa Stories — Percakapan Bahasa Jepang | Koto no Ha',
-  description:
-    'Latihan percakapan (kaiwa) bahasa Jepang N5–N1 per tema, dengan cara baca (hiragana & romaji) dan terjemahan Indonesia.',
-}
-
 // `searchParams` dan `cookies()` (lewat createClient() di getKaiwaByLevel)
 // sudah membuat rute ini dynamic secara implisit, tapi deklarasi eksplisit
 // ini memaksa header Cache-Control no-store pada setiap respons — jaga-jaga
@@ -31,6 +24,47 @@ const LEVELS: { code: JLPTLevel; name: string; accent: string }[] = [
   { code: 'N2', name: 'Lanjutan', accent: 'var(--red)' },
   { code: 'N1', name: 'Mahir', accent: 'var(--gold)' },
 ]
+
+// Judul/deskripsi/canonical unik per level & tema, dihitung dari data yang
+// sama dengan yang dirender komponen halaman (lihat AUDIT.md §7 — sebelum ini
+// og:title/og:url mewarisi default dari layout, sama dengan beranda, untuk
+// setiap kombinasi level/tema). `getKaiwaByLevel` dibungkus React `cache()`
+// jadi query di sini tidak menduplikasi query yang dijalankan komponen di
+// bawah dalam satu request yang sama.
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ level?: string; theme?: string }>
+}): Promise<Metadata> {
+  const { level, theme } = await searchParams
+  const active = LEVELS.find((l) => l.code === (level ?? '').toUpperCase()) ?? LEVELS[0]
+  const kaiwa = await getKaiwaByLevel(active.code)
+
+  const counts = new Map<string, number>()
+  for (const k of kaiwa) counts.set(k.category, (counts.get(k.category) ?? 0) + 1)
+  const activeTheme = theme && counts.has(theme) ? theme : null
+
+  const canonicalQuery = [level ? `level=${active.code}` : null, activeTheme ? `theme=${activeTheme}` : null]
+    .filter(Boolean)
+    .join('&')
+  const canonical = canonicalQuery ? `/kaiwa?${canonicalQuery}` : '/kaiwa'
+
+  if (activeTheme) {
+    const themeInfo = getCategoryInfo(activeTheme)
+    const count = counts.get(activeTheme) ?? 0
+    return {
+      alternates: { canonical },
+      title: `Kaiwa ${active.code} · ${themeInfo.id} — Latihan Percakapan Bahasa Jepang | Koto no Ha`,
+      description: `${count} dialog kaiwa level ${active.code} bertema ${themeInfo.id.toLowerCase()} (${themeInfo.jp}), dengan cara baca hiragana, romaji, dan terjemahan Indonesia.`,
+    }
+  }
+
+  return {
+    alternates: { canonical },
+    title: `Kaiwa ${active.code} — Latihan Percakapan Bahasa Jepang | Koto no Ha`,
+    description: `${kaiwa.length} dialog kaiwa level ${active.code} (${active.name}) per tema, dengan cara baca hiragana, romaji, dan terjemahan Indonesia.`,
+  }
+}
 
 export default async function KaiwaPage({
   searchParams,
