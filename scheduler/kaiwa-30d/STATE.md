@@ -1,8 +1,8 @@
 # State — Program 30 Hari Kaiwa
 
 - `start_date`: 2026-09-22 (JST)
-- Hari ini: **Day 3 / 30**
-- Rem darurat: **tidak aktif** (0 PR konten terbuka dari program ini)
+- Hari ini: **Day 4 / 30**
+- Rem darurat: **tidak aktif** (1 PR konten terbuka dari program ini — PR #14, di bawah ambang 3)
 
 ## Item selesai
 
@@ -33,6 +33,22 @@
   masalah kode kaiwa, cek apakah retry-nya sudah jalan 3x.
 - **C2 — angka statis "40+ dialog"** (Day 3): lihat detail di bawah dan PR
   #11 (merged).
+- **C3 — SEO title/description/canonical per level & tema di `/kaiwa`** (Day
+  4): lihat "Analisis C3" di bawah dan PR #13 (merged).
+- **Perbaikan validator di luar antrean asli, tapi teknis (Day 4)**: sambil
+  menyiapkan antrean D (lihat bawah), ditemukan bahwa `checkGlossaryFormat`
+  di `tools/validate-kaiwa.mts` menganggap pola lama "yomi (romaji)" sebagai
+  "paling dekat ke standar" — padahal kedua komponen yang merender
+  `vocab_highlight` (`KaiwaList.tsx`, `app/kaiwa/kerja/[job]/[lesson]/page.tsx`)
+  SUDAH membungkus `reading` dalam kurungnya sendiri, jadi pola itu akan
+  tampil kurung ganda. Validator diperbaiki untuk menolak kurung apa pun di
+  dalam `reading` dan membedakan kata berkanji ("yomi · romaji") dari kata
+  kana-saja (romaji telanjang). Dibundel ke PR #13 (masih kategori teknis,
+  tidak menyentuh data). Ini keputusan format resmi untuk antrean D — lihat
+  PR #14 dan "Antrean berikutnya" di bawah.
+- **D — migrasi format glosarium, level N5 (dialog lepas saja)** (Day 4):
+  `040_seed_kaiwa_n5.sql` + `048_seed_kaiwa_lepas_n5.sql`, PR #14 (konten,
+  **belum di-merge, menunggu review Zilsa**). Lihat "Analisis D" di bawah.
 
 ## Analisis C1 (Day 2)
 
@@ -100,19 +116,85 @@ tidak ada error baru — PR ini tidak menyentuh file migrasi kaiwa).
 sehingga verifikasi isi deploy preview & produksi mengandalkan status check
 GitHub (lihat bagian PR di bawah).
 
+## Analisis C3 (Day 4)
+
+`app/kaiwa/page.tsx` sebelumnya hanya punya `export const metadata` statis
+tunggal (title/description tetap, tanpa `openGraph`/`canonical` per
+level-tema) — jadi semua kombinasi `/kaiwa?level=&theme=` mewarisi og:title/
+og:url default dari `app/layout.tsx` (sama dengan beranda), persis seperti
+dilaporkan di AUDIT.md §7.
+
+**Perubahan**: `generateMetadata` dinamis, dihitung dari `searchParams` dan
+`getKaiwaByLevel` (fungsi yang sama yang dipanggil komponen halaman — kini
+dibungkus React `cache()` supaya tidak dobel query per request). Title/
+description/`alternates.canonical` berbeda untuk (a) tanpa parameter/hanya
+level, dan (b) level+tema valid. Mengikuti konvensi yang sudah dipakai di
+`berita/[id]`/`flashcard/[level]` (title + `alternates.canonical`, tanpa
+mengisi `openGraph.title/url` manual — sesuai catatan SEO&GEO di CLAUDE.md).
+
+**Gerbang lokal**: `tsc --noEmit` bersih, `npm run lint` bersih, `npm run
+build` sukses (`/kaiwa` tetap `ƒ` Dynamic), `npm run validate:kaiwa --
+--base=origin/master` lolos.
+
+## Analisis D (Day 4) — keputusan format & migrasi N5
+
+AUDIT.md Day 1 §5 mencatat keputusan skema Fase D masih terbuka. Membaca
+kode render (`components/learn/KaiwaList.tsx` dan
+`app/kaiwa/kerja/[job]/[lesson]/page.tsx`), **keduanya membungkus
+`v.reading` dalam kurungnya sendiri**: `{word} ({reading}) — {meaning}`.
+Konsekuensinya, pola lama "yomi (romaji)" (dipakai di 048–052, sebagian 046/
+047) akan tampil **kurung ganda** di halaman — kemungkinan bug tampilan yang
+sudah lama ada di produksi.
+
+**Keputusan format resmi (dipakai mulai Day 4)**: `reading` di DB TIDAK
+boleh punya kurung sendiri.
+- Kata berkanji: `"yomi · romaji"` (titik tengah, tanpa kurung).
+- Kata kana-saja (word tidak punya kanji): `"romaji"` telanjang.
+
+Ini bukan "mengarang fakta bahasa Jepang" — murni kesimpulan dari baca kode
+komponen (dua tempat, konsisten), tidak ada bacaan/romaji yang diubah
+nilainya, hanya tanda baca dan lengkap-tidaknya romaji. **Tapi ini BELUM
+diverifikasi di browser sungguhan** (sandbox tidak punya akses jaringan ke
+domain Netlify/Vercel) — PR #14 minta konfirmasi Zilsa sebelum dipakai untuk
+N4–N1.
+
+Validator (`tools/validate-kaiwa.mts`) diperbarui ke definisi ini (PR #13,
+teknis, sudah merge) — reading dengan kurung literal sekarang selalu
+diflag, kata kana-saja vs berkanji dibedakan lewat `word`.
+
+**Migrasi N5**: `040_seed_kaiwa_n5.sql` (30 entri, semua sebelumnya hiragana
+tanpa romaji — romaji ditambahkan mekanis, dicocokkan ke romaji baris
+dialog yang sama dalam file) dan `048_seed_kaiwa_lepas_n5.sql` (59 dari 64
+entri, ganti tanda baca "(x)" → " · x", romaji/hiragana tidak berubah
+nilainya; 5 entri kana-saja sudah bare-romaji, tidak disentuh). PR #14,
+kategori konten, **tidak di-merge** — menunggu review Zilsa termasuk
+konfirmasi keputusan format di atas.
+
+**Sengaja di luar cakupan PR #14**: silabus profesi 介護職員 (`046`/`047`) —
+lesson_no di file itu tidak dikelompokkan per JLPT level dalam satu file
+(1–7 N5, 8–13 N4, 14–20 N3 semua dalam file yang sama), jadi "1 PR per
+level" untuk data itu perlu pendekatan berbeda dari dialog lepas. Perlu
+diputuskan hari berikutnya: migrasi tersendiri per rentang lesson_no, atau
+digabung saat E3 mengerjakan profesi baru.
+
 ## Belum selesai / lanjutan
 
 - **B lanjutan**: cek (2) hiragana↔kanji dan (3) romaji-dari-skrip — butuh
   tokenizer morfologis (kuromoji atau setara), karena partikel は/へ/を
   tidak bisa dikonversi benar dari pemetaan karakter polos. Lihat komentar
   di `tools/validate-kaiwa.mts`.
-- **C3** (Day 4–7, teknis): SEO halaman kaiwa — title/description/og:title/
-  og:url/canonical unik per level dan tema (saat ini og:title dan og:url
-  ikut default dari layout, sama dengan beranda).
-- **D** (Day 4–8, konten, 1 PR/level): migrasi format glosarium ke standar
-  `表記 (よみ · romaji) — arti`. AUDIT.md §5 sudah memetakan file mana yang
-  perlu disentuh (67 entri, tersebar di 040, 046, 047, 048–052).
-- **E1** (mulai Day 4): perpanjang dialog di bawah ambang panjang. **Catatan
+- **D lanjutan** (Day 5–8, konten, 1 PR/level): migrasi format glosarium
+  N4, N3, N2, N1 (dialog lepas), pakai keputusan format & pola script yang
+  sama seperti N5 (lihat "Analisis D" di atas) — TAPI cek dulu apakah Zilsa
+  sudah konfirmasi PR #14 sebelum lanjut (kalau ternyata keputusan format
+  salah, perlu perbaiki N5 dulu, jangan lanjut ke level lain dengan asumsi
+  yang sama). Juga perlu keputusan terpisah untuk silabus profesi
+  介護職員 (`046`/`047`, lesson_no lintas level dalam satu file — lihat
+  "Sengaja di luar cakupan PR #14" di atas).
+- **E1** (mulai Day 4, belum dikerjakan — slot PR konten "item baru" hari
+  ini tidak dipakai, seluruh waktu terpakai untuk D/N5 + keputusan format;
+  bukan karena rem darurat, rem masih tidak aktif): perpanjang dialog di
+  bawah ambang panjang. **Catatan
   penting**: 35 dari 41 dialog yang kependekan TIDAK punya file migrasi
   sumber di repo (disetor langsung ke Supabase sebelum migrasi 040) — harus
   ditulis sebagai migrasi baru (UPDATE by level_id+title atau
@@ -174,28 +256,52 @@ deployment Netlify/Vercel), bukan pengecekan isi halaman langsung.
   workflow `Kaiwa CI` pada push ke `master` di commit `51eac0f` (merge
   PR #11) dipantau sampai selesai — **sukses penuh** (npm ci, lint, build,
   validate:kaiwa). Tidak ada revert yang diperlukan.
-- PR konten: tidak ada (belum masuk antrean E, mulai Day 4).
+- PR #13 (`[teknis] Day 4 — C3: SEO title/description/canonical unik per
+  level & tema di /kaiwa`): dibuka dan **di-merge** hari ini (2 komit:
+  `8308480` C3, `9d41115` perbaikan validator format-glosarium yang
+  dibundel — lihat "Analisis C3" di atas dan catatan "Perbaikan validator"
+  di "Item selesai" → merge `725b423`). Gerbang lokal lulus (lihat di
+  atas). Di level PR: `ci` sukses, dua deploy-preview Netlify "ready",
+  Vercel "Ready" — auto-merge dilakukan berdasar gerbang ini. **Cek
+  pasca-merge**: workflow `ci` pada push ke `master` di commit `725b423`
+  dipantau sampai selesai — **sukses penuh**. Tidak ada revert diperlukan.
+- PR #14 (`[konten-jepang] Day 4 — D: migrasi format glosarium kaiwa lepas
+  N5`): dibuka hari ini, **BELUM di-merge** (kategori konten, menunggu
+  review Zilsa — termasuk konfirmasi keputusan format di "Analisis D" di
+  atas sebelum dipakai untuk level lain). Lihat "Analisis D" untuk detail.
 - PR lain di luar program ini: #1 (`claude/website-enhancement-plan-7qxgmb`,
-  fitur Kana+SRS, dibuka 21 Jun 2026) dan #6 (`fitur/loading-publik`, dari
-  sesi lain, dibuka 23 Sep 2026) — tidak disentuh. Per `list_pull_requests`
-  awal sesi Day 3, PR #1 sudah tidak muncul di daftar open (kemungkinan
-  ditutup/di-merge oleh sesi/agen lain di luar program ini) — belum
-  diverifikasi lebih jauh karena di luar cakupan.
+  fitur Kana+SRS) sudah tidak muncul di daftar open sejak Day 3 (kemungkinan
+  ditutup/di-merge di luar program ini, tidak diverifikasi lebih jauh —
+  di luar cakupan). #6 (`fitur/loading-publik`, dari sesi lain, dibuka 23
+  Sep 2026) masih open per pengecekan awal sesi Day 4 — tidak disentuh.
 
-## Antrean berikutnya (Day 4)
+## Antrean berikutnya (Day 5)
 
 1. Mulai `git fetch origin master` + `list_pull_requests` dulu untuk
-   menangkap perubahan dari sumber lain sejak Day 3.
-2. **C3** (teknis, Day 4–7): SEO halaman kaiwa — title/description/
-   og:title/og:url/canonical unik per level & tema di `app/kaiwa/page.tsx`
-   (`generateMetadata` dinamis dari `searchParams`, lihat AUDIT.md §7).
-3. Day 4 juga membuka antrean **D** (migrasi format glosarium, 1 PR per
-   level, kategori KONTEN — wajib PR, jangan auto-merge) dan **E1**
-   (perpanjang dialog di bawah ambang panjang, kategori KONTEN). Cek dulu
-   rem darurat (jumlah PR konten terbuka) sebelum membuka PR konten baru;
-   batas tetap 1 PR teknis + 1 PR konten per run (plus maks 1 PR migrasi
-   format tambahan selama Day 4–8, sesuai Aturan Keras #5).
-4. E1 harus ditulis sebagai migrasi SQL **baru** (UPDATE by
-   level_id+title, atau INSERT ... ON CONFLICT DO UPDATE) untuk 35 dari 41
-   dialog pendek yang tidak punya file migrasi sumber di repo — lihat
-   AUDIT.md §4, jangan mengedit file yang tidak ada.
+   menangkap perubahan dari sumber lain sejak Day 4, termasuk **cek status
+   PR #14** (di-review/di-merge/ada komentar?) — terutama konfirmasi
+   keputusan format kurung-tunggal di "Analisis D" sebelum lanjut migrasi
+   level lain. Kalau PR #14 masih terbuka tanpa komentar, itu wajar (bukan
+   berarti ditolak) — tetap tidak boleh di-merge sendiri.
+2. Cek rem darurat: kalau PR #14 (dan/atau PR konten baru lain dari program
+   ini) yang terbuka sudah ≥3, hentikan penambahan konten baru hari itu,
+   kerjakan antrean teknis saja, laporkan menunggu review di notifikasi.
+3. **C1 masih perlu dipantau**: perubahan Day 2 (`force-dynamic`) bersifat
+   defensif, belum ada cara memverifikasi langsung dari sandbox bahwa
+   `/kaiwa` vs `/kaiwa?level=N5` benar-benar sama sekarang. Kalau ada cara
+   cek (mis. Zilsa konfirmasi di live site), catat di sini.
+4. Kalau keputusan format D terkonfirmasi benar: lanjut **D untuk N4**
+   (dialog lepas, `049_seed_kaiwa_lepas_n4.sql` — pola sama seperti N5,
+   script mekanis strip-kurung + tambah-titik-tengah). Silabus profesi
+   介養職員 (`046`/`047`) masih di luar cakupan D dialog-lepas — putuskan
+   pendekatannya (migrasi lesson_no-range tersendiri, atau gabung ke E3).
+5. Kalau ada slot PR konten tersisa (belum terpakai untuk D): mulai **E1**
+   — perpanjang dialog di bawah ambang panjang. Harus ditulis sebagai
+   migrasi SQL **baru** (UPDATE by level_id+title, atau
+   INSERT ... ON CONFLICT DO UPDATE) untuk 35 dari 41 dialog pendek yang
+   TIDAK punya file migrasi sumber di repo — lihat AUDIT.md §4, jangan
+   mengedit file yang tidak ada.
+6. Ingat batas Aturan Keras #5: 1 PR teknis + 1 PR konten per run, plus
+   maks 1 PR migrasi format tambahan selama Day 4–8 (jadi total maks 2 PR
+   konten per run selama jendela itu: 1 migrasi-format D + 1 konten
+   item-baru E).
