@@ -4,6 +4,15 @@
 -- Setiap baris lines: {speaker, text, reading, romaji, trans} — memenuhi aturan konten.
 -- Idempoten: unique index (level_id, title) + ON CONFLICT DO NOTHING.
 -- TANPA DELETE — data kaiwa live yang sudah ada tidak disentuh.
+--
+-- [Fase D, Day 4] `vocab_highlight[].reading` dirapikan ke format standar
+-- "よみ · romaji" (kata berkanji) / "romaji" saja (kata kana-saja). Komponen
+-- render (KaiwaList.tsx, app/kaiwa/kerja/[job]/[lesson]/page.tsx) sudah
+-- membungkus `reading` dalam tanda kurungnya sendiri ("word (reading) —
+-- meaning"), jadi nilai di DB TIDAK boleh menyimpan kurung lagi — sebelumnya
+-- beberapa baris hanya hiragana tanpa romaji sama sekali. Tidak ada arti,
+-- bacaan, atau baris dialog yang berubah — cek dengan `npm run seed:kaiwa --
+-- --file supabase/migrations/040_seed_kaiwa_n5.sql --dry-run`.
 
 CREATE UNIQUE INDEX IF NOT EXISTS uniq_kaiwa_level_title
   ON public.kaiwa_stories (level_id, title);
@@ -30,11 +39,11 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"リナ","text":"分かりました。お願いします。","reading":"わかりました。おねがいします。","romaji":"Wakarimashita. Onegai shimasu.","trans":"Oke, tolong ya."}
  ]'::jsonb,
  '[
-  {"word":"荷物","reading":"にもつ","meaning":"paket / barang bawaan"},
-  {"word":"中身","reading":"なかみ","meaning":"isi"},
-  {"word":"住所","reading":"じゅうしょ","meaning":"alamat"},
-  {"word":"船便","reading":"ふなびん","meaning":"pos jalur laut"},
-  {"word":"航空便","reading":"こうくうびん","meaning":"pos jalur udara"}
+  {"word":"荷物","reading":"にもつ · nimotsu","meaning":"paket / barang bawaan"},
+  {"word":"中身","reading":"なかみ · nakami","meaning":"isi"},
+  {"word":"住所","reading":"じゅうしょ · juusho","meaning":"alamat"},
+  {"word":"船便","reading":"ふなびん · funabin","meaning":"pos jalur laut"},
+  {"word":"航空便","reading":"こうくうびん · koukuubin","meaning":"pos jalur udara"}
  ]'::jsonb,
  false),
 
@@ -57,11 +66,11 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"大家","text":"いいえ。分からなかったら、また聞いてくださいね。","reading":"いいえ。わからなかったら、またきいてくださいね。","romaji":"Iie. Wakaranakattara, mata kiite kudasai ne.","trans":"Sama-sama. Kalau bingung, tanya lagi aja ya."}
  ]'::jsonb,
  '[
-  {"word":"ごみ","reading":"ごみ","meaning":"sampah"},
-  {"word":"燃えるごみ","reading":"もえるごみ","meaning":"sampah mudah terbakar"},
-  {"word":"ペットボトル","reading":"ペットボトル","meaning":"botol plastik"},
-  {"word":"ごみ袋","reading":"ごみぶくろ","meaning":"kantong sampah"},
-  {"word":"出す","reading":"だす","meaning":"membuang / mengeluarkan"}
+  {"word":"ごみ","reading":"gomi","meaning":"sampah"},
+  {"word":"燃えるごみ","reading":"もえるごみ · moeru gomi","meaning":"sampah mudah terbakar"},
+  {"word":"ペットボトル","reading":"pettobotoru","meaning":"botol plastik"},
+  {"word":"ごみ袋","reading":"ごみぶくろ · gomibukuro","meaning":"kantong sampah"},
+  {"word":"出す","reading":"だす · dasu","meaning":"membuang / mengeluarkan"}
  ]'::jsonb,
  false),
 
@@ -85,11 +94,11 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"リナ","text":"はい、頑張ります。","reading":"はい、がんばります。","romaji":"Hai, ganbarimasu.","trans":"Iya, aku akan berusaha!"}
  ]'::jsonb,
  '[
-  {"word":"制服","reading":"せいふく","meaning":"seragam"},
-  {"word":"休憩","reading":"きゅうけい","meaning":"istirahat"},
-  {"word":"レジ","reading":"レジ","meaning":"kasir"},
-  {"word":"使い方","reading":"つかいかた","meaning":"cara pakai"},
-  {"word":"頑張る","reading":"がんばる","meaning":"berusaha"}
+  {"word":"制服","reading":"せいふく · seifuku","meaning":"seragam"},
+  {"word":"休憩","reading":"きゅうけい · kyuukei","meaning":"istirahat"},
+  {"word":"レジ","reading":"reji","meaning":"kasir"},
+  {"word":"使い方","reading":"つかいかた · tsukaikata","meaning":"cara pakai"},
+  {"word":"頑張る","reading":"がんばる · ganbaru","meaning":"berusaha"}
  ]'::jsonb,
  false),
 
@@ -113,11 +122,11 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"リナ","text":"はい、ありがとうございました。","reading":"はい、ありがとうございました。","romaji":"Hai, arigatou gozaimashita.","trans":"Baik, terima kasih, Dok."}
  ]'::jsonb,
  '[
-  {"word":"熱","reading":"ねつ","meaning":"demam"},
-  {"word":"のど","reading":"のど","meaning":"tenggorokan"},
-  {"word":"風邪","reading":"かぜ","meaning":"flu / masuk angin"},
-  {"word":"薬","reading":"くすり","meaning":"obat"},
-  {"word":"食後","reading":"しょくご","meaning":"setelah makan"}
+  {"word":"熱","reading":"ねつ · netsu","meaning":"demam"},
+  {"word":"のど","reading":"nodo","meaning":"tenggorokan"},
+  {"word":"風邪","reading":"かぜ · kaze","meaning":"flu / masuk angin"},
+  {"word":"薬","reading":"くすり · kusuri","meaning":"obat"},
+  {"word":"食後","reading":"しょくご · shokugo","meaning":"setelah makan"}
  ]'::jsonb,
  false),
 
@@ -139,11 +148,11 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"リナ","text":"はい、よろしくお願いいたします。","reading":"はい、よろしくおねがいいたします。","romaji":"Hai, yoroshiku onegai itashimasu.","trans":"Baik, mohon kerja samanya."}
  ]'::jsonb,
  '[
-  {"word":"名刺","reading":"めいし","meaning":"kartu nama"},
-  {"word":"〜と申します","reading":"〜ともうします","meaning":"saya ... (cara sopan menyebut nama)"},
-  {"word":"お世話になっております","reading":"おせわになっております","meaning":"frasa pembuka bisnis (terima kasih atas kerja samanya)"},
-  {"word":"少々お待ちください","reading":"しょうしょうおまちください","meaning":"mohon tunggu sebentar"},
-  {"word":"参ります","reading":"まいります","meaning":"datang (bentuk merendah)"}
+  {"word":"名刺","reading":"めいし · meishi","meaning":"kartu nama"},
+  {"word":"〜と申します","reading":"〜ともうします · to moushimasu","meaning":"saya ... (cara sopan menyebut nama)"},
+  {"word":"お世話になっております","reading":"おせわになっております · osewa ni natte orimasu","meaning":"frasa pembuka bisnis (terima kasih atas kerja samanya)"},
+  {"word":"少々お待ちください","reading":"しょうしょうおまちください · shoushou omachi kudasai","meaning":"mohon tunggu sebentar"},
+  {"word":"参ります","reading":"まいります · mairimasu","meaning":"datang (bentuk merendah)"}
  ]'::jsonb,
  false),
 
@@ -165,11 +174,11 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"リナ","text":"よかったです。午後は散歩に行きましょうね。","reading":"よかったです。ごごはさんぽにいきましょうね。","romaji":"Yokatta desu. Gogo wa sanpo ni ikimashou ne.","trans":"Syukurlah. Nanti sore kita jalan-jalan ya."}
  ]'::jsonb,
  '[
-  {"word":"お昼ご飯","reading":"おひるごはん","meaning":"makan siang"},
-  {"word":"みそ汁","reading":"みそしる","meaning":"sup miso"},
-  {"word":"拭く","reading":"ふく","meaning":"mengelap"},
-  {"word":"熱い","reading":"あつい","meaning":"panas"},
-  {"word":"散歩","reading":"さんぽ","meaning":"jalan-jalan"}
+  {"word":"お昼ご飯","reading":"おひるごはん · ohirugohan","meaning":"makan siang"},
+  {"word":"みそ汁","reading":"みそしる · misoshiru","meaning":"sup miso"},
+  {"word":"拭く","reading":"ふく · fuku","meaning":"mengelap"},
+  {"word":"熱い","reading":"あつい · atsui","meaning":"panas"},
+  {"word":"散歩","reading":"さんぽ · sanpo","meaning":"jalan-jalan"}
  ]'::jsonb,
  false)
 

@@ -9,6 +9,12 @@
 -- dipakai sebagai satu bongkah, bukan pola yang harus diurai pemula.
 --
 -- Idempoten: uniq_kaiwa_level_title (level_id, title) + DO NOTHING.
+--
+-- [Fase D, Day 4] `vocab_highlight[].reading` dirapikan dari "よみ (romaji)"
+-- (kurung ganda dengan kurung yang dirender komponen) ke standar "よみ ·
+-- romaji" — lihat catatan di 040_seed_kaiwa_n5.sql. Kata kana-saja (mis.
+-- ハンコ, パジャマ) sudah bare-romaji sebelum ini, tidak disentuh. Tidak ada
+-- arti, bacaan, atau baris dialog yang berubah.
 
 INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highlight, is_premium) VALUES
 
@@ -29,10 +35,10 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"リナ","text":"分かりました。ありがとうございます。","reading":"わかりました。ありがとうございます。","romaji":"Wakarimashita. Arigatou gozaimasu.","trans":"Baik. Terima kasih."}
  ]'::jsonb,
  '[
-  {"word":"洗剤","reading":"せんざい (senzai)","meaning":"deterjen"},
-  {"word":"乾燥","reading":"かんそう (kansou)","meaning":"pengeringan"},
-  {"word":"両替機","reading":"りょうがえき (ryougaeki)","meaning":"mesin penukar uang"},
-  {"word":"百円玉","reading":"ひゃくえんだま (hyakuen-dama)","meaning":"koin 100 yen"}
+  {"word":"洗剤","reading":"せんざい · senzai","meaning":"deterjen"},
+  {"word":"乾燥","reading":"かんそう · kansou","meaning":"pengeringan"},
+  {"word":"両替機","reading":"りょうがえき · ryougaeki","meaning":"mesin penukar uang"},
+  {"word":"百円玉","reading":"ひゃくえんだま · hyakuen-dama","meaning":"koin 100 yen"}
  ]'::jsonb, false),
 
 (1, 'Membuka Rekening Bank', 'daily',
@@ -52,10 +58,10 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"アリ","text":"分かりました。ありがとうございます。","reading":"わかりました。ありがとうございます。","romaji":"Wakarimashita. Arigatou gozaimasu.","trans":"Baik. Terima kasih."}
  ]'::jsonb,
  '[
-  {"word":"口座","reading":"こうざ (kouza)","meaning":"rekening bank"},
-  {"word":"在留カード","reading":"ざいりゅうカード (zairyuu kaado)","meaning":"kartu izin tinggal"},
+  {"word":"口座","reading":"こうざ · kouza","meaning":"rekening bank"},
+  {"word":"在留カード","reading":"ざいりゅうカード · zairyuu kaado","meaning":"kartu izin tinggal"},
   {"word":"ハンコ","reading":"hanko","meaning":"stempel nama (pengganti tanda tangan di Jepang)"},
-  {"word":"届く","reading":"とどく (todoku)","meaning":"sampai, terkirim"}
+  {"word":"届く","reading":"とどく · todoku","meaning":"sampai, terkirim"}
  ]'::jsonb, false),
 
 (1, 'Mencari Apartemen', 'daily',
@@ -75,10 +81,10 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"デウィ","text":"見たいです。お願いします。","reading":"みたいです。おねがいします。","romaji":"Mitai desu. Onegai shimasu.","trans":"Saya mau lihat. Tolong ya."}
  ]'::jsonb,
  '[
-  {"word":"家賃","reading":"やちん (yachin)","meaning":"uang sewa"},
-  {"word":"管理費","reading":"かんりひ (kanrihi)","meaning":"biaya pengelolaan gedung"},
-  {"word":"予算","reading":"よさん (yosan)","meaning":"anggaran"},
-  {"word":"探す","reading":"さがす (sagasu)","meaning":"mencari"}
+  {"word":"家賃","reading":"やちん · yachin","meaning":"uang sewa"},
+  {"word":"管理費","reading":"かんりひ · kanrihi","meaning":"biaya pengelolaan gedung"},
+  {"word":"予算","reading":"よさん · yosan","meaning":"anggaran"},
+  {"word":"探す","reading":"さがす · sagasu","meaning":"mencari"}
  ]'::jsonb, false),
 
 (1, 'Naik Bus Kota', 'daily',
@@ -98,10 +104,10 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"ブディ","text":"はい、ありがとうございます。","reading":"はい、ありがとうございます。","romaji":"Hai, arigatou gozaimasu.","trans":"Baik, terima kasih."}
  ]'::jsonb,
  '[
-  {"word":"整理券","reading":"せいりけん (seiriken)","meaning":"karcis nomor naik bus (penentu ongkos)"},
-  {"word":"小銭","reading":"こぜに (kozeni)","meaning":"uang receh"},
-  {"word":"市役所","reading":"しやくしょ (shiyakusho)","meaning":"kantor pemerintah kota"},
-  {"word":"放送","reading":"ほうそう (housou)","meaning":"pengumuman, siaran"}
+  {"word":"整理券","reading":"せいりけん · seiriken","meaning":"karcis nomor naik bus (penentu ongkos)"},
+  {"word":"小銭","reading":"こぜに · kozeni","meaning":"uang receh"},
+  {"word":"市役所","reading":"しやくしょ · shiyakusho","meaning":"kantor pemerintah kota"},
+  {"word":"放送","reading":"ほうそう · housou","meaning":"pengumuman, siaran"}
  ]'::jsonb, false),
 
 (1, 'Belanja di Supermarket', 'daily',
@@ -121,10 +127,10 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"サリ","text":"教えてくれてありがとうございます。","reading":"おしえてくれてありがとうございます。","romaji":"Oshiete kurete arigatou gozaimasu.","trans":"Terima kasih sudah memberitahu."}
  ]'::jsonb,
  '[
-  {"word":"豚肉","reading":"ぶたにく (butaniku)","meaning":"daging babi"},
-  {"word":"鶏肉","reading":"とりにく (toriniku)","meaning":"daging ayam"},
-  {"word":"奥","reading":"おく (oku)","meaning":"bagian dalam, ujung belakang"},
-  {"word":"夕方","reading":"ゆうがた (yuugata)","meaning":"sore menjelang malam"}
+  {"word":"豚肉","reading":"ぶたにく · butaniku","meaning":"daging babi"},
+  {"word":"鶏肉","reading":"とりにく · toriniku","meaning":"daging ayam"},
+  {"word":"奥","reading":"おく · oku","meaning":"bagian dalam, ujung belakang"},
+  {"word":"夕方","reading":"ゆうがた · yuugata","meaning":"sore menjelang malam"}
  ]'::jsonb, false),
 
 (1, 'Meminta Cuti Sehari', 'work',
@@ -144,10 +150,10 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"アリ","text":"はい、書きます。","reading":"はい、かきます。","romaji":"Hai, kakimasu.","trans":"Baik, saya tulis."}
  ]'::jsonb,
  '[
-  {"word":"手続き","reading":"てつづき (tetsuzuki)","meaning":"prosedur, pengurusan dokumen"},
-  {"word":"午前中","reading":"ごぜんちゅう (gozenchuu)","meaning":"sepanjang pagi"},
-  {"word":"早めに","reading":"はやめに (hayame ni)","meaning":"lebih awal dari batas waktu"},
-  {"word":"助かる","reading":"たすかる (tasukaru)","meaning":"terbantu"}
+  {"word":"手続き","reading":"てつづき · tetsuzuki","meaning":"prosedur, pengurusan dokumen"},
+  {"word":"午前中","reading":"ごぜんちゅう · gozenchuu","meaning":"sepanjang pagi"},
+  {"word":"早めに","reading":"はやめに · hayame ni","meaning":"lebih awal dari batas waktu"},
+  {"word":"助かる","reading":"たすかる · tasukaru","meaning":"terbantu"}
  ]'::jsonb, false),
 
 (1, 'Membersihkan Toko Sebelum Tutup', 'work',
@@ -167,10 +173,10 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"先輩","text":"レジのお金を数えて、鍵を閉めます。","reading":"レジのおかねをかぞえて、かぎをしめます。","romaji":"Reji no okane o kazoete, kagi o shimemasu.","trans":"Hitung uang di kasir, lalu kunci pintunya."}
  ]'::jsonb,
  '[
-  {"word":"閉店","reading":"へいてん (heiten)","meaning":"penutupan toko"},
-  {"word":"看板","reading":"かんばん (kanban)","meaning":"papan nama toko"},
-  {"word":"掃く","reading":"はく (haku)","meaning":"menyapu"},
-  {"word":"燃えるゴミ","reading":"もえるゴミ (moeru gomi)","meaning":"sampah yang bisa dibakar"}
+  {"word":"閉店","reading":"へいてん · heiten","meaning":"penutupan toko"},
+  {"word":"看板","reading":"かんばん · kanban","meaning":"papan nama toko"},
+  {"word":"掃く","reading":"はく · haku","meaning":"menyapu"},
+  {"word":"燃えるゴミ","reading":"もえるゴミ · moeru gomi","meaning":"sampah yang bisa dibakar"}
  ]'::jsonb, false),
 
 (1, 'Terlambat Datang Kerja', 'work',
@@ -190,10 +196,10 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"アリ","text":"はい、失礼しました。","reading":"はい、しつれいしました。","romaji":"Hai, shitsurei shimashita.","trans":"Baik, mohon maaf."}
  ]'::jsonb,
  '[
-  {"word":"遅れる","reading":"おくれる (okureru)","meaning":"terlambat"},
-  {"word":"仕方がない","reading":"しかたがない (shikata ga nai)","meaning":"tidak bisa dihindari, mau bagaimana lagi"},
-  {"word":"連絡","reading":"れんらく (renraku)","meaning":"kabar, pemberitahuan"},
-  {"word":"着替える","reading":"きがえる (kigaeru)","meaning":"berganti pakaian"}
+  {"word":"遅れる","reading":"おくれる · okureru","meaning":"terlambat"},
+  {"word":"仕方がない","reading":"しかたがない · shikata ga nai","meaning":"tidak bisa dihindari, mau bagaimana lagi"},
+  {"word":"連絡","reading":"れんらく · renraku","meaning":"kabar, pemberitahuan"},
+  {"word":"着替える","reading":"きがえる · kigaeru","meaning":"berganti pakaian"}
  ]'::jsonb, false),
 
 (1, 'Mendaftar di Resepsionis Rumah Sakit', 'hospital',
@@ -213,10 +219,10 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"デウィ","text":"はい、ありがとうございます。","reading":"はい、ありがとうございます。","romaji":"Hai, arigatou gozaimasu.","trans":"Baik, terima kasih."}
  ]'::jsonb,
  '[
-  {"word":"保険証","reading":"ほけんしょう (hokenshou)","meaning":"kartu asuransi kesehatan"},
-  {"word":"受付","reading":"うけつけ (uketsuke)","meaning":"resepsionis, pendaftaran"},
-  {"word":"痛い","reading":"いたい (itai)","meaning":"sakit, nyeri"},
-  {"word":"初めて","reading":"はじめて (hajimete)","meaning":"untuk pertama kali"}
+  {"word":"保険証","reading":"ほけんしょう · hokenshou","meaning":"kartu asuransi kesehatan"},
+  {"word":"受付","reading":"うけつけ · uketsuke","meaning":"resepsionis, pendaftaran"},
+  {"word":"痛い","reading":"いたい · itai","meaning":"sakit, nyeri"},
+  {"word":"初めて","reading":"はじめて · hajimete","meaning":"untuk pertama kali"}
  ]'::jsonb, false),
 
 (1, 'Menjelaskan Sakit Gigi', 'hospital',
@@ -236,10 +242,10 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"医者","text":"虫歯ですね。今日治しましょう。","reading":"むしばですね。きょうなおしましょう。","romaji":"Mushiba desu ne. Kyou naoshimashou.","trans":"Ini gigi berlubang. Kita obati hari ini."}
  ]'::jsonb,
  '[
-  {"word":"歯","reading":"は (ha)","meaning":"gigi"},
-  {"word":"虫歯","reading":"むしば (mushiba)","meaning":"gigi berlubang"},
-  {"word":"甘い","reading":"あまい (amai)","meaning":"manis"},
-  {"word":"治す","reading":"なおす (naosu)","meaning":"mengobati, memperbaiki"}
+  {"word":"歯","reading":"は · ha","meaning":"gigi"},
+  {"word":"虫歯","reading":"むしば · mushiba","meaning":"gigi berlubang"},
+  {"word":"甘い","reading":"あまい · amai","meaning":"manis"},
+  {"word":"治す","reading":"なおす · naosu","meaning":"mengobati, memperbaiki"}
  ]'::jsonb, false),
 
 (1, 'Mengambil Obat di Apotek', 'hospital',
@@ -259,10 +265,10 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"薬剤師","text":"だめです。薬の間はやめてください。","reading":"だめです。くすりのあいだはやめてください。","romaji":"Dame desu. Kusuri no aida wa yamete kudasai.","trans":"Tidak boleh. Selama minum obat, hentikan dulu."}
  ]'::jsonb,
  '[
-  {"word":"薬剤師","reading":"やくざいし (yakuzaishi)","meaning":"apoteker"},
-  {"word":"痛み止め","reading":"いたみどめ (itamidome)","meaning":"obat pereda nyeri"},
-  {"word":"粉","reading":"こな (kona)","meaning":"bubuk, serbuk"},
-  {"word":"一日三回","reading":"いちにちさんかい (ichinichi sankai)","meaning":"tiga kali sehari"}
+  {"word":"薬剤師","reading":"やくざいし · yakuzaishi","meaning":"apoteker"},
+  {"word":"痛み止め","reading":"いたみどめ · itamidome","meaning":"obat pereda nyeri"},
+  {"word":"粉","reading":"こな · kona","meaning":"bubuk, serbuk"},
+  {"word":"一日三回","reading":"いちにちさんかい · ichinichi sankai","meaning":"tiga kali sehari"}
  ]'::jsonb, false),
 
 (1, 'Menerima Telepon Kantor', 'biz',
@@ -282,10 +288,10 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"山田","text":"よろしくお願いします。","reading":"よろしくおねがいします。","romaji":"Yoroshiku onegai shimasu.","trans":"Terima kasih, mohon bantuannya."}
  ]'::jsonb,
  '[
-  {"word":"席をはずす","reading":"せきをはずす (seki o hazusu)","meaning":"sedang tidak di tempat"},
-  {"word":"少々","reading":"しょうしょう (shoushou)","meaning":"sebentar (bentuk sopan)"},
-  {"word":"伝える","reading":"つたえる (tsutaeru)","meaning":"menyampaikan pesan"},
-  {"word":"お世話になっております","reading":"おせわになっております (osewa ni natte orimasu)","meaning":"salam bisnis baku di telepon"}
+  {"word":"席をはずす","reading":"せきをはずす · seki o hazusu","meaning":"sedang tidak di tempat"},
+  {"word":"少々","reading":"しょうしょう · shoushou","meaning":"sebentar (bentuk sopan)"},
+  {"word":"伝える","reading":"つたえる · tsutaeru","meaning":"menyampaikan pesan"},
+  {"word":"お世話になっております","reading":"おせわになっております · osewa ni natte orimasu","meaning":"salam bisnis baku di telepon"}
  ]'::jsonb, false),
 
 (1, 'Meminta Tanda Tangan Atasan', 'biz',
@@ -305,10 +311,10 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"アリ","text":"分かりました。失礼します。","reading":"わかりました。しつれいします。","romaji":"Wakarimashita. Shitsurei shimasu.","trans":"Baik. Permisi."}
  ]'::jsonb,
  '[
-  {"word":"書類","reading":"しょるい (shorui)","meaning":"dokumen"},
-  {"word":"課長","reading":"かちょう (kachou)","meaning":"kepala bagian"},
-  {"word":"予定表","reading":"よていひょう (yoteihyou)","meaning":"tabel jadwal"},
-  {"word":"直す","reading":"なおす (naosu)","meaning":"memperbaiki, membetulkan"}
+  {"word":"書類","reading":"しょるい · shorui","meaning":"dokumen"},
+  {"word":"課長","reading":"かちょう · kachou","meaning":"kepala bagian"},
+  {"word":"予定表","reading":"よていひょう · yoteihyou","meaning":"tabel jadwal"},
+  {"word":"直す","reading":"なおす · naosu","meaning":"memperbaiki, membetulkan"}
  ]'::jsonb, false),
 
 (1, 'Mengantar Lansia Jalan-jalan', 'kaigo',
@@ -328,10 +334,10 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"職員","text":"咲いています。見に行きましょう。","reading":"さいています。みにいきましょう。","romaji":"Saite imasu. Mi ni ikimashou.","trans":"Sedang mekar. Ayo kita lihat."}
  ]'::jsonb,
  '[
-  {"word":"上着","reading":"うわぎ (uwagi)","meaning":"jaket, baju luar"},
-  {"word":"帽子","reading":"ぼうし (boushi)","meaning":"topi"},
-  {"word":"咲く","reading":"さく (saku)","meaning":"mekar"},
-  {"word":"車いす","reading":"くるまいす (kurumaisu)","meaning":"kursi roda"}
+  {"word":"上着","reading":"うわぎ · uwagi","meaning":"jaket, baju luar"},
+  {"word":"帽子","reading":"ぼうし · boushi","meaning":"topi"},
+  {"word":"咲く","reading":"さく · saku","meaning":"mekar"},
+  {"word":"車いす","reading":"くるまいす · kurumaisu","meaning":"kursi roda"}
  ]'::jsonb, false),
 
 (1, 'Membantu Ganti Baju', 'kaigo',
@@ -351,7 +357,7 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
   {"speaker":"職員","text":"上手にできましたね。ズボンも自分ではきますか。","reading":"じょうずにできましたね。ズボンもじぶんではきますか。","romaji":"Jouzu ni dekimashita ne. Zubon mo jibun de hakimasu ka.","trans":"Bagus sekali. Celananya juga mau dipakai sendiri?"}
  ]'::jsonb,
  '[
-  {"word":"着替える","reading":"きがえる (kigaeru)","meaning":"berganti pakaian"},
+  {"word":"着替える","reading":"きがえる · kigaeru","meaning":"berganti pakaian"},
   {"word":"パジャマ","reading":"pajama","meaning":"piyama"},
   {"word":"ボタン","reading":"botan","meaning":"kancing"},
   {"word":"はく","reading":"haku","meaning":"memakai (celana, sepatu)"}
@@ -375,9 +381,9 @@ INSERT INTO public.kaiwa_stories (level_id, title, category, lines, vocab_highli
  ]'::jsonb,
  '[
   {"word":"レクリエーション","reading":"rekurieeshon","meaning":"kegiatan rekreasi di panti"},
-  {"word":"動かす","reading":"うごかす (ugokasu)","meaning":"menggerakkan"},
-  {"word":"下手","reading":"へた (heta)","meaning":"tidak pandai"},
-  {"word":"楽しみにする","reading":"たのしみにする (tanoshimi ni suru)","meaning":"menantikan dengan senang"}
+  {"word":"動かす","reading":"うごかす · ugokasu","meaning":"menggerakkan"},
+  {"word":"下手","reading":"へた · heta","meaning":"tidak pandai"},
+  {"word":"楽しみにする","reading":"たのしみにする · tanoshimi ni suru","meaning":"menantikan dengan senang"}
  ]'::jsonb, false)
 
 ON CONFLICT (level_id, title) DO NOTHING;
