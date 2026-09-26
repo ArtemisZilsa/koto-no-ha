@@ -1,8 +1,8 @@
 # State — Program 30 Hari Kaiwa
 
 - `start_date`: 2026-09-22 (JST)
-- Hari ini: **Day 4 / 30**
-- Rem darurat: **tidak aktif** (1 PR konten terbuka dari program ini — PR #14, di bawah ambang 3)
+- Hari ini: **Day 5 / 30**
+- Rem darurat: **tidak aktif** (2 PR konten terbuka dari program ini — PR #14 dan PR #16, di bawah ambang 3)
 
 ## Item selesai
 
@@ -49,6 +49,9 @@
 - **D — migrasi format glosarium, level N5 (dialog lepas saja)** (Day 4):
   `040_seed_kaiwa_n5.sql` + `048_seed_kaiwa_lepas_n5.sql`, PR #14 (konten,
   **belum di-merge, menunggu review Zilsa**). Lihat "Analisis D" di bawah.
+- **E1 — perpanjang 5 dialog lepas N5 di bawah ambang panjang** (Day 5):
+  `054_extend_kaiwa_lepas_n5_short.sql`, PR #16 (konten, **belum di-merge,
+  menunggu review Zilsa**). Lihat "Analisis E1" di bawah.
 
 ## Analisis C1 (Day 2)
 
@@ -177,29 +180,75 @@ level" untuk data itu perlu pendekatan berbeda dari dialog lepas. Perlu
 diputuskan hari berikutnya: migrasi tersendiri per rentang lesson_no, atau
 digabung saat E3 mengerjakan profesi baru.
 
+## Analisis E1 (Day 5)
+
+Query langsung ke Supabase (read-only, lihat batasan di "Catatan penting")
+mengonfirmasi temuan AUDIT.md §4: tepat 35 dialog lepas (7 per level N5–N1)
+punya `jsonb_array_length(lines) < ambang`, semuanya persis 4–5 baris, dan
+tidak satu pun punya jejak file migrasi di repo.
+
+Karena PR #14 (keputusan format D) masih terbuka tanpa review/komentar dari
+Zilsa (dicek awal sesi ini, lihat "Antrean berikutnya" Day 4 poin 1), **D
+untuk N4 sengaja TIDAK dikerjakan hari ini** — bukan menyerah, tapi menghindari
+menggandakan risiko: kalau keputusan format kurung-tunggal di "Analisis D"
+ternyata salah, lebih baik itu ketahuan sebelum dipakai di 4 migrasi format
+lain, bukan setelah. PR #14 tetap dibiarkan menunggu, tidak di-merge sendiri.
+
+Sebagai gantinya, slot PR konten hari ini dipakai untuk **E1**: 5 dari 7
+dialog N5 pendek (dipilih karena levelnya paling rendah risiko — tata bahasa
+paling dasar, kesalahan alami paling kecil kemungkinannya) diperpanjang lewat
+migrasi baru `054_extend_kaiwa_lepas_n5_short.sql` (`INSERT ... ON CONFLICT
+(level_id, title) DO UPDATE`, sesuai catatan AUDIT.md §4 — bukan edit file
+yang tidak ada). Judul, tema, dan baris lama dipertahankan; baris baru
+ditambahkan di akhir sampai ambang N5 (≥6 baris) terlampaui.
+
+`vocab_highlight` tiap dialog yang disentuh juga ditulis ulang penuh (bukan
+hanya `lines`), jadi sekaligus dinormalkan ke standar glosarium Fase D
+("yomi · romaji" tanpa kurung / romaji telanjang untuk kata kana-saja) —
+ini **independen** dari status konfirmasi PR #14 (yang soal migrasi data
+LAMA), karena standar itu sendiri sudah aktif di `tools/validate-kaiwa.mts`
+sejak PR #13 (merged) untuk baris APA PUN yang ditulis ulang, baru atau lama.
+
+**Gerbang lokal**: `npm ci` (node_modules belum ada di sandbox baru — di-
+install dulu), `tsc --noEmit` bersih, `npm run lint` bersih, `npm run build`
+sukses (gagal di percobaan pertama karena flake fetch Google Fonts yang sudah
+tercatat di catatan Day 2 — sukses di percobaan retry ke-2), `npm run
+validate:kaiwa -- --base=origin/master` lulus, 0 error dari file baru
+(406 baris warning lain semuanya dari file lama yang tidak diubah PR ini —
+jumlah warning naik dari 67 karena base perbandingan render ulang seluruh
+riwayat sejak PR #13, bukan regresi).
+
+**Belum disentuh hari ini** (batas 5 item/PR konten): 2 dialog N5 pendek
+sisanya ("Menyapa Tetangga", "Perkenalan Diri") — lanjutan di "Belum
+selesai" di bawah.
+
 ## Belum selesai / lanjutan
 
 - **B lanjutan**: cek (2) hiragana↔kanji dan (3) romaji-dari-skrip — butuh
   tokenizer morfologis (kuromoji atau setara), karena partikel は/へ/を
   tidak bisa dikonversi benar dari pemetaan karakter polos. Lihat komentar
-  di `tools/validate-kaiwa.mts`.
-- **D lanjutan** (Day 5–8, konten, 1 PR/level): migrasi format glosarium
-  N4, N3, N2, N1 (dialog lepas), pakai keputusan format & pola script yang
-  sama seperti N5 (lihat "Analisis D" di atas) — TAPI cek dulu apakah Zilsa
-  sudah konfirmasi PR #14 sebelum lanjut (kalau ternyata keputusan format
-  salah, perlu perbaiki N5 dulu, jangan lanjut ke level lain dengan asumsi
-  yang sama). Juga perlu keputusan terpisah untuk silabus profesi
-  介護職員 (`046`/`047`, lesson_no lintas level dalam satu file — lihat
-  "Sengaja di luar cakupan PR #14" di atas).
-- **E1** (mulai Day 4, belum dikerjakan — slot PR konten "item baru" hari
-  ini tidak dipakai, seluruh waktu terpakai untuk D/N5 + keputusan format;
-  bukan karena rem darurat, rem masih tidak aktif): perpanjang dialog di
-  bawah ambang panjang. **Catatan
-  penting**: 35 dari 41 dialog yang kependekan TIDAK punya file migrasi
-  sumber di repo (disetor langsung ke Supabase sebelum migrasi 040) — harus
-  ditulis sebagai migrasi baru (UPDATE by level_id+title atau
-  INSERT ... ON CONFLICT DO UPDATE), bukan edit file yang tidak ada. Lihat
-  AUDIT.md §4.
+  di `tools/validate-kaiwa.mts`. Dicoba dicek kelayakannya Day 5: registry
+  npm bisa diakses dari sandbox ini (`npm view kuromoji versions` sukses),
+  jadi menambah dependency BUKAN blocker jaringan — tapi belum dikerjakan
+  (butuh integrasi tokenizer + dictionary, cakupan lebih besar dari satu
+  run; diprioritaskan setelah D & E1 lanjutan).
+- **D lanjutan** (konten, 1 PR/level): migrasi format glosarium N4, N3, N2,
+  N1 (dialog lepas), pakai keputusan format & pola script yang sama seperti
+  N5 (lihat "Analisis D" di atas) — TAPI cek dulu apakah Zilsa sudah
+  konfirmasi PR #14 sebelum lanjut (kalau ternyata keputusan format salah,
+  perlu perbaiki N5 dulu, jangan lanjut ke level lain dengan asumsi yang
+  sama). PR #14 masih terbuka tanpa komentar per akhir Day 5 — ini WAJAR,
+  bukan berarti ditolak, tapi juga belum ada sinyal untuk lanjut. Juga
+  perlu keputusan terpisah untuk silabus profesi 介護職員 (`046`/`047`,
+  lesson_no lintas level dalam satu file — lihat "Sengaja di luar cakupan
+  PR #14" di atas).
+- **E1 lanjutan**: 2 dialog N5 pendek sisanya ("Menyapa Tetangga",
+  "Perkenalan Diri", masing-masing 4→6 baris), lalu 7 dialog N4, 7 N3, 6 N2,
+  7 N1 — semuanya di AUDIT.md §4 (query Supabase Day 5), semuanya TIDAK
+  punya file migrasi sumber, harus lewat `INSERT ... ON CONFLICT DO UPDATE`
+  seperti pola `054_extend_kaiwa_lepas_n5_short.sql`. N3–N1 butuh +6 baris
+  per dialog (4→10) — lebih besar dari N5/N4, alokasikan waktu lebih untuk
+  menjaga kealamian & level kesulitan saat giliran level itu tiba.
 - **E2** (setelah E1): isi sel level×tema sampai minimal 6. Sel terendah
   saat ini: N4×biz (2), lalu beberapa sel bernilai 3 (lihat AUDIT.md §2).
 - **E3**: profesi berikutnya setelah 介護職員 — urutan: (1) Produksi
@@ -218,10 +267,22 @@ Selalu `git fetch` + `list_pull_requests` dulu sebelum menyimpulkan apa
 yang sudah/belum ada.
 
 Sandbox sesi ini tidak punya akses jaringan ke domain Netlify/Vercel
-ataupun kredensial Supabase (`.env.local` tidak ada). Verifikasi "deploy
-preview tanpa error" dan "cek produksi setelah merge" untuk PR teknis
-apa pun harus mengandalkan status check GitHub (CI Actions + status
-deployment Netlify/Vercel), bukan pengecekan isi halaman langsung.
+ataupun kredensial `.env.local` untuk `next dev` melawan data asli.
+Verifikasi "deploy preview tanpa error" dan "cek produksi setelah merge"
+untuk PR teknis apa pun harus mengandalkan status check GitHub (CI Actions +
+status deployment Netlify/Vercel), bukan pengecekan isi halaman langsung.
+
+**Update Day 5**: sandbox INI punya akses read-only ke Supabase produksi
+lewat MCP tool (`mcp__Supabase__execute_sql` dkk, project_id
+`vkdtjeogushskcgvazom`) — dipakai untuk mengonfirmasi isi 35 dialog pendek
+di "Analisis E1" di atas. Ini tetap read-only (tidak ada `apply_migration`/
+`execute_sql` tulis yang dipakai) — sesuai Aturan Keras #3, semua perubahan
+data tetap lewat file migrasi di PR, menunggu Zilsa menjalankan
+`npm run seed:kaiwa`. Registry `npm` juga bisa diakses (dicek untuk B
+lanjutan, lihat di atas) — jaringan yang diblokir khusus domain
+Netlify/Vercel, bukan seluruh jaringan keluar. Sesi berikutnya tidak perlu
+mengasumsikan akses ini selalu tersedia (bisa berbeda per sesi sandbox);
+cek ulang sebelum bergantung padanya.
 
 ## PR
 
@@ -266,42 +327,59 @@ deployment Netlify/Vercel), bukan pengecekan isi halaman langsung.
   pasca-merge**: workflow `ci` pada push ke `master` di commit `725b423`
   dipantau sampai selesai — **sukses penuh**. Tidak ada revert diperlukan.
 - PR #14 (`[konten-jepang] Day 4 — D: migrasi format glosarium kaiwa lepas
-  N5`): dibuka hari ini, **BELUM di-merge** (kategori konten, menunggu
-  review Zilsa — termasuk konfirmasi keputusan format di "Analisis D" di
-  atas sebelum dipakai untuk level lain). Lihat "Analisis D" untuk detail.
+  N5`): dibuka Day 4, **masih BELUM di-merge** per akhir Day 5 (kategori
+  konten, menunggu review Zilsa — termasuk konfirmasi keputusan format di
+  "Analisis D" di atas sebelum dipakai untuk level lain). Dicek awal sesi
+  Day 5: belum ada komentar/review manusia, hanya komentar bot deploy
+  preview (Netlify x2 + Vercel, semua "ready"/"Ready"). Lihat "Analisis D"
+  untuk detail.
+- PR #16 (`[konten-jepang] Day 5 — E1: perpanjang 5 dialog lepas N5 di
+  bawah ambang panjang`): dibuka hari ini, **belum di-merge** (kategori
+  konten, menunggu review Zilsa). Lihat "Analisis E1" di atas.
+- Tidak ada PR teknis hari ini (Day 5) — semua item C sudah selesai
+  (C1–C3, Day 2–4), item B lanjutan (tokenizer) terlalu besar untuk satu
+  run tanpa risiko ketergesaan (lihat "Belum selesai / lanjutan"), jadi
+  seluruh waktu dipakai untuk E1. Ini sesuai Aturan Keras #5 (batas PR,
+  bukan wajib selalu ada PR teknis tiap run).
 - PR lain di luar program ini: #1 (`claude/website-enhancement-plan-7qxgmb`,
   fitur Kana+SRS) sudah tidak muncul di daftar open sejak Day 3 (kemungkinan
   ditutup/di-merge di luar program ini, tidak diverifikasi lebih jauh —
   di luar cakupan). #6 (`fitur/loading-publik`, dari sesi lain, dibuka 23
-  Sep 2026) masih open per pengecekan awal sesi Day 4 — tidak disentuh.
+  Sep 2026) masih open per pengecekan Day 5 — tidak disentuh.
 
-## Antrean berikutnya (Day 5)
+## Antrean berikutnya (Day 6)
 
 1. Mulai `git fetch origin master` + `list_pull_requests` dulu untuk
-   menangkap perubahan dari sumber lain sejak Day 4, termasuk **cek status
-   PR #14** (di-review/di-merge/ada komentar?) — terutama konfirmasi
-   keputusan format kurung-tunggal di "Analisis D" sebelum lanjut migrasi
-   level lain. Kalau PR #14 masih terbuka tanpa komentar, itu wajar (bukan
-   berarti ditolak) — tetap tidak boleh di-merge sendiri.
-2. Cek rem darurat: kalau PR #14 (dan/atau PR konten baru lain dari program
-   ini) yang terbuka sudah ≥3, hentikan penambahan konten baru hari itu,
-   kerjakan antrean teknis saja, laporkan menunggu review di notifikasi.
+   menangkap perubahan dari sumber lain sejak Day 5, termasuk **cek status
+   PR #14 dan PR #16** (di-review/di-merge/ada komentar?) — terutama
+   konfirmasi keputusan format kurung-tunggal di "Analisis D" sebelum
+   lanjut migrasi level lain (D untuk N4). Kalau kedua PR masih terbuka
+   tanpa komentar, itu wajar (bukan berarti ditolak) — tetap tidak boleh
+   di-merge sendiri.
+2. Cek rem darurat: kalau PR konten dari program ini yang terbuka sudah
+   ≥3, hentikan penambahan konten baru hari itu, kerjakan antrean teknis
+   saja, laporkan menunggu review di notifikasi. Per akhir Day 5: 2 terbuka
+   (#14, #16) — kalau belum ada yang di-merge/ditutup, PR konten baru hari
+   ini (Day 6) akan membuatnya 3 → **rem darurat aktif**, jangan tambah
+   konten baru, hanya kerjakan antrean teknis kalau ada.
 3. **C1 masih perlu dipantau**: perubahan Day 2 (`force-dynamic`) bersifat
    defensif, belum ada cara memverifikasi langsung dari sandbox bahwa
    `/kaiwa` vs `/kaiwa?level=N5` benar-benar sama sekarang. Kalau ada cara
    cek (mis. Zilsa konfirmasi di live site), catat di sini.
-4. Kalau keputusan format D terkonfirmasi benar: lanjut **D untuk N4**
-   (dialog lepas, `049_seed_kaiwa_lepas_n4.sql` — pola sama seperti N5,
-   script mekanis strip-kurung + tambah-titik-tengah). Silabus profesi
-   介養職員 (`046`/`047`) masih di luar cakupan D dialog-lepas — putuskan
-   pendekatannya (migrasi lesson_no-range tersendiri, atau gabung ke E3).
-5. Kalau ada slot PR konten tersisa (belum terpakai untuk D): mulai **E1**
-   — perpanjang dialog di bawah ambang panjang. Harus ditulis sebagai
-   migrasi SQL **baru** (UPDATE by level_id+title, atau
-   INSERT ... ON CONFLICT DO UPDATE) untuk 35 dari 41 dialog pendek yang
-   TIDAK punya file migrasi sumber di repo — lihat AUDIT.md §4, jangan
-   mengedit file yang tidak ada.
+4. Kalau keputusan format D terkonfirmasi benar DAN rem darurat tidak
+   aktif: lanjut **D untuk N4** (dialog lepas, `049_seed_kaiwa_lepas_n4.sql`
+   — pola sama seperti N5, script mekanis strip-kurung + tambah-titik-
+   tengah). Silabus profesi 介護職員 (`046`/`047`) masih di luar cakupan D
+   dialog-lepas — putuskan pendekatannya (migrasi lesson_no-range
+   tersendiri, atau gabung ke E3).
+5. Kalau rem darurat tidak aktif dan ada slot PR konten tersisa (belum
+   terpakai untuk D): lanjut **E1** — 2 dialog N5 pendek sisanya
+   ("Menyapa Tetangga", "Perkenalan Diri"), lalu mulai N4 (7 dialog, AUDIT
+   §4/Analisis E1 Day 5) memakai pola migrasi
+   `INSERT ... ON CONFLICT (level_id, title) DO UPDATE` yang sama seperti
+   `054_extend_kaiwa_lepas_n5_short.sql`.
 6. Ingat batas Aturan Keras #5: 1 PR teknis + 1 PR konten per run, plus
    maks 1 PR migrasi format tambahan selama Day 4–8 (jadi total maks 2 PR
    konten per run selama jendela itu: 1 migrasi-format D + 1 konten
-   item-baru E).
+   item-baru E) — TAPI lihat poin 2, rem darurat membatasi ini lebih jauh
+   kalau berlaku.
