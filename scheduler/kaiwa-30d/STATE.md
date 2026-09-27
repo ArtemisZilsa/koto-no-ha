@@ -1,8 +1,14 @@
 # State — Program 30 Hari Kaiwa
 
 - `start_date`: 2026-09-22 (JST)
-- Hari ini: **Day 5 / 30**
-- Rem darurat: **tidak aktif** (2 PR konten terbuka dari program ini — PR #14 dan PR #16, di bawah ambang 3)
+- Hari ini: **Day 6 / 30**
+- Rem darurat: **AKTIF mulai Day 7** (3 PR konten terbuka dari program ini —
+  PR #14, #16, #18 — mencapai ambang 3 setelah PR #18 dibuka hari ini. Pada
+  awal Day 6, sebelum PR #18 dibuka, jumlahnya masih 2 (di bawah ambang),
+  jadi PR konten Day 6 tetap diperbolehkan per Aturan Keras #6 yang mengecek
+  kondisi di awal run. Run Day 7 harus mengecek ulang status ketiga PR ini
+  sebelum memutuskan — kalau masih 3 terbuka, JANGAN tambah konten baru,
+  hanya kerjakan antrean teknis.)
 
 ## Item selesai
 
@@ -52,6 +58,17 @@
 - **E1 — perpanjang 5 dialog lepas N5 di bawah ambang panjang** (Day 5):
   `054_extend_kaiwa_lepas_n5_short.sql`, PR #16 (konten, **belum di-merge,
   menunggu review Zilsa**). Lihat "Analisis E1" di bawah.
+- **E1 — perpanjang 2 dialog lepas N5 sisa** (Day 6):
+  `055_extend_kaiwa_lepas_n5_short_2.sql`, PR #18 (konten, **belum di-merge,
+  menunggu review Zilsa**). "Menyapa Tetangga" (4→7 baris) dan "Perkenalan
+  Diri" (4→8 baris) — 4 baris asli tiap dialog dipertahankan persis, baris
+  baru menambah obrolan kecil (kerja/belanja untuk yang pertama, tanya-jawab
+  pekerjaan + ajakan makan siang untuk yang kedua). `vocab_highlight`
+  dinormalkan ke standar glosarium Fase D. Ini **menuntaskan E1** (seluruh 7
+  dialog N5 pendek dari AUDIT.md §4 sudah diperpanjang lewat 054+055, meski
+  keduanya masih menunggu merge). Gerbang lokal lulus: `tsc --noEmit`
+  bersih, `npm run lint` bersih, `npm run build` sukses, `npm run
+  validate:kaiwa -- --base=origin/master` lulus (0 error dari file baru).
 
 ## Analisis C1 (Day 2)
 
@@ -334,8 +351,20 @@ cek ulang sebelum bergantung padanya.
   preview (Netlify x2 + Vercel, semua "ready"/"Ready"). Lihat "Analisis D"
   untuk detail.
 - PR #16 (`[konten-jepang] Day 5 — E1: perpanjang 5 dialog lepas N5 di
-  bawah ambang panjang`): dibuka hari ini, **belum di-merge** (kategori
-  konten, menunggu review Zilsa). Lihat "Analisis E1" di atas.
+  bawah ambang panjang`): dibuka Day 5, **masih belum di-merge** per akhir
+  Day 6 (kategori konten, menunggu review Zilsa). Dicek awal sesi Day 6:
+  belum ada komentar/review manusia, hanya komentar bot deploy preview.
+- PR #18 (`[konten-jepang] Day 6 — E1: perpanjang 2 dialog lepas N5 sisa`):
+  dibuka hari ini, **belum di-merge** (kategori konten, menunggu review
+  Zilsa). Lihat item E1 Day 6 di atas. Pembukaan PR ini membuat total PR
+  konten terbuka dari program ini jadi 3 (#14, #16, #18) — **rem darurat
+  aktif mulai Day 7** (lihat catatan status di atas).
+- Tidak ada PR migrasi-format (D) hari ini (Day 6): PR #14 (keputusan
+  format D-N5) masih terbuka tanpa komentar/review dari Zilsa per
+  pengecekan awal Day 6, jadi D untuk N4 sengaja belum dikerjakan — sama
+  seperti alasan Day 5 (lihat "Analisis E1" dan "D lanjutan" di atas),
+  menghindari menggandakan risiko kalau keputusan format ternyata perlu
+  direvisi.
 - Tidak ada PR teknis hari ini (Day 5) — semua item C sudah selesai
   (C1–C3, Day 2–4), item B lanjutan (tokenizer) terlalu besar untuk satu
   run tanpa risiko ketergesaan (lihat "Belum selesai / lanjutan"), jadi
@@ -347,37 +376,44 @@ cek ulang sebelum bergantung padanya.
   di luar cakupan). #6 (`fitur/loading-publik`, dari sesi lain, dibuka 23
   Sep 2026) masih open per pengecekan Day 5 — tidak disentuh.
 
-## Antrean berikutnya (Day 6)
+## Antrean berikutnya (Day 7)
 
 1. Mulai `git fetch origin master` + `list_pull_requests` dulu untuk
-   menangkap perubahan dari sumber lain sejak Day 5, termasuk **cek status
-   PR #14 dan PR #16** (di-review/di-merge/ada komentar?) — terutama
+   menangkap perubahan dari sumber lain sejak Day 6, termasuk **cek status
+   PR #14, #16, #18** (di-review/di-merge/ada komentar?) — terutama
    konfirmasi keputusan format kurung-tunggal di "Analisis D" sebelum
-   lanjut migrasi level lain (D untuk N4). Kalau kedua PR masih terbuka
+   lanjut migrasi level lain (D untuk N4). Kalau ketiganya masih terbuka
    tanpa komentar, itu wajar (bukan berarti ditolak) — tetap tidak boleh
    di-merge sendiri.
-2. Cek rem darurat: kalau PR konten dari program ini yang terbuka sudah
-   ≥3, hentikan penambahan konten baru hari itu, kerjakan antrean teknis
-   saja, laporkan menunggu review di notifikasi. Per akhir Day 5: 2 terbuka
-   (#14, #16) — kalau belum ada yang di-merge/ditutup, PR konten baru hari
-   ini (Day 6) akan membuatnya 3 → **rem darurat aktif**, jangan tambah
-   konten baru, hanya kerjakan antrean teknis kalau ada.
+2. **Cek rem darurat dulu, sebelum kerjakan apa pun di antrean konten**:
+   hitung ulang PR konten program ini yang masih *open* saat itu (bukan
+   angka Day 6 ini). Kalau ≥3 masih terbuka → rem darurat aktif: JANGAN
+   tambah konten baru hari itu (baik item baru E maupun migrasi format D).
+   Kerjakan antrean teknis saja (kalau ada), lalu tulis di notifikasi
+   bahwa sedang menunggu review. Kalau salah satu dari #14/#16/#18 sudah
+   di-merge/ditutup sebelum Day 7 sehingga tersisa <3 terbuka, rem darurat
+   tidak aktif — boleh lanjut ke poin 3–5 seperti biasa.
 3. **C1 masih perlu dipantau**: perubahan Day 2 (`force-dynamic`) bersifat
    defensif, belum ada cara memverifikasi langsung dari sandbox bahwa
    `/kaiwa` vs `/kaiwa?level=N5` benar-benar sama sekarang. Kalau ada cara
    cek (mis. Zilsa konfirmasi di live site), catat di sini.
-4. Kalau keputusan format D terkonfirmasi benar DAN rem darurat tidak
-   aktif: lanjut **D untuk N4** (dialog lepas, `049_seed_kaiwa_lepas_n4.sql`
-   — pola sama seperti N5, script mekanis strip-kurung + tambah-titik-
-   tengah). Silabus profesi 介護職員 (`046`/`047`) masih di luar cakupan D
-   dialog-lepas — putuskan pendekatannya (migrasi lesson_no-range
-   tersendiri, atau gabung ke E3).
-5. Kalau rem darurat tidak aktif dan ada slot PR konten tersisa (belum
-   terpakai untuk D): lanjut **E1** — 2 dialog N5 pendek sisanya
-   ("Menyapa Tetangga", "Perkenalan Diri"), lalu mulai N4 (7 dialog, AUDIT
-   §4/Analisis E1 Day 5) memakai pola migrasi
-   `INSERT ... ON CONFLICT (level_id, title) DO UPDATE` yang sama seperti
-   `054_extend_kaiwa_lepas_n5_short.sql`.
+4. Kalau rem darurat TIDAK aktif dan keputusan format D (PR #14)
+   terkonfirmasi benar oleh Zilsa: lanjut **D untuk N4** (dialog lepas,
+   `049_seed_kaiwa_lepas_n4.sql` — pola sama seperti N5, script mekanis
+   strip-kurung + tambah-titik-tengah). Kalau PR #14 belum ada
+   komentar/konfirmasi, JANGAN lanjut D — sama seperti keputusan Day 5 &
+   Day 6, hindari menggandakan risiko. Silabus profesi 介護職員
+   (`046`/`047`) masih di luar cakupan D dialog-lepas — putuskan
+   pendekatannya (migrasi lesson_no-range tersendiri, atau gabung ke E3).
+5. Kalau rem darurat TIDAK aktif: **E1 sudah tuntas** (054+055 mencakup
+   semua 7 dialog N5 pendek dari AUDIT.md §4) — lanjut **E1 untuk N4** (7
+   dialog, lihat AUDIT §4/"Analisis E1" Day 5 untuk daftarnya), pakai pola
+   migrasi `INSERT ... ON CONFLICT (level_id, title) DO UPDATE` yang sama
+   seperti `054`/`055`. Cek dulu isi 7 dialog N4 itu lewat Supabase
+   read-only (`mcp__Supabase__execute_sql`, project_id
+   `vkdtjeogushskcgvazom`, kalau masih tersedia di sandbox) sebelum
+   menulis migrasi, karena baris tambahan N4 butuh tata bahasa N4 (bukan
+   N5) dan +baris lebih banyak per dialog (4→8, ambang N4 ≥8).
 6. Ingat batas Aturan Keras #5: 1 PR teknis + 1 PR konten per run, plus
    maks 1 PR migrasi format tambahan selama Day 4–8 (jadi total maks 2 PR
    konten per run selama jendela itu: 1 migrasi-format D + 1 konten
