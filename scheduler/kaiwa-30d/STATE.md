@@ -1,14 +1,12 @@
 # State — Program 30 Hari Kaiwa
 
 - `start_date`: 2026-09-22 (JST)
-- Hari ini: **Day 6 / 30**
-- Rem darurat: **AKTIF mulai Day 7** (3 PR konten terbuka dari program ini —
-  PR #14, #16, #18 — mencapai ambang 3 setelah PR #18 dibuka hari ini. Pada
-  awal Day 6, sebelum PR #18 dibuka, jumlahnya masih 2 (di bawah ambang),
-  jadi PR konten Day 6 tetap diperbolehkan per Aturan Keras #6 yang mengecek
-  kondisi di awal run. Run Day 7 harus mengecek ulang status ketiga PR ini
-  sebelum memutuskan — kalau masih 3 terbuka, JANGAN tambah konten baru,
-  hanya kerjakan antrean teknis.)
+- Hari ini: **Day 8 / 30** (29 Sep 2026 JST; run sebelumnya menyebut "Day 6" untuk 28 Sep, jadi penomoran run tertinggal 1 hari dari kalender — Day N dihitung dari start_date sesuai instruksi)
+- Rem darurat: **AKTIF** (dicek awal run Day 8): PR konten #14, #16, #18 masih
+  open, belum ada yang di-merge/ditutup. Tidak ada konten baru hari ini (E maupun
+  D). Tidak ada item antrean teknis yang tersisa selain B lanjutan (tokenizer),
+  yang terlalu besar untuk run tanpa risiko; run ini hanya memperbarui STATE.
+  Run berikutnya: cek ulang ketiga PR; kalau masih 3 terbuka, ulangi.
 
 ## Item selesai
 
