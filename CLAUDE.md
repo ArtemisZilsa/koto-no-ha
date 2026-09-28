@@ -171,3 +171,4 @@ Tokutei Ginou (B2B), paywall/gating berbayar, switcher bahasa UI multi-negara.
 - Jangan ubah struktur route yang sudah ada
 - Konten data ada di Supabase (bukan file JSON lokal)
 - Deploy via Netlify (push ke main → auto deploy)
+- Realtime: publikasi `supabase_realtime` berisi `profiles` + `user_practice_answers` (migrasi 056). `components/practice/ProgressLiveRefresh.tsx` berlangganan perubahan milik user login lalu `router.refresh()`. Tabel baru yang perlu live → tambahkan ke publikasi, pastikan RLS SELECT hanya baris sendiri.
