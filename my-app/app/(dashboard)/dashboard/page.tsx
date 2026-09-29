@@ -6,6 +6,7 @@ import { Reveal } from '@/components/ui/Reveal'
 import { sswSectors } from '@/lib/data/sswSectors'
 import { NeonGridBackground } from '@/components/effects/NeonGridBackground'
 import PracticeProgress from '@/components/practice/PracticeProgress'
+import ProgressLiveRefresh from '@/components/practice/ProgressLiveRefresh'
 import { getPracticeProgress } from '@/lib/data/queries'
 
 export const metadata = {
@@ -35,6 +36,7 @@ export default async function DashboardPage() {
   return (
     <main className="relative z-10 px-5 md:px-8 py-10 max-w-5xl mx-auto">
       <NeonGridBackground />
+      <ProgressLiveRefresh />
 
       {/* Welcome */}
       <Reveal className="mb-10">
