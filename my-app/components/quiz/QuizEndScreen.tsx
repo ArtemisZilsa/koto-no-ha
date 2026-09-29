@@ -4,7 +4,6 @@
 import { animate, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import confetti from 'canvas-confetti'
 import { Icon } from '@/components/ui/Icon'
 
 interface QuizEndScreenProps {
@@ -21,7 +20,6 @@ interface QuizEndScreenProps {
   onExit?: () => void
 }
 
-const CONFETTI_COLORS = ['#c9963c', '#2f7d4f', '#c8102e', '#d4a957']
 const R = 52
 const CIRC = 2 * Math.PI * R
 
@@ -60,22 +58,6 @@ export default function QuizEndScreen({
     })
     return () => controls.stop()
   }, [totalXp, reduced])
-
-  // Confetti besar bila akurasi > 80%
-  useEffect(() => {
-    if (accuracy <= 80 || reduced) return
-    const t = setTimeout(() => {
-      confetti({
-        particleCount: 160,
-        spread: 100,
-        startVelocity: 45,
-        origin: { x: 0.5, y: 0.4 },
-        colors: CONFETTI_COLORS,
-        disableForReducedMotion: true,
-      })
-    }, 350)
-    return () => clearTimeout(t)
-  }, [accuracy, reduced])
 
   return (
     <motion.div

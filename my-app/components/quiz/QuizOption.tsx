@@ -2,8 +2,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useEffect, useRef } from 'react'
-import confetti from 'canvas-confetti'
+import { useRef } from 'react'
 import type { QuizItem } from '@/lib/data/quiz'
 
 export type OptionState = 'idle' | 'correct' | 'wrong' | 'revealCorrect'
@@ -17,27 +16,8 @@ interface QuizOptionProps {
 }
 
 // canvas tidak membaca CSS var → pakai hex brand konkret.
-const CONFETTI_COLORS = ['#c9963c', '#2f7d4f', '#c8102e', '#d4a957']
-
 export default function QuizOption({ option, state, disabled, reduced, onSelect }: QuizOptionProps) {
   const ref = useRef<HTMLButtonElement>(null)
-
-  useEffect(() => {
-    if (state !== 'correct' || reduced || !ref.current) return
-    const r = ref.current.getBoundingClientRect()
-    confetti({
-      particleCount: 70,
-      spread: 60,
-      startVelocity: 34,
-      gravity: 1.1,
-      origin: {
-        x: (r.left + r.width / 2) / window.innerWidth,
-        y: (r.top + r.height / 2) / window.innerHeight,
-      },
-      colors: CONFETTI_COLORS,
-      disableForReducedMotion: true,
-    })
-  }, [state, reduced])
 
   const isGreen = state === 'correct' || state === 'revealCorrect'
   const isRed = state === 'wrong'

@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google'
 import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google'
 import './globals.css'
 import { ThemeScript } from '@/components/theme/ThemeScript'
-import { AmbientEffects } from '@/components/effects/AmbientEffects'
 import { SITE_URL } from '@/lib/site'
 import { JsonLd, SITE_DESCRIPTION, SITE_NAME, organizationJsonLd, websiteJsonLd } from '@/lib/seo'
 
@@ -107,7 +106,6 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen">
         <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
-        <AmbientEffects />
         {children}
       </body>
     </html>
