@@ -24,7 +24,8 @@ export interface AwardXpResult {
 /**
  * Tambah XP hasil kuis ke akun user saat ini + update streak harian.
  * Bila belum login, kuis tetap valid tapi XP tidak disimpan (saved:false).
- * Nilai XP divalidasi & di-clamp di dalam RPC `award_quiz_xp` (0..1000).
+ * Nilai XP divalidasi di dalam RPC `award_quiz_xp` (migrasi 057): maks 250 per
+ * panggilan, jeda minimal 20 detik, dan maks 2.000 XP kuis per hari.
  */
 export async function awardQuizXp(xp: number): Promise<AwardXpResult> {
   const supabase = await createClient()
@@ -37,7 +38,7 @@ export async function awardQuizXp(xp: number): Promise<AwardXpResult> {
   }
 
   // Clamp di sisi klien juga (pertahanan berlapis; RPC tetap clamp).
-  const safeXp = Math.max(0, Math.min(1000, Math.round(Number.isFinite(xp) ? xp : 0)))
+  const safeXp = Math.max(0, Math.min(250, Math.round(Number.isFinite(xp) ? xp : 0)))
 
   // Cast pada CLIENT (bukan metode rpc) agar `this` tetap terikat ke client.
   // Tipe Database hand-maintained belum punya generic Functions untuk inferensi rpc.
