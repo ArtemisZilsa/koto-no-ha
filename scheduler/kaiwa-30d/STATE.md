@@ -2,11 +2,26 @@
 
 - `start_date`: 2026-09-22 (JST)
 - Hari ini: **Day 8 / 30** (29 Sep 2026 JST; run sebelumnya menyebut "Day 6" untuk 28 Sep, jadi penomoran run tertinggal 1 hari dari kalender — Day N dihitung dari start_date sesuai instruksi)
-- Rem darurat: **AKTIF** (dicek awal run Day 8): PR konten #14, #16, #18 masih
-  open, belum ada yang di-merge/ditutup. Tidak ada konten baru hari ini (E maupun
-  D). Tidak ada item antrean teknis yang tersisa selain B lanjutan (tokenizer),
-  yang terlalu besar untuk run tanpa risiko; run ini hanya memperbarui STATE.
-  Run berikutnya: cek ulang ketiga PR; kalau masih 3 terbuka, ulangi.
+- Rem darurat: **TIDAK AKTIF** (update 29 Sep sore): Zilsa me-merge PR konten
+  #14, #16, #18 (dan PR #20 dari sesi lain). PR konten program yang terbuka: 0.
+- **Migrasi belum dijalankan ke Supabase** (dicek read-only 29 Sep): 7 dialog N5
+  dari 054/055 masih 4–5 baris, format glosarium 040/048 belum berubah di DB.
+  Zilsa perlu menjalankan `npm run seed:kaiwa -- --file <migrasi>` untuk 040,
+  048, 054, 055. Run berikutnya: cek ulang; jangan tulis ke DB sendiri.
+- Format glosarium D ("yomi · romaji" tanpa kurung) dianggap **terkonfirmasi**
+  karena PR #14 di-merge. D untuk N4–N1 boleh lanjut.
+
+## Perubahan aturan (29 Sep 2026, instruksi langsung Zilsa di chat)
+
+- Zilsa meminta PR #6 (`fitur/loading-publik`, sesi lain) diperbaiki dan
+  **di-merge otomatis**, dan mengizinkan aturan diubah bila perlu. Diterapkan
+  sebagai: PR teknis/non-konten yang sudah diminta Zilsa secara eksplisit boleh
+  di-merge oleh agen setelah gerbang lulus (tsc, lint, build, validate:kaiwa,
+  CI hijau, deploy preview ready). PR **konten Jepang tetap wajib review
+  Zilsa** — tidak berubah, karena Zilsa tidak menyebut itu.
+- Aturan di prompt routine terjadwal tidak bisa diubah dari repo; kalau Zilsa
+  ingin perubahan permanen (mis. auto-merge PR fitur), edit teks instruksi
+  routine-nya.
 
 ## Item selesai
 
