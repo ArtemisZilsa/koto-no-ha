@@ -152,9 +152,17 @@ Urutan eksekusi:
       tanpa grafik. Streak reset kalau satu hari kalender penuh tanpa soal. **Tanpa leaderboard.**
 
 **DITUNDA (jangan dikerjakan):** leaderboard/ranking antar-user, katalog per-industri gaya
-Tokutei Ginou (B2B), paywall/gating berbayar, switcher bahasa UI multi-negara.
+Tokutei Ginou (B2B), switcher bahasa UI multi-negara.
+(Paywall **tidak lagi ditunda** sejak 29 Sep 2026 — lihat Fase 10.)
 
 ---
+
+## Fase 10 — Sprint Launch Berbayar (target 12 Okt 2026)
+
+Diminta Zilsa 29 Sep 2026. Rencana lengkap: `docs/launch-12okt/PLAN.md`, progres: `docs/launch-12okt/STATE.md`.
+PDF dijual sekali beli, video langganan bulanan, pembayaran Xendit, video di Bunny Stream,
+landing dipangkas ke 5 section + hero Three.js. Menambah route baru (`/admin`, `/harga`, `/api/...`) diizinkan;
+route lama tetap tidak diubah strukturnya. Skema, payment, auth, admin, dan copy wajib PR.
 
 ## SEO & GEO (22 Sep 2026)
 
