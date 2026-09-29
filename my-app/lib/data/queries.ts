@@ -1,3 +1,4 @@
+import { cache } from 'react'
 import { createClient } from '@/lib/supabase/server'
 import type { Vocab, Kanji, KanjiExampleJson, Grammar, GrammarExampleJson, NewsArticle, KaiwaStory, KaiwaJob, KaiwaCategory, DokkaPassage, DokkaiHighlightWord, UserSrsProgress } from '@/lib/types/database.types'
 import type { VocabEntry, KanjiEntry, GrammarEntry, JLPTLevel } from './types'
@@ -363,7 +364,31 @@ export async function getNewsList(page = 1): Promise<PagedResult<NewsArticle>> {
  * menampilkan pelajaran 14 sebelum pelajaran 2. Silabus dibaca lewat
  * getKaiwaLessons().
  */
-export async function getKaiwaByLevel(level: JLPTLevel): Promise<KaiwaStory[]> {
+/**
+ * Total dialog kaiwa lepas (semua level, `job_slug IS NULL`) — dipakai untuk
+ * angka statistik di landing page supaya tidak perlu diperbarui manual tiap
+ * kali ada dialog baru.
+ */
+export async function getKaiwaDialogCount(): Promise<number> {
+  const supabase = await createClient()
+
+  const { count, error } = await supabase
+    .from('kaiwa_stories')
+    .select('id', { count: 'exact', head: true })
+    .is('job_slug', null)
+
+  if (error) {
+    console.error('getKaiwaDialogCount error', error)
+    return 0
+  }
+  return count ?? 0
+}
+
+// Dibungkus React `cache()` supaya `generateMetadata` dan komponen halaman
+// `/kaiwa` berbagi satu query per request (bukan dua kali ke Supabase).
+export const getKaiwaByLevel = cache(async function getKaiwaByLevel(
+  level: JLPTLevel
+): Promise<KaiwaStory[]> {
   const supabase = await createClient()
   const levelId = levelIdByCode[level]
 
@@ -380,7 +405,7 @@ export async function getKaiwaByLevel(level: JLPTLevel): Promise<KaiwaStory[]> {
   }
   // `lines[].audio` disimpan sebagai path storage; rakit jadi URL publik di sini.
   return ((data ?? []) as KaiwaStory[]).map(withResolvedAudio)
-}
+})
 
 // ── Kaiwa per profesi (silabus) ────────────────────────────────
 

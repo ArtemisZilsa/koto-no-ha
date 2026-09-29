@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import PracticeProgress from '@/components/practice/PracticeProgress'
+import ProgressLiveRefresh from '@/components/practice/ProgressLiveRefresh'
 import { getPracticeProgress, getPracticeTotals } from '@/lib/data/queries'
 import { CATEGORY_META, PRACTICE_CATEGORIES, PRACTICE_LEVELS, setCount } from '@/lib/data/practice'
 import { JsonLd, breadcrumbJsonLd } from '@/lib/seo'
@@ -36,6 +37,7 @@ export default async function LatihanPage() {
             <div className="mb-14">
               <h2 className="text-[13px] font-semibold mb-5" style={{ color: 'var(--text)' }}>Progresmu</h2>
               <PracticeProgress rows={progress} />
+              <ProgressLiveRefresh />
             </div>
           )}
 

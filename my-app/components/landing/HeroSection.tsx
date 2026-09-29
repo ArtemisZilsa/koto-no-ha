@@ -3,6 +3,7 @@ import { AnimatedKanji } from '@/components/ui/AnimatedKanji'
 import { Reveal } from '@/components/ui/Reveal'
 import { Icon } from '@/components/ui/Icon'
 import { HeroBackground } from '@/components/ui/HeroBackground'
+import { getKaiwaDialogCount } from '@/lib/data/queries'
 
 // 10 hyougen bertema kata & belajar — satu dipilih acak tiap render.
 // Halaman ini dirender dinamis per request, jadi tagline berganti
@@ -25,8 +26,16 @@ function pickHyougen() {
   return HYOUGEN[Math.floor(Math.random() * HYOUGEN.length)]
 }
 
-export function HeroSection() {
+// Dibulatkan ke bawah ke kelipatan 10 supaya angka "X+" tetap valid
+// walau ada dialog baru ditambah tanpa mengubah kode ini.
+function formatDialogStat(count: number): string {
+  const rounded = Math.floor(count / 10) * 10
+  return `${rounded}+`
+}
+
+export async function HeroSection() {
   const hyougen = pickHyougen()
+  const dialogCount = await getKaiwaDialogCount()
 
   return (
     <section className="min-h-screen flex items-center px-5 md:px-12 pt-24 pb-16 relative overflow-hidden">
@@ -119,7 +128,7 @@ export function HeroSection() {
           <div className="flex flex-wrap gap-x-9 gap-y-4">
             {[
               { num: '6 Level', label: 'N5 sampai N1 + SSW' },
-              { num: '40+', label: 'Dialog dari Situasi Nyata' },
+              { num: formatDialogStat(dialogCount), label: 'Dialog dari Situasi Nyata' },
               { num: 'Gratis', label: 'Daftar Tanpa Biaya' },
             ].map(({ num, label }) => (
               <div key={label}>

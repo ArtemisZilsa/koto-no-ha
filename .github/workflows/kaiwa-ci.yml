@@ -38,6 +38,22 @@ jobs:
 
       - run: npm run lint
 
-      - run: npm run build
+      # `next/font/google` (Inter, Noto Sans/Serif JP) mengunduh berkas font dari
+      # Google saat build — tidak ada cache di runner CI, jadi satu hiccup jaringan
+      # menggagalkan seluruh build (lihat run #6 di master, 23 Sep 2026: gagal
+      # dengan "Module not found" berulang di noto_sans_jp_*.module.css, sukses
+      # lagi di commit berikutnya tanpa perubahan kode). Ulangi sampai 3x sebelum
+      # dianggap gagal sungguhan.
+      - name: npm run build (retry saat fetch font Google Fonts gagal sementara)
+        run: |
+          for attempt in 1 2 3; do
+            if npm run build; then
+              exit 0
+            fi
+            echo "Build gagal (percobaan $attempt/3). Menunggu 10 detik lalu mengulang..."
+            sleep 10
+          done
+          echo "Build tetap gagal setelah 3 percobaan."
+          exit 1
 
       - run: npm run validate:kaiwa -- --base=origin/master
