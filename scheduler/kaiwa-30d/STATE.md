@@ -1,5 +1,16 @@
 # State — Program 30 Hari Kaiwa
 
+## Day 9 (30 Sep 2026 JST)
+
+- Rem darurat TIDAK aktif (0 PR konten program terbuka; #14/#16/#18 merged).
+- E1 N4: `058_extend_kaiwa_lepas_n4_short.sql` (5 dialog N4 daily/work, 4 -> 8
+  baris; 4 baris asli persis dipertahankan; glosarium format Fase D). PR konten
+  menunggu review Zilsa. Sisa E1 N4: "Di Klinik" (kaigo, 5 baris) + 1 lain bila
+  ada; lalu N3 (7), N2 (6), N1 (7).
+- Migrasi 040/048/054/055/058 belum dicek ulang di DB pada run ini; jalankan
+  `npm run seed:kaiwa -- --file <migrasi>` (Zilsa).
+- Tidak ada PR teknis hari ini.
+
 - `start_date`: 2026-09-22 (JST)
 - Hari ini: **Day 8 / 30** (29 Sep 2026 JST; run sebelumnya menyebut "Day 6" untuk 28 Sep, jadi penomoran run tertinggal 1 hari dari kalender — Day N dihitung dari start_date sesuai instruksi)
 - Rem darurat: **TIDAK AKTIF** (update 29 Sep sore): Zilsa me-merge PR konten
