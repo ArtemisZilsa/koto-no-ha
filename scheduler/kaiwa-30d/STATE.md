@@ -1,5 +1,16 @@
 # State — Program 30 Hari Kaiwa
 
+## Day 11 (2 Okt 2026 JST)
+
+- Rem darurat TIDAK aktif (PR konten terbuka: #24 Day 9, #26 Day 10, #28 Day 11 = 3 setelah PR hari ini;
+  hari berikutnya cek ulang: bila masih >=3 terbuka, rem aktif).
+- PR #27 (STATE Day 10, teknis) di-merge.
+- E1 N3 dimulai: `061_extend_kaiwa_lepas_n3_short.sql` (PR #28): Di Panti Jompo, Komplain dengan Sopan,
+  Membatalkan Janji, Rapat di Kantor, Wawancara Kerja Sederhana, masing-masing 4 -> 10 baris.
+  Sisa N3: "Menanyakan Jalan yang Rumit", "Menjelaskan Gejala ke Apoteker".
+- Antrean berikutnya: sisa E1 N3 (2), N2 (6), N1 (7); B lanjutan (tokenizer); D N4-N1.
+- Seed yang menunggu Zilsa: 058, 060, 061 (dan 040/048/054/055 bila belum).
+
 ## Day 10 (1 Okt 2026 JST)
 
 - Rem darurat TIDAK aktif (PR konten terbuka: #24 Day 9 + PR Day 10).
