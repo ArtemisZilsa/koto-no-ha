@@ -1,5 +1,14 @@
 # State — Program 30 Hari Kaiwa
 
+## Day 12 (3 Okt 2026 JST)
+
+- Rem darurat **AKTIF**: PR konten program yang terbuka = 3 (#24 Day 9, #26 Day 10, #28 Day 11).
+  Tidak ada konten baru hari ini (E1/E2/D ditahan). Menunggu review Zilsa.
+- PR lain di luar program: #25 (T4 skema paywall), #30 (bank soal) — tidak disentuh.
+- Tidak ada PR teknis selain update STATE ini; B lanjutan (tokenizer) tetap di antrean.
+- Seed yang menunggu Zilsa: 058, 060, 061 (dan 040/048/054/055 bila belum).
+- Antrean berikutnya: bila <3 PR konten terbuka, lanjut sisa E1 N3 (2), N2 (6), N1 (7); lalu D N4-N1.
+
 ## Day 11 (2 Okt 2026 JST)
 
 - Rem darurat TIDAK aktif (PR konten terbuka: #24 Day 9, #26 Day 10, #28 Day 11 = 3 setelah PR hari ini;
