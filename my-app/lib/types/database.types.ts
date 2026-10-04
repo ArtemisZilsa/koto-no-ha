@@ -29,6 +29,11 @@ export interface Profile {
   is_premium: boolean
   created_at: string
   last_active_date: string | null
+  /** Hanya bisa diubah lewat SQL (migrasi 059). */
+  role: 'user' | 'admin'
+  /** Format +62…; wajib disertai whatsapp_consent_at (diisi server). */
+  whatsapp: string | null
+  whatsapp_consent_at: string | null
 }
 
 export interface UserItemProgress {
@@ -62,6 +67,88 @@ export interface UserPracticeAnswer {
   is_correct: boolean
   answered_at: string
 }
+
+// ─── Paywall (migrasi 059) ───────────────────────────────────────────────────
+// Klien hanya membaca; semua tulisan lewat server (service role).
+
+export type ProductKind = 'pdf' | 'video_sub'
+export type OrderStatus = 'pending' | 'paid' | 'expired' | 'failed' | 'refunded'
+
+export interface Product {
+  id: string
+  kind: ProductKind
+  title: string
+  description: string | null
+  level: LevelCode | null
+  price_idr: number
+  /** NULL = akses selamanya (PDF). */
+  access_days: number | null
+  /** Tidak bisa dibaca klien (tanpa GRANT kolom); hanya server. */
+  storage_path: string | null
+  sort_order: number
+  is_active: boolean
+  created_at: string
+  updated_at: string
+}
+
+export interface Order {
+  id: string
+  user_id: string | null
+  product_id: string
+  amount_idr: number
+  status: OrderStatus
+  xendit_invoice_id: string | null
+  xendit_invoice_url: string | null
+  payment_method: string | null
+  payment_channel: string | null
+  paid_at: string | null
+  invoice_expires_at: string | null
+  created_at: string
+  updated_at: string
+}
+
+export interface Payment {
+  id: number
+  order_id: string | null
+  webhook_id: string | null
+  xendit_invoice_id: string | null
+  status: string | null
+  amount_idr: number | null
+  payload: unknown
+  outcome: 'received' | 'applied' | 'duplicate' | 'rejected' | 'error'
+  error: string | null
+  received_at: string
+}
+
+export interface Entitlement {
+  id: string
+  user_id: string
+  product_id: string
+  order_id: string | null
+  source: 'purchase' | 'admin'
+  starts_at: string
+  /** NULL = selamanya. */
+  expires_at: string | null
+  revoked_at: string | null
+  created_at: string
+}
+
+export interface AdminAuditLog {
+  id: number
+  admin_id: string | null
+  action: string
+  target_user_id: string | null
+  target_order_id: string | null
+  details: unknown
+  created_at: string
+}
+
+export type ApplyPaidOrderResult =
+  | 'applied'
+  | 'duplicate'
+  | 'not_found'
+  | 'amount_mismatch'
+  | 'invoice_mismatch'
 
 export interface Level {
   id: number
@@ -406,8 +493,56 @@ export interface Database {
         Insert: Omit<UserPracticeAnswer, 'id' | 'answered_at'> & Partial<Pick<UserPracticeAnswer, 'answered_at'>>
         Update: never
       }
+      products: {
+        Row: Product
+        Insert: Omit<Product, 'created_at' | 'updated_at' | 'sort_order' | 'is_active'> &
+          Partial<Pick<Product, 'sort_order' | 'is_active'>>
+        Update: Partial<Omit<Product, 'id' | 'created_at' | 'updated_at'>>
+      }
+      orders: {
+        Row: Order
+        Insert: Pick<Order, 'user_id' | 'product_id' | 'amount_idr'> &
+          Partial<Omit<Order, 'user_id' | 'product_id' | 'amount_idr' | 'created_at' | 'updated_at'>>
+        Update: Partial<Omit<Order, 'id' | 'created_at' | 'updated_at'>>
+      }
+      payments: {
+        Row: Payment
+        Insert: Pick<Payment, 'payload'> & Partial<Omit<Payment, 'id' | 'payload' | 'received_at'>>
+        Update: Partial<Pick<Payment, 'outcome' | 'error' | 'order_id'>>
+      }
+      entitlements: {
+        Row: Entitlement
+        Insert: Pick<Entitlement, 'user_id' | 'product_id' | 'source'> &
+          Partial<Omit<Entitlement, 'id' | 'user_id' | 'product_id' | 'source' | 'created_at'>>
+        Update: Partial<Pick<Entitlement, 'expires_at' | 'revoked_at'>>
+      }
+      admin_audit_log: {
+        Row: AdminAuditLog
+        Insert: Pick<AdminAuditLog, 'admin_id' | 'action'> &
+          Partial<Pick<AdminAuditLog, 'target_user_id' | 'target_order_id' | 'details'>>
+        Update: never
+      }
     }
     Functions: {
+      has_entitlement: {
+        Args: { p_product_id: string }
+        Returns: boolean
+      }
+      is_admin: {
+        Args: Record<string, never>
+        Returns: boolean
+      }
+      apply_paid_order: {
+        Args: {
+          p_order_id: string
+          p_xendit_invoice_id: string
+          p_amount_idr: number
+          p_paid_at?: string
+          p_payment_method?: string | null
+          p_payment_channel?: string | null
+        }
+        Returns: ApplyPaidOrderResult
+      }
       mark_item_known: {
         Args: { p_item_type: string; p_item_id: string; p_xp?: number }
         Returns: { known: boolean; total_xp: number; streak_days: number }[]
