@@ -19,6 +19,9 @@ export default async function DashboardLayout({
     redirect('/login')
   }
 
+  // Link Admin hanya untuk admin; halaman /admin sendiri tetap dijaga server + 2 langkah.
+  const { data: isAdmin } = await (supabase as unknown as { rpc: (fn: 'is_admin') => Promise<{ data: boolean | null }> }).rpc('is_admin')
+
   return (
     <div className="min-h-screen" style={{ background: 'var(--paper)' }}>
       {/* Dashboard Nav */}
@@ -44,6 +47,11 @@ export default async function DashboardLayout({
           >
             Dashboard
           </Link>
+          {isAdmin === true && (
+            <Link href="/admin" className="text-[13px] font-medium no-underline" style={{ color: 'var(--crimson)' }}>
+              Admin
+            </Link>
+          )}
           <div className="flex items-center gap-0.5 md:gap-1 shrink-0">
             {[
               { label: 'N5', href: '/learn/n5' },

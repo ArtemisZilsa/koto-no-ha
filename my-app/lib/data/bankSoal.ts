@@ -99,7 +99,7 @@ export async function getBankSession(kategori: string, unit: string): Promise<Ba
   const supabase = await createClient()
   const cols = 'id, code, qtype, question, options, answer_index, explanation, group_label'
   // ponytail: hanya N5 (data yang ada). Saat N4 masuk, tambahkan level ke URL dan ke get_bank_progress.
-  let q = supabase.from('bank_soal').select(cols).eq('level', 'N5').neq('mode', 'cadangan')
+  let q = supabase.from('bank_soal').select(cols).eq('level', 'N5').neq('mode', 'cadangan').neq('review_status', 'buang')
   let kind: SessionKind = 'latihan'
   let title: string
   let set = 0, tema = 0
