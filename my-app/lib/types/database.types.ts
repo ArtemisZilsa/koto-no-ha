@@ -150,6 +150,22 @@ export type ApplyPaidOrderResult =
   | 'amount_mismatch'
   | 'invoice_mismatch'
 
+// ─── Bank soal berbayar (migrasi 060) ────────────────────────────────────────
+// Hanya terbaca oleh pemilik entitlement 'video-bulanan' atau admin (RLS).
+export interface BankSoal {
+  id: string
+  level: 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
+  section: 'moji_goi' | 'bunpou' | 'dokkai' | 'choukai'
+  question: string
+  passage: string | null
+  /** Tepat 4 opsi. */
+  options: string[]
+  answer_index: number
+  explanation: string | null
+  order_index: number
+  created_at: string
+}
+
 export interface Level {
   id: number
   code: LevelCode
@@ -515,6 +531,11 @@ export interface Database {
         Insert: Pick<Entitlement, 'user_id' | 'product_id' | 'source'> &
           Partial<Omit<Entitlement, 'id' | 'user_id' | 'product_id' | 'source' | 'created_at'>>
         Update: Partial<Pick<Entitlement, 'expires_at' | 'revoked_at'>>
+      }
+      bank_soal: {
+        Row: BankSoal
+        Insert: never
+        Update: never
       }
       admin_audit_log: {
         Row: AdminAuditLog
