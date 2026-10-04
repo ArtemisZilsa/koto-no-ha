@@ -1,11 +1,13 @@
 """Excel bank soal (Drive Zilsa) -> supabase/migrations/061_seed_bank_soal.sql.
 
-Pakai:  python tools/import-bank-soal.py <folder-berisi-xlsx>
+Pakai:  python tools/import-bank-soal.py <folder-berisi-xlsx> <nomor-migrasi-baru, mis. 063>
 Butuh:  pip install openpyxl
 
 Membaca setiap file Bank-Soal-*.xlsx yang punya sheet 'Bank Soal' (tata bahasa)
 atau 'Bank Soal - Kanji'. Upsert per kode soal, jadi aman diulang setelah Excel
-direvisi. Baris berstatus 'Buang' dihapus dari database.
+direvisi. Status 'Buang' = soal disembunyikan (progres user tetap utuh).
+Soal yang sudah diedit lewat /admin (edited_at terisi) TIDAK ditimpa Excel.
+061 sudah diterapkan di produksi: jangan ditimpa, selalu pakai nomor baru.
 """
 import json
 import sys
@@ -13,7 +15,7 @@ from pathlib import Path
 
 from openpyxl import load_workbook
 
-OUT = Path(__file__).resolve().parent.parent / 'supabase/migrations/061_seed_bank_soal.sql'
+MIGRATIONS = Path(__file__).resolve().parent.parent / 'supabase/migrations'
 KEYS = 'ABCD'
 MODES = {'Latihan': 'latihan', 'Checkpoint': 'checkpoint', 'Cadangan': 'cadangan'}
 
@@ -21,7 +23,7 @@ MODES = {'Latihan': 'latihan', 'Checkpoint': 'checkpoint', 'Cadangan': 'cadangan
 def status(raw):
     s = (raw or '').strip().lower()
     if s == 'buang':
-        return None
+        return 'buang'
     if s == 'ok':
         return 'ok'
     if s == 'revisi':
@@ -47,15 +49,12 @@ def soal(r, **kw):
 
 
 def read(folder):
-    out, drop = [], []
+    out = []
     for f in sorted(Path(folder).glob('Bank-Soal-*.xlsx')):
         wb = load_workbook(f, data_only=True)
         if 'Bank Soal' in wb.sheetnames:  # tata bahasa
             for i, r in enumerate(rows(wb['Bank Soal'])):
                 code, st = str(r['ID Soal']).strip(), status(r['Status Review'])
-                if st is None:
-                    drop.append(code)
-                    continue
                 out.append(soal(r, code=code, level=r['Level'], category='tata_bahasa', qtype=r['Tipe'],
                                 unit=int(r['Batch']), group_code=r['ID Pola'], group_label=r['Pola'],
                                 mode=MODES[r['Mode']], checkpoint=r['Checkpoint'], review_status=st, order_index=i))
@@ -63,14 +62,11 @@ def read(folder):
             level = 'N5' if '-N5-' in f.name else sys.exit(f'{f.name}: level tidak dikenali dari nama file')
             for r in rows(wb['Bank Soal - Kanji']):
                 code, st = f"K{level[1]}-{int(r['No']):04d}", status(r['Status'])
-                if st is None:
-                    drop.append(code)
-                    continue
                 t = int(r['Level'])
                 out.append(soal(r, code=code, level=level, category='kanji', qtype=r['Tipe'], unit=t,
                                 group_code=f'T{t:02d}', group_label=r['Tema Level'], mode='latihan',
                                 checkpoint=None, review_status=st, order_index=int(r['No'])))
-    return out, drop
+    return out
 
 
 def lit(v):
@@ -88,25 +84,28 @@ COLS = ['code', 'level', 'category', 'qtype', 'unit', 'group_code', 'group_label
 
 
 def main():
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 3 or not sys.argv[2].isdigit():
         sys.exit(__doc__)
-    data, drop = read(sys.argv[1])
+    out = MIGRATIONS / f'{int(sys.argv[2]):03d}_seed_bank_soal.sql'
+    if out.exists() or any(MIGRATIONS.glob(f'{int(sys.argv[2]):03d}_*.sql')):
+        sys.exit(f'Nomor migrasi {sys.argv[2]} sudah dipakai; pilih nomor baru.')
+    data = read(sys.argv[1])
     codes = [d['code'] for d in data]
     assert len(codes) == len(set(codes)), 'kode soal kembar'
-    sql = ['-- 061: Seed bank soal. DIBUAT OTOMATIS oleh tools/import-bank-soal.py, jangan diedit manual.',
-           f'-- {len(data)} soal. Upsert per code: aman dijalankan ulang.', 'BEGIN;']
+    sql = [f'-- {out.stem}: Seed bank soal. DIBUAT OTOMATIS oleh tools/import-bank-soal.py, jangan diedit manual.',
+           f'-- {len(data)} soal. Upsert per code; soal yang sudah diedit di /admin tidak ditimpa.', 'BEGIN;']
     for i in range(0, len(data), 200):
         vals = ',\n'.join('(' + ', '.join(lit(d[c]) for c in COLS) + ')' for d in data[i:i + 200])
         upd = ', '.join(f'{c} = EXCLUDED.{c}' for c in COLS[1:])
-        sql.append(f'INSERT INTO public.bank_soal ({", ".join(COLS)}) VALUES\n{vals}\nON CONFLICT (code) DO UPDATE SET {upd};')
-    if drop:
-        sql.append(f'DELETE FROM public.bank_soal WHERE code IN ({", ".join(lit(c) for c in drop)});')
+        sql.append(f'INSERT INTO public.bank_soal ({", ".join(COLS)}) VALUES\n{vals}\n'
+                   f'ON CONFLICT (code) DO UPDATE SET {upd}\nWHERE public.bank_soal.edited_at IS NULL;')
     sql.append('COMMIT;')
-    OUT.write_text('\n'.join(sql) + '\n', encoding='utf-8')
+    out.write_text('\n'.join(sql) + '\n', encoding='utf-8')
     by = {}
     for d in data:
-        by[(d['category'], d['mode'])] = by.get((d['category'], d['mode']), 0) + 1
-    print(f'{len(data)} soal -> {OUT.name}; dibuang {len(drop)}; {by}')
+        k = (d['category'], d['mode'], d['review_status'])
+        by[k] = by.get(k, 0) + 1
+    print(f'{len(data)} soal -> {out.name}; {by}')
 
 
 if __name__ == '__main__':
