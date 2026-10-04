@@ -154,16 +154,25 @@ export type ApplyPaidOrderResult =
 // Hanya terbaca oleh pemilik entitlement 'video-bulanan' atau admin (RLS).
 export interface BankSoal {
   id: string
+  /** ID dari Excel, mis. G5-001-01 / K5-0001. */
+  code: string
   level: 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
-  section: 'moji_goi' | 'bunpou' | 'dokkai' | 'choukai'
+  category: 'tata_bahasa' | 'kanji'
+  qtype: string
+  /** Tata bahasa: batch video; kanji: tema. */
+  unit: number
+  group_code: string
+  group_label: string
+  mode: 'latihan' | 'checkpoint' | 'cadangan'
+  checkpoint: string | null
   question: string
-  passage: string | null
   /** Tepat 4 opsi. */
   options: string[]
   answer_index: number
   explanation: string | null
+  distractor_basis: string | null
+  review_status: 'belum' | 'ok' | 'revisi'
   order_index: number
-  created_at: string
 }
 
 export interface Level {
