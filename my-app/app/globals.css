@@ -638,6 +638,9 @@ html.dark .washi-art { filter: invert(0.88) hue-rotate(180deg); mix-blend-mode: 
     14px 18px 26px rgba(17, 17, 17, 0.22);
 }
 
+/* Lembar materi PDF 3D (WebGL) mengisi area visual kartu. */
+.lembar-3d { position: absolute; inset: 0; filter: drop-shadow(0 14px 18px rgba(17, 17, 17, 0.18)); }
+
 /* Layar video 3D. */
 .layar {
   transform: perspective(700px) rotateY(18deg) rotateX(4deg);
