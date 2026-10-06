@@ -584,6 +584,9 @@ html.dark .washi-art { filter: invert(0.88) hue-rotate(180deg); mix-blend-mode: 
   .washi-scrim { background: linear-gradient(0deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 80%, transparent) 45%, transparent 70%); }
 }
 
+/* Hero: kanvas daun kanji 3D (WebGL) di sisi kanan, di atas ilustrasi. */
+.pohon-kata { position: absolute; inset: 0 0 0 auto; width: 58%; }
+
 /* Tangga level: desktop anak tangga naik ke kanan, kartu sedikit miring 3D. */
 @media (min-width: 768px) {
   .tangga { perspective: 1100px; }
