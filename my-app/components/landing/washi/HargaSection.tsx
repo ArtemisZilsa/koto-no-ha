@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import { PRICING, rupiah } from '@/lib/data/pricing'
 import { WashiArt } from './WashiArt'
+import { LembarMateri } from './LembarMateri'
 
-// Section 4 — Harga. Buku PDF & layar video digambar dengan CSS 3D (tanpa WebGL),
-// berputar sedikit saat di-hover. Checkout Xendit (T5) belum ada → tombol ke /register.
+// Section 4 — Harga. Desktop: lembar materi PDF 3D (WebGL, bisa diputar); HP: buku CSS 3D.
+// Layar video tetap CSS 3D, berputar sedikit saat di-hover. Checkout Xendit (T5) belum ada → tombol ke /register.
 export function HargaSection() {
   return (
     <section id="harga" className="relative isolate px-5 md:px-12 py-20 md:py-28 overflow-hidden">
@@ -22,7 +23,7 @@ export function HargaSection() {
 
         <div className="grid gap-6 md:grid-cols-2 max-w-[760px]">
           <Paket
-            visual={<Buku />}
+            visual={<LembarMateri fallback={<Buku />} />}
             title={PRICING.pdf.title}
             price={rupiah(PRICING.pdf.price)}
             unit={PRICING.pdf.unit}
@@ -53,7 +54,7 @@ function Paket({
         border: highlight ? '1.5px solid var(--crimson)' : '1px solid var(--brand-line)',
       }}
     >
-      <div className="h-[150px] flex items-center justify-center mb-5" aria-hidden="true">{visual}</div>
+      <div className="h-[150px] md:h-[250px] flex items-center justify-center mb-5" aria-hidden="true">{visual}</div>
       <h3 className="text-[16px] font-semibold mb-1" style={{ color: 'var(--text)' }}>{title}</h3>
       <p className="mb-4">
         <span className="font-serif text-[30px] font-semibold" style={{ color: 'var(--text)' }}>{price}</span>{' '}
