@@ -1,5 +1,7 @@
 import { cache } from 'react'
+import { unstable_cache } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { createPublicClient } from '@/lib/supabase/public'
 import type { Vocab, Kanji, KanjiExampleJson, Grammar, GrammarExampleJson, NewsArticle, KaiwaStory, KaiwaJob, KaiwaCategory, DokkaPassage, DokkaiHighlightWord, UserSrsProgress } from '@/lib/types/database.types'
 import type { VocabEntry, KanjiEntry, GrammarEntry, JLPTLevel } from './types'
 import type { QuizItem, QuizMode } from './quiz'
@@ -370,7 +372,8 @@ export async function getNewsList(page = 1): Promise<PagedResult<NewsArticle>> {
  * kali ada dialog baru.
  */
 export async function getKaiwaDialogCount(): Promise<number> {
-  const supabase = await createClient()
+  // Dipakai di hero beranda: client publik agar beranda tetap statis.
+  const supabase = createPublicClient()
 
   const { count, error } = await supabase
     .from('kaiwa_stories')
@@ -888,8 +891,11 @@ export async function getPracticeSet(
 }
 
 /** Jumlah item per kategori+level (tanpa login), untuk daftar set. */
-export async function getPracticeTotals(): Promise<Record<PracticeCategory, Record<string, number>>> {
-  const supabase = await createClient()
+/** Jumlah soal per kategori+level. Jarang berubah → di-cache 1 jam (9 query hitung per kunjungan sebelumnya). */
+export const getPracticeTotals = unstable_cache(fetchPracticeTotals, ['practice-totals'], { revalidate: 3600 })
+
+async function fetchPracticeTotals(): Promise<Record<PracticeCategory, Record<string, number>>> {
+  const supabase = createPublicClient()
   const out = { kosakata: {}, tata_bahasa: {}, kanji: {} } as Record<PracticeCategory, Record<string, number>>
   await Promise.all(
     PRACTICE_LEVELS.flatMap((level) =>

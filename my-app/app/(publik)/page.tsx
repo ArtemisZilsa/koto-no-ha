@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
 }
 
+// Statis dari CDN, diperbarui paling lambat tiap 1 jam (jumlah dialog di hero).
+export const revalidate = 3600
+
 export default function HomePage() {
   return (
     <>

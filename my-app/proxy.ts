@@ -2,6 +2,12 @@ import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
 export async function proxy(request: NextRequest) {
+  // Pengunjung tanpa cookie sesi Supabase (mis. dari iklan) tidak perlu dicek ke server auth:
+  // menghemat satu panggilan jaringan ke Supabase di setiap halaman.
+  if (!request.cookies.getAll().some((c) => c.name.startsWith('sb-'))) {
+    return NextResponse.next({ request })
+  }
+
   let supabaseResponse = NextResponse.next({ request })
 
   const supabase = createServerClient(
