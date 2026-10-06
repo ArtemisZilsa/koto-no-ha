@@ -113,7 +113,7 @@ html.dark { color-scheme: dark; }
   --color-ink-surface: var(--ink-surface);
   --color-on-ink: var(--on-ink);
 
-  --font-sans: var(--font-noto-sans-jp), var(--font-inter), sans-serif;
+  --font-sans: var(--font-noto-sans-jp), system-ui, sans-serif;
   --font-serif: var(--font-noto-serif-jp), serif;
   --font-display: var(--font-noto-serif-jp), serif;
 }
@@ -155,116 +155,6 @@ body {
   animation: pulse-dot 2s infinite;
 }
 
-/* — Sakura (桜) — kelopak bunga jatuh — */
-.sakura-layer {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  /* Di atas konten tapi di bawah nav (nav z-50) agar tetap rapi & tidak menghalangi klik */
-  z-index: 40;
-}
-
-.sakura-petal {
-  position: absolute;
-  top: -8%;
-  width: 12px;
-  height: 12px;
-  background: var(--red);
-  opacity: 0.35;
-  /* Bentuk kelopak: lingkaran yang dipotong asimetris */
-  border-radius: 100% 0 100% 0;
-  will-change: transform;
-  animation-name: sakura-fall;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-/* Jatuh dari atas ke bawah + goyang kiri-kanan + berputar */
-@keyframes sakura-fall {
-  0% {
-    transform: translateY(-10vh) translateX(0) rotate(0deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.4;
-  }
-  50% {
-    transform: translateY(45vh) translateX(40px) rotate(180deg);
-  }
-  90% {
-    opacity: 0.4;
-  }
-  100% {
-    transform: translateY(110vh) translateX(-20px) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-/* — Layer efek umum (dipakai sakura/maple/fireflies) — */
-.fx-layer {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 40;
-}
-
-/* — Momiji (紅葉) — daun maple jatuh — */
-.maple-leaf {
-  position: absolute;
-  top: -8%;
-  width: 14px;
-  height: 14px;
-  opacity: 0.4;
-  will-change: transform;
-  /* Bentuk daun maple via clip-path bintang lima-runcing */
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  background: linear-gradient(135deg, var(--gold) 0%, var(--red) 100%);
-  animation-name: maple-fall;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-@keyframes maple-fall {
-  0% {
-    transform: translateY(-10vh) translateX(0) rotate(0deg);
-    opacity: 0;
-  }
-  10% { opacity: 0.5; }
-  50% { transform: translateY(45vh) translateX(-50px) rotate(200deg); }
-  90% { opacity: 0.5; }
-  100% {
-    transform: translateY(110vh) translateX(30px) rotate(400deg);
-    opacity: 0;
-  }
-}
-
-/* — Hotaru (蛍) — kunang-kunang / partikel cahaya mengambang — */
-.firefly {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  border-radius: 9999px;
-  background: var(--green-soft);
-  box-shadow: 0 0 8px 2px color-mix(in srgb, var(--green-soft) 70%, transparent);
-  opacity: 0;
-  will-change: transform, opacity;
-  animation-name: firefly-drift, firefly-glow;
-  animation-timing-function: ease-in-out, ease-in-out;
-  animation-iteration-count: infinite, infinite;
-}
-@keyframes firefly-drift {
-  0%   { transform: translate(0, 0); }
-  25%  { transform: translate(24px, -30px); }
-  50%  { transform: translate(-18px, -54px); }
-  75%  { transform: translate(30px, -84px); }
-  100% { transform: translate(0, -110px); }
-}
-@keyframes firefly-glow {
-  0%, 100% { opacity: 0; }
-  20%, 80% { opacity: 0.85; }
-  50% { opacity: 0.3; }
-}
 
 /* — Aurora / kabut gradien bergerak (latar dekoratif, termasuk hijau) — */
 .aurora {
@@ -359,17 +249,13 @@ body {
   position: relative;
   overflow: hidden;
   background-size: 180% 180%;
-  animation: kanji-gradient 10s ease infinite;
+  background-position: 30% 50%;
 }
 .kanji-panel-green {
   background-image: linear-gradient(135deg, #0f5132 0%, #2f7d4f 45%, #1a6b6b 100%);
 }
 .kanji-panel-blue {
   background-image: linear-gradient(135deg, #15314f 0%, #1f6f8b 50%, #2f7d8f 100%);
-}
-@keyframes kanji-gradient {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
 }
 /* Teks kanji selalu terang & kontras di atas gradien (light & dark). */
 .kanji-glyph {
@@ -380,15 +266,18 @@ body {
 .kanji-panel::after {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: 0 auto 0 0;
+  width: 250%;
   background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.18) 50%, transparent 65%);
-  background-size: 250% 100%;
-  animation: kanji-sheen 6s ease-in-out infinite;
+  animation: sheen-x 6s ease-in-out infinite;
+  will-change: transform;
   pointer-events: none;
 }
-@keyframes kanji-sheen {
-  0%, 100% { background-position: 160% 0; }
-  50% { background-position: -60% 0; }
+/* Kilau digeser dengan transform (dikerjakan GPU), bukan background-position
+   yang memaksa browser mengecat ulang tiap frame. */
+@keyframes sheen-x {
+  0%, 100% { transform: translateX(-60%); }
+  50% { transform: translateX(0%); }
 }
 /* Kanji muncul (pop-in) saat kartu masuk viewport — sekali. */
 @keyframes glyph-pop {
@@ -426,16 +315,13 @@ body {
   .glass::after {
     content: '';
     position: absolute;
-    inset: 0;
+    inset: 0 auto 0 0;
+    width: 250%;
     background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.12) 48%, transparent 66%);
-    background-size: 250% 100%;
-    animation: glass-sheen 9s ease-in-out infinite;
+    animation: sheen-x 9s ease-in-out infinite;
+    will-change: transform;
     pointer-events: none;
   }
-}
-@keyframes glass-sheen {
-  0%, 100% { background-position: 180% 0; }
-  50% { background-position: -80% 0; }
 }
 
 /* — Utility gradasi hijau (untuk teks/aksen) — */
@@ -501,14 +387,6 @@ body {
 }
 
 /* — Gradient sweep pada teks judul (washi: merah → gold → teal) — */
-@keyframes gradient-sweep {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 200% 50%;
-  }
-}
 .text-sweep {
   background-image: linear-gradient(
     100deg,
@@ -523,7 +401,7 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  animation: gradient-sweep 7s linear infinite;
+  background-position: 0% 50%;
 }
 
 /* — Foto hero: zoom sangat lambat (Ken Burns halus) — */
@@ -579,12 +457,15 @@ html.dark .hover-lift:hover {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
+/* HP: efek dekoratif yang mahal dimatikan (layar kecil, prosesor lemah).
+   Foto hero tidak di-zoom, kilau di permukaan kaca (blur) tidak berjalan. */
+@media (max-width: 767px) {
+  .hero-photo { animation: none; }
+  .glass::after { animation: none; display: none; }
+}
+
 /* Hormati preferensi gerak berkurang — matikan animasi & sembunyikan */
 @media (prefers-reduced-motion: reduce) {
-  .sakura-layer,
-  .fx-layer {
-    display: none;
-  }
   .aurora {
     animation: none;
   }
@@ -641,10 +522,6 @@ html.dark .hover-lift:hover {
 
 /* — Matikan animasi via toggle pengguna (class di <html>) —
    Setara dengan prefers-reduced-motion, tapi dikontrol manual. — */
-html.no-anim .sakura-layer,
-html.no-anim .fx-layer {
-  display: none;
-}
 html.no-anim .aurora { animation: none; }
 html.no-anim .neon-grid__moving,
 html.no-anim .neon-grid__glow,
@@ -690,3 +567,105 @@ html.no-anim .progress-fill { transition: none; width: var(--bar-w, 0%); }
   text-orientation: upright;
   letter-spacing: 0.2em;
 }
+
+/* ════════ Beranda washi (sumi-e) ════════════════════════════════════════════
+   Semua gerak memakai transform (dikerjakan GPU) dan mati di reduced-motion. */
+
+/* Ilustrasi menyatu dengan warna kertas halaman; mode gelap: tinta dibalik
+   (hue-rotate menjaga crimson tetap merah). */
+.washi-art { mix-blend-mode: multiply; }
+html.dark .washi-art { filter: invert(0.88) hue-rotate(180deg); mix-blend-mode: screen; opacity: 0.32; }
+/* Kabut kertas di sisi teks (kiri desktop, bawah HP) supaya teks tetap terbaca di atas ilustrasi. */
+.washi-scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 75%, transparent) 38%, transparent 62%);
+}
+@media (max-width: 767px) {
+  .washi-scrim { background: linear-gradient(0deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 80%, transparent) 45%, transparent 70%); }
+}
+
+/* Hero: kanvas daun kanji 3D (WebGL) di sisi kanan, di atas ilustrasi. */
+.pohon-kata { position: absolute; inset: 0 0 0 auto; width: 58%; }
+
+/* Tangga level: desktop anak tangga naik ke kanan, kartu sedikit miring 3D. */
+@media (min-width: 768px) {
+  .tangga { perspective: 1100px; }
+  .tangga-step {
+    transform: translateY(calc(var(--step) * -36px)) rotateX(6deg) rotateY(-8deg);
+    transform-origin: bottom center;
+    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .tangga-step:hover {
+    transform: translateY(calc(var(--step) * -36px - 10px)) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+/* Kartu soal yang berbalik. */
+.kartu-soal { perspective: 1200px; }
+.kartu-soal__inner {
+  position: relative;
+  display: grid;
+  transform-style: preserve-3d;
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.kartu-soal[data-flipped='true'] .kartu-soal__inner { transform: rotateY(180deg); }
+.kartu-soal__face {
+  grid-area: 1 / 1;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: var(--surface);
+  border: 1px solid var(--brand-line);
+  box-shadow: 0 18px 40px rgba(17, 17, 17, 0.08);
+}
+.kartu-soal__back { transform: rotateY(180deg); }
+
+/* Buku PDF 3D: sampul miring; tebal halaman = box-shadow berlapis ke kanan-bawah. */
+.buku {
+  width: 96px;
+  height: 132px;
+  transform: perspective(600px) rotateY(-24deg) rotateX(6deg);
+  transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.paket:hover .buku { transform: perspective(600px) rotateY(-6deg) rotateX(2deg); }
+.buku__cover {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: var(--crimson); color: #fafafa;
+  border-radius: 2px 6px 6px 2px;
+  box-shadow:
+    inset 7px 0 0 rgba(0, 0, 0, 0.22),
+    2px 2px 0 #f3eee4, 4px 4px 0 #ddd6c8, 6px 6px 0 #f3eee4, 8px 8px 0 #cfc7b7,
+    14px 18px 26px rgba(17, 17, 17, 0.22);
+}
+
+/* Lembar materi PDF 3D (WebGL) mengisi area visual kartu. */
+.lembar-3d { position: absolute; inset: 0; filter: drop-shadow(0 14px 18px rgba(17, 17, 17, 0.18)); }
+
+/* Layar video 3D. */
+.layar {
+  transform: perspective(700px) rotateY(18deg) rotateX(4deg);
+  transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.paket:hover .layar { transform: perspective(700px) rotateY(4deg) rotateX(0deg); }
+.layar__screen {
+  width: 190px; height: 112px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  border-radius: 10px;
+  background: #111111; color: #fafafa;
+  border: 6px solid #2a2a2a;
+  box-shadow: 0 16px 30px rgba(17, 17, 17, 0.2);
+}
+.layar__play {
+  width: 0; height: 0;
+  border-left: 16px solid var(--crimson);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tangga-step, .kartu-soal__inner, .buku, .layar { transition: none; }
+}
+html.no-anim .tangga-step,
+html.no-anim .kartu-soal__inner,
+html.no-anim .buku,
+html.no-anim .layar { transition: none; }

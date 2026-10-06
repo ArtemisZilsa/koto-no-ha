@@ -1,18 +1,34 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { logout } from '@/app/actions/auth'
-import type { User } from '@supabase/supabase-js'
+import { createClient } from '@/lib/supabase/client'
 import ThemeToggle from '@/components/theme/ThemeToggle'
 import AnimationToggle from '@/components/theme/AnimationToggle'
 
-interface NavClientProps {
-  user: User | null
+/**
+ * Status login dibaca di browser (cookie sesi), bukan di server, supaya halaman publik
+ * bisa disajikan statis dari CDN. Ini hanya untuk tombol Masuk/Dashboard; halaman yang
+ * butuh login tetap mengecek ulang di server.
+ */
+function useLoggedIn(): boolean {
+  const pathname = usePathname()
+  const [loggedIn, setLoggedIn] = useState(false)
+  useEffect(() => {
+    const supabase = createClient()
+    // Dibaca ulang tiap pindah halaman: login/logout lewat server action tidak memicu event di sini.
+    supabase.auth.getSession().then(({ data }) => setLoggedIn(!!data.session))
+    const { data } = supabase.auth.onAuthStateChange((_event, session) => setLoggedIn(!!session))
+    return () => data.subscription.unsubscribe()
+  }, [pathname])
+  return loggedIn
 }
 
-export function NavClient({ user }: NavClientProps) {
+export function NavClient() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const user = useLoggedIn()
 
   return (
     <nav

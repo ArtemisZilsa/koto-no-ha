@@ -1,26 +1,20 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
 import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google'
 import './globals.css'
 import { ThemeScript } from '@/components/theme/ThemeScript'
 import { SITE_URL } from '@/lib/site'
 import { JsonLd, SITE_DESCRIPTION, SITE_NAME, organizationJsonLd, websiteJsonLd } from '@/lib/seo'
 
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-})
-
 const notoSansJP = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
   subsets: ['latin'],
-  weight: ['300', '400', '500'],
+  // Tanpa `weight`: variable font, satu @font-face per potongan huruf untuk semua ketebalan.
+  // Dengan 3 weight statis CSS font-nya ±280 KB dan memblokir render pertama.
 })
 
 const notoSerifJP = Noto_Serif_JP({
   variable: '--font-noto-serif-jp',
   subsets: ['latin'],
-  weight: ['300', '400', '600'],
 })
 
 export const metadata: Metadata = {
@@ -98,7 +92,7 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${inter.variable} ${notoSansJP.variable} ${notoSerifJP.variable}`}
+      className={`${notoSansJP.variable} ${notoSerifJP.variable}`}
       suppressHydrationWarning
     >
       <head>

@@ -9,6 +9,11 @@
 [build.environment]
   # Pin Node to match local toolchain (Next 16 requires Node 18+).
   NODE_VERSION = "20"
+  # Halaman publik dirender statis saat build → butuh Supabase saat build.
+  # Nilai ini publik (ikut terkirim ke browser); tanpa ini project Netlify yang
+  # belum diisi env-nya gagal build / error 500.
+  NEXT_PUBLIC_SUPABASE_URL = "https://vkdtjeogushskcgvazom.supabase.co"
+  NEXT_PUBLIC_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZrZHRqZW9ndXNoc2tjZ3Zhem9tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4OTc4MjksImV4cCI6MjA5NTQ3MzgyOX0.oJlyIzYMZcUzO0zFud32H_llvJClLDAdDaimsIG_7k4"
 
 # Official runtime that enables SSR, Server Actions, and route handlers
 # (this app is NOT a static export — it uses cookies/auth at request time).
