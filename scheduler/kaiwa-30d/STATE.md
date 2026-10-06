@@ -1,5 +1,12 @@
 # State — Program 30 Hari Kaiwa
 
+## Day 15 (6 Okt 2026 JST)
+
+- Rem darurat TIDAK aktif: PR konten terbuka hanya #24 (Day 9) + PR Day 15 ini (#26 dan #28 sudah tidak terbuka).
+- E1 N3 dituntaskan: `064_extend_kaiwa_lepas_n3_short_2.sql` ("Menanyakan Jalan yang Rumit", "Menjelaskan Gejala ke Apoteker", 4 -> 10 baris).
+- PR teknis STATE #31 dan #34 masih terbuka (ditumpuk oleh PR ini).
+- Antrean berikutnya: E1 N2 (6), N1 (7); D N4-N1; seed menunggu Zilsa: 058, 060, 061, 064.
+
 ## Day 14 (5 Okt 2026 JST)
 
 - Rem darurat AKTIF: PR konten terbuka #24 (Day 9), #26 (Day 10), #28 (Day 11) belum di-merge. Tidak ada konten baru hari ini.
