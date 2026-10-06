@@ -1,0 +1,101 @@
+# 農業 — Pertanian: tanaman & peternakan (100 kata)
+農業|のうぎょう|nōgyō|pertanian|n|Pekerjaan menanam tanaman dan beternak.|作物を育てたり家畜を飼ったりする仕事|kegiatan bercocok tanam dan beternak|北海道で農業をしています。|ほっかいどうでのうぎょうをしています。|Saya bertani di Hokkaido.
+農家|のうか|nōka|petani / rumah tani|n|Keluarga atau orang yang bertani.|農業をする家や人|keluarga atau orang yang mata pencahariannya bertani|農家の仕事を手伝います。|のうかのしごとをてつだいます。|Saya membantu pekerjaan petani.
+畑|はたけ|hatake|ladang|n|Lahan kering untuk menanam sayur.|野菜などを作る土地|lahan kering untuk menanam sayur dan tanaman lain|畑でキャベツを作っています。|はたけでキャベツをつくっています。|Di ladang kami menanam kubis.
+田んぼ|たんぼ|tanbo|sawah|n|Lahan berair untuk menanam padi.|米を作る水のある土地|lahan berair untuk menanam padi|田んぼに水を入れます。|たんぼにみずをいれます。|Sawah diairi.
+耕種農業|こうしゅのうぎょう|kōshu nōgyō|pertanian tanaman|n|Bidang pertanian yang menanam tanaman.|作物を育てる農業|bidang pertanian yang membudidayakan tanaman|耕種農業の試験を受けます。|こうしゅのうぎょうのしけんをうけます。|Saya mengikuti ujian pertanian tanaman.
+畜産農業|ちくさんのうぎょう|chikusan nōgyō|peternakan|n|Bidang pertanian yang memelihara hewan ternak.|家畜を育てる農業|bidang pertanian yang memelihara hewan ternak|畜産農業で牛を育てています。|ちくさんのうぎょうでうしをそだてています。|Di peternakan, saya memelihara sapi.
+作物|さくもつ|sakumotsu|tanaman budidaya|n|Tanaman yang ditanam untuk dipanen.|畑などで育てる植物|tanaman yang dibudidayakan untuk dipanen|今年の作物はよく育ちました。|ことしのさくもつはよくそだちました。|Tanaman tahun ini tumbuh dengan baik.
+野菜|やさい|yasai|sayuran|n|Sayur-sayuran.|食べる植物|tanaman yang dimakan sebagai sayur|毎朝野菜を収穫します。|まいあさやさいをしゅうかくします。|Setiap pagi sayuran dipanen.
+果樹|かじゅ|kaju|pohon buah|n|Pohon yang menghasilkan buah.|果物がなる木|pohon yang menghasilkan buah|りんごの果樹を育てています。|りんごのかじゅをそだてています。|Saya merawat pohon apel.
+施設園芸|しせつえんげい|shisetsu engei|hortikultura dalam fasilitas|n|Menanam di rumah kaca atau rumah plastik.|ハウスの中で作物を育てること|budidaya tanaman di dalam rumah kaca atau rumah plastik|施設園芸でトマトを作ります。|しせつえんげいでトマトをつくります。|Tomat ditanam di rumah kaca.
+ビニールハウス|びにーるはうす|binīru hausu|rumah plastik|n|Bangunan berlapis plastik untuk menanam.|ビニールでおおった小屋|bangunan berangka yang ditutup plastik untuk menanam tanaman|ビニールハウスの中は暑いです。|ビニールハウスのなかはあついです。|Di dalam rumah plastik panas.
+露地栽培|ろじさいばい|roji saibai|budidaya lahan terbuka|n|Menanam di ladang terbuka tanpa atap.|屋根のない畑で育てること|menanam tanaman di lahan terbuka tanpa naungan|露地栽培は天気の影響を受けます。|ろじさいばいはてんきのえいきょうをうけます。|Budidaya lahan terbuka dipengaruhi cuaca.
+栽培|さいばい|saibai|budidaya|n|Menanam dan merawat tanaman.|植物を植えて育てること|menanam dan merawat tanaman sampai panen|いちごの栽培を学んでいます。|いちごのさいばいをまなんでいます。|Saya belajar budidaya stroberi.
+種|たね|tane|benih / biji|n|Biji untuk ditanam.|植物が生えるもと|biji yang ditanam untuk tumbuh menjadi tanaman|畑に種をまきます。|はたけにたねをまきます。|Benih disebar di ladang.
+種まき|たねまき|tanemaki|menabur benih|n|Menanam biji ke tanah.|種を土にまくこと|kegiatan menabur atau menanam benih|春に種まきをします。|はるにたねまきをします。|Menabur benih di musim semi.
+苗|なえ|nae|bibit|n|Tanaman muda yang siap dipindah.|小さい植物|tanaman muda yang siap dipindahkan ke lahan|苗を育てます。|なえをそだてます。|Bibit dirawat.
+定植|ていしょく|teishoku|penanaman bibit|n|Memindahkan bibit ke lahan tetap.|苗を畑に植えること|memindahkan bibit ke lahan tempat tumbuh sampai panen|トマトの苗を定植します。|トマトのなえをていしょくします。|Bibit tomat ditanam di lahan.
+田植え|たうえ|taue|tanam padi|n|Menanam bibit padi di sawah.|田んぼに稲の苗を植えること|menanam bibit padi di sawah|五月に田植えをします。|ごがつにたうえをします。|Tanam padi pada bulan Mei.
+稲刈り|いねかり|inekari|panen padi|n|Memotong padi saat panen.|実った稲を刈ること|memotong tanaman padi yang sudah masak|秋に稲刈りをします。|あきにいねかりをします。|Panen padi di musim gugur.
+収穫|しゅうかく|shūkaku|panen|n|Memetik hasil tanaman.|育った作物をとること|memetik atau mengambil hasil tanaman yang sudah matang|今日はきゅうりを収穫します。|きょうはきゅうりをしゅうかくします。|Hari ini panen mentimun.
+出荷|しゅっか|shukka|pengiriman hasil panen|n|Mengirim hasil panen ke pasar.|作物を市場などに送ること|mengirim hasil panen ke pasar atau pembeli|午後に野菜を出荷します。|ごごにやさいをしゅっかします。|Siang ini sayur dikirim.
+選別|せんべつ|senbetsu|penyortiran|n|Memilah hasil panen menurut ukuran dan kualitas.|大きさや品質で分けること|memilah hasil panen berdasarkan ukuran dan kualitas|トマトを大きさで選別します。|トマトをおおきさでせんべつします。|Tomat disortir menurut ukuran.
+規格|きかく|kikaku|standar mutu|n|Standar ukuran dan bentuk hasil panen.|大きさや形の決まり|standar ukuran, bentuk, dan mutu produk pertanian|規格に合わない野菜は別にします。|きかくにあわないやさいはべつにします。|Sayur yang tidak sesuai standar dipisahkan.
+箱詰め|はこづめ|hakozume|pengemasan dalam kotak|n|Memasukkan hasil panen ke kotak.|箱に入れること|memasukkan hasil panen ke dalam kotak untuk dikirim|りんごを箱詰めします。|りんごをはこづめします。|Apel dikemas ke dalam kotak.
+土|つち|tsuchi|tanah|n|Tanah tempat tanaman tumbuh.|植物が育つ地面|tanah tempat tanaman tumbuh|いい土を作ることが大切です。|いいつちをつくることがたいせつです。|Membuat tanah yang baik itu penting.
+土づくり|つちづくり|tsuchizukuri|pengolahan tanah|n|Menyiapkan tanah agar subur.|作物がよく育つ土にすること|menyiapkan dan menyuburkan tanah sebelum menanam|堆肥で土づくりをします。|たいひでつちづくりをします。|Tanah diolah dengan kompos.
+耕す|たがやす|tagayasu|membajak / menggemburkan|v|Menggemburkan tanah sebelum menanam.|土を掘って柔らかくする|menggemburkan tanah dengan cara menggali dan membaliknya|トラクターで畑を耕します。|トラクターではたけをたがやします。|Ladang dibajak dengan traktor.
+肥料|ひりょう|hiryō|pupuk|n|Zat yang membantu tanaman tumbuh.|植物の栄養|zat yang diberikan agar tanaman tumbuh subur|肥料をあげすぎないでください。|ひりょうをあげすぎないでください。|Jangan memberi pupuk terlalu banyak.
+堆肥|たいひ|taihi|kompos|n|Pupuk alami dari sisa tanaman atau kotoran ternak.|草やふんから作る肥料|pupuk alami hasil penguraian sisa tanaman dan kotoran hewan|牛のふんで堆肥を作ります。|うしのふんでたいひをつくります。|Kompos dibuat dari kotoran sapi.
+施肥|せひ|sehi|pemupukan|n|Memberi pupuk ke tanaman.|肥料をやること|kegiatan memberikan pupuk ke tanaman|植える前に施肥をします。|うえるまえにせひをします。|Sebelum menanam, dilakukan pemupukan.
+水やり|みずやり|mizuyari|menyiram|n|Memberi air ke tanaman.|植物に水をあげること|kegiatan memberi air pada tanaman|朝と夕方に水やりをします。|あさとゆうがたにみずやりをします。|Menyiram pagi dan sore.
+かん水|かんすい|kansui|irigasi|n|Mengalirkan air ke tanaman (istilah teknis).|作物に水をあたえること|pemberian air ke tanaman secara teratur, biasanya dengan sistem selang|ハウスのかん水は自動です。|ハウスのかんすいはじどうです。|Irigasi di rumah plastik otomatis.
+雑草|ざっそう|zassō|gulma|n|Rumput liar yang mengganggu tanaman.|自然に生える草|tumbuhan liar yang mengganggu pertumbuhan tanaman|畑の雑草を取ります。|はたけのざっそうをとります。|Gulma di ladang dicabut.
+草取り|くさとり|kusatori|menyiangi|n|Mencabut rumput liar.|雑草をぬくこと|mencabut rumput liar dari ladang|夏は草取りが大変です。|なつはくさとりがたいへんです。|Musim panas, menyiangi itu berat.
+除草剤|じょそうざい|josōzai|herbisida|n|Bahan kimia pembasmi gulma.|雑草をからす薬|bahan kimia untuk membasmi rumput liar|除草剤を使うときはマスクをします。|じょそうざいをつかうときはマスクをします。|Saat memakai herbisida, pakai masker.
+農薬|のうやく|nōyaku|pestisida|n|Bahan kimia pembasmi hama dan penyakit.|虫や病気を防ぐ薬|bahan kimia untuk mencegah hama dan penyakit tanaman|農薬の量を守ります。|のうやくのりょうをまもります。|Takaran pestisida dipatuhi.
+散布|さんぷ|sanpu|penyemprotan|n|Menyemprotkan pestisida atau pupuk cair.|薬などをまくこと|menyemprotkan atau menaburkan pestisida dan pupuk|風の強い日は散布しません。|かぜのつよいひはさんぷしません。|Saat angin kencang, tidak menyemprot.
+害虫|がいちゅう|gaichū|hama serangga|n|Serangga yang merusak tanaman.|作物に害を与える虫|serangga yang merusak tanaman|葉に害虫がついています。|はにがいちゅうがついています。|Ada hama di daun.
+病気|びょうき|byōki|penyakit tanaman|n|Penyakit yang menyerang tanaman.|作物がかかる病|penyakit yang menyerang tanaman atau hewan|病気の葉を取ります。|びょうきのはをとります。|Daun yang sakit dibuang.
+防除|ぼうじょ|bōjo|pengendalian hama|n|Mencegah dan membasmi hama dan penyakit.|害虫や病気を防ぐこと|upaya mencegah dan mengendalikan hama serta penyakit|定期的に防除をします。|ていきてきにぼうじょをします。|Pengendalian hama dilakukan rutin.
+摘果|てきか|tekika|penjarangan buah|n|Membuang sebagian buah muda agar sisanya besar.|小さい実を取ること|membuang sebagian buah muda agar buah yang tersisa tumbuh besar|りんごの摘果をします。|りんごのてきかをします。|Penjarangan buah apel dilakukan.
+剪定|せんてい|sentei|pemangkasan|n|Memotong cabang pohon.|木の枝を切ること|memotong cabang pohon agar tumbuh dengan baik|冬に果樹の剪定をします。|ふゆにかじゅのせんていをします。|Pemangkasan pohon buah dilakukan di musim dingin.
+誘引|ゆういん|yūin|pengikatan tanaman (rambatan)|n|Mengikat batang tanaman ke penyangga.|茎をひもで支えにつけること|mengikat batang tanaman ke penyangga agar tumbuh ke arah yang diinginkan|きゅうりのつるを誘引します。|きゅうりのつるをゆういんします。|Sulur mentimun diikat ke penyangga.
+支柱|しちゅう|shichū|tiang penyangga|n|Tiang untuk menopang tanaman.|植物を支える棒|tiang untuk menopang tanaman agar tidak rebah|トマトに支柱を立てます。|トマトにしちゅうをたてます。|Tiang penyangga dipasang untuk tomat.
+マルチ|まるち|maruchi|mulsa|n|Penutup tanah dari plastik.|土をおおうシート|lembaran plastik penutup tanah untuk menjaga kelembapan dan mencegah gulma|畝にマルチを張ります。|うねにマルチをはります。|Mulsa dipasang di bedengan.
+畝|うね|une|bedengan|n|Gundukan tanah memanjang untuk menanam.|作物を植えるために盛った土|gundukan tanah memanjang tempat tanaman ditanam|トラクターで畝を作ります。|トラクターでうねをつくります。|Bedengan dibuat dengan traktor.
+トラクター|とらくたー|torakutā|traktor|n|Mesin pertanian untuk membajak.|畑を耕す車|kendaraan pertanian untuk membajak dan menarik alat|トラクターの運転を習います。|トラクターのうんてんをならいます。|Saya belajar mengemudikan traktor.
+耕運機|こううんき|kōunki|mesin penggembur tanah|n|Mesin kecil untuk menggemburkan tanah.|土を耕す小さい機械|mesin kecil untuk menggemburkan tanah|耕運機で畑を耕します。|こううんきではたけをたがやします。|Ladang digemburkan dengan mesin penggembur.
+田植え機|たうえき|taueki|mesin tanam padi|n|Mesin untuk menanam bibit padi.|稲の苗を植える機械|mesin untuk menanam bibit padi di sawah|田植え機で苗を植えます。|たうえきでなえをうえます。|Bibit padi ditanam dengan mesin tanam.
+コンバイン|こんばいん|konbain|mesin pemanen (combine)|n|Mesin pemanen dan perontok padi.|稲を刈って脱穀する機械|mesin yang memanen sekaligus merontokkan padi|コンバインで稲刈りをします。|コンバインでいねかりをします。|Panen padi dengan mesin combine.
+農機具|のうきぐ|nōkigu|alat & mesin pertanian|n|Alat dan mesin untuk bertani.|農業に使う機械や道具|alat dan mesin yang digunakan dalam pertanian|農機具を洗ってしまいます。|のうきぐをあらってしまいます。|Alat pertanian dicuci lalu disimpan.
+鎌|かま|kama|sabit|n|Alat potong rumput berbentuk lengkung.|草を刈る道具|alat pemotong berbilah melengkung untuk rumput|鎌を使うときは手袋をします。|かまをつかうときはてぶくろをします。|Saat memakai sabit, pakai sarung tangan.
+はさみ|はさみ|hasami|gunting|n|Gunting untuk memetik atau memangkas.|物を切る道具|gunting untuk memetik hasil panen atau memangkas|はさみでぶどうを収穫します。|はさみでぶどうをしゅうかくします。|Anggur dipanen dengan gunting.
+コンテナ|こんてな|kontena|keranjang panen|n|Kotak plastik untuk hasil panen.|収穫した物を入れる箱|kotak plastik untuk menampung hasil panen|収穫した野菜をコンテナに入れます。|しゅうかくしたやさいをコンテナにいれます。|Sayur hasil panen dimasukkan ke keranjang.
+温度管理|おんどかんり|ondo kanri|pengaturan suhu|n|Menjaga suhu yang tepat untuk tanaman.|温度をちょうどよく保つこと|menjaga suhu yang sesuai untuk tanaman atau ternak|ハウスの温度管理をします。|ハウスのおんどかんりをします。|Suhu rumah plastik diatur.
+換気|かんき|kanki|ventilasi|n|Membuka rumah plastik agar udara berganti.|空気を入れかえること|mengganti udara di dalam rumah plastik atau kandang|暑い日はハウスを換気します。|あついひはハウスをかんきします。|Saat panas, rumah plastik dibuka untuk ventilasi.
+受粉|じゅふん|jufun|penyerbukan|n|Proses bunga dibuahi agar berbuah.|花に花粉がつくこと|proses serbuk sari menempel pada putik agar berbuah|ハチがいちごの受粉をします。|ハチがいちごのじゅふんをします。|Lebah membantu penyerbukan stroberi.
+発芽|はつが|hatsuga|perkecambahan|n|Biji mulai tumbuh tunas.|種から芽が出ること|keadaan biji mulai mengeluarkan tunas|三日で発芽しました。|みっかではつがしました。|Benih berkecambah dalam tiga hari.
+生育|せいいく|seiiku|pertumbuhan|n|Pertumbuhan tanaman atau hewan.|育つこと|proses tumbuh dan berkembangnya tanaman atau hewan|今年は生育がいいです。|ことしはせいいくがいいです。|Tahun ini pertumbuhannya bagus.
+枯れる|かれる|kareru|layu / mati (tanaman)|v|Tanaman mati dan mengering.|植物が死んで乾く|keadaan tanaman mati dan mengering|水が足りなくて苗が枯れました。|みずがたりなくてなえがかれました。|Bibitnya mati karena kurang air.
+実る|みのる|minoru|berbuah / matang|v|Tanaman menghasilkan buah yang matang.|実がなって熟す|keadaan tanaman berbuah dan matang|稲がよく実りました。|いねがよくみのりました。|Padinya berbuah dengan baik.
+熟す|じゅくす|jukusu|matang|v|Buah menjadi matang.|果物が食べごろになる|keadaan buah menjadi matang dan siap dimakan|赤く熟したトマトをとります。|あかくじゅくしたトマトをとります。|Tomat yang sudah matang merah dipetik.
+家畜|かちく|kachiku|hewan ternak|n|Hewan yang dipelihara untuk diambil hasilnya.|人が飼う牛や豚など|hewan yang dipelihara manusia seperti sapi, babi, dan ayam|家畜の世話をします。|かちくのせわをします。|Saya merawat hewan ternak.
+牛|うし|ushi|sapi|n|Sapi ternak.|牛乳や肉をとる動物|hewan ternak penghasil susu dan daging|牛にえさをやります。|うしにえさをやります。|Sapi diberi pakan.
+乳牛|にゅうぎゅう|nyūgyū|sapi perah|n|Sapi yang diambil susunya.|牛乳をとるための牛|sapi yang dipelihara untuk diperah susunya|乳牛は一日二回しぼります。|にゅうぎゅうはいちにちにかいしぼります。|Sapi perah diperah dua kali sehari.
+肉牛|にくぎゅう|nikugyū|sapi potong|n|Sapi yang dipelihara untuk dagingnya.|肉をとるための牛|sapi yang dipelihara untuk diambil dagingnya|肉牛を育てる牧場です。|にくぎゅうをそだてるぼくじょうです。|Ini peternakan sapi potong.
+豚|ぶた|buta|babi|n|Babi ternak.|肉をとる動物|hewan ternak yang diambil dagingnya|豚舎を掃除します。|とんしゃをそうじします。|Kandang babi dibersihkan.
+鶏|にわとり|niwatori|ayam|n|Ayam ternak.|卵や肉をとる鳥|unggas yang dipelihara untuk telur dan daging|鶏の卵を集めます。|にわとりのたまごをあつめます。|Telur ayam dikumpulkan.
+養鶏|ようけい|yōkei|peternakan ayam|n|Memelihara ayam untuk telur atau daging.|鶏を飼うこと|kegiatan memelihara ayam untuk telur dan daging|養鶏場で働いています。|ようけいじょうではたらいています。|Saya bekerja di peternakan ayam.
+牧場|ぼくじょう|bokujō|peternakan / padang ternak|n|Tempat memelihara sapi atau kuda.|牛や馬を飼う所|tempat luas untuk memelihara sapi, kuda, dan ternak lain|牧場は朝が早いです。|ぼくじょうはあさがはやいです。|Di peternakan, pagi dimulai sangat awal.
+牛舎|ぎゅうしゃ|gyūsha|kandang sapi|n|Bangunan tempat sapi dipelihara.|牛を飼う建物|bangunan tempat memelihara sapi|牛舎の掃除をします。|ぎゅうしゃのそうじをします。|Kandang sapi dibersihkan.
+えさ|えさ|esa|pakan|n|Makanan untuk hewan ternak.|動物の食べ物|makanan yang diberikan kepada hewan|朝六時にえさをやります。|あさろくじにえさをやります。|Pakan diberikan pukul enam pagi.
+飼料|しりょう|shiryō|pakan ternak (istilah teknis)|n|Pakan ternak dalam jumlah besar.|家畜のえさ|bahan makanan untuk hewan ternak|飼料の量を記録します。|しりょうのりょうをきろくします。|Jumlah pakan dicatat.
+給餌|きゅうじ|kyūji|pemberian pakan|n|Memberi pakan kepada ternak.|えさをあたえること|kegiatan memberi pakan kepada hewan|給餌は一日三回です。|きゅうじはいちにちさんかいです。|Pemberian pakan tiga kali sehari.
+給水|きゅうすい|kyūsui|pemberian minum|n|Memberi air minum kepada ternak.|水をあたえること|memberi air minum kepada hewan ternak|給水器が動いているか確認します。|きゅうすいきがうごいているかかくにんします。|Diperiksa apakah alat minum berfungsi.
+搾乳|さくにゅう|sakunyū|pemerahan susu|n|Memerah susu sapi.|牛の乳をしぼること|kegiatan memerah susu sapi|朝五時に搾乳をします。|あさごじにさくにゅうをします。|Pemerahan susu pukul lima pagi.
+ふん尿|ふんにょう|funnyō|kotoran ternak|n|Kotoran dan air seni hewan.|動物のふんとおしっこ|kotoran dan urine hewan ternak|ふん尿を片付けます。|ふんにょうをかたづけます。|Kotoran ternak dibersihkan.
+敷料|しきりょう|shikiryō|alas kandang|n|Jerami atau serbuk kayu untuk alas kandang.|家畜の床にしく物|bahan alas kandang seperti jerami atau serbuk gergaji|新しい敷料を入れます。|あたらしいしきりょうをいれます。|Alas kandang baru dimasukkan.
+わら|わら|wara|jerami|n|Batang padi kering.|稲の茎を乾かした物|batang padi yang sudah dikeringkan|牛舎にわらをしきます。|ぎゅうしゃにわらをしきます。|Jerami dihamparkan di kandang sapi.
+健康観察|けんこうかんさつ|kenkō kansatsu|pengamatan kesehatan|n|Memeriksa kondisi hewan setiap hari.|動物の体調を見ること|mengamati kondisi kesehatan hewan setiap hari|毎日牛の健康観察をします。|まいにちうしのけんこうかんさつをします。|Setiap hari kesehatan sapi diamati.
+体温|たいおん|taion|suhu tubuh|n|Suhu tubuh hewan.|体の温度|suhu tubuh hewan|子牛の体温を測ります。|こうしのたいおんをはかります。|Suhu tubuh anak sapi diukur.
+子牛|こうし|kōshi|anak sapi|n|Sapi yang masih kecil.|生まれたばかりの牛|anak sapi yang masih kecil|子牛にミルクをあげます。|こうしにミルクをあげます。|Anak sapi diberi susu.
+出産|しゅっさん|shussan|melahirkan|n|Hewan melahirkan anak.|子どもを産むこと|proses hewan melahirkan anak|今夜、牛が出産しそうです。|こんや、うしがしゅっさんしそうです。|Malam ini sapinya sepertinya akan melahirkan.
+獣医|じゅうい|jūi|dokter hewan|n|Dokter yang merawat hewan.|動物の医者|dokter yang mengobati hewan|牛の調子が悪いので獣医を呼びます。|うしのちょうしがわるいのでじゅういをよびます。|Sapi sakit, jadi dokter hewan dipanggil.
+ワクチン|わくちん|wakuchin|vaksin|n|Obat pencegah penyakit untuk ternak.|病気を予防する薬|obat untuk mencegah penyakit menular|鶏にワクチンを打ちます。|にわとりにワクチンをうちます。|Ayam divaksin.
+感染症|かんせんしょう|kansenshō|penyakit menular|n|Penyakit yang menular antarhewan.|うつる病気|penyakit yang dapat menular dari satu hewan ke hewan lain|感染症を防ぐために消毒します。|かんせんしょうをふせぐためにしょうどくします。|Disinfeksi dilakukan untuk mencegah penyakit menular.
+防疫|ぼうえき|bōeki|pencegahan wabah|n|Mencegah masuknya penyakit menular.|伝染病を防ぐこと|upaya mencegah masuk dan menyebarnya wabah penyakit|農場に入る前に防疫をします。|のうじょうにはいるまえにぼうえきをします。|Sebelum masuk peternakan, dilakukan pencegahan wabah.
+消毒|しょうどく|shōdoku|disinfeksi|n|Membunuh kuman.|薬で菌を殺すこと|membunuh kuman dengan bahan disinfektan|長靴を消毒してから入ります。|ながぐつをしょうどくしてからはいります。|Sepatu bot didisinfeksi sebelum masuk.
+長靴|ながぐつ|nagagutsu|sepatu bot|n|Sepatu karet panjang untuk ladang dan kandang.|ゴムの長い靴|sepatu karet tinggi untuk bekerja di ladang dan kandang|牛舎では長靴をはきます。|ぎゅうしゃではながぐつをはきます。|Di kandang sapi memakai sepatu bot.
+作業着|さぎょうぎ|sagyōgi|baju kerja|n|Pakaian untuk bekerja.|仕事のときの服|pakaian khusus untuk bekerja|汚れてもいい作業着を着ます。|よごれてもいいさぎょうぎをきます。|Memakai baju kerja yang boleh kotor.
+熱中症|ねっちゅうしょう|necchūshō|sengatan panas|n|Gangguan kesehatan karena cuaca panas.|暑さで体調が悪くなること|gangguan kesehatan akibat panas saat bekerja di luar|ハウスの中は熱中症に注意します。|ハウスのなかはねっちゅうしょうにちゅういします。|Di dalam rumah plastik waspadai sengatan panas.
+天候|てんこう|tenkō|cuaca|n|Keadaan cuaca yang memengaruhi pertanian.|天気の様子|keadaan cuaca yang memengaruhi pekerjaan pertanian|天候によって作業を変えます。|てんこうによってさぎょうをかえます。|Pekerjaan disesuaikan dengan cuaca.
+霜|しも|shimo|embun beku|n|Embun beku yang merusak tanaman.|寒い朝にできる氷のつぶ|kristal es yang terbentuk pada pagi dingin dan bisa merusak tanaman|霜が降りそうなので苗をおおいます。|しもがおりそうなのでなえをおおいます。|Karena akan ada embun beku, bibit ditutup.
+台風|たいふう|taifū|taifun|n|Badai besar yang merusak tanaman dan bangunan.|強い風と雨の嵐|badai besar dengan angin kencang dan hujan lebat|台風の前にハウスを補強します。|たいふうのまえにハウスをほきょうします。|Sebelum taifun, rumah plastik diperkuat.
+JA|ジェイエイ|jei ei|koperasi pertanian Jepang|n|Koperasi pertanian (農協) tempat petani menjual hasil.|農業協同組合|organisasi koperasi pertanian yang membantu petani menjual hasil dan membeli bahan|野菜をJAに出荷します。|やさいをジェイエイにしゅっかします。|Sayur dikirim ke JA.
+直売所|ちょくばいじょ|chokubaijo|kios penjualan langsung|n|Tempat petani menjual hasil langsung ke pembeli.|農家が直接売る店|tempat petani menjual hasil panen langsung kepada konsumen|直売所でとれたての野菜を売ります。|ちょくばいじょでとれたてのやさいをうります。|Sayur segar dijual di kios penjualan langsung.
+作業日誌|さぎょうにっし|sagyō nisshi|jurnal kerja harian|n|Catatan pekerjaan harian di ladang.|毎日の作業を書く記録|catatan pekerjaan yang dilakukan setiap hari|作業日誌に農薬の量を書きます。|さぎょうにっしにのうやくのりょうをかきます。|Jumlah pestisida ditulis di jurnal kerja.
+豚舎|とんしゃ|tonsha|kandang babi|n|Bangunan tempat babi dipelihara.|豚を飼う建物|bangunan tempat memelihara babi|豚舎の温度を確認します。|とんしゃのおんどをかくにんします。|Suhu kandang babi diperiksa.
+鶏舎|けいしゃ|keisha|kandang ayam|n|Bangunan tempat ayam dipelihara.|鶏を飼う建物|bangunan tempat memelihara ayam|鶏舎に入る前に手を洗います。|けいしゃにはいるまえにてをあらいます。|Sebelum masuk kandang ayam, cuci tangan.
+集卵|しゅうらん|shūran|pengumpulan telur|n|Mengumpulkan telur dari kandang.|卵を集めること|mengumpulkan telur ayam dari kandang|朝と午後に集卵をします。|あさとごごにしゅうらんをします。|Telur dikumpulkan pagi dan siang.

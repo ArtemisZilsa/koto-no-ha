@@ -1,0 +1,101 @@
+# 宿泊 — Perhotelan (100 kata)
+宿泊|しゅくはく|shukuhaku|menginap|n|Tinggal di hotel atau penginapan.|ホテルなどに泊まること|kegiatan tinggal sementara di hotel atau penginapan|お客様は三泊宿泊されます。|おきゃくさまはさんぱくしゅくはくされます。|Tamu menginap tiga malam.
+宿泊客|しゅくはくきゃく|shukuhakukyaku|tamu hotel|n|Orang yang menginap di hotel.|泊まっているお客様|orang yang menginap di hotel|宿泊客の名前を確認します。|しゅくはくきゃくのなまえをかくにんします。|Nama tamu hotel diperiksa.
+旅館|りょかん|ryokan|penginapan tradisional Jepang|n|Penginapan bergaya Jepang dengan tatami.|和風の宿|penginapan bergaya tradisional Jepang dengan kamar tatami|旅館で働いています。|りょかんではたらいています。|Saya bekerja di ryokan.
+フロント|ふろんと|furonto|resepsionis / front desk|n|Meja penerimaan tamu di hotel.|受付|meja penerimaan tamu untuk check-in, check-out, dan informasi|フロントでお客様を迎えます。|フロントでおきゃくさまをむかえます。|Tamu disambut di front desk.
+チェックイン|ちぇっくいん|chekkuin|check-in|n|Prosedur tamu saat datang ke hotel.|ホテルに着いて手続きすること|prosedur pendaftaran saat tamu tiba di hotel|チェックインは午後三時からです。|チェックインはごごさんじからです。|Check-in mulai pukul tiga sore.
+チェックアウト|ちぇっくあうと|chekkuauto|check-out|n|Prosedur tamu saat meninggalkan hotel.|ホテルを出るときの手続き|prosedur saat tamu meninggalkan hotel dan membayar|チェックアウトは十時までです。|チェックアウトはじゅうじまでです。|Check-out sampai pukul sepuluh.
+予約|よやく|yoyaku|reservasi|n|Memesan kamar sebelumnya.|前もって部屋をとること|pemesanan kamar sebelum tanggal menginap|ご予約のお名前をお願いします。|ごよやくのおなまえをおねがいします。|Mohon nama atas reservasinya.
+キャンセル|きゃんせる|kyanseru|pembatalan|n|Membatalkan reservasi.|予約をやめること|membatalkan reservasi yang sudah dibuat|キャンセルの電話がありました。|キャンセルのでんわがありました。|Ada telepon pembatalan.
+空室|くうしつ|kūshitsu|kamar kosong|n|Kamar yang belum dipesan.|あいている部屋|kamar yang masih tersedia|今日は空室がありません。|きょうはくうしつがありません。|Hari ini tidak ada kamar kosong.
+満室|まんしつ|manshitsu|penuh|n|Semua kamar sudah terisi.|部屋が全部うまっていること|keadaan seluruh kamar sudah terisi|週末は満室です。|しゅうまつはまんしつです。|Akhir pekan penuh.
+客室|きゃくしつ|kyakushitsu|kamar tamu|n|Kamar untuk tamu.|お客様が泊まる部屋|kamar yang digunakan tamu untuk menginap|客室の準備ができました。|きゃくしつのじゅんびができました。|Kamar tamu sudah siap.
+シングル|しんぐる|shinguru|kamar single|n|Kamar untuk satu orang.|一人用の部屋|kamar untuk satu orang|シングルを一部屋予約しました。|シングルをひとへやよやくしました。|Saya memesan satu kamar single.
+ツイン|ついん|tsuin|kamar twin|n|Kamar dengan dua tempat tidur.|ベッドが二つある部屋|kamar dengan dua tempat tidur terpisah|ツインのお部屋をご用意しました。|ツインのおへやをごよういしました。|Kami sudah menyiapkan kamar twin.
+和室|わしつ|washitsu|kamar bergaya Jepang|n|Kamar dengan lantai tatami.|たたみの部屋|kamar bergaya Jepang dengan lantai tatami|和室ではスリッパをぬぎます。|わしつではスリッパをぬぎます。|Di kamar bergaya Jepang, sandal dilepas.
+洋室|ようしつ|yōshitsu|kamar bergaya Barat|n|Kamar dengan tempat tidur dan lantai biasa.|ベッドがある西洋風の部屋|kamar bergaya Barat dengan tempat tidur|洋室と和室がございます。|ようしつとわしつがございます。|Tersedia kamar bergaya Barat dan Jepang.
+宿泊カード|しゅくはくカード|shukuhaku kādo|formulir registrasi tamu|n|Formulir yang diisi tamu saat check-in.|泊まる人が書く用紙|formulir berisi data tamu yang diisi saat check-in|宿泊カードにご記入ください。|しゅくはくカードにごきにゅうください。|Silakan isi formulir registrasi tamu.
+パスポート|ぱすぽーと|pasupōto|paspor|n|Dokumen identitas tamu asing.|外国人の身分証|dokumen identitas resmi untuk perjalanan luar negeri|外国のお客様のパスポートをコピーします。|がいこくのおきゃくさまのパスポートをコピーします。|Paspor tamu asing difotokopi.
+ルームキー|るーむきー|rūmu kī|kunci kamar|n|Kunci atau kartu kamar.|部屋のかぎ|kunci atau kartu untuk membuka kamar|こちらがルームキーです。|こちらがルームキーです。|Ini kunci kamar Anda.
+会計|かいけい|kaikei|pembayaran|n|Membayar tagihan.|お金をはらうこと|proses membayar tagihan|会計はフロントでお願いします。|かいけいはフロントでおねがいします。|Pembayaran di front desk.
+精算|せいさん|seisan|pelunasan tagihan|n|Menghitung dan membayar seluruh biaya.|料金を計算してはらうこと|menghitung dan melunasi seluruh biaya menginap|チェックアウトのときに精算します。|チェックアウトのときにせいさんします。|Tagihan dilunasi saat check-out.
+領収書|りょうしゅうしょ|ryōshūsho|kuitansi|n|Bukti pembayaran.|お金を受け取った証明|bukti tertulis bahwa pembayaran sudah diterima|領収書をお渡しします。|りょうしゅうしょをおわたしします。|Kuitansi kami serahkan.
+宿泊料金|しゅくはくりょうきん|shukuhaku ryōkin|tarif menginap|n|Harga menginap.|泊まるのにかかるお金|biaya yang harus dibayar untuk menginap|宿泊料金には朝食が含まれます。|しゅくはくりょうきんにはちょうしょくがふくまれます。|Tarif menginap sudah termasuk sarapan.
+朝食|ちょうしょく|chōshoku|sarapan|n|Makan pagi di hotel.|朝ごはん|makan pagi yang disediakan hotel|朝食は七時からです。|ちょうしょくはしちじからです。|Sarapan mulai pukul tujuh.
+夕食|ゆうしょく|yūshoku|makan malam|n|Makan malam di hotel atau ryokan.|夜ごはん|makan malam yang disediakan hotel atau ryokan|夕食はお部屋でお召し上がりいただけます。|ゆうしょくはおへやでおめしあがりいただけます。|Makan malam bisa dinikmati di kamar.
+バイキング|ばいきんぐ|baikingu|prasmanan|n|Makanan prasmanan ambil sendiri.|好きな物を自分で取る食事|gaya makan di mana tamu mengambil makanan sendiri|朝食はバイキングです。|ちょうしょくはバイキングです。|Sarapannya prasmanan.
+レストラン|れすとらん|resutoran|restoran|n|Restoran di dalam hotel.|食事をする店|tempat makan di dalam hotel|レストランは二階にございます。|レストランはにかいにございます。|Restoran ada di lantai dua.
+ベッドメイク|べっどめいく|beddo meiku|merapikan tempat tidur|n|Memasang seprai dan merapikan kasur.|ベッドを整えること|memasang seprai dan merapikan tempat tidur|ベッドメイクを十分で終わらせます。|ベッドメイクをじゅっぷんでおわらせます。|Merapikan tempat tidur selesai dalam 10 menit.
+客室清掃|きゃくしつせいそう|kyakushitsu seisō|pembersihan kamar|n|Membersihkan kamar setelah tamu pergi.|部屋をきれいにすること|membersihkan kamar tamu setelah digunakan|午前中に客室清掃をします。|ごぜんちゅうにきゃくしつせいそうをします。|Pembersihan kamar dilakukan pagi hari.
+ハウスキーピング|はうすきーぴんぐ|hausu kīpingu|housekeeping|n|Bagian yang membersihkan dan menyiapkan kamar.|客室を整える仕事|bagian yang bertugas membersihkan dan menyiapkan kamar|ハウスキーピングに連絡します。|ハウスキーピングにれんらくします。|Saya menghubungi housekeeping.
+シーツ|しーつ|shītsu|seprai|n|Kain penutup kasur.|ベッドにしく布|kain penutup kasur|シーツを新しいものに替えます。|シーツをあたらしいものにかえます。|Seprai diganti dengan yang baru.
+枕カバー|まくらカバー|makura kabā|sarung bantal|n|Kain pembungkus bantal.|枕をつつむ布|kain pembungkus bantal|枕カバーを交換します。|まくらカバーをこうかんします。|Sarung bantal diganti.
+タオル|たおる|taoru|handuk|n|Handuk untuk tamu.|体をふく布|kain untuk mengeringkan tubuh|タオルを二枚補充します。|タオルをにまいほじゅうします。|Ditambahkan dua handuk.
+アメニティ|あめにてぃ|ameniti|perlengkapan kamar|n|Sikat gigi, sampo, dan barang kecil untuk tamu.|客室に置く小物|perlengkapan kecil untuk tamu seperti sikat gigi dan sampo|アメニティをセットします。|アメニティをセットします。|Perlengkapan kamar ditata.
+浴衣|ゆかた|yukata|yukata|n|Pakaian katun tipis untuk tamu.|旅館などで着る薄い着物|pakaian katun tipis yang disediakan untuk tamu ryokan|浴衣のサイズをお選びください。|ゆかたのサイズをおえらびください。|Silakan pilih ukuran yukata.
+布団|ふとん|futon|futon|n|Kasur lipat gaya Jepang.|たたみにしく寝具|kasur lipat yang digelar di atas tatami|夕食の間に布団をしきます。|ゆうしょくのあいだにふとんをしきます。|Futon digelar saat tamu makan malam.
+たたみ|たたみ|tatami|tatami|n|Lantai anyaman jerami khas Jepang.|日本の床|lantai berupa anyaman jerami khas Jepang|たたみの上を掃除機でかけます。|たたみのうえをそうじきでかけます。|Tatami dibersihkan dengan penyedot debu.
+大浴場|だいよくじょう|daiyokujō|pemandian umum besar|n|Pemandian besar untuk tamu.|みんなで入る大きなお風呂|pemandian besar yang digunakan bersama oleh tamu|大浴場は夜十二時までです。|だいよくじょうはよるじゅうにじまでです。|Pemandian besar buka sampai pukul 12 malam.
+温泉|おんせん|onsen|pemandian air panas|n|Air panas alami dari bumi.|地下から出るお湯|pemandian dengan air panas alami dari dalam bumi|この旅館には温泉があります。|このりょかんにはおんせんがあります。|Ryokan ini punya onsen.
+露天風呂|ろてんぶろ|rotenburo|pemandian terbuka|n|Pemandian di luar ruangan.|外にあるお風呂|pemandian air panas di ruang terbuka|露天風呂から山が見えます。|ろてんぶろからやまがみえます。|Dari pemandian terbuka terlihat gunung.
+お客様|おきゃくさま|okyakusama|tamu (sopan)|n|Sebutan hormat untuk tamu.|客のていねいな言い方|sebutan hormat untuk tamu atau pelanggan|お客様をお部屋へご案内します。|おきゃくさまをおへやへごあんないします。|Saya mengantar tamu ke kamar.
+おもてなし|おもてなし|omotenashi|keramahan khas Jepang|n|Pelayanan tulus sepenuh hati.|心をこめたサービス|pelayanan dengan sepenuh hati dan memahami kebutuhan tamu|おもてなしの心を大切にしています。|おもてなしのこころをたいせつにしています。|Kami menjunjung semangat omotenashi.
+接客|せっきゃく|sekkyaku|melayani tamu|n|Berinteraksi dan melayani tamu.|お客様の相手をすること|melayani dan berinteraksi langsung dengan tamu|接客では笑顔が大切です。|せっきゃくではえがおがたいせつです。|Dalam melayani tamu, senyum itu penting.
+敬語|けいご|keigo|bahasa hormat|n|Bahasa sopan untuk berbicara dengan tamu.|ていねいな言葉づかい|bentuk bahasa sopan dan hormat dalam bahasa Jepang|お客様には敬語を使います。|おきゃくさまにはけいごをつかいます。|Kepada tamu memakai bahasa hormat.
+いらっしゃいませ|いらっしゃいませ|irasshaimase|selamat datang|x|Salam saat tamu datang.|お客様を迎えるあいさつ|ucapan selamat datang kepada tamu|「いらっしゃいませ」と笑顔で言います。|「いらっしゃいませ」とえがおでいいます。|Kami mengucapkan "irasshaimase" sambil tersenyum.
+かしこまりました|かしこまりました|kashikomarimashita|baik, saya mengerti|x|Ungkapan sopan menerima permintaan tamu.|わかりましたのていねいな言い方|ungkapan sopan untuk menyatakan menerima permintaan|「かしこまりました。すぐにお持ちします。」|「かしこまりました。すぐにおもちします。」|"Baik, segera saya bawakan."
+少々お待ちください|しょうしょうおまちください|shōshō omachi kudasai|mohon tunggu sebentar|x|Ungkapan sopan meminta tamu menunggu.|少し待ってくださいのていねいな言い方|ungkapan sopan untuk meminta tamu menunggu sebentar|少々お待ちください。確認いたします。|しょうしょうおまちください。かくにんいたします。|Mohon tunggu sebentar, akan saya periksa.
+申し訳ございません|もうしわけございません|mōshiwake gozaimasen|mohon maaf|x|Permintaan maaf yang sangat sopan.|すみませんのとてもていねいな言い方|ungkapan permintaan maaf yang sangat sopan|お待たせして申し訳ございません。|おまたせしてもうしわけございません。|Mohon maaf telah membuat Anda menunggu.
+案内|あんない|annai|memandu / informasi|n|Mengantar atau memberi informasi.|場所などを教えること|mengantar tamu atau memberi informasi|お部屋までご案内します。|おへやまでごあんないします。|Saya antar sampai ke kamar.
+荷物|にもつ|nimotsu|barang bawaan|n|Koper dan tas tamu.|お客様のかばんなど|koper dan tas milik tamu|お荷物をお持ちします。|おにもつをおもちします。|Saya bawakan barang Anda.
+ベルスタッフ|べるすたっふ|beru sutaffu|bellboy|n|Petugas pembawa barang tamu.|荷物を運ぶ係|petugas yang membawa barang tamu dan mengantar ke kamar|ベルスタッフが荷物を運びます。|ベルスタッフがにもつをはこびます。|Bellboy membawa barang.
+クローク|くろーく|kurōku|tempat penitipan barang|n|Tempat menitipkan barang atau mantel.|荷物を預かる所|tempat untuk menitipkan barang atau mantel tamu|チェックインまで荷物をクロークで預かります。|チェックインまでにもつをクロークであずかります。|Barang dititipkan sampai check-in.
+預かる|あずかる|azukaru|menerima titipan|v|Menyimpan barang milik tamu sementara.|人の物を守っておく|menyimpan sementara barang milik orang lain|お荷物をお預かりします。|おにもつをおあずかりします。|Barang Anda kami simpan.
+貴重品|きちょうひん|kichōhin|barang berharga|n|Barang berharga seperti uang dan paspor.|大切な物|barang berharga seperti uang, perhiasan, dan paspor|貴重品は金庫に入れてください。|きちょうひんはきんこにいれてください。|Barang berharga silakan dimasukkan ke brankas.
+金庫|きんこ|kinko|brankas|n|Kotak penyimpan barang berharga di kamar.|大切な物をしまう箱|kotak terkunci untuk menyimpan barang berharga|客室に金庫がございます。|きゃくしつにきんこがございます。|Ada brankas di kamar.
+忘れ物|わすれもの|wasuremono|barang tertinggal|n|Barang yang tertinggal di kamar.|置いて忘れた物|barang milik tamu yang tertinggal|客室に忘れ物がありました。|きゃくしつにわすれものがありました。|Ada barang tertinggal di kamar.
+落とし物|おとしもの|otoshimono|barang hilang/jatuh|n|Barang yang dijatuhkan atau hilang.|落としてなくした物|barang yang jatuh atau hilang dan ditemukan|落とし物をフロントに届けます。|おとしものをフロントにとどけます。|Barang hilang diantar ke front desk.
+苦情|くじょう|kujō|keluhan|n|Keluhan dari tamu.|お客様の不満|keluhan atau ketidakpuasan dari tamu|お客様から苦情がありました。|おきゃくさまからくじょうがありました。|Ada keluhan dari tamu.
+要望|ようぼう|yōbō|permintaan|n|Permintaan khusus dari tamu.|お客様のしてほしいこと|permintaan atau keinginan khusus tamu|お客様の要望に応えます。|おきゃくさまのようぼうにこたえます。|Kami memenuhi permintaan tamu.
+モーニングコール|もーにんぐこーる|mōningu kōru|panggilan bangun pagi|n|Telepon untuk membangunkan tamu.|朝お客様を起こす電話|layanan telepon untuk membangunkan tamu pada jam tertentu|六時にモーニングコールをお願いします。|ろくじにモーニングコールをおねがいします。|Tolong bangunkan saya pukul enam.
+ルームサービス|るーむさーびす|rūmu sābisu|layanan kamar|n|Mengantar makanan ke kamar.|部屋に食事を届けるサービス|layanan mengantar makanan dan minuman ke kamar|ルームサービスのメニューです。|ルームサービスのメニューです。|Ini menu layanan kamar.
+送迎|そうげい|sōgei|antar-jemput|n|Layanan antar-jemput tamu.|お客様を送ったり迎えたりすること|layanan mengantar dan menjemput tamu|駅まで送迎バスがあります。|えきまでそうげいバスがあります。|Ada bus antar-jemput sampai stasiun.
+観光|かんこう|kankō|wisata|n|Berwisata ke tempat menarik.|名所を見に行くこと|kegiatan mengunjungi tempat wisata|観光の案内をします。|かんこうのあんないをします。|Saya memberi informasi wisata.
+インバウンド|いんばうんど|inbaundo|wisatawan asing|n|Wisatawan dari luar negeri yang datang ke Jepang.|外国から日本に来る旅行者|wisatawan mancanegara yang berkunjung ke Jepang|インバウンドのお客様が増えています。|インバウンドのおきゃくさまがふえています。|Tamu wisatawan asing bertambah.
+多言語|たげんご|tagengo|multibahasa|n|Menggunakan banyak bahasa.|たくさんの言葉|penggunaan berbagai bahasa|多言語の案内を用意しています。|たげんごのあんないをよういしています。|Kami menyediakan informasi multibahasa.
+館内|かんない|kannai|dalam gedung hotel|n|Di dalam hotel atau ryokan.|建物の中|di dalam area hotel atau penginapan|館内は禁煙です。|かんないはきんえんです。|Di dalam hotel dilarang merokok.
+禁煙|きんえん|kin'en|dilarang merokok|n|Tidak boleh merokok.|たばこを吸ってはいけないこと|larangan merokok|全室禁煙でございます。|ぜんしつきんえんでございます。|Semua kamar bebas rokok.
+喫煙所|きつえんじょ|kitsuenjo|area merokok|n|Tempat khusus merokok.|たばこを吸ってもいい場所|tempat khusus yang disediakan untuk merokok|喫煙所は一階の外にあります。|きつえんじょはいっかいのそとにあります。|Area merokok ada di luar lantai satu.
+非常口|ひじょうぐち|hijōguchi|pintu darurat|n|Pintu keluar saat darurat.|緊急のときの出口|pintu keluar yang digunakan saat keadaan darurat|非常口の場所を確認します。|ひじょうぐちのばしょをかくにんします。|Lokasi pintu darurat diperiksa.
+避難|ひなん|hinan|evakuasi|n|Menyelamatkan diri ke tempat aman.|安全な所へにげること|menyelamatkan diri ke tempat yang aman|地震のときはお客様の避難を誘導します。|じしんのときはおきゃくさまのひなんをゆうどうします。|Saat gempa, kami memandu evakuasi tamu.
+防災|ぼうさい|bōsai|penanggulangan bencana|n|Persiapan untuk mencegah dan menghadapi bencana.|災害を防ぐこと|upaya mencegah dan bersiap menghadapi bencana|防災訓練に参加します。|ぼうさいくんれんにさんかします。|Saya ikut latihan penanggulangan bencana.
+衛生|えいせい|eisei|kebersihan / higiene|n|Menjaga kebersihan demi kesehatan.|清潔にして病気を防ぐこと|menjaga kebersihan untuk mencegah penyakit|衛生に気をつけて掃除します。|えいせいにきをつけてそうじします。|Membersihkan dengan memperhatikan kebersihan.
+リネン|りねん|rinen|linen|n|Seprai, handuk, dan kain hotel.|シーツやタオルなどの布|kain-kain hotel seperti seprai, sarung bantal, dan handuk|使ったリネンを回収します。|つかったリネンをかいしゅうします。|Linen bekas pakai dikumpulkan.
+備品|びひん|bihin|perlengkapan / inventaris|n|Barang yang disediakan di kamar.|部屋にそなえてある物|barang dan perlengkapan yang tersedia di kamar|客室の備品をチェックします。|きゃくしつのびひんをチェックします。|Perlengkapan kamar dicek.
+ミニバー|みにばー|minibā|minibar|n|Minuman berbayar di kamar.|部屋の中の有料の飲み物|minuman dan makanan ringan berbayar di dalam kamar|ミニバーの料金を精算します。|ミニバーのりょうきんをせいさんします。|Tagihan minibar dilunasi.
+エアコン|えあこん|eakon|AC|n|Pendingin udara di kamar.|部屋の温度を調節する機械|alat pengatur suhu ruangan|エアコンの温度を調整します。|エアコンのおんどをちょうせいします。|Suhu AC disesuaikan.
+故障|こしょう|koshō|kerusakan|n|Peralatan kamar rusak.|機械がこわれること|keadaan alat rusak dan tidak berfungsi|テレビの故障を報告します。|テレビのこしょうをほうこくします。|Saya melaporkan TV rusak.
+点検|てんけん|tenken|pemeriksaan|n|Memeriksa kamar dan peralatan.|悪い所がないか調べること|memeriksa kondisi kamar dan peralatan|清掃のあと、部屋を点検します。|せいそうのあと、へやをてんけんします。|Setelah dibersihkan, kamar diperiksa.
+連泊|れんぱく|renpaku|menginap beberapa malam|n|Menginap berturut-turut lebih dari satu malam.|続けて何日も泊まること|menginap berturut-turut selama beberapa malam|連泊のお客様の部屋を整えます。|れんぱくのおきゃくさまのへやをととのえます。|Kamar tamu yang menginap beberapa malam dirapikan.
+一泊|いっぱく|ippaku|satu malam|n|Menginap satu malam.|一晩泊まること|menginap selama satu malam|一泊二食付きのプランです。|いっぱくにしょくつきのプランです。|Paket satu malam dengan dua kali makan.
+プラン|ぷらん|puran|paket|n|Paket menginap.|宿泊の料金とサービスの組み合わせ|paket kombinasi harga dan layanan menginap|朝食付きのプランを選びました。|ちょうしょくつきのプランをえらびました。|Saya memilih paket dengan sarapan.
+団体|だんたい|dantai|rombongan|n|Tamu dalam kelompok besar.|大勢のグループ|tamu yang datang dalam kelompok besar|今日は団体のお客様が来ます。|きょうはだんたいのおきゃくさまがきます。|Hari ini tamu rombongan datang.
+宴会|えんかい|enkai|jamuan / pesta|n|Pesta makan bersama di hotel.|みんなで食事をする会|acara makan bersama atau pesta di hotel|宴会場の準備をします。|えんかいじょうのじゅんびをします。|Ruang jamuan disiapkan.
+配膳|はいぜん|haizen|menyajikan makanan|n|Mengantar dan menata hidangan.|料理を並べて出すこと|mengantar dan menata hidangan untuk tamu|宴会で配膳をします。|えんかいではいぜんをします。|Saya menyajikan makanan di jamuan.
+下膳|げぜん|gezen|membereskan piring|n|Mengangkat piring setelah makan.|食べ終わった食器を下げること|membereskan piring dan alat makan setelah tamu selesai|お食事のあと下膳します。|おしょくじのあとげぜんします。|Setelah makan, piring dibereskan.
+仲居|なかい|nakai|pelayan ryokan|n|Pelayan kamar di ryokan.|旅館でお客様の世話をする人|pelayan di ryokan yang melayani tamu di kamar|仲居さんが夕食を運びます。|なかいさんがゆうしょくをはこびます。|Pelayan ryokan membawakan makan malam.
+女将|おかみ|okami|pemilik/pengelola ryokan (wanita)|n|Wanita pengelola ryokan.|旅館を取りしきる女性|wanita yang mengelola ryokan dan menyambut tamu|女将がお客様にあいさつします。|おかみがおきゃくさまにあいさつします。|Okami menyapa tamu.
+支配人|しはいにん|shihainin|manajer hotel|n|Pimpinan hotel.|ホテルの責任者|pimpinan yang bertanggung jawab atas hotel|支配人に報告します。|しはいにんにほうこくします。|Saya melapor kepada manajer.
+シフト|しふと|shifuto|shift kerja|n|Jadwal giliran kerja.|働く時間の割り当て|jadwal pembagian waktu kerja|来週のシフトが出ました。|らいしゅうのシフトがでました。|Jadwal shift minggu depan sudah keluar.
+夜勤|やきん|yakin|shift malam|n|Bekerja pada malam hari.|夜の勤務|giliran kerja pada malam hari|フロントの夜勤をしています。|フロントのやきんをしています。|Saya bertugas shift malam di front desk.
+引き継ぎ|ひきつぎ|hikitsugi|serah terima|n|Menyampaikan informasi ke petugas berikutnya.|次の人に仕事を伝えること|menyampaikan informasi pekerjaan ke petugas shift berikutnya|朝の引き継ぎをします。|あさのひきつぎをします。|Serah terima pagi dilakukan.
+身だしなみ|みだしなみ|midashinami|kerapian penampilan|n|Penampilan rapi saat bekerja.|服や髪を整えること|menjaga penampilan pakaian dan rambut tetap rapi|仕事の前に身だしなみを確認します。|しごとのまえにみだしなみをかくにんします。|Sebelum bekerja, kerapian penampilan dicek.
+笑顔|えがお|egao|senyum|n|Wajah tersenyum.|笑った顔|ekspresi wajah tersenyum|笑顔でお客様を迎えます。|えがおでおきゃくさまをむかえます。|Tamu disambut dengan senyum.
+お辞儀|おじぎ|ojigi|membungkuk hormat|n|Membungkukkan badan sebagai tanda hormat.|頭を下げるあいさつ|membungkukkan badan sebagai salam hormat|ていねいにお辞儀をします。|ていねいにおじぎをします。|Membungkuk dengan sopan.
+ご用意|ごようい|go-yōi|persiapan (sopan)|n|Bentuk sopan dari persiapan.|準備のていねいな言い方|bentuk sopan untuk menyiapkan sesuatu bagi tamu|お部屋のご用意ができました。|おへやのごよういができました。|Kamar Anda sudah siap.
+お見送り|おみおくり|omiokuri|mengantar kepergian tamu|n|Mengantar tamu yang pulang.|帰るお客様を送ること|mengantar tamu yang pulang sampai pintu|玄関でお見送りします。|げんかんでおみおくりします。|Tamu diantar sampai pintu depan.
+玄関|げんかん|genkan|pintu masuk|n|Pintu masuk hotel atau ryokan.|建物の入口|area pintu masuk bangunan|玄関で靴をぬぎます。|げんかんでくつをぬぎます。|Sepatu dilepas di pintu masuk.
+ロビー|ろびー|robī|lobi|n|Ruang tunggu dekat pintu masuk.|入口の近くの広い所|ruang luas di dekat pintu masuk untuk menunggu|ロビーでお待ちください。|ロビーでおまちください。|Silakan menunggu di lobi.
+クレジットカード|くれじっとかーど|kurejitto kādo|kartu kredit|n|Kartu untuk pembayaran.|お金をはらうカード|kartu untuk melakukan pembayaran|クレジットカードはお使いになれます。|クレジットカードはおつかいになれます。|Kartu kredit bisa digunakan.
+アレルギー|あれるぎー|arerugī|alergi|n|Reaksi tubuh terhadap makanan tertentu.|特定の食べ物で体が悪くなること|reaksi tubuh yang tidak normal terhadap makanan tertentu|食べ物のアレルギーはございますか。|たべもののアレルギーはございますか。|Apakah Anda punya alergi makanan?
+騒音|そうおん|sōon|kebisingan|n|Suara keras yang mengganggu tamu.|うるさい音|suara keras yang mengganggu|隣の部屋の騒音の苦情がありました。|となりのへやのそうおんのくじょうがありました。|Ada keluhan kebisingan dari kamar sebelah.
