@@ -1,0 +1,101 @@
+# 自動車整備 — Perawatan Otomotif (100 kata)
+整備|せいび|seibi|perawatan / servis|n|Memeriksa dan memperbaiki kendaraan agar aman.|車を点検して直すこと|kegiatan memeriksa, merawat, dan memperbaiki kendaraan|この車の整備は明日終わります。|このくるまのせいびはあしたおわります。|Servis mobil ini selesai besok.
+整備士|せいびし|seibishi|mekanik|n|Orang yang memperbaiki dan merawat mobil.|車の整備をする人|teknisi bersertifikat yang merawat dan memperbaiki kendaraan|自動車整備士になりたいです。|じどうしゃせいびしになりたいです。|Saya ingin menjadi mekanik mobil.
+整備工場|せいびこうじょう|seibi kōjō|bengkel|n|Tempat memperbaiki mobil.|車を直す工場|tempat untuk memeriksa dan memperbaiki kendaraan|車を整備工場に持って行きます。|くるまをせいびこうじょうにもっていきます。|Mobil dibawa ke bengkel.
+車検|しゃけん|shaken|inspeksi wajib kendaraan|n|Pemeriksaan kendaraan wajib berkala di Jepang.|国が決めた車の検査|pemeriksaan kelayakan kendaraan yang diwajibkan secara berkala di Jepang|この車は来月車検です。|このくるまはらいげつしゃけんです。|Mobil ini inspeksi wajib bulan depan.
+点検|てんけん|tenken|pemeriksaan|n|Memeriksa kondisi bagian mobil.|悪い所がないか調べること|memeriksa kondisi bagian-bagian kendaraan|ブレーキを点検します。|ブレーキをてんけんします。|Rem diperiksa.
+定期点検|ていきてんけん|teiki tenken|pemeriksaan berkala|n|Pemeriksaan rutin setiap periode tertentu.|決まった期間ごとの点検|pemeriksaan kendaraan secara rutin sesuai jadwal|十二か月の定期点検をします。|じゅうにかげつのていきてんけんをします。|Dilakukan pemeriksaan berkala 12 bulan.
+日常点検|にちじょうてんけん|nichijō tenken|pemeriksaan harian|n|Pemeriksaan sederhana sebelum berkendara.|運転の前に毎日する点検|pemeriksaan sederhana yang dilakukan sebelum berkendara|日常点検でタイヤの空気を見ます。|にちじょうてんけんでタイヤのくうきをみます。|Pada pemeriksaan harian, tekanan ban dilihat.
+故障|こしょう|koshō|kerusakan|n|Bagian mobil rusak dan tidak berfungsi.|こわれて動かないこと|keadaan bagian kendaraan rusak dan tidak berfungsi|エンジンが故障しました。|エンジンがこしょうしました。|Mesinnya rusak.
+修理|しゅうり|shūri|perbaikan|n|Memperbaiki bagian yang rusak.|こわれた所を直すこと|memperbaiki bagian kendaraan yang rusak|修理に三日かかります。|しゅうりにみっかかかります。|Perbaikannya memakan tiga hari.
+交換|こうかん|kōkan|penggantian|n|Mengganti suku cadang lama dengan yang baru.|新しい物と取りかえること|mengganti suku cadang lama atau rusak dengan yang baru|ワイパーを交換します。|ワイパーをこうかんします。|Wiper diganti.
+部品|ぶひん|buhin|suku cadang|n|Bagian-bagian mobil.|車を作っている一つ一つの物|komponen-komponen yang membentuk kendaraan|部品を注文します。|ぶひんをちゅうもんします。|Suku cadang dipesan.
+純正部品|じゅんせいぶひん|junsei buhin|suku cadang asli|n|Suku cadang resmi dari pabrik mobil.|メーカーが作った部品|suku cadang resmi buatan pabrikan kendaraan|純正部品を使って修理します。|じゅんせいぶひんをつかってしゅうりします。|Perbaikan memakai suku cadang asli.
+エンジン|えんじん|enjin|mesin|n|Mesin penggerak mobil.|車を動かす機械|mesin yang menghasilkan tenaga untuk menggerakkan kendaraan|エンジンをかけてください。|エンジンをかけてください。|Tolong nyalakan mesinnya.
+エンジンオイル|えんじんおいる|enjin oiru|oli mesin|n|Oli pelumas mesin.|エンジンの中の油|oli untuk melumasi dan mendinginkan bagian dalam mesin|エンジンオイルを交換します。|エンジンオイルをこうかんします。|Oli mesin diganti.
+オイルフィルター|おいるふぃるたー|oiru firutā|filter oli|n|Penyaring kotoran pada oli mesin.|オイルの汚れをこす部品|komponen penyaring kotoran dalam oli mesin|オイルフィルターも一緒に替えます。|オイルフィルターもいっしょにかえます。|Filter oli juga diganti bersamaan.
+エアクリーナー|えあくりーなー|ea kurīnā|saringan udara|n|Penyaring udara yang masuk ke mesin.|エンジンに入る空気をきれいにする部品|komponen yang menyaring debu dari udara yang masuk ke mesin|エアクリーナーが汚れています。|エアクリーナーがよごれています。|Saringan udaranya kotor.
+冷却水|れいきゃくすい|reikyakusui|air pendingin (coolant)|n|Cairan untuk mendinginkan mesin.|エンジンを冷やす水|cairan yang bersirkulasi untuk mendinginkan mesin|冷却水の量を確認します。|れいきゃくすいのりょうをかくにんします。|Jumlah air pendingin diperiksa.
+ラジエーター|らじえーたー|rajiētā|radiator|n|Komponen untuk mendinginkan air pendingin.|冷却水を冷やす部品|komponen yang mendinginkan air pendingin mesin|ラジエーターから水が漏れています。|ラジエーターからみずがもれています。|Air bocor dari radiator.
+オーバーヒート|おーばーひーと|ōbāhīto|mesin terlalu panas|n|Keadaan mesin terlalu panas.|エンジンが熱くなりすぎること|keadaan mesin terlalu panas sehingga bisa rusak|冷却水が少ないとオーバーヒートします。|れいきゃくすいがすくないとオーバーヒートします。|Jika air pendingin sedikit, mesin jadi terlalu panas.
+バッテリー|ばってりー|batterī|aki|n|Sumber listrik mobil.|電気をためる部品|komponen penyimpan listrik untuk menyalakan mesin dan peralatan|バッテリーが上がりました。|バッテリーがあがりました。|Akinya soak.
+スパークプラグ|すぱーくぷらぐ|supāku puragu|busi|n|Komponen pemercik api di mesin bensin.|火花を出す部品|komponen yang memercikkan api untuk membakar bahan bakar|スパークプラグを点検します。|スパークプラグをてんけんします。|Busi diperiksa.
+ブレーキ|ぶれーき|burēki|rem|n|Sistem untuk menghentikan mobil.|車を止める装置|sistem untuk memperlambat dan menghentikan kendaraan|ブレーキの効きが悪いです。|ブレーキのききがわるいです。|Remnya kurang pakem.
+ブレーキパッド|ぶれーきぱっど|burēki paddo|kampas rem|n|Bantalan gesek yang menjepit cakram rem.|ディスクをはさんで止める部品|bantalan gesek yang menjepit cakram untuk mengerem|ブレーキパッドがすり減っています。|ブレーキパッドがすりへっています。|Kampas remnya sudah aus.
+ブレーキフルード|ぶれーきふるーど|burēki furūdo|minyak rem|n|Cairan yang meneruskan tekanan rem.|ブレーキの力を伝える液|cairan hidrolik yang meneruskan tekanan dari pedal ke rem|ブレーキフルードを交換します。|ブレーキフルードをこうかんします。|Minyak rem diganti.
+ディスク|でぃすく|disuku|cakram rem|n|Piringan logam yang berputar bersama roda.|タイヤと回る円い板|piringan logam yang berputar bersama roda dan dijepit kampas rem|ディスクに傷があります。|ディスクにきずがあります。|Ada goresan di cakram rem.
+タイヤ|たいや|taiya|ban|n|Ban karet mobil.|車のゴムの輪|ban karet yang bersentuhan langsung dengan jalan|タイヤの溝を測ります。|タイヤのみぞをはかります。|Kedalaman alur ban diukur.
+空気圧|くうきあつ|kūkiatsu|tekanan angin|n|Tekanan udara di dalam ban.|タイヤの中の空気の強さ|besarnya tekanan udara di dalam ban|タイヤの空気圧を調整します。|タイヤのくうきあつをちょうせいします。|Tekanan angin ban disesuaikan.
+パンク|ぱんく|panku|ban bocor|n|Ban bocor dan kempis.|タイヤに穴があいて空気が抜けること|keadaan ban bocor sehingga udaranya keluar|釘を踏んでパンクしました。|くぎをふんでパンクしました。|Ban bocor karena menginjak paku.
+ホイール|ほいーる|hoīru|velg|n|Pelek tempat ban dipasang.|タイヤをはめる金属の輪|pelek logam tempat ban dipasang|ホイールのナットを締めます。|ホイールのナットをしめます。|Mur velg dikencangkan.
+タイヤローテーション|たいやろーてーしょん|taiya rōtēshon|rotasi ban|n|Menukar posisi ban agar aus merata.|タイヤの位置を入れかえること|menukar posisi ban depan dan belakang agar keausan merata|五千キロごとにタイヤローテーションをします。|ごせんキロごとにタイヤローテーションをします。|Rotasi ban dilakukan setiap 5.000 km.
+ジャッキ|じゃっき|jakki|dongkrak|n|Alat untuk mengangkat mobil.|車を持ち上げる道具|alat untuk mengangkat kendaraan|ジャッキで車を上げます。|ジャッキでくるまをあげます。|Mobil diangkat dengan dongkrak.
+リフト|りふと|rifuto|lift mobil|n|Mesin untuk mengangkat mobil di bengkel.|車を高く上げる機械|alat pengangkat kendaraan di bengkel agar bisa bekerja di bawahnya|リフトで車を上げて下を見ます。|リフトでくるまをあげてしたをみます。|Mobil diangkat dengan lift untuk melihat bagian bawah.
+ウマ|うま|uma|penyangga mobil (jack stand)|n|Penyangga untuk menahan mobil yang sudah diangkat.|上げた車を支える台|penyangga untuk menahan kendaraan yang sudah didongkrak|ジャッキで上げたらウマをかけます。|ジャッキであげたらウマをかけます。|Setelah didongkrak, pasang penyangga.
+輪止め|わどめ|wadome|ganjal roda|n|Penahan agar roda tidak bergerak.|タイヤが動かないように止める物|penahan yang dipasang di roda agar kendaraan tidak bergerak|作業の前に輪止めをします。|さぎょうのまえにわどめをします。|Sebelum bekerja, pasang ganjal roda.
+トルクレンチ|とるくれんち|toruku renchi|kunci torsi|n|Kunci untuk mengencangkan dengan kekuatan tertentu.|決まった力で締める工具|kunci untuk mengencangkan baut sesuai torsi yang ditentukan|トルクレンチでホイールナットを締めます。|トルクレンチでホイールナットをしめます。|Mur roda dikencangkan dengan kunci torsi.
+レンチ|れんち|renchi|kunci|n|Alat untuk memutar baut dan mur.|ボルトを回す工具|alat untuk memutar baut dan mur|十ミリのレンチを取ってください。|じゅうミリのレンチをとってください。|Tolong ambilkan kunci 10 mm.
+ソケット|そけっと|soketto|kunci sok|n|Mata kunci berbentuk silinder.|レンチの先につける部品|mata kunci berbentuk silinder yang dipasang pada gagang|ソケットのサイズを選びます。|ソケットのサイズをえらびます。|Ukuran kunci sok dipilih.
+インパクトレンチ|いんぱくとれんち|inpakuto renchi|kunci pneumatik|n|Kunci bertenaga udara untuk membuka mur roda.|空気の力でナットを回す工具|kunci bertenaga udara atau listrik untuk membuka dan memasang mur dengan cepat|インパクトレンチでタイヤを外します。|インパクトレンチでタイヤをはずします。|Ban dilepas dengan kunci pneumatik.
+テスター|てすたー|tesutā|tester / multimeter|n|Alat ukur listrik.|電気を測る道具|alat untuk mengukur tegangan, arus, dan hambatan listrik|テスターでバッテリーの電圧を測ります。|テスターでバッテリーのでんあつをはかります。|Tegangan aki diukur dengan tester.
+電圧|でんあつ|den'atsu|tegangan listrik|n|Besarnya tekanan listrik (volt).|電気の強さ|besarnya beda potensial listrik dalam satuan volt|バッテリーの電圧が低いです。|バッテリーのでんあつがひくいです。|Tegangan akinya rendah.
+診断|しんだん|shindan|diagnosis|n|Mencari penyebab kerusakan.|悪い所の原因を調べること|mencari penyebab kerusakan kendaraan|故障の原因を診断します。|こしょうのげんいんをしんだんします。|Penyebab kerusakan didiagnosis.
+スキャンツール|すきゃんつーる|sukyan tsūru|alat pemindai (scan tool)|n|Alat untuk membaca kode kerusakan dari komputer mobil.|車のコンピューターを読む機械|alat yang dihubungkan ke komputer mobil untuk membaca kode kerusakan|スキャンツールでエラーを確認します。|スキャンツールでエラーをかくにんします。|Kode error dicek dengan alat pemindai.
+警告灯|けいこくとう|keikokutō|lampu peringatan|n|Lampu di dasbor yang menandakan masalah.|異常を知らせるランプ|lampu di panel instrumen yang menyala saat ada masalah|エンジンの警告灯がつきました。|エンジンのけいこくとうがつきました。|Lampu peringatan mesin menyala.
+異音|いおん|ion|suara aneh|n|Suara tidak normal dari mobil.|いつもと違う音|suara yang tidak biasa dari kendaraan yang menandakan masalah|走るとき異音がします。|はしるときいおんがします。|Saat berjalan ada suara aneh.
+振動|しんどう|shindō|getaran|n|Getaran tidak normal saat mobil berjalan.|ゆれること|getaran kendaraan yang bisa menandakan kerusakan|ハンドルに振動があります。|ハンドルにしんどうがあります。|Ada getaran di setir.
+オイル漏れ|オイルもれ|oiru more|kebocoran oli|n|Oli keluar dari mesin atau komponen.|オイルが外に出ること|keadaan oli merembes keluar dari mesin atau komponen|エンジンの下にオイル漏れがあります。|エンジンのしたにオイルもれがあります。|Ada kebocoran oli di bawah mesin.
+トランスミッション|とらんすみっしょん|toransumisshon|transmisi|n|Sistem pemindah gigi.|ギアを変える装置|sistem yang mengubah dan meneruskan tenaga mesin ke roda|トランスミッションのオイルを見ます。|トランスミッションのオイルをみます。|Oli transmisi diperiksa.
+クラッチ|くらっち|kuratchi|kopling|n|Komponen yang menyambung dan memutus tenaga mesin.|エンジンの力をつないだり切ったりする部品|komponen yang menghubungkan dan memutus tenaga mesin ke transmisi|クラッチが滑っています。|クラッチがすべっています。|Koplingnya selip.
+サスペンション|さすぺんしょん|sasupenshon|suspensi|n|Sistem peredam guncangan mobil.|車のゆれをおさえる装置|sistem pegas dan peredam yang menyerap guncangan jalan|サスペンションから音がします。|サスペンションからおとがします。|Ada suara dari suspensi.
+ショックアブソーバー|しょっくあぶそーばー|shokku abusōbā|shock absorber|n|Peredam kejut pada suspensi.|ゆれを小さくする部品|komponen peredam yang mengurangi guncangan pada suspensi|ショックアブソーバーを交換します。|ショックアブソーバーをこうかんします。|Shock absorber diganti.
+ステアリング|すてありんぐ|sutearingu|sistem kemudi|n|Sistem untuk membelokkan mobil.|車の向きを変える装置|sistem untuk mengarahkan dan membelokkan kendaraan|ステアリングが重いです。|ステアリングがおもいです。|Kemudinya berat.
+ハンドル|はんどる|handoru|setir|n|Roda kemudi yang dipegang pengemudi.|運転手がにぎって回す輪|roda kemudi yang diputar pengemudi|ハンドルをまっすぐにしてください。|ハンドルをまっすぐにしてください。|Tolong luruskan setirnya.
+アライメント|あらいめんと|araimento|spooring / keselarasan roda|n|Penyetelan sudut roda.|タイヤの角度の調整|penyetelan sudut roda agar kendaraan berjalan lurus|アライメントを調整します。|アライメントをちょうせいします。|Spooring disetel.
+マフラー|まふらー|mafurā|knalpot|n|Saluran pembuangan gas mesin.|排気ガスを出す管|saluran yang mengeluarkan gas buang dan meredam suara mesin|マフラーに穴があいています。|マフラーにあながあいています。|Knalpotnya berlubang.
+排気ガス|はいきガス|haiki gasu|gas buang|n|Gas sisa pembakaran mesin.|エンジンから出るガス|gas sisa pembakaran yang keluar dari mesin|車検で排気ガスを測ります。|しゃけんではいきガスをはかります。|Gas buang diukur saat inspeksi wajib.
+燃料|ねんりょう|nenryō|bahan bakar|n|Bensin atau solar.|ガソリンや軽油|bahan bakar kendaraan seperti bensin atau solar|燃料が少ないです。|ねんりょうがすくないです。|Bahan bakarnya sedikit.
+ガソリン|がそりん|gasorin|bensin|n|Bahan bakar mobil bensin.|車の燃料|bahan bakar cair untuk mesin bensin|ガソリンは火に注意してください。|ガソリンはひにちゅういしてください。|Waspadai api di dekat bensin.
+軽油|けいゆ|keiyu|solar|n|Bahan bakar mesin diesel.|ディーゼル車の燃料|bahan bakar untuk mesin diesel|トラックに軽油を入れます。|トラックにけいゆをいれます。|Truk diisi solar.
+ベルト|べると|beruto|sabuk mesin (V-belt)|n|Sabuk karet penggerak komponen mesin.|部品を回すゴムの帯|sabuk karet yang menggerakkan komponen seperti alternator|ベルトにひびがあります。|ベルトにひびがあります。|Sabuk mesinnya retak.
+ワイパー|わいぱー|waipā|wiper|n|Penghapus air di kaca depan.|ガラスの雨をふく部品|penyeka air hujan pada kaca mobil|ワイパーのゴムが切れています。|ワイパーのゴムがきれています。|Karet wipernya putus.
+ヘッドライト|へっどらいと|heddoraito|lampu depan|n|Lampu besar di depan mobil.|車の前の明かり|lampu utama di bagian depan kendaraan|ヘッドライトの向きを調整します。|ヘッドライトのむきをちょうせいします。|Arah lampu depan disetel.
+ウインカー|ういんかー|uinkā|lampu sein|n|Lampu penanda belok.|曲がる方向を知らせるランプ|lampu yang berkedip untuk menandakan arah belok|ウインカーがつきません。|ウインカーがつきません。|Lampu seinnya tidak menyala.
+ヒューズ|ひゅーず|hyūzu|sekering|n|Pengaman arus listrik yang putus jika berlebih.|電気が流れすぎると切れる部品|komponen pengaman yang putus bila arus listrik berlebih|ヒューズが切れています。|ヒューズがきれています。|Sekeringnya putus.
+配線|はいせん|haisen|kabel kelistrikan|n|Jalur kabel listrik di mobil.|電気の線|jaringan kabel listrik di dalam kendaraan|配線がショートしています。|はいせんがショートしています。|Kabelnya korsleting.
+エアコン|えあこん|eakon|AC|n|Pendingin udara di dalam mobil.|車の中の温度を調整する装置|sistem pendingin dan pemanas udara kabin|エアコンから冷たい風が出ません。|エアコンからつめたいかぜがでません。|AC tidak mengeluarkan angin dingin.
+ボディ|ぼでぃ|bodi|bodi mobil|n|Badan luar mobil.|車の外側|bagian badan luar kendaraan|ボディに傷があります。|ボディにきずがあります。|Ada goresan di bodi.
+板金|ばんきん|bankin|ketok magic / perbaikan bodi|n|Memperbaiki bodi yang penyok.|へこんだボディを直すこと|memperbaiki bodi kendaraan yang penyok|ドアのへこみを板金で直します。|ドアのへこみをばんきんでなおします。|Pintu yang penyok diperbaiki dengan ketok bodi.
+へこみ|へこみ|hekomi|penyok|n|Bagian bodi yang masuk ke dalam.|表面が中に入った所|bagian permukaan bodi yang melesak ke dalam|バンパーにへこみがあります。|バンパーにへこみがあります。|Ada penyok di bumper.
+塗装|とそう|tosō|pengecatan|n|Mengecat bodi mobil.|色をぬること|mengecat bodi kendaraan|修理のあとで塗装します。|しゅうりのあとでとそうします。|Setelah perbaikan, dicat.
+バンパー|ばんぱー|banpā|bumper|n|Pelindung depan dan belakang mobil.|車の前と後ろの部品|komponen pelindung di bagian depan dan belakang kendaraan|バンパーを外します。|バンパーをはずします。|Bumper dilepas.
+シャシー|しゃしー|shashī|sasis|n|Rangka dasar mobil.|車の骨組み|rangka dasar kendaraan tempat komponen dipasang|シャシーにさびがあります。|シャシーにさびがあります。|Ada karat di sasis.
+下回り|したまわり|shitamawari|bagian bawah mobil|n|Bagian bawah kendaraan.|車の下の部分|bagian bawah kendaraan seperti sasis, knalpot, dan suspensi|リフトで下回りを点検します。|リフトでしたまわりをてんけんします。|Bagian bawah mobil diperiksa dengan lift.
+ハイブリッド車|ハイブリッドしゃ|haiburiddo-sha|mobil hibrida|n|Mobil bertenaga mesin dan motor listrik.|エンジンとモーターで走る車|kendaraan yang digerakkan mesin bensin dan motor listrik|ハイブリッド車は高電圧に注意します。|ハイブリッドしゃはこうでんあつにちゅういします。|Pada mobil hibrida, waspadai tegangan tinggi.
+電気自動車|でんきじどうしゃ|denki jidōsha|mobil listrik|n|Mobil yang bergerak dengan listrik.|電気だけで走る車|kendaraan yang hanya digerakkan motor listrik dan baterai|電気自動車の整備を勉強しています。|でんきじどうしゃのせいびをべんきょうしています。|Saya sedang belajar servis mobil listrik.
+高電圧|こうでんあつ|kōden'atsu|tegangan tinggi|n|Listrik bertegangan tinggi yang berbahaya.|とても強い電気|listrik bertegangan tinggi yang berbahaya bagi tubuh|高電圧の部品にさわらないでください。|こうでんあつのぶひんにさわらないでください。|Jangan sentuh komponen tegangan tinggi.
+走行距離|そうこうきょり|sōkō kyori|jarak tempuh|n|Jumlah kilometer yang sudah ditempuh mobil.|車が走った長さ|total jarak yang sudah ditempuh kendaraan|走行距離が十万キロを超えました。|そうこうきょりがじゅうまんキロをこえました。|Jarak tempuhnya sudah lebih dari 100.000 km.
+見積もり|みつもり|mitsumori|perkiraan biaya|n|Perkiraan biaya perbaikan.|修理にかかるお金の計算|perhitungan perkiraan biaya perbaikan sebelum dikerjakan|お客様に見積もりを出します。|おきゃくさまにみつもりをだします。|Perkiraan biaya diberikan ke pelanggan.
+作業指示書|さぎょうしじしょ|sagyō shijisho|surat perintah kerja|n|Dokumen berisi pekerjaan yang harus dilakukan.|する作業を書いた紙|dokumen berisi daftar pekerjaan yang harus dilakukan pada kendaraan|作業指示書を見て作業します。|さぎょうしじしょをみてさぎょうします。|Bekerja sesuai surat perintah kerja.
+整備記録簿|せいびきろくぼ|seibi kirokubo|buku catatan servis|n|Catatan riwayat servis kendaraan.|整備したことを書く記録|catatan riwayat pemeriksaan dan perbaikan kendaraan|整備記録簿に記入します。|せいびきろくぼにきにゅうします。|Diisi di buku catatan servis.
+試運転|しうんてん|shiunten|uji jalan|n|Mengendarai mobil untuk mengecek hasil perbaikan.|ためしに走ること|menjalankan kendaraan untuk memeriksa hasil perbaikan|修理のあと試運転をします。|しゅうりのあとしうんてんをします。|Setelah perbaikan, dilakukan uji jalan.
+締め付け|しめつけ|shimetsuke|pengencangan|n|Mengencangkan baut atau mur.|ボルトをきつくすること|mengencangkan baut atau mur sesuai ketentuan|締め付けトルクを守ります。|しめつけトルクをまもります。|Torsi pengencangan dipatuhi.
+増し締め|ましじめ|mashijime|pengencangan ulang|n|Mengencangkan lagi setelah beberapa waktu.|もう一度締めること|mengencangkan ulang baut setelah beberapa waktu pemakaian|タイヤ交換のあと増し締めをします。|タイヤこうかんのあとましじめをします。|Setelah ganti ban, mur dikencangkan ulang.
+グリス|ぐりす|gurisu|gemuk (grease)|n|Pelumas kental untuk bagian bergerak.|ねばりのある油|pelumas kental untuk bagian yang bergerak dan bergesekan|ベアリングにグリスをぬります。|ベアリングにグリスをぬります。|Bearing diolesi gemuk.
+ベアリング|べありんぐ|bearingu|bantalan (bearing)|n|Komponen agar putaran lancar.|回転をなめらかにする部品|komponen yang membuat putaran poros menjadi lancar|ベアリングから音がします。|ベアリングからおとがします。|Ada suara dari bearing.
+ガスケット|がすけっと|gasuketto|paking|n|Penyekat agar cairan tidak bocor.|すき間をふさぐ部品|komponen penyekat di sambungan agar cairan atau gas tidak bocor|ガスケットを新しくします。|ガスケットをあたらしくします。|Paking diganti baru.
+劣化|れっか|rekka|penurunan kualitas / aus|n|Bahan menjadi rusak karena usia atau pemakaian.|古くなって悪くなること|penurunan kualitas bahan karena usia atau pemakaian|ゴムが劣化しています。|ゴムがれっかしています。|Karetnya sudah getas.
+摩耗|まもう|mamō|keausan|n|Bagian menipis karena gesekan.|こすれてへること|berkurangnya ketebalan bagian karena gesekan|タイヤの摩耗がひどいです。|タイヤのまもうがひどいです。|Keausan bannya parah.
+ひび|ひび|hibi|retak halus|n|Retakan kecil di permukaan.|表面の小さな割れ目|retakan kecil pada permukaan bahan|タイヤの横にひびがあります。|タイヤのよこにひびがあります。|Ada retakan halus di samping ban.
+廃油|はいゆ|haiyu|oli bekas|n|Oli lama yang sudah dikeluarkan.|使い終わった油|oli bekas pakai yang harus dibuang sesuai aturan|廃油は決められたタンクに入れます。|はいゆはきめられたタンクにいれます。|Oli bekas dimasukkan ke tangki yang ditentukan.
+洗車|せんしゃ|sensha|cuci mobil|n|Mencuci kendaraan.|車を洗うこと|mencuci kendaraan bagian luar dan dalam|納車の前に洗車します。|のうしゃのまえにせんしゃします。|Sebelum diserahkan, mobil dicuci.
+納車|のうしゃ|nōsha|penyerahan mobil|n|Menyerahkan mobil kepada pelanggan.|お客様に車を渡すこと|menyerahkan kendaraan kepada pelanggan setelah selesai|納車は午後四時です。|のうしゃはごごよじです。|Penyerahan mobil pukul empat sore.
+引き取り|ひきとり|hikitori|penjemputan / pengambilan mobil|n|Mengambil mobil dari pelanggan.|車を受け取りに行くこと|mengambil kendaraan pelanggan untuk diservis|お客様の家に引き取りに行きます。|おきゃくさまのいえにひきとりにいきます。|Saya mengambil mobil ke rumah pelanggan.
+代車|だいしゃ|daisha|mobil pengganti|n|Mobil pinjaman selama servis.|修理の間に貸す車|mobil pinjaman untuk pelanggan selama kendaraannya diperbaiki|修理の間、代車をお貸しします。|しゅうりのあいだ、だいしゃをおかしします。|Selama perbaikan, kami meminjamkan mobil pengganti.
+ナンバープレート|なんばーぷれーと|nanbā purēto|pelat nomor|n|Pelat nomor kendaraan.|車の番号の板|pelat berisi nomor registrasi kendaraan|ナンバープレートを確認します。|ナンバープレートをかくにんします。|Pelat nomor diperiksa.
+車体番号|しゃたいばんごう|shatai bangō|nomor rangka|n|Nomor identitas unik kendaraan.|車ごとの番号|nomor identitas unik yang tercetak di rangka kendaraan|書類の車体番号と合わせます。|しょるいのしゃたいばんごうとあわせます。|Dicocokkan dengan nomor rangka di dokumen.
+保安基準|ほあんきじゅん|hoan kijun|standar keselamatan kendaraan|n|Standar teknis yang harus dipenuhi mobil.|車が守る安全のルール|standar teknis keselamatan yang wajib dipenuhi kendaraan|保安基準に合っているか検査します。|ほあんきじゅんにあっているかけんさします。|Diperiksa apakah memenuhi standar keselamatan.
+ボンネット|ぼんねっと|bonnetto|kap mesin|n|Penutup ruang mesin.|エンジンの上のふた|penutup ruang mesin di bagian depan kendaraan|ボンネットを開けてください。|ボンネットをあけてください。|Tolong buka kap mesin.
+サイドブレーキ|さいどぶれーき|saido burēki|rem tangan|n|Rem untuk menahan mobil saat parkir.|止めた車を動かないようにするブレーキ|rem untuk menahan kendaraan agar tidak bergerak saat parkir|サイドブレーキを引いてください。|サイドブレーキをひいてください。|Tolong tarik rem tangannya.
+オートマ|おーとま|ōtoma|transmisi otomatis|n|Mobil dengan gigi otomatis.|自動でギアが変わる車|kendaraan dengan perpindahan gigi otomatis|この車はオートマです。|このくるまはオートマです。|Mobil ini bertransmisi otomatis.
+保護具|ほごぐ|hogogu|alat pelindung diri|n|Sarung tangan, kacamata, dan pelindung lain.|体を守る道具|perlengkapan pelindung tubuh saat bekerja|オイル交換のときも保護具をつけます。|オイルこうかんのときもほごぐをつけます。|Saat ganti oli pun kami memakai alat pelindung.
