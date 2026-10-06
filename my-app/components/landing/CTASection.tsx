@@ -23,7 +23,7 @@ export function CTASection() {
         Mulai Perjalananmu Hari Ini
       </h2>
       <p className="text-[15px] mb-9 relative" style={{ color: 'var(--on-ink-muted)' }}>
-        Materi dasar bisa diakses gratis. Fitur lanjutan akan menyusul.
+        Materi dasar gratis selamanya. Paket lengkap kapan pun kamu siap.
       </p>
       <Link
         href="/register"
