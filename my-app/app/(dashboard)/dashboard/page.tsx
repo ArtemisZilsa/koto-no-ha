@@ -156,7 +156,7 @@ export default async function DashboardPage() {
               color: 'var(--gold)',
               bg: 'var(--gold-bg)',
               href: '/ssw',
-              counts: '介護 · 300 kosakata',
+              counts: '16 bidang · 1.800 kosakata',
             },
           ].map(({ level, name, subtitle, bgKanji, color, bg, href, counts }, i) => (
             <Reveal key={level} delay={i * 70}>
@@ -196,7 +196,7 @@ export default async function DashboardPage() {
               Kosakata Kerja · SSW
             </Reveal>
             <p className="text-[12px] text-muted mt-0.5">
-              Istilah khusus (専門用語) tiap bidang Tokutei Ginou. Langsung mulai dari bidang yang tersedia.
+              Istilah khusus (専門用語) untuk 16 bidang Tokutei Ginou. Pilih bidang tujuanmu.
             </p>
           </div>
           <Link
@@ -238,7 +238,7 @@ export default async function DashboardPage() {
                       <div className="font-serif text-[15px] font-semibold text-ink leading-tight">{s.label}</div>
                       <div className="text-[12px] text-muted">{s.jp}</div>
                       <div className="mt-3 inline-flex items-center gap-1 text-[11px] font-medium" style={{ color: s.accent }}>
-                        300 kosakata
+                        {s.count} kosakata
                         <Icon name="chevron-right" className="w-3.5 h-3.5" />
                       </div>
                     </div>
@@ -247,7 +247,7 @@ export default async function DashboardPage() {
               </Reveal>
             ))}
 
-          {/* Kartu ajakan ke hub untuk bidang lain */}
+          {/* Kartu ajakan ke hub: panduan visa & syarat SSW */}
           <Reveal delay={sswSectors.filter((s) => s.status === 'active').length * 70}>
             <Link
               href="/ssw"
@@ -262,10 +262,10 @@ export default async function DashboardPage() {
                   <Icon name="layers" className="w-5 h-5" />
                 </span>
                 <div className="min-w-0">
-                  <div className="font-serif text-[15px] font-semibold text-ink leading-tight">14 Bidang SSW</div>
+                  <div className="font-serif text-[15px] font-semibold text-ink leading-tight">Panduan Visa SSW</div>
                   <div className="text-[12px] text-muted">特定技能 · Tokutei Ginou</div>
                   <div className="mt-3 inline-flex items-center gap-1 text-[11px] font-medium text-muted">
-                    Bidang lain segera hadir
+                    Syarat, tingkat, dan alur
                     <Icon name="chevron-right" className="w-3.5 h-3.5" />
                   </div>
                 </div>

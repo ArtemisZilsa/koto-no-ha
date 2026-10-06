@@ -26,7 +26,7 @@ Koto no Ha dibuat oleh Zilsa, orang Indonesia yang sudah 3 tahun tinggal dan bek
 
 ## Kerja di Jepang
 
-- [Tokutei Ginou (SSW)](${u('/ssw')}): hub bidang Specified Skilled Worker, termasuk 300 istilah khusus bidang kaigo.
+- [Tokutei Ginou (SSW)](${u('/ssw')}): hub bidang Specified Skilled Worker, dengan kosakata istilah khusus untuk 16 bidang (kaigo 300 kata, bidang lain 100 kata).
 - [Berita Jepang](${u('/berita')}): artikel berita Jepang untuk latihan membaca.
 
 ## Isi konten

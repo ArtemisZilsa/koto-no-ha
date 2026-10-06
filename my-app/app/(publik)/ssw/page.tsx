@@ -104,8 +104,7 @@ export default function SSWPage() {
           <section>
             <h2 className="font-serif text-[22px] md:text-[26px] font-semibold text-ink mb-1">Belajar Kosakata per Bidang</h2>
             <p className="text-[13px] text-muted mb-6">
-              Kosakata istilah khusus (専門用語) untuk tiap sektor SSW. Pilih bidang untuk mulai belajar
-              — bidang lain menyusul.
+              Kosakata istilah khusus (専門用語) untuk tiap sektor SSW. Pilih bidang untuk mulai belajar.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {sswSectors.map((s, i) => {
@@ -139,7 +138,7 @@ export default function SSWPage() {
                             className="text-[10px] font-medium px-2 py-0.5 rounded-full whitespace-nowrap"
                             style={{ background: s.accentBg, color: s.accent }}
                           >
-                            300 kosakata
+                            {s.count} kosakata
                           </span>
                           <Icon name="chevron-right" className="w-4 h-4" style={{ color: s.accent }} />
                         </>

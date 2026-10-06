@@ -1,0 +1,101 @@
+# 外食業 — Industri Restoran (100 kata)
+外食業|がいしょくぎょう|gaishokugyō|industri restoran|n|Bisnis restoran dan tempat makan.|レストランなどの仕事|industri yang menyajikan makanan di restoran, kafe, dan sejenisnya|外食業の特定技能で働いています。|がいしょくぎょうのとくていぎのうではたらいています。|Saya bekerja dengan SSW bidang restoran.
+飲食店|いんしょくてん|inshokuten|rumah makan|n|Tempat makan dan minum.|食べたり飲んだりする店|tempat usaha yang menyajikan makanan dan minuman|駅前の飲食店で働いています。|えきまえのいんしょくてんではたらいています。|Saya bekerja di rumah makan depan stasiun.
+店長|てんちょう|tenchō|manajer toko|n|Pimpinan restoran.|店の責任者|orang yang bertanggung jawab atas restoran|店長にシフトを相談します。|てんちょうにシフトをそうだんします。|Saya berkonsultasi soal shift dengan manajer.
+ホール|ほーる|hōru|area pelayanan (hall)|n|Area tamu duduk dan makan.|お客様が食事をする所|area tempat tamu duduk dan makan|今日はホールの担当です。|きょうはホールのたんとうです。|Hari ini saya bertugas di area pelayanan.
+キッチン|きっちん|kitchin|dapur|n|Tempat memasak.|料理を作る所|tempat memasak makanan di restoran|キッチンで料理を作ります。|キッチンでりょうりをつくります。|Saya memasak di dapur.
+厨房|ちゅうぼう|chūbō|dapur (istilah resmi)|n|Dapur restoran.|料理を作る部屋|ruang dapur di restoran|厨房は清潔にしてください。|ちゅうぼうはせいけつにしてください。|Jaga dapur tetap bersih.
+接客|せっきゃく|sekkyaku|melayani tamu|n|Melayani dan berinteraksi dengan tamu.|お客様の相手をすること|melayani dan berinteraksi langsung dengan tamu|接客では笑顔を大切にします。|せっきゃくではえがおをたいせつにします。|Dalam melayani tamu, senyum diutamakan.
+いらっしゃいませ|いらっしゃいませ|irasshaimase|selamat datang|x|Salam ketika tamu masuk.|お客様を迎えることば|ucapan sambutan ketika tamu masuk|元気に「いらっしゃいませ」と言います。|げんきに「いらっしゃいませ」といいます。|Mengucapkan "irasshaimase" dengan semangat.
+何名様ですか|なんめいさまですか|nanmei-sama desu ka|berapa orang?|x|Menanyakan jumlah tamu dengan sopan.|人数をていねいに聞くことば|pertanyaan sopan tentang jumlah tamu|「何名様ですか。」「二人です。」|「なんめいさまですか。」「ふたりです。」|"Berapa orang?" "Dua orang."
+案内|あんない|annai|mengantar ke meja|n|Mengantar tamu ke tempat duduk.|席へ連れて行くこと|mengantar tamu ke tempat duduk|お客様を窓の席に案内します。|おきゃくさまをまどのせきにあんないします。|Tamu diantar ke kursi dekat jendela.
+席|せき|seki|tempat duduk|n|Kursi atau meja tamu.|座る所|tempat duduk tamu|空いている席を確認します。|あいているせきをかくにんします。|Tempat duduk kosong diperiksa.
+カウンター|かうんたー|kauntā|konter|n|Meja panjang tempat tamu duduk di depan dapur.|横に長い台の席|meja panjang tempat tamu duduk menghadap dapur|カウンター席でもよろしいですか。|カウンターせきでもよろしいですか。|Apakah boleh di kursi konter?
+テーブル|てーぶる|tēburu|meja|n|Meja makan tamu.|食事をする台|meja makan untuk tamu|テーブルをふきます。|テーブルをふきます。|Meja dilap.
+メニュー|めにゅー|menyū|menu|n|Daftar makanan dan minuman.|料理の一覧|daftar makanan dan minuman beserta harganya|メニューをお持ちします。|メニューをおもちします。|Saya bawakan menunya.
+注文|ちゅうもん|chūmon|pesanan|n|Makanan yang dipesan tamu.|食べたい物をたのむこと|permintaan makanan atau minuman dari tamu|ご注文はお決まりですか。|ごちゅうもんはおきまりですか。|Apakah pesanannya sudah ditentukan?
+オーダー|おーだー|ōdā|pesanan (order)|n|Pesanan yang diteruskan ke dapur.|注文|pesanan tamu yang diteruskan ke dapur|オーダーをキッチンに通します。|オーダーをキッチンにとおします。|Pesanan diteruskan ke dapur.
+ハンディ|はんでぃ|handi|alat pencatat pesanan|n|Alat elektronik untuk memasukkan pesanan.|注文を入れる小さな機械|alat genggam elektronik untuk mencatat pesanan|ハンディで注文を入力します。|ハンディでちゅうもんをにゅうりょくします。|Pesanan dimasukkan dengan alat pencatat.
+復唱|ふくしょう|fukushō|mengulang pesanan|n|Mengulang pesanan untuk memastikan.|注文をくり返して確認すること|mengulang isi pesanan kepada tamu untuk konfirmasi|ご注文を復唱いたします。|ごちゅうもんをふくしょういたします。|Saya ulangi pesanan Anda.
+かしこまりました|かしこまりました|kashikomarimashita|baik, saya mengerti|x|Menerima permintaan tamu dengan sopan.|わかりましたのていねいな言い方|ungkapan sopan untuk menerima permintaan tamu|かしこまりました。少々お待ちください。|かしこまりました。しょうしょうおまちください。|Baik, mohon tunggu sebentar.
+お待たせしました|おまたせしました|omatase shimashita|maaf menunggu|x|Ucapan saat mengantar pesanan.|待たせたことをわびることば|ungkapan saat menyajikan pesanan setelah tamu menunggu|お待たせしました。ラーメンです。|おまたせしました。ラーメンです。|Maaf menunggu, ini ramennya.
+配膳|はいぜん|haizen|menyajikan|n|Mengantar makanan ke meja.|料理をテーブルに運ぶこと|mengantar dan menyajikan makanan ke meja tamu|料理を配膳します。|りょうりをはいぜんします。|Makanan disajikan.
+下げる|さげる|sageru|mengangkat (piring)|v|Mengangkat piring kosong dari meja.|食べ終わった皿を持っていく|mengangkat piring atau gelas kosong dari meja|お皿をお下げしてもよろしいですか。|おさらをおさげしてもよろしいですか。|Bolehkah piringnya saya angkat?
+バッシング|ばっしんぐ|basshingu|membersihkan meja|n|Mengangkat piring dan membersihkan meja.|テーブルを片付けること|mengangkat piring dan membersihkan meja setelah tamu pergi|お客様が帰ったらすぐバッシングします。|おきゃくさまがかえったらすぐバッシングします。|Setelah tamu pulang, meja segera dibersihkan.
+セッティング|せってぃんぐ|settingu|menata meja|n|Menyiapkan alat makan di meja.|テーブルの準備|menata alat makan dan perlengkapan di meja|次のお客様のためにセッティングします。|つぎのおきゃくさまのためにセッティングします。|Meja ditata untuk tamu berikutnya.
+おしぼり|おしぼり|oshibori|handuk basah|n|Handuk kecil basah untuk tamu.|手をふくぬれたタオル|handuk kecil basah untuk tamu membersihkan tangan|お水とおしぼりを出します。|おみずとおしぼりをだします。|Air dan handuk basah disajikan.
+取り皿|とりざら|torizara|piring kecil|n|Piring kecil untuk berbagi makanan.|料理を取り分ける小さい皿|piring kecil untuk mengambil makanan bersama|取り皿を三枚お持ちします。|とりざらをさんまいおもちします。|Saya bawakan tiga piring kecil.
+会計|かいけい|kaikei|pembayaran|n|Membayar di kasir.|お金をはらうこと|proses pembayaran tagihan|お会計はレジでお願いします。|おかいけいはレジでおねがいします。|Pembayaran di kasir.
+レジ|れじ|reji|kasir|n|Mesin atau tempat pembayaran.|お金をはらう所|mesin atau meja tempat pembayaran|レジでお金を数えます。|レジでおかねをかぞえます。|Uang dihitung di kasir.
+伝票|でんぴょう|denpyō|bon / nota pesanan|n|Kertas catatan pesanan.|注文を書いた紙|kertas berisi catatan pesanan dan harga|伝票をテーブルに置きます。|でんぴょうをテーブルにおきます。|Bon diletakkan di meja.
+お釣り|おつり|otsuri|uang kembalian|n|Kembalian uang.|返すお金|uang kembalian dari pembayaran|お釣りは三百円です。|おつりはさんびゃくえんです。|Kembaliannya 300 yen.
+キャッシュレス|きゃっしゅれす|kyasshuresu|pembayaran non-tunai|n|Bayar dengan kartu atau ponsel.|現金を使わない支払い|pembayaran tanpa uang tunai seperti kartu atau aplikasi|キャッシュレスでも払えます。|キャッシュレスでもはらえます。|Bisa juga bayar non-tunai.
+ありがとうございました|ありがとうございました|arigatō gozaimashita|terima kasih|x|Salam saat tamu pulang.|お客様が帰るときのことば|ucapan terima kasih saat tamu pulang|「ありがとうございました」と見送ります。|「ありがとうございました」とみおくります。|Tamu diantar pulang dengan ucapan terima kasih.
+予約|よやく|yoyaku|reservasi|n|Pemesanan tempat sebelumnya.|前もって席をとること|pemesanan meja sebelum datang|七時に四名の予約があります。|しちじによんめいのよやくがあります。|Ada reservasi empat orang pukul tujuh.
+満席|まんせき|manseki|penuh|n|Semua kursi terisi.|席が全部うまっていること|keadaan semua kursi sudah terisi|ただいま満席です。|ただいままんせきです。|Saat ini penuh.
+テイクアウト|ていくあうと|teikuauto|bawa pulang|n|Membeli makanan untuk dibawa pulang.|持ち帰り|membeli makanan untuk dimakan di luar restoran|テイクアウトもできます。|テイクアウトもできます。|Bisa juga dibawa pulang.
+デリバリー|でりばりー|deribarī|pesan antar|n|Mengantar makanan ke rumah.|料理を家に届けること|layanan mengantar makanan ke rumah pelanggan|デリバリーの注文が入りました。|デリバリーのちゅうもんがはいりました。|Ada pesanan antar.
+調理|ちょうり|chōri|memasak|n|Memasak makanan.|料理を作ること|mengolah dan memasak makanan|調理の前に手を洗います。|ちょうりのまえにてをあらいます。|Cuci tangan sebelum memasak.
+仕込み|しこみ|shikomi|persiapan bahan|n|Menyiapkan bahan sebelum restoran buka.|開店前の材料の準備|persiapan bahan makanan sebelum jam buka|朝は仕込みをします。|あさはしこみをします。|Pagi hari mempersiapkan bahan.
+下ごしらえ|したごしらえ|shitagoshirae|persiapan awal bahan|n|Mencuci, memotong, dan membumbui bahan.|材料の準備|persiapan awal bahan seperti mencuci, memotong, dan membumbui|野菜の下ごしらえをします。|やさいのしたごしらえをします。|Sayuran dipersiapkan.
+盛り付け|もりつけ|moritsuke|penataan hidangan|n|Menata makanan di piring.|料理を皿にきれいに並べること|menata makanan di piring agar terlihat menarik|写真のとおりに盛り付けます。|しゃしんのとおりにもりつけます。|Ditata sesuai foto.
+マニュアル|まにゅある|manyuaru|panduan kerja|n|Buku petunjuk cara kerja.|仕事のやり方を書いた本|buku panduan tentang cara kerja di restoran|マニュアルを見て覚えます。|マニュアルをみておぼえます。|Saya menghafal dengan melihat panduan.
+レシピ|れしぴ|reshipi|resep|n|Cara dan takaran membuat masakan.|料理の作り方|petunjuk bahan, takaran, dan cara memasak|レシピの量を守ります。|レシピのりょうをまもります。|Takaran resep dipatuhi.
+包丁|ほうちょう|hōchō|pisau dapur|n|Pisau untuk memasak.|料理に使うナイフ|pisau untuk memotong bahan masakan|包丁を使うときは集中します。|ほうちょうをつかうときはしゅうちゅうします。|Saat memakai pisau, harus fokus.
+まな板|まないた|manaita|talenan|n|Papan alas memotong.|材料を切る板|papan alas untuk memotong bahan|生肉用のまな板は赤です。|なまにくようのまないたはあかです。|Talenan untuk daging mentah berwarna merah.
+フライヤー|ふらいやー|furaiyā|mesin penggoreng|n|Mesin untuk menggoreng.|揚げ物をする機械|mesin berisi minyak panas untuk menggoreng|フライヤーで唐揚げを揚げます。|フライヤーでからあげをあげます。|Karaage digoreng dengan mesin penggoreng.
+鍋|なべ|nabe|panci|n|Panci untuk memasak.|料理に使う入れ物|panci untuk merebus atau memasak|鍋でスープを作ります。|なべでスープをつくります。|Sup dibuat dengan panci.
+フライパン|ふらいぱん|furaipan|wajan|n|Wajan untuk menumis.|炒める道具|wajan datar untuk menumis dan menggoreng|フライパンで野菜を炒めます。|フライパンでやさいをいためます。|Sayur ditumis dengan wajan.
+炒める|いためる|itameru|menumis|v|Memasak dengan sedikit minyak sambil diaduk.|油で混ぜながら加熱する|memasak dengan sedikit minyak sambil diaduk|強火で炒めます。|つよびでいためます。|Ditumis dengan api besar.
+茹でる|ゆでる|yuderu|merebus|v|Memasak di dalam air mendidih.|お湯で加熱する|memasak bahan dalam air mendidih|麺を三分茹でます。|めんをさんぷんゆでます。|Mi direbus tiga menit.
+火加減|ひかげん|hikagen|besar kecil api|n|Mengatur besar api.|火の強さ|pengaturan besar kecilnya api|火加減に注意してください。|ひかげんにちゅういしてください。|Perhatikan besar kecil apinya.
+強火|つよび|tsuyobi|api besar|n|Api yang besar.|強い火|nyala api yang besar|強火で一分焼きます。|つよびでいっぷんやきます。|Dipanggang satu menit dengan api besar.
+弱火|よわび|yowabi|api kecil|n|Api yang kecil.|弱い火|nyala api yang kecil|弱火で十分煮ます。|よわびでじゅっぷんにます。|Direbus 10 menit dengan api kecil.
+味見|あじみ|ajimi|mencicipi|n|Mencicipi rasa masakan.|味を確かめること|mencicipi untuk memeriksa rasa masakan|味見をしてから出します。|あじみをしてからだします。|Dicicipi dulu sebelum disajikan.
+食材|しょくざい|shokuzai|bahan makanan|n|Bahan untuk memasak.|料理の材料|bahan-bahan untuk membuat masakan|食材の産地を確認します。|しょくざいのさんちをかくにんします。|Asal bahan makanan diperiksa.
+冷蔵庫|れいぞうこ|reizōko|kulkas|n|Tempat menyimpan bahan dingin.|物を冷やして保存する箱|lemari pendingin untuk menyimpan bahan|食材を冷蔵庫に入れます。|しょくざいをれいぞうこにいれます。|Bahan dimasukkan ke kulkas.
+温度管理|おんどかんり|ondo kanri|pengendalian suhu|n|Menjaga suhu penyimpanan yang benar.|温度をちょうどよく保つこと|menjaga suhu penyimpanan dan masakan agar aman|冷蔵庫の温度管理をします。|れいぞうこのおんどかんりをします。|Suhu kulkas dikendalikan.
+衛生管理|えいせいかんり|eisei kanri|manajemen kebersihan|n|Mengelola kebersihan dapur dan restoran.|清潔さを管理すること|pengelolaan kebersihan untuk mencegah keracunan makanan|毎日衛生管理の記録をつけます。|まいにちえいせいかんりのきろくをつけます。|Setiap hari catatan kebersihan diisi.
+食中毒|しょくちゅうどく|shokuchūdoku|keracunan makanan|n|Sakit karena makanan.|悪い食べ物で病気になること|penyakit akibat makanan yang terkontaminasi|食中毒を出さないように気をつけます。|しょくちゅうどくをださないようにきをつけます。|Kami berhati-hati agar tidak terjadi keracunan makanan.
+手洗い|てあらい|tearai|cuci tangan|n|Mencuci tangan dengan benar.|手を洗うこと|mencuci tangan dengan sabun dan air mengalir|トイレのあとは必ず手洗いをします。|トイレのあとはかならずてあらいをします。|Setelah ke toilet, wajib cuci tangan.
+消毒|しょうどく|shōdoku|disinfeksi|n|Membunuh kuman pada alat atau tangan.|菌を殺すこと|membunuh kuman dengan alkohol atau disinfektan|テーブルをアルコールで消毒します。|テーブルをアルコールでしょうどくします。|Meja didisinfeksi dengan alkohol.
+加熱|かねつ|kanetsu|memanaskan|n|Memasak sampai panas merata.|熱を加えること|memanaskan makanan sampai matang merata|肉は中まで加熱します。|にくはなかまでかねつします。|Daging dipanaskan sampai ke dalam.
+生もの|なまもの|namamono|makanan mentah|n|Makanan yang dimakan mentah seperti sashimi.|火を通していない食べ物|makanan yang tidak dimasak seperti sashimi|生ものは早めに食べてください。|なまものははやめにたべてください。|Makanan mentah sebaiknya cepat dimakan.
+アレルギー|あれるぎー|arerugī|alergi|n|Reaksi tubuh terhadap makanan tertentu.|特定の食べ物で体が悪くなること|reaksi tubuh tidak normal terhadap bahan makanan tertentu|アレルギーの有無をお聞きします。|アレルギーのうむをおききします。|Kami menanyakan ada tidaknya alergi.
+異物|いぶつ|ibutsu|benda asing|n|Benda yang tidak seharusnya ada di makanan.|料理に入ってはいけない物|benda asing seperti rambut atau plastik di makanan|料理に異物が入らないようにします。|りょうりにいぶつがはいらないようにします。|Dijaga agar tidak ada benda asing di makanan.
+洗い場|あらいば|araiba|tempat cuci piring|n|Tempat mencuci piring dan alat masak.|食器を洗う所|area untuk mencuci piring dan alat masak|洗い場で皿を洗います。|あらいばでさらをあらいます。|Piring dicuci di tempat cuci.
+食器|しょっき|shokki|peralatan makan|n|Piring, mangkuk, dan gelas.|皿や茶わんなど|peralatan makan seperti piring, mangkuk, dan gelas|食器洗浄機に食器を入れます。|しょっきせんじょうきにしょっきをいれます。|Peralatan makan dimasukkan ke mesin cuci piring.
+食器洗浄機|しょっきせんじょうき|shokki senjōki|mesin cuci piring|n|Mesin untuk mencuci piring.|皿を洗う機械|mesin untuk mencuci peralatan makan|食器洗浄機のお湯は熱いです。|しょっきせんじょうきのおゆはあついです。|Air di mesin cuci piring panas.
+グリストラップ|ぐりすとらっぷ|gurisu torappu|penangkap lemak|n|Bak penyaring minyak di saluran air dapur.|油を水から分ける装置|bak penyaring lemak dan minyak dari air buangan dapur|週に一回グリストラップを掃除します。|しゅうにいっかいグリストラップをそうじします。|Penangkap lemak dibersihkan seminggu sekali.
+ごみ|ごみ|gomi|sampah|n|Sampah restoran.|いらない物|sampah dari kegiatan restoran|ごみは分別して出します。|ごみはぶんべつしてだします。|Sampah dipilah sebelum dibuang.
+生ごみ|なまごみ|namagomi|sampah basah|n|Sisa makanan dan bahan.|食べ物のごみ|sampah sisa makanan dan bahan dapur|生ごみはふたのある箱に入れます。|なまごみはふたのあるはこにいれます。|Sampah basah dimasukkan ke kotak bertutup.
+開店|かいてん|kaiten|buka toko|n|Waktu restoran mulai buka.|店を開けること|saat restoran mulai beroperasi|開店は十一時です。|かいてんはじゅういちじです。|Restoran buka pukul sebelas.
+閉店|へいてん|heiten|tutup toko|n|Waktu restoran tutup.|店を閉めること|saat restoran berhenti beroperasi|閉店のあと掃除をします。|へいてんのあとそうじをします。|Setelah tutup, bersih-bersih.
+ラストオーダー|らすとおーだー|rasuto ōdā|pesanan terakhir|n|Batas waktu terakhir untuk memesan.|最後の注文の時間|batas waktu terakhir tamu boleh memesan|ラストオーダーは九時半です。|ラストオーダーはくじはんです。|Pesanan terakhir pukul setengah sepuluh.
+ピークタイム|ぴーくたいむ|pīku taimu|jam sibuk|n|Waktu tamu paling banyak.|いちばん忙しい時間|waktu ketika tamu paling banyak|昼のピークタイムは忙しいです。|ひるのピークタイムはいそがしいです。|Jam sibuk siang sangat padat.
+回転率|かいてんりつ|kaitenritsu|tingkat perputaran meja|n|Berapa kali satu kursi dipakai tamu.|席が何回使われたかの割合|ukuran berapa kali satu kursi ditempati tamu dalam satu waktu|昼は回転率が大切です。|ひるはかいてんりつがたいせつです。|Saat siang, tingkat perputaran meja penting.
+売上|うりあげ|uriage|penjualan / omzet|n|Jumlah uang hasil penjualan.|売って入ったお金|jumlah uang yang diperoleh dari penjualan|今日の売上を計算します。|きょうのうりあげをけいさんします。|Omzet hari ini dihitung.
+原価|げんか|genka|biaya pokok|n|Biaya bahan untuk membuat menu.|作るのにかかったお金|biaya bahan yang dikeluarkan untuk membuat satu menu|原価を考えて食材を使います。|げんかをかんがえてしょくざいをつかいます。|Bahan dipakai dengan memperhitungkan biaya pokok.
+発注|はっちゅう|hacchū|pemesanan barang|n|Memesan bahan ke pemasok.|業者に材料をたのむこと|memesan bahan atau barang kepada pemasok|足りない食材を発注します。|たりないしょくざいをはっちゅうします。|Bahan yang kurang dipesan.
+納品|のうひん|nōhin|pengiriman barang (dari pemasok)|n|Barang yang dikirim pemasok datang.|注文した物がとどくこと|kedatangan barang pesanan dari pemasok|朝九時に野菜が納品されます。|あさくじにやさいがのうひんされます。|Sayur dikirim pukul sembilan pagi.
+在庫|ざいこ|zaiko|stok|n|Bahan yang tersisa di toko.|店にある品物|bahan atau barang yang tersedia di toko|在庫を確認してから発注します。|ざいこをかくにんしてからはっちゅうします。|Stok dicek sebelum memesan.
+クレーム|くれーむ|kurēmu|keluhan|n|Keluhan tamu.|お客様の苦情|keluhan atau ketidakpuasan tamu|クレームはすぐ店長に伝えます。|クレームはすぐてんちょうにつたえます。|Keluhan segera disampaikan ke manajer.
+申し訳ございません|もうしわけございません|mōshiwake gozaimasen|mohon maaf|x|Permintaan maaf yang sangat sopan.|すみませんのていねいな言い方|ungkapan permintaan maaf yang sangat sopan|大変申し訳ございません。すぐにお作りします。|たいへんもうしわけございません。すぐにおつくりします。|Mohon maaf sekali, segera kami buatkan.
+シフト|しふと|shifuto|jadwal shift|n|Jadwal kerja bergiliran.|働く時間の予定|jadwal pembagian waktu kerja|来週のシフトを出します。|らいしゅうのシフトをだします。|Jadwal shift minggu depan dikeluarkan.
+まかない|まかない|makanai|makan untuk karyawan|n|Makanan untuk staf restoran.|店の人が食べる食事|makanan yang disediakan untuk karyawan restoran|休憩のときにまかないを食べます。|きゅうけいのときにまかないをたべます。|Saat istirahat, makan makanan karyawan.
+身だしなみ|みだしなみ|midashinami|kerapian penampilan|n|Penampilan rapi dan bersih.|服や髪を整えること|menjaga penampilan pakaian dan rambut tetap rapi dan bersih|仕事の前に身だしなみを確認します。|しごとのまえにみだしなみをかくにんします。|Kerapian dicek sebelum bekerja.
+エプロン|えぷろん|epuron|celemek|n|Kain pelindung baju saat bekerja.|服を汚さないための布|kain pelindung pakaian saat memasak atau melayani|エプロンをつけてキッチンに入ります。|エプロンをつけてキッチンにはいります。|Pakai celemek sebelum masuk dapur.
+声かけ|こえかけ|koekake|saling memberi aba-aba|n|Saling berbicara agar kerja lancar dan aman.|仲間に声で知らせること|saling memberi tahu dengan suara agar kerja aman dan lancar|後ろを通るときは声かけをします。|うしろをとおるときはこえかけをします。|Saat lewat di belakang, beri aba-aba.
+後ろ通ります|うしろとおります|ushiro tōrimasu|saya lewat di belakang|x|Aba-aba saat lewat di belakang rekan.|後ろを通ることを知らせることば|aba-aba agar rekan tahu ada orang lewat di belakang|「後ろ通ります」と言ってから通ります。|「うしろとおります」といってからとおります。|Ucapkan "ushiro tōrimasu" sebelum lewat.
+滑りやすい|すべりやすい|suberiyasui|licin|a|Lantai dapur yang licin.|滑って転びやすい|keadaan lantai mudah membuat tergelincir|厨房の床は滑りやすいです。|ちゅうぼうのゆかはすべりやすいです。|Lantai dapur licin.
+やけど|やけど|yakedo|luka bakar|n|Luka karena panas.|熱で皮ふをいためること|luka akibat panas atau minyak|熱い鍋でやけどしないようにします。|あついなべでやけどしないようにします。|Hati-hati agar tidak terluka oleh panci panas.
+定食|ていしょく|teishoku|set menu|n|Menu lengkap nasi, sup, dan lauk.|ご飯とみそ汁とおかずのセット|paket makanan berisi nasi, sup miso, dan lauk|昼は定食がよく出ます。|ひるはていしょくがよくでます。|Saat siang, set menu laris.
+おすすめ|おすすめ|osusume|rekomendasi|n|Menu yang disarankan.|すすめる物|menu yang direkomendasikan|今日のおすすめは焼き魚です。|きょうのおすすめはやきざかなです。|Rekomendasi hari ini ikan bakar.
+大盛り|おおもり|ōmori|porsi besar|n|Porsi lebih banyak.|量が多いこと|porsi makanan yang lebih banyak dari biasa|ご飯を大盛りにしますか。|ごはんをおおもりにしますか。|Nasinya mau porsi besar?
+お冷|おひや|ohiya|air putih dingin|n|Air minum dingin untuk tamu.|冷たい水|air putih dingin yang disajikan gratis|お冷をお持ちします。|おひやをおもちします。|Saya bawakan air dingin.
+お手洗い|おてあらい|otearai|toilet (sopan)|n|Sebutan sopan untuk toilet.|トイレのていねいな言い方|sebutan sopan untuk toilet|お手洗いは奥にございます。|おてあらいはおくにございます。|Toilet ada di bagian belakang.
+チェーン店|チェーンてん|chēnten|restoran waralaba|n|Restoran dengan banyak cabang.|同じ名前の店がたくさんあること|restoran yang memiliki banyak cabang dengan sistem yang sama|大きなチェーン店で働いています。|おおきなチェーンてんではたらいています。|Saya bekerja di restoran waralaba besar.
+ファストフード|ふぁすとふーど|fasuto fūdo|makanan cepat saji|n|Makanan yang disajikan dengan cepat.|すぐに出せる食べ物|makanan yang dimasak dan disajikan dengan cepat|ファストフードの店はスピードが大切です。|ファストフードのみせはスピードがたいせつです。|Di restoran cepat saji, kecepatan penting.
+居酒屋|いざかや|izakaya|izakaya (kedai minum)|n|Kedai minum dan makan ala Jepang.|お酒と料理の店|kedai minum Jepang yang menyajikan minuman dan makanan kecil|夜は居酒屋で働いています。|よるはいざかやではたらいています。|Malam hari saya bekerja di izakaya.
+年齢確認|ねんれいかくにん|nenrei kakunin|cek usia|n|Memastikan tamu boleh minum alkohol.|お酒を飲める年か確かめること|memeriksa usia tamu sebelum menyajikan alkohol|お酒の注文では年齢確認をします。|おさけのちゅうもんではねんれいかくにんをします。|Untuk pesanan alkohol, usia dicek.
+営業時間|えいぎょうじかん|eigyō jikan|jam operasional|n|Jam buka restoran.|店が開いている時間|jam buka dan tutup restoran|営業時間は十一時から十時です。|えいぎょうじかんはじゅういちじからじゅうじです。|Jam operasional pukul 11 sampai 10.

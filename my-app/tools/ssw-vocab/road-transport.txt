@@ -1,0 +1,101 @@
+# 自動車運送業 — Transportasi / Sopir: truk, bus, taksi (100 kata)
+自動車運送業|じどうしゃうんそうぎょう|jidōsha unsōgyō|usaha angkutan jalan|n|Bisnis mengangkut barang atau penumpang dengan kendaraan.|車で人や物を運ぶ仕事|usaha mengangkut barang atau penumpang dengan truk, bus, atau taksi|自動車運送業の特定技能を目指しています。|じどうしゃうんそうぎょうのとくていぎのうをめざしています。|Saya menargetkan SSW bidang angkutan jalan.
+運転手|うんてんしゅ|untenshu|sopir|n|Orang yang mengemudikan kendaraan.|車を運転する人|orang yang pekerjaannya mengemudikan kendaraan|トラックの運転手をしています。|トラックのうんてんしゅをしています。|Saya bekerja sebagai sopir truk.
+ドライバー|どらいばー|doraibā|pengemudi|n|Sebutan umum untuk sopir.|運転する人|sebutan untuk orang yang mengemudikan kendaraan|ドライバーは安全運転が第一です。|ドライバーはあんぜんうんてんがだいいちです。|Bagi pengemudi, keselamatan berkendara nomor satu.
+運転免許|うんてんめんきょ|unten menkyo|SIM|n|Surat izin mengemudi.|車を運転する許可|izin resmi untuk mengemudikan kendaraan|日本の運転免許を取りました。|にほんのうんてんめんきょをとりました。|Saya mendapat SIM Jepang.
+大型免許|おおがためんきょ|ōgata menkyo|SIM kendaraan besar|n|SIM untuk truk besar.|大きい車の運転免許|SIM untuk mengemudikan kendaraan besar seperti truk besar|大型免許があればトレーラーも運転できます。|おおがためんきょがあればトレーラーもうんてんできます。|Dengan SIM besar, trailer pun bisa dikemudikan.
+二種免許|にしゅめんきょ|nishu menkyo|SIM angkutan penumpang|n|SIM untuk mengangkut penumpang berbayar.|お客を乗せて運転する免許|SIM khusus untuk mengemudikan kendaraan penumpang berbayar seperti taksi dan bus|タクシーには二種免許が必要です。|タクシーにはにしゅめんきょがひつようです。|Untuk taksi perlu SIM angkutan penumpang.
+トラック|とらっく|torakku|truk|n|Kendaraan pengangkut barang.|荷物を運ぶ車|kendaraan untuk mengangkut barang|トラックで荷物を運びます。|トラックでにもつをはこびます。|Barang diangkut dengan truk.
+バス|ばす|basu|bus|n|Kendaraan pengangkut banyak penumpang.|たくさんの人を運ぶ車|kendaraan besar untuk mengangkut banyak penumpang|路線バスを運転しています。|ろせんバスをうんてんしています。|Saya mengemudikan bus trayek.
+タクシー|たくしー|takushī|taksi|n|Kendaraan penumpang berbayar.|お金をもらって人を運ぶ車|kendaraan yang mengangkut penumpang dengan tarif|タクシーでお客様を駅まで送ります。|タクシーでおきゃくさまをえきまでおくります。|Saya mengantar penumpang ke stasiun dengan taksi.
+物流|ぶつりゅう|butsuryū|logistik|n|Aliran barang dari produsen ke konsumen.|物が運ばれる流れ|aliran pengiriman barang dari produsen sampai konsumen|物流の会社で働いています。|ぶつりゅうのかいしゃではたらいています。|Saya bekerja di perusahaan logistik.
+運送|うんそう|unsō|pengangkutan|n|Mengangkut barang.|物を運ぶこと|kegiatan mengangkut barang|運送の仕事は時間が大切です。|うんそうのしごとはじかんがたいせつです。|Dalam pengangkutan, waktu itu penting.
+配送|はいそう|haisō|pengiriman|n|Mengantar barang ke tujuan.|荷物を届けること|mengantar barang ke alamat tujuan|午前中に配送します。|ごぜんちゅうにはいそうします。|Dikirim pada pagi hari.
+配達|はいたつ|haitatsu|pengantaran|n|Mengantar barang ke rumah atau toko.|物を家などに届けること|mengantar barang langsung ke rumah atau toko penerima|荷物を配達しました。|にもつをはいたつしました。|Barang sudah diantar.
+荷物|にもつ|nimotsu|barang muatan|n|Barang yang diangkut.|運ぶ物|barang yang diangkut atau dikirim|荷物を確認してから出発します。|にもつをかくにんしてからしゅっぱつします。|Muatan diperiksa sebelum berangkat.
+積み込み|つみこみ|tsumikomi|pemuatan|n|Memuat barang ke truk.|荷物を車に積むこと|kegiatan memuat barang ke kendaraan|朝五時に積み込みをします。|あさごじにつみこみをします。|Pemuatan dilakukan pukul lima pagi.
+荷下ろし|におろし|nioroshi|pembongkaran muatan|n|Menurunkan barang dari truk.|車から荷物を下ろすこと|menurunkan barang dari kendaraan|倉庫で荷下ろしをします。|そうこでにおろしをします。|Pembongkaran muatan di gudang.
+荷崩れ|にくずれ|nikuzure|muatan ambruk|n|Muatan bergeser atau jatuh.|積んだ荷物がくずれること|keadaan muatan bergeser atau jatuh saat kendaraan berjalan|荷崩れしないようにしっかり固定します。|にくずれしないようにしっかりこていします。|Muatan dikunci kuat agar tidak ambruk.
+固定|こてい|kotei|pengikatan / pengunci|n|Mengikat agar tidak bergerak.|動かないようにすること|mengikat atau mengunci agar tidak bergeser|ベルトで荷物を固定します。|ベルトでにもつをこていします。|Muatan dikunci dengan sabuk.
+ラッシングベルト|らっしんぐべると|rasshingu beruto|sabuk pengikat muatan|n|Sabuk untuk mengikat muatan.|荷物をしめるベルト|sabuk khusus untuk mengikat muatan di truk|ラッシングベルトをしっかり締めます。|ラッシングベルトをしっかりしめます。|Sabuk pengikat dikencangkan kuat.
+パレット|ぱれっと|paretto|palet|n|Alas datar untuk menumpuk barang.|荷物をのせる台|alas datar untuk menumpuk dan mengangkut barang|パレットごとトラックに積みます。|パレットごとトラックにつみます。|Barang dimuat ke truk bersama paletnya.
+フォークリフト|ふぉーくりふと|fōkurifuto|forklift|n|Kendaraan pengangkat barang.|荷物を持ち上げる車|kendaraan untuk mengangkat dan memindahkan barang|フォークリフトで荷物を下ろします。|フォークリフトでにもつをおろします。|Barang diturunkan dengan forklift.
+倉庫|そうこ|sōko|gudang|n|Tempat menyimpan barang.|物をしまう建物|bangunan tempat menyimpan barang|倉庫で荷物を受け取ります。|そうこでにもつをうけとります。|Barang diterima di gudang.
+集荷|しゅうか|shūka|penjemputan barang|n|Mengambil barang dari pengirim.|荷物を集めに行くこと|mengambil barang kiriman dari pengirim|夕方に集荷に行きます。|ゆうがたにしゅうかにいきます。|Sore hari menjemput barang.
+届け先|とどけさき|todokesaki|alamat tujuan|n|Tempat barang dikirim.|荷物を届ける場所|tempat atau alamat tujuan pengiriman|届け先の住所を確認します。|とどけさきのじゅうしょをかくにんします。|Alamat tujuan diperiksa.
+伝票|でんぴょう|denpyō|resi / surat jalan|n|Dokumen berisi informasi kiriman.|荷物の情報を書いた紙|dokumen berisi informasi pengirim, penerima, dan barang|伝票にサインをもらいます。|でんぴょうにサインをもらいます。|Meminta tanda tangan di surat jalan.
+受領印|じゅりょういん|juryōin|tanda terima|n|Cap atau tanda tangan penerima.|受け取った印|cap atau tanda tangan bukti barang sudah diterima|受領印をお願いします。|じゅりょういんをおねがいします。|Mohon tanda terimanya.
+不在|ふざい|fuzai|tidak ada di tempat|n|Penerima tidak ada di rumah.|家にいないこと|keadaan penerima tidak ada di tempat|不在だったので不在票を入れました。|ふざいだったのでふざいひょうをいれました。|Karena tidak ada orang, saya tinggalkan surat pemberitahuan.
+再配達|さいはいたつ|saihaitatsu|pengiriman ulang|n|Mengantar lagi barang yang belum diterima.|もう一度届けること|mengantar kembali barang yang sebelumnya gagal diterima|夜七時に再配達します。|よるしちじにさいはいたつします。|Diantar ulang pukul tujuh malam.
+時間指定|じかんしてい|jikan shitei|penentuan waktu|n|Waktu pengiriman yang diminta pelanggan.|届ける時間を決めること|permintaan pelanggan tentang waktu pengiriman|時間指定の荷物を先に配達します。|じかんしていのにもつをさきにはいたつします。|Barang dengan penentuan waktu diantar lebih dulu.
+ルート|るーと|rūto|rute|n|Jalan yang dilalui.|走る道の順番|urutan jalan yang dilalui saat pengiriman|配達のルートを考えます。|はいたつのルートをかんがえます。|Rute pengantaran dipikirkan.
+カーナビ|かーなび|kānabi|navigasi mobil|n|Alat penunjuk jalan di mobil.|道を案内する機械|alat navigasi elektronik di dalam kendaraan|カーナビに住所を入れます。|カーナビにじゅうしょをいれます。|Alamat dimasukkan ke navigasi.
+高速道路|こうそくどうろ|kōsoku dōro|jalan tol|n|Jalan khusus berkecepatan tinggi.|速く走るための有料の道|jalan berbayar khusus kendaraan berkecepatan tinggi|高速道路で大阪へ行きます。|こうそくどうろでおおさかへいきます。|Pergi ke Osaka lewat jalan tol.
+一般道|いっぱんどう|ippandō|jalan umum|n|Jalan biasa selain jalan tol.|高速道路ではない道|jalan biasa yang bukan jalan tol|一般道は信号が多いです。|いっぱんどうはしんごうがおおいです。|Di jalan umum banyak lampu lalu lintas.
+サービスエリア|さーびすえりあ|sābisu eria|rest area|n|Tempat istirahat di jalan tol.|高速道路の休む所|tempat istirahat di jalan tol dengan toilet dan restoran|サービスエリアで休憩します。|サービスエリアできゅうけいします。|Istirahat di rest area.
+交通ルール|こうつうルール|kōtsū rūru|peraturan lalu lintas|n|Aturan di jalan raya.|道路のきまり|aturan yang harus dipatuhi di jalan|日本の交通ルールを覚えます。|にほんのこうつうルールをおぼえます。|Menghafal peraturan lalu lintas Jepang.
+左側通行|ひだりがわつうこう|hidarigawa tsūkō|lajur kiri|n|Jepang berkendara di sisi kiri.|道の左を走ること|aturan berkendara di sisi kiri jalan|日本は左側通行です。|にほんはひだりがわつうこうです。|Jepang memakai lajur kiri.
+信号|しんごう|shingō|lampu lalu lintas|n|Lampu pengatur lalu lintas.|赤・黄・青のランプ|lampu merah, kuning, hijau untuk mengatur lalu lintas|信号が赤になりました。|しんごうがあかになりました。|Lampunya berubah merah.
+標識|ひょうしき|hyōshiki|rambu lalu lintas|n|Tanda di jalan.|道路にある案内の板|tanda di jalan yang memberi perintah atau informasi|標識をよく見て運転します。|ひょうしきをよくみてうんてんします。|Mengemudi dengan memperhatikan rambu.
+一時停止|いちじていし|ichiji teishi|berhenti sejenak|n|Wajib berhenti sebentar.|いったん止まること|kewajiban berhenti sejenak sebelum melanjutkan|止まれの標識で一時停止します。|とまれのひょうしきでいちじていしします。|Berhenti sejenak di rambu "tomare".
+制限速度|せいげんそくど|seigen sokudo|batas kecepatan|n|Kecepatan maksimum yang diizinkan.|出していい速さの上限|kecepatan maksimum yang diizinkan di jalan|制限速度を守って走ります。|せいげんそくどをまもってはしります。|Berkendara mematuhi batas kecepatan.
+車間距離|しゃかんきょり|shakan kyori|jarak antarkendaraan|n|Jarak dengan kendaraan di depan.|前の車との距離|jarak antara kendaraan sendiri dan kendaraan di depan|車間距離を十分にとります。|しゃかんきょりをじゅうぶんにとります。|Menjaga jarak antarkendaraan yang cukup.
+安全運転|あんぜんうんてん|anzen unten|berkendara aman|n|Mengemudi dengan hati-hati.|事故を起こさない運転|cara mengemudi yang hati-hati agar tidak terjadi kecelakaan|毎日安全運転を心がけます。|まいにちあんぜんうんてんをこころがけます。|Setiap hari berusaha berkendara aman.
+交通事故|こうつうじこ|kōtsū jiko|kecelakaan lalu lintas|n|Kecelakaan di jalan.|車などの事故|kecelakaan yang terjadi di jalan raya|交通事故のときはすぐ会社に連絡します。|こうつうじこのときはすぐかいしゃにれんらくします。|Saat terjadi kecelakaan, segera hubungi kantor.
+死角|しかく|shikaku|titik buta|n|Bagian yang tidak terlihat dari kursi sopir.|運転席から見えない所|area di sekitar kendaraan yang tidak terlihat oleh pengemudi|大きいトラックは死角が多いです。|おおきいトラックはしかくがおおいです。|Truk besar memiliki banyak titik buta.
+巻き込み|まきこみ|makikomi|terlindas saat berbelok|n|Kecelakaan saat belok menabrak pejalan kaki atau sepeda.|曲がるときに人や自転車をまきこむこと|kecelakaan ketika kendaraan berbelok dan melindas pejalan kaki atau sepeda di sampingnya|左折のときは巻き込みに注意します。|させつのときはまきこみにちゅういします。|Saat belok kiri, waspadai melindas yang di samping.
+右折|うせつ|usetsu|belok kanan|n|Berbelok ke kanan.|右に曲がること|berbelok ke arah kanan|交差点で右折します。|こうさてんでうせつします。|Belok kanan di persimpangan.
+左折|させつ|sasetsu|belok kiri|n|Berbelok ke kiri.|左に曲がること|berbelok ke arah kiri|次の角を左折してください。|つぎのかどをさせつしてください。|Belok kiri di tikungan berikutnya.
+バック|ばっく|bakku|mundur|n|Menjalankan kendaraan ke belakang.|後ろに下がること|menjalankan kendaraan ke arah belakang|バックするときは後ろを確認します。|バックするときはうしろをかくにんします。|Saat mundur, periksa bagian belakang.
+駐車|ちゅうしゃ|chūsha|parkir|n|Menghentikan kendaraan di tempat parkir.|車を止めておくこと|meletakkan kendaraan di suatu tempat dalam waktu tertentu|ここは駐車禁止です。|ここはちゅうしゃきんしです。|Di sini dilarang parkir.
+アイドリングストップ|あいどりんぐすとっぷ|aidoringu sutoppu|mematikan mesin saat berhenti|n|Mematikan mesin saat menunggu.|止まっているときエンジンを切ること|mematikan mesin saat kendaraan berhenti untuk menghemat bahan bakar|荷物を待つ間はアイドリングストップします。|にもつをまつあいだはアイドリングストップします。|Saat menunggu barang, mesin dimatikan.
+点呼|てんこ|tenko|apel / pemeriksaan sopir|n|Pemeriksaan kondisi sopir sebelum dan sesudah bekerja.|運転の前と後の確認|pemeriksaan kesehatan dan kondisi sopir sebelum dan sesudah bertugas|出発前に点呼を受けます。|しゅっぱつまえにてんこをうけます。|Sebelum berangkat, mengikuti apel sopir.
+アルコールチェック|あるこーるちぇっく|arukōru chekku|tes alkohol|n|Pemeriksaan kadar alkohol napas.|お酒を飲んでいないか調べること|pemeriksaan kadar alkohol dalam napas pengemudi|毎朝アルコールチェックをします。|まいあさアルコールチェックをします。|Setiap pagi dilakukan tes alkohol.
+飲酒運転|いんしゅうんてん|inshu unten|mengemudi dalam keadaan mabuk|n|Mengemudi setelah minum alkohol (dilarang).|お酒を飲んで運転すること|mengemudi setelah minum alkohol, tindakan yang dilarang keras|飲酒運転は絶対にしません。|いんしゅうんてんはぜったいにしません。|Sama sekali tidak mengemudi setelah minum alkohol.
+居眠り運転|いねむりうんてん|inemuri unten|mengantuk saat mengemudi|n|Tertidur saat mengemudi.|運転中にねむること|keadaan tertidur atau mengantuk saat mengemudi|居眠り運転を防ぐために休憩します。|いねむりうんてんをふせぐためにきゅうけいします。|Istirahat untuk mencegah mengantuk saat mengemudi.
+休憩|きゅうけい|kyūkei|istirahat|n|Istirahat saat perjalanan jauh.|仕事の間に休むこと|waktu istirahat di sela mengemudi|四時間運転したら休憩します。|よじかんうんてんしたらきゅうけいします。|Setelah mengemudi empat jam, istirahat.
+運行管理者|うんこうかんりしゃ|unkō kanrisha|pengelola operasional|n|Orang yang mengatur jadwal dan keselamatan sopir.|運転の計画と安全を管理する人|petugas yang mengatur jadwal, rute, dan keselamatan pengemudi|運行管理者に到着を報告します。|うんこうかんりしゃにとうちゃくをほうこくします。|Saya melapor kedatangan ke pengelola operasional.
+運転日報|うんてんにっぽう|unten nippō|laporan harian mengemudi|n|Catatan harian perjalanan.|毎日の運転の記録|catatan harian tentang perjalanan, jarak, dan waktu kerja|仕事のあと運転日報を書きます。|しごとのあとうんてんにっぽうをかきます。|Setelah kerja, menulis laporan harian mengemudi.
+デジタコ|でじたこ|dejitako|takograf digital|n|Alat pencatat kecepatan dan waktu mengemudi.|速さや時間を記録する機械|alat yang mencatat kecepatan, jarak, dan waktu mengemudi secara digital|デジタコで運転の記録を残します。|デジタコでうんてんのきろくをのこします。|Catatan mengemudi disimpan dengan takograf digital.
+ドライブレコーダー|どらいぶれこーだー|doraibu rekōdā|kamera dasbor|n|Kamera perekam perjalanan.|運転中の映像を記録する機械|kamera yang merekam keadaan saat mengemudi|事故の時はドライブレコーダーの映像を見ます。|じこのときはドライブレコーダーのえいぞうをみます。|Saat kecelakaan, rekaman kamera dasbor dilihat.
+始業点検|しぎょうてんけん|shigyō tenken|pemeriksaan sebelum jalan|n|Memeriksa kendaraan sebelum berangkat.|仕事の前の車の点検|pemeriksaan kondisi kendaraan sebelum mulai bertugas|始業点検でタイヤとライトを見ます。|しぎょうてんけんでタイヤとライトをみます。|Saat pemeriksaan awal, ban dan lampu dicek.
+タイヤ|たいや|taiya|ban|n|Ban kendaraan.|車のゴムの輪|ban kendaraan|タイヤの空気を確認します。|タイヤのくうきをかくにんします。|Tekanan ban diperiksa.
+ブレーキ|ぶれーき|burēki|rem|n|Sistem pengereman.|車を止める装置|sistem untuk menghentikan kendaraan|ブレーキの効きを確認します。|ブレーキのききをかくにんします。|Kepakeman rem diperiksa.
+燃料|ねんりょう|nenryō|bahan bakar|n|Bahan bakar kendaraan.|車を動かす油|bahan bakar kendaraan|燃料を満タンにします。|ねんりょうをまんタンにします。|Bahan bakar diisi penuh.
+給油|きゅうゆ|kyūyu|isi bahan bakar|n|Mengisi bahan bakar.|燃料を入れること|mengisi bahan bakar ke kendaraan|帰る前に給油します。|かえるまえにきゅうゆします。|Mengisi bahan bakar sebelum kembali.
+洗車|せんしゃ|sensha|cuci kendaraan|n|Mencuci kendaraan.|車を洗うこと|mencuci kendaraan|週に一回洗車します。|しゅうにいっかいせんしゃします。|Kendaraan dicuci seminggu sekali.
+冷凍車|れいとうしゃ|reitōsha|truk berpendingin|n|Truk dengan bak pendingin.|冷やして運ぶトラック|truk dengan bak berpendingin untuk barang beku|冷凍車でアイスを運びます。|れいとうしゃでアイスをはこびます。|Es krim diangkut dengan truk berpendingin.
+トレーラー|とれーらー|torērā|trailer|n|Truk besar dengan gandengan.|大きな荷台を引く車|truk penarik dengan gandengan besar|トレーラーでコンテナを運びます。|トレーラーでコンテナをはこびます。|Kontainer diangkut dengan trailer.
+荷台|にだい|nidai|bak truk|n|Bagian truk untuk muatan.|荷物をのせる所|bagian kendaraan tempat meletakkan muatan|荷台に荷物を積みます。|にだいににもつをつみます。|Barang dimuat ke bak truk.
+積載量|せきさいりょう|sekisairyō|kapasitas muatan|n|Berat muatan maksimum.|積める重さ|berat maksimum muatan yang boleh diangkut|積載量を超えてはいけません。|せきさいりょうをこえてはいけません。|Tidak boleh melebihi kapasitas muatan.
+過積載|かせきさい|kasekisai|muatan berlebih|n|Muatan melebihi batas (melanggar).|決まりより多く積むこと|keadaan muatan melebihi batas yang diizinkan|過積載は法律違反です。|かせきさいはほうりついはんです。|Muatan berlebih melanggar hukum.
+乗客|じょうきゃく|jōkyaku|penumpang|n|Orang yang naik bus atau taksi.|乗り物に乗る人|orang yang menumpang kendaraan|乗客が全員座ったか確認します。|じょうきゃくがぜんいんすわったかかくにんします。|Diperiksa apakah semua penumpang sudah duduk.
+停留所|ていりゅうじょ|teiryūjo|halte|n|Tempat bus berhenti.|バスが止まる所|tempat bus berhenti untuk menaikkan dan menurunkan penumpang|次の停留所で止まります。|つぎのていりゅうじょでとまります。|Berhenti di halte berikutnya.
+路線バス|ろせんバス|rosen basu|bus trayek|n|Bus dengan rute tetap.|決まった道を走るバス|bus yang berjalan pada rute dan jadwal tetap|路線バスは時刻表どおりに走ります。|ろせんバスはじこくひょうどおりにはしります。|Bus trayek berjalan sesuai jadwal.
+観光バス|かんこうバス|kankō basu|bus pariwisata|n|Bus untuk wisata.|旅行の人を運ぶバス|bus yang mengangkut rombongan wisata|観光バスで京都を回ります。|かんこうバスできょうとをまわります。|Berkeliling Kyoto dengan bus pariwisata.
+時刻表|じこくひょう|jikokuhyō|jadwal|n|Tabel jam keberangkatan.|発車の時間の表|tabel jam keberangkatan dan kedatangan|時刻表を確認します。|じこくひょうをかくにんします。|Jadwal diperiksa.
+運賃|うんちん|unchin|ongkos / tarif|n|Biaya naik kendaraan umum.|乗るためのお金|biaya yang dibayar penumpang|運賃は降りるときに払います。|うんちんはおりるときにはらいます。|Ongkos dibayar saat turun.
+料金メーター|りょうきんメーター|ryōkin mētā|argometer|n|Alat penghitung tarif taksi.|タクシーの料金を数える機械|alat yang menghitung tarif taksi|料金メーターを入れて出発します。|りょうきんメーターをいれてしゅっぱつします。|Argometer dinyalakan lalu berangkat.
+行き先|いきさき|ikisaki|tujuan|n|Tempat yang dituju penumpang.|行く場所|tempat yang ingin dituju|お客様に行き先を聞きます。|おきゃくさまにいきさきをききます。|Saya menanyakan tujuan kepada penumpang.
+乗車|じょうしゃ|jōsha|naik kendaraan|n|Penumpang naik ke kendaraan.|車に乗ること|kegiatan naik ke kendaraan|ご乗車ありがとうございます。|ごじょうしゃありがとうございます。|Terima kasih telah naik.
+降車|こうしゃ|kōsha|turun kendaraan|n|Penumpang turun dari kendaraan.|車から降りること|kegiatan turun dari kendaraan|降車のときは足元に気をつけてください。|こうしゃのときはあしもとにきをつけてください。|Saat turun, perhatikan langkah Anda.
+シートベルト|しーとべると|shīto beruto|sabuk pengaman|n|Sabuk pengaman di kursi.|座席のベルト|sabuk pengaman di kursi kendaraan|シートベルトをお締めください。|シートベルトをおしめください。|Silakan kenakan sabuk pengaman.
+車いす|くるまいす|kurumaisu|kursi roda|n|Kursi beroda untuk orang yang sulit berjalan.|歩けない人が使ういす|kursi beroda untuk orang yang kesulitan berjalan|車いすのお客様の乗車を手伝います。|くるまいすのおきゃくさまのじょうしゃをてつだいます。|Saya membantu penumpang berkursi roda naik.
+渋滞|じゅうたい|jūtai|macet|n|Jalan penuh dan kendaraan sulit bergerak.|車が多くて進まないこと|keadaan jalan padat sehingga kendaraan sulit bergerak|事故で渋滞しています。|じこでじゅうたいしています。|Macet karena kecelakaan.
+通行止め|つうこうどめ|tsūkōdome|jalan ditutup|n|Jalan tidak bisa dilewati.|道を通れないこと|keadaan jalan ditutup dan tidak bisa dilewati|雪で高速道路が通行止めです。|ゆきでこうそくどうろがつうこうどめです。|Jalan tol ditutup karena salju.
+迂回|うかい|ukai|memutar jalan|n|Memakai jalan lain.|ちがう道を通ること|mengambil jalan lain untuk menghindari hambatan|通行止めなので迂回します。|つうこうどめなのでうかいします。|Karena jalan ditutup, kami memutar.
+チェーン|ちぇーん|chēn|rantai ban|n|Rantai di ban untuk jalan bersalju.|雪道でタイヤにつける鎖|rantai yang dipasang di ban agar tidak tergelincir di jalan bersalju|雪道ではタイヤにチェーンをつけます。|ゆきみちではタイヤにチェーンをつけます。|Di jalan bersalju, rantai dipasang di ban.
+スタッドレスタイヤ|すたっどれすたいや|sutaddoresu taiya|ban musim dingin|n|Ban khusus untuk jalan es dan salju.|冬用のタイヤ|ban khusus untuk jalan bersalju dan beku|冬はスタッドレスタイヤに替えます。|ふゆはスタッドレスタイヤにかえます。|Musim dingin ganti ke ban musim dingin.
+凍結|とうけつ|tōketsu|jalan beku|n|Permukaan jalan membeku.|道がこおること|keadaan permukaan jalan membeku dan licin|朝は道路の凍結に注意します。|あさはどうろのとうけつにちゅういします。|Pagi hari, waspadai jalan beku.
+労働時間|ろうどうじかん|rōdō jikan|jam kerja|n|Lama waktu bekerja.|働く時間|lamanya waktu bekerja|ドライバーの労働時間には決まりがあります。|ドライバーのろうどうじかんにはきまりがあります。|Jam kerja sopir ada aturannya.
+拘束時間|こうそくじかん|kōsoku jikan|waktu terikat kerja|n|Waktu dari mulai kerja sampai selesai termasuk istirahat.|仕事を始めてから終わるまでの時間|total waktu dari mulai sampai selesai bertugas termasuk istirahat|拘束時間は十三時間までです。|こうそくじかんはじゅうさんじかんまでです。|Waktu terikat kerja maksimal 13 jam.
+事故報告|じこほうこく|jiko hōkoku|laporan kecelakaan|n|Melaporkan kecelakaan ke perusahaan.|事故を知らせること|menyampaikan laporan kecelakaan kepada perusahaan dan polisi|事故報告書を書きます。|じこほうこくしょをかきます。|Menulis laporan kecelakaan.
+警察|けいさつ|keisatsu|polisi|n|Polisi yang dihubungi saat kecelakaan.|安全を守る役所|instansi yang menjaga keamanan dan menangani kecelakaan|事故のときは警察に連絡します。|じこのときはけいさつにれんらくします。|Saat kecelakaan, hubungi polisi.
+保険|ほけん|hoken|asuransi|n|Asuransi kendaraan.|事故のときのお金の備え|perlindungan biaya jika terjadi kecelakaan|会社の車は保険に入っています。|かいしゃのくるまはほけんにはいっています。|Mobil perusahaan sudah diasuransikan.
+運行|うんこう|unkō|operasional perjalanan|n|Menjalankan kendaraan sesuai rencana.|決まった予定で車を走らせること|menjalankan kendaraan sesuai jadwal dan rute|今日の運行は三便です。|きょうのうんこうはさんびんです。|Operasional hari ini tiga perjalanan.
+ハザードランプ|はざーどらんぷ|hazādo ranpu|lampu hazard|n|Lampu darurat yang berkedip.|非常のときに点滅するランプ|lampu darurat yang berkedip semua untuk memberi tanda|止まるときはハザードランプをつけます。|とまるときはハザードランプをつけます。|Saat berhenti, lampu hazard dinyalakan.
+接客|せっきゃく|sekkyaku|melayani penumpang|n|Berinteraksi sopan dengan penumpang.|お客様の相手をすること|melayani penumpang dengan sopan|タクシーの仕事は接客も大切です。|タクシーのしごとはせっきゃくもたいせつです。|Dalam pekerjaan taksi, melayani penumpang juga penting.
+地理|ちり|chiri|pengetahuan wilayah|n|Pengetahuan tentang jalan dan tempat.|道や場所の知識|pengetahuan tentang jalan dan lokasi di suatu daerah|この町の地理を覚えます。|このまちのちりをおぼえます。|Saya menghafal seluk-beluk kota ini.
+交差点|こうさてん|kōsaten|persimpangan|n|Tempat dua jalan bertemu.|道と道が交わる所|tempat bertemunya dua jalan atau lebih|交差点では歩行者に注意します。|こうさてんではほこうしゃにちゅういします。|Di persimpangan, waspadai pejalan kaki.
+歩行者|ほこうしゃ|hokōsha|pejalan kaki|n|Orang yang berjalan di jalan.|道を歩く人|orang yang berjalan kaki di jalan|横断歩道では歩行者が優先です。|おうだんほどうではほこうしゃがゆうせんです。|Di zebra cross, pejalan kaki diutamakan.
+横断歩道|おうだんほどう|ōdan hodō|zebra cross|n|Tempat menyeberang jalan.|道をわたるための所|tempat khusus pejalan kaki menyeberang jalan|横断歩道の前で止まります。|おうだんほどうのまえでとまります。|Berhenti di depan zebra cross.

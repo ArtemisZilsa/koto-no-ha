@@ -1,0 +1,101 @@
+# 漁業 — Perikanan: penangkapan & budidaya (100 kata)
+漁業|ぎょぎょう|gyogyō|perikanan|n|Pekerjaan menangkap atau membudidayakan ikan.|魚などをとったり育てたりする仕事|kegiatan menangkap dan membudidayakan ikan serta hasil laut|父は漁業をしています。|ちちはぎょぎょうをしています。|Ayah saya bekerja di perikanan.
+養殖業|ようしょくぎょう|yōshokugyō|budidaya perikanan|n|Usaha membesarkan ikan atau kerang.|魚や貝を育てる仕事|usaha membesarkan ikan, kerang, dan rumput laut|養殖業で働きたいです。|ようしょくぎょうではたらきたいです。|Saya ingin bekerja di budidaya perikanan.
+漁師|りょうし|ryōshi|nelayan|n|Orang yang menangkap ikan.|魚をとる人|orang yang pekerjaannya menangkap ikan|漁師は朝早く海に出ます。|りょうしはあさはやくうみにでます。|Nelayan melaut pagi-pagi sekali.
+漁船|ぎょせん|gyosen|kapal ikan|n|Kapal untuk menangkap ikan.|魚をとる船|kapal yang digunakan untuk menangkap ikan|漁船に乗って働きます。|ぎょせんにのってはたらきます。|Saya bekerja di atas kapal ikan.
+漁港|ぎょこう|gyokō|pelabuhan perikanan|n|Pelabuhan tempat kapal ikan berlabuh.|漁船が集まる港|pelabuhan tempat kapal ikan berlabuh dan membongkar hasil|朝、漁港に魚が上がります。|あさ、ぎょこうにさかながあがります。|Pagi hari ikan dibongkar di pelabuhan.
+出港|しゅっこう|shukkō|berangkat dari pelabuhan|n|Kapal meninggalkan pelabuhan.|船が港を出ること|kapal berangkat meninggalkan pelabuhan|午前三時に出港します。|ごぜんさんじにしゅっこうします。|Kapal berangkat pukul tiga pagi.
+入港|にゅうこう|nyūkō|masuk pelabuhan|n|Kapal kembali masuk ke pelabuhan.|船が港に入ること|kapal masuk ke pelabuhan|昼ごろ入港する予定です。|ひるごろにゅうこうするよていです。|Rencananya masuk pelabuhan sekitar tengah hari.
+漁場|ぎょじょう|gyojō|daerah penangkapan|n|Tempat di laut yang banyak ikannya.|魚がよくとれる所|wilayah perairan tempat ikan banyak ditangkap|今日は遠い漁場へ行きます。|きょうはとおいぎょじょうへいきます。|Hari ini kami pergi ke daerah tangkapan yang jauh.
+漁獲|ぎょかく|gyokaku|hasil tangkapan|n|Ikan yang berhasil ditangkap.|とれた魚|ikan dan hasil laut yang berhasil ditangkap|今日は漁獲が多いです。|きょうはぎょかくがおおいです。|Hari ini hasil tangkapannya banyak.
+水揚げ|みずあげ|mizuage|pembongkaran hasil tangkapan|n|Menurunkan ikan dari kapal ke darat.|とった魚を船から陸に上げること|menurunkan hasil tangkapan dari kapal ke pelabuhan|港で水揚げを手伝います。|みなとでみずあげをてつだいます。|Saya membantu membongkar ikan di pelabuhan.
+網|あみ|ami|jaring|n|Jaring untuk menangkap ikan.|魚をとるためのネット|jaring untuk menangkap ikan|網を海に入れます。|あみをうみにいれます。|Jaring diturunkan ke laut.
+定置網|ていちあみ|teichiami|jaring tetap (sero)|n|Jaring besar yang dipasang tetap di laut.|海に置いたままにする大きな網|jaring besar yang dipasang menetap di laut untuk menangkap ikan yang lewat|定置網の魚を取ります。|ていちあみのさかなをとります。|Ikan di jaring tetap diambil.
+刺し網|さしあみ|sashiami|jaring insang|n|Jaring tempat ikan tersangkut insangnya.|魚が引っかかる網|jaring tempat ikan tersangkut pada insangnya|刺し網から魚を外します。|さしあみからさかなをはずします。|Ikan dilepas dari jaring insang.
+まき網|まきあみ|makiami|jaring lingkar (purse seine)|n|Jaring untuk mengurung gerombolan ikan.|魚の群れを囲む網|jaring besar untuk melingkari dan mengurung gerombolan ikan|まき網でいわしをとります。|まきあみでいわしをとります。|Ikan sarden ditangkap dengan jaring lingkar.
+底引き網|そこびきあみ|sokobikiami|pukat dasar|n|Jaring yang ditarik di dasar laut.|海の底を引く網|jaring yang ditarik menyusuri dasar laut|底引き網でかれいをとります。|そこびきあみでかれいをとります。|Ikan sebelah ditangkap dengan pukat dasar.
+釣り|つり|tsuri|memancing|n|Menangkap ikan dengan kail.|針で魚をとること|menangkap ikan dengan kail dan tali|かつおを一本釣りでとります。|かつおをいっぽんづりでとります。|Cakalang ditangkap dengan pancing satu per satu.
+はえ縄|はえなわ|haenawa|rawai|n|Tali panjang dengan banyak kail.|たくさんの針をつけた長い縄|tali panjang yang dipasangi banyak kail untuk menangkap ikan|はえ縄でまぐろをとります。|はえなわでまぐろをとります。|Tuna ditangkap dengan rawai.
+針|はり|hari|kail|n|Kail pancing.|魚をつる金属のかぎ|kail logam untuk memancing ikan|針にえさをつけます。|はりにえさをつけます。|Umpan dipasang di kail.
+えさ|えさ|esa|umpan / pakan|n|Umpan untuk ikan atau pakan budidaya.|魚の食べ物|umpan untuk memancing atau pakan ikan budidaya|いかをえさに使います。|いかをえさにつかいます。|Cumi dipakai sebagai umpan.
+ロープ|ろーぷ|rōpu|tali|n|Tali untuk kapal dan jaring.|太いなわ|tali tebal untuk menambat kapal dan menarik jaring|ロープを強く結びます。|ロープをつよくむすびます。|Tali diikat dengan kuat.
+結び方|むすびかた|musubikata|cara mengikat|n|Cara membuat simpul tali.|ロープの結ぶ方法|cara membuat simpul pada tali|ロープの結び方を教えてもらいました。|ロープのむすびかたをおしえてもらいました。|Saya diajari cara mengikat tali.
+浮き|うき|uki|pelampung jaring|n|Pelampung pada jaring.|水に浮かぶ道具|alat pengapung pada jaring atau tali|網に浮きをつけます。|あみにうきをつけます。|Pelampung dipasang di jaring.
+重り|おもり|omori|pemberat|n|Pemberat agar jaring tenggelam.|しずめるための重い物|benda berat agar jaring atau tali tenggelam|重りをつけて網をしずめます。|おもりをつけてあみをしずめます。|Jaring ditenggelamkan dengan pemberat.
+甲板|かんぱん|kanpan|dek kapal|n|Lantai atas kapal.|船の上の床|lantai bagian atas kapal|甲板で魚を分けます。|かんぱんでさかなをわけます。|Ikan dipilah di dek.
+船長|せんちょう|senchō|kapten kapal|n|Pemimpin kapal.|船のいちばん上の人|orang yang memimpin dan bertanggung jawab atas kapal|船長の指示に従います。|せんちょうのしじにしたがいます。|Saya mengikuti instruksi kapten.
+乗組員|のりくみいん|norikumiin|awak kapal|n|Orang yang bekerja di kapal.|船で働く人|orang-orang yang bekerja di atas kapal|乗組員は五人です。|のりくみいんはごにんです。|Awak kapalnya lima orang.
+ライフジャケット|らいふじゃけっと|raifu jaketto|jaket pelampung|n|Jaket agar tidak tenggelam.|水に浮くための服|jaket yang membuat orang tetap mengapung di air|船の上ではライフジャケットを着ます。|ふねのうえではライフジャケットをきます。|Di atas kapal memakai jaket pelampung.
+転落|てんらく|tenraku|terjatuh (ke laut)|n|Jatuh dari kapal ke laut.|船から海に落ちること|kecelakaan jatuh dari kapal ke laut|転落しないように手すりを持ちます。|てんらくしないようにてすりをもちます。|Pegang pegangan agar tidak terjatuh ke laut.
+船酔い|ふなよい|funayoi|mabuk laut|n|Pusing dan mual karena guncangan kapal.|船のゆれで気分が悪くなること|rasa pusing dan mual akibat guncangan kapal|はじめは船酔いがひどかったです。|はじめはふなよいがひどかったです。|Awalnya saya mabuk laut parah.
+波|なみ|nami|ombak|n|Gelombang laut.|海の水の動き|gerakan naik turun air laut|今日は波が高いです。|きょうはなみがたかいです。|Hari ini ombaknya tinggi.
+天気予報|てんきよほう|tenki yohō|prakiraan cuaca|n|Informasi cuaca yang akan datang.|これからの天気の情報|informasi perkiraan cuaca|出港の前に天気予報を見ます。|しゅっこうのまえにてんきよほうをみます。|Sebelum berangkat, cek prakiraan cuaca.
+しけ|しけ|shike|laut berbadai|n|Laut bergelombang besar sehingga tidak bisa melaut.|海があれること|keadaan laut berombak besar sehingga kapal tidak bisa melaut|しけで今日は漁に出られません。|しけできょうはりょうにでられません。|Laut berbadai, hari ini tidak bisa melaut.
+魚群探知機|ぎょぐんたんちき|gyogun tanchiki|fish finder|n|Alat untuk menemukan gerombolan ikan.|魚の群れをさがす機械|alat elektronik untuk mendeteksi gerombolan ikan di bawah air|魚群探知機で魚をさがします。|ぎょぐんたんちきでさかなをさがします。|Ikan dicari dengan fish finder.
+氷|こおり|kōri|es|n|Es untuk menjaga ikan tetap segar.|水がかたまった物|es untuk mendinginkan ikan agar tetap segar|魚に氷をかけます。|さかなにこおりをかけます。|Ikan ditaburi es.
+鮮度|せんど|sendo|kesegaran|n|Tingkat segar ikan.|新しさ|tingkat kesegaran ikan dan hasil laut|鮮度を保つために早く冷やします。|せんどをたもつためにはやくひやします。|Didinginkan cepat untuk menjaga kesegaran.
+活け締め|いけじめ|ikejime|ikejime (mematikan ikan agar segar)|n|Cara mematikan ikan dengan cepat agar tetap segar.|魚をすぐに締めて鮮度を保つ方法|teknik mematikan ikan dengan cepat agar dagingnya tetap segar|高い魚は活け締めにします。|たかいさかなはいけじめにします。|Ikan mahal diproses dengan ikejime.
+血抜き|ちぬき|chinuki|pengeluaran darah|n|Mengeluarkan darah ikan agar tidak amis.|魚の血を出すこと|mengeluarkan darah ikan agar rasa dan kesegaran terjaga|血抜きをすると味がよくなります。|ちぬきをするとあじがよくなります。|Jika darahnya dikeluarkan, rasanya lebih enak.
+選別|せんべつ|senbetsu|penyortiran|n|Memilah ikan menurut jenis dan ukuran.|種類や大きさで分けること|memilah ikan berdasarkan jenis dan ukuran|とれた魚を選別します。|とれたさかなをせんべつします。|Ikan hasil tangkapan disortir.
+魚箱|さかなばこ|sakanabako|kotak ikan|n|Kotak untuk mengemas ikan.|魚を入れる箱|kotak untuk menampung dan mengirim ikan|魚を魚箱に並べます。|さかなをさかなばこにならべます。|Ikan disusun di kotak ikan.
+市場|しじょう|shijō|pasar (lelang ikan)|n|Pasar tempat ikan dijual dan dilelang.|魚を売り買いする所|pasar tempat ikan diperjualbelikan|魚を市場に運びます。|さかなをしじょうにはこびます。|Ikan dibawa ke pasar.
+競り|せり|seri|lelang|n|Penjualan dengan harga tertinggi.|一番高い値段で買う人に売ること|penjualan ikan kepada penawar harga tertinggi|朝五時から競りがあります。|あさごじからせりがあります。|Lelang mulai pukul lima pagi.
+魚|さかな|sakana|ikan|n|Ikan.|水の中にすむ生き物|hewan yang hidup di air|魚の種類を覚えます。|さかなのしゅるいをおぼえます。|Saya menghafal jenis-jenis ikan.
+まぐろ|まぐろ|maguro|tuna|n|Ikan tuna.|大きな赤身の魚|ikan besar berdaging merah|まぐろはとても高いです。|まぐろはとてもたかいです。|Tuna sangat mahal.
+さば|さば|saba|ikan kembung (makerel)|n|Ikan makerel.|青い魚の一つ|ikan makerel berpunggung biru|さばがたくさんとれました。|さばがたくさんとれました。|Banyak makerel tertangkap.
+いか|いか|ika|cumi|n|Cumi-cumi.|足が十本ある海の生き物|hewan laut berkaki sepuluh|夜にいかを釣ります。|よるにいかをつります。|Memancing cumi pada malam hari.
+たこ|たこ|tako|gurita|n|Gurita.|足が八本ある海の生き物|hewan laut berkaki delapan|たこつぼでたこをとります。|たこつぼでたこをとります。|Gurita ditangkap dengan perangkap pot.
+貝|かい|kai|kerang|n|Kerang dan sejenisnya.|かたいからを持つ生き物|hewan laut bercangkang keras|貝を養殖しています。|かいをようしょくしています。|Kami membudidayakan kerang.
+ほたて|ほたて|hotate|kerang simping|n|Kerang simping yang banyak dibudidaya.|大きな二枚貝|kerang simping besar yang banyak dibudidayakan di Jepang utara|ほたてを耳づりで育てます。|ほたてをみみづりでそだてます。|Simping dibesarkan dengan cara digantung.
+かき|かき|kaki|tiram|n|Tiram.|海の貝の一つ|kerang tiram|かきの養殖いかだを見に行きます。|かきのようしょくいかだをみにいきます。|Saya pergi melihat rakit budidaya tiram.
+のり|のり|nori|rumput laut nori|n|Rumput laut untuk sushi.|海藻をうすく乾かした食べ物|rumput laut yang dikeringkan tipis|冬はのりの養殖が忙しいです。|ふゆはのりのようしょくがいそがしいです。|Musim dingin, budidaya nori sibuk.
+わかめ|わかめ|wakame|rumput laut wakame|n|Rumput laut wakame.|海藻の一つ|jenis rumput laut yang banyak dimakan di Jepang|わかめを収穫します。|わかめをしゅうかくします。|Wakame dipanen.
+海藻|かいそう|kaisō|rumput laut|n|Tumbuhan yang hidup di laut.|海の植物|tumbuhan yang hidup di laut|海藻の養殖をしています。|かいそうのようしょくをしています。|Kami membudidayakan rumput laut.
+養殖|ようしょく|yōshoku|budidaya|n|Membesarkan ikan atau kerang secara terkendali.|魚などを人が育てること|membesarkan ikan atau hasil laut dengan cara dikendalikan manusia|ぶりの養殖をしています。|ぶりのようしょくをしています。|Kami membudidayakan ikan buri.
+いけす|いけす|ikesu|keramba|n|Kurungan jaring untuk memelihara ikan.|魚を生かしておく所|kurungan atau kolam tempat ikan dipelihara hidup|いけすの魚にえさをやります。|いけすのさかなにえさをやります。|Ikan di keramba diberi pakan.
+いかだ|いかだ|ikada|rakit budidaya|n|Rakit untuk menggantung kerang atau rumput laut.|海に浮かべる台|rakit terapung tempat menggantung kerang atau rumput laut|いかだにロープをつけます。|いかだにロープをつけます。|Tali dipasang di rakit.
+稚魚|ちぎょ|chigyo|benih ikan|n|Ikan yang masih sangat kecil.|生まれて間もない魚|anak ikan yang baru menetas|稚魚をいけすに入れます。|ちぎょをいけすにいれます。|Benih ikan dimasukkan ke keramba.
+種苗|しゅびょう|shubyō|benih (budidaya)|n|Benih ikan atau kerang untuk dibesarkan.|育てるための小さな魚や貝|benih ikan, kerang, atau rumput laut untuk budidaya|種苗を海に放します。|しゅびょうをうみにはなします。|Benih dilepas ke laut.
+給餌|きゅうじ|kyūji|pemberian pakan|n|Memberi pakan ke ikan.|えさをやること|kegiatan memberi pakan kepada ikan budidaya|給餌は一日二回です。|きゅうじはいちにちにかいです。|Pemberian pakan dua kali sehari.
+飼料|しりょう|shiryō|pakan|n|Pakan ikan budidaya.|魚のえさ|pakan untuk ikan budidaya|飼料の量を記録します。|しりょうのりょうをきろくします。|Jumlah pakan dicatat.
+水温|すいおん|suion|suhu air|n|Suhu air laut atau kolam.|水の温度|suhu air tempat ikan hidup|毎朝水温を測ります。|まいあさすいおんをはかります。|Setiap pagi suhu air diukur.
+水質|すいしつ|suishitsu|kualitas air|n|Kondisi kebersihan dan kandungan air.|水のきれいさや成分|kondisi kualitas air seperti kebersihan dan kadar oksigen|水質が悪いと魚が病気になります。|すいしつがわるいとさかながびょうきになります。|Kalau kualitas air buruk, ikan sakit.
+酸素|さんそ|sanso|oksigen|n|Oksigen yang dibutuhkan ikan.|生き物が息をするのに必要な気体|gas yang dibutuhkan makhluk hidup untuk bernapas|水の中の酸素が足りません。|みずのなかのさんそがたりません。|Oksigen dalam air kurang.
+赤潮|あかしお|akashio|pasang merah (red tide)|n|Air laut berubah merah karena plankton.|プランクトンで海が赤くなること|fenomena air laut berubah warna akibat ledakan plankton yang membahayakan ikan|赤潮で魚が死にました。|あかしおでさかながしにました。|Ikan mati karena pasang merah.
+へい死|へいし|heishi|kematian massal ikan|n|Ikan mati karena penyakit atau lingkungan.|魚などが病気などで死ぬこと|kematian ikan budidaya akibat penyakit atau lingkungan|へい死した魚を取り除きます。|へいししたさかなをとりのぞきます。|Ikan yang mati diangkat.
+病気|びょうき|byōki|penyakit|n|Penyakit pada ikan.|生き物がかかる病|penyakit yang menyerang ikan|魚の病気を早く見つけます。|さかなのびょうきをはやくみつけます。|Penyakit ikan dideteksi lebih awal.
+寄生虫|きせいちゅう|kiseichū|parasit|n|Hewan kecil yang hidup menempel di ikan.|ほかの生き物について生きる虫|hewan kecil yang hidup menumpang pada ikan|寄生虫がついていないか見ます。|きせいちゅうがついていないかみます。|Periksa apakah ada parasit.
+網替え|あみがえ|amigae|penggantian jaring|n|Mengganti jaring keramba yang kotor.|いけすの網を取りかえること|mengganti jaring keramba yang kotor dengan yang bersih|月に一回網替えをします。|つきにいっかいあみがえをします。|Jaring diganti sebulan sekali.
+網の修理|あみのしゅうり|ami no shūri|memperbaiki jaring|n|Menjahit jaring yang robek.|破れた網を直すこと|memperbaiki jaring yang robek|雨の日は網の修理をします。|あめのひはあみのしゅうりをします。|Saat hujan, kami memperbaiki jaring.
+出荷|しゅっか|shukka|pengiriman|n|Mengirim ikan ke pembeli.|魚を送り出すこと|mengirim ikan hasil budidaya atau tangkapan ke pembeli|ぶりを出荷します。|ぶりをしゅっかします。|Ikan buri dikirim.
+加工|かこう|kakō|pengolahan|n|Mengolah ikan menjadi produk.|魚を食品にすること|mengolah ikan menjadi produk makanan|港の近くに加工場があります。|みなとのちかくにかこうじょうがあります。|Ada pabrik pengolahan dekat pelabuhan.
+三枚おろし|さんまいおろし|sanmai oroshi|fillet tiga bagian|n|Memotong ikan menjadi dua fillet dan tulang.|魚を身二枚と骨に分ける切り方|cara memotong ikan menjadi dua lembar daging dan satu tulang tengah|あじを三枚おろしにします。|あじをさんまいおろしにします。|Ikan aji difillet tiga bagian.
+冷凍|れいとう|reitō|pembekuan|n|Membekukan ikan agar awet.|こおらせること|membekukan ikan agar dapat disimpan lama|まぐろを冷凍で運びます。|まぐろをれいとうではこびます。|Tuna dikirim dalam keadaan beku.
+冷蔵|れいぞう|reizō|pendinginan|n|Menyimpan ikan dalam suhu dingin.|低い温度で保存すること|menyimpan ikan pada suhu dingin tanpa membekukan|魚は冷蔵で保存します。|さかなはれいぞうでほぞんします。|Ikan disimpan dalam pendingin.
+漁協|ぎょきょう|gyokyō|koperasi perikanan|n|Koperasi nelayan.|漁業協同組合|koperasi nelayan yang mengatur penjualan dan hak penangkapan|漁協のルールを守ります。|ぎょきょうのルールをまもります。|Aturan koperasi perikanan dipatuhi.
+漁業権|ぎょぎょうけん|gyogyōken|hak penangkapan ikan|n|Hak resmi untuk menangkap ikan di wilayah tertentu.|決まった海で漁をする権利|hak resmi untuk menangkap atau membudidayakan ikan di wilayah tertentu|漁業権がない所では漁をしてはいけません。|ぎょぎょうけんがないところではりょうをしてはいけません。|Tidak boleh menangkap ikan di wilayah tanpa hak.
+禁漁|きんりょう|kinryō|larangan menangkap ikan|n|Masa atau tempat dilarang menangkap ikan.|魚をとってはいけないこと|larangan menangkap ikan pada musim atau wilayah tertentu|この時期は禁漁です。|このじきはきんりょうです。|Musim ini dilarang menangkap ikan.
+資源管理|しげんかんり|shigen kanri|pengelolaan sumber daya|n|Menjaga agar ikan tidak habis.|魚がへらないように管理すること|pengelolaan agar sumber daya ikan tetap lestari|資源管理のために小さい魚は放します。|しげんかんりのためにちいさいさかなははなします。|Demi pengelolaan sumber daya, ikan kecil dilepas.
+潮|しお|shio|pasang surut / arus|n|Pergerakan air laut.|海の水の満ち引き|pergerakan naik turun dan aliran air laut|潮の流れが速いです。|しおのながれがはやいです。|Arus lautnya deras.
+満潮|まんちょう|manchō|air pasang|n|Saat air laut paling tinggi.|海の水がいちばん高いとき|saat permukaan air laut paling tinggi|満潮の時間を確認します。|まんちょうのじかんをかくにんします。|Waktu air pasang diperiksa.
+干潮|かんちょう|kanchō|air surut|n|Saat air laut paling rendah.|海の水がいちばん低いとき|saat permukaan air laut paling rendah|干潮のときに貝をとります。|かんちょうのときにかいをとります。|Kerang diambil saat air surut.
+岸壁|がんぺき|ganpeki|dermaga|n|Tempat kapal bersandar.|船をつける所|dinding tepi pelabuhan tempat kapal bersandar|船を岸壁につけます。|ふねをがんぺきにつけます。|Kapal disandarkan ke dermaga.
+係留|けいりゅう|keiryū|menambatkan kapal|n|Mengikat kapal agar tidak hanyut.|船をロープでつなぐこと|mengikat kapal ke dermaga dengan tali|船を係留してから降ります。|ふねをけいりゅうしてからおります。|Kapal ditambatkan sebelum turun.
+燃料|ねんりょう|nenryō|bahan bakar|n|Bahan bakar kapal.|船を動かす油|bahan bakar untuk mesin kapal|出港の前に燃料を入れます。|しゅっこうのまえにねんりょうをいれます。|Bahan bakar diisi sebelum berangkat.
+エンジン|えんじん|enjin|mesin kapal|n|Mesin penggerak kapal.|船を動かす機械|mesin yang menggerakkan kapal|エンジンの音がおかしいです。|エンジンのおとがおかしいです。|Suara mesinnya aneh.
+無線|むせん|musen|radio|n|Alat komunikasi di kapal.|線のない通信|alat komunikasi radio di kapal|無線で港と連絡します。|むせんでみなととれんらくします。|Berkomunikasi dengan pelabuhan lewat radio.
+救命|きゅうめい|kyūmei|penyelamatan jiwa|n|Menyelamatkan nyawa.|命を助けること|tindakan menyelamatkan nyawa|救命いかだの場所を覚えます。|きゅうめいいかだのばしょをおぼえます。|Lokasi rakit penyelamat dihafal.
+長靴|ながぐつ|nagagutsu|sepatu bot|n|Sepatu karet untuk bekerja di kapal.|ゴムの長い靴|sepatu karet tinggi tahan air|船では滑らない長靴をはきます。|ふねではすべらないながぐつをはきます。|Di kapal memakai sepatu bot anti-licin.
+カッパ|かっぱ|kappa|jas hujan|n|Jas hujan untuk bekerja di laut.|雨や水から体を守る服|pakaian tahan air untuk bekerja di laut|カッパを着て作業します。|カッパをきてさぎょうします。|Bekerja dengan memakai jas hujan.
+手袋|てぶくろ|tebukuro|sarung tangan|n|Sarung tangan untuk memegang jaring dan ikan.|手を守る物|sarung tangan untuk melindungi tangan|ゴムの手袋で魚をさわります。|ゴムのてぶくろでさかなをさわります。|Ikan dipegang dengan sarung tangan karet.
+けが|けが|kega|cedera|n|Luka saat bekerja.|体をいためること|luka atau cedera saat bekerja|魚のとげでけがをしました。|さかなのとげでけがをしました。|Saya terluka karena duri ikan.
+とげ|とげ|toge|duri|n|Duri pada sirip ikan.|魚のするどい部分|bagian tajam pada sirip atau tubuh ikan|この魚はとげに毒があります。|このさかなはとげにどくがあります。|Duri ikan ini beracun.
+クレーン|くれーん|kurēn|derek|n|Mesin pengangkat di kapal atau pelabuhan.|重い物をつり上げる機械|mesin untuk mengangkat jaring dan muatan berat|クレーンで網を上げます。|クレーンであみをあげます。|Jaring diangkat dengan derek.
+ウインチ|ういんち|uinchi|winch / derek tarik|n|Mesin penarik tali atau jaring.|ロープを巻き上げる機械|mesin untuk menggulung dan menarik tali atau jaring|ウインチに手を近づけないでください。|ウインチにてをちかづけないでください。|Jangan dekatkan tangan ke winch.
+巻き込まれ|まきこまれ|makikomare|tergulung mesin|n|Kecelakaan tertarik ke mesin.|機械に体が引き込まれること|kecelakaan ketika tubuh atau pakaian tertarik ke mesin penggulung|ロープの巻き込まれに注意します。|ロープのまきこまれにちゅういします。|Waspadai tergulung tali.
+水産|すいさん|suisan|hasil perikanan|n|Hasil dari laut dan air.|海や川からとれる物|produk dan industri hasil laut dan perairan|水産の会社で働いています。|すいさんのかいしゃではたらいています。|Saya bekerja di perusahaan perikanan.
+沿岸|えんがん|engan|pesisir|n|Laut dekat pantai.|海岸に近い海|wilayah laut di dekat pantai|沿岸で漁をします。|えんがんでりょうをします。|Kami menangkap ikan di pesisir.
+沖合|おきあい|okiai|lepas pantai|n|Laut yang jauh dari pantai.|岸から遠い海|wilayah laut yang jauh dari pantai|沖合で三日間漁をします。|おきあいでみっかかんりょうをします。|Kami menangkap ikan di lepas pantai selama tiga hari.
+遠洋|えんよう|en'yō|laut lepas|n|Laut jauh di samudra.|遠い海|samudra yang sangat jauh dari daratan|遠洋漁業は何か月も海にいます。|えんようぎょぎょうはなんかげつもうみにいます。|Perikanan laut lepas berada di laut berbulan-bulan.
+水槽|すいそう|suisō|tangki air / akuarium|n|Wadah air untuk menyimpan ikan hidup.|魚を入れる水の入れ物|wadah berisi air untuk menyimpan ikan hidup|活魚を水槽に入れます。|かつぎょをすいそうにいれます。|Ikan hidup dimasukkan ke tangki.
+活魚|かつぎょ|katsugyo|ikan hidup|n|Ikan yang dijual dalam keadaan hidup.|生きている魚|ikan yang dikirim atau dijual dalam keadaan hidup|活魚は高く売れます。|かつぎょはたかくうれます。|Ikan hidup dijual dengan harga tinggi.
