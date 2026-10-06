@@ -584,6 +584,9 @@ html.dark .washi-art { filter: invert(0.88) hue-rotate(180deg); mix-blend-mode: 
   .washi-scrim { background: linear-gradient(0deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 80%, transparent) 45%, transparent 70%); }
 }
 
+/* Hero: kanvas daun kanji 3D (WebGL) di sisi kanan, di atas ilustrasi. */
+.pohon-kata { position: absolute; inset: 0 0 0 auto; width: 58%; }
+
 /* Tangga level: desktop anak tangga naik ke kanan, kartu sedikit miring 3D. */
 @media (min-width: 768px) {
   .tangga { perspective: 1100px; }
@@ -634,6 +637,9 @@ html.dark .washi-art { filter: invert(0.88) hue-rotate(180deg); mix-blend-mode: 
     2px 2px 0 #f3eee4, 4px 4px 0 #ddd6c8, 6px 6px 0 #f3eee4, 8px 8px 0 #cfc7b7,
     14px 18px 26px rgba(17, 17, 17, 0.22);
 }
+
+/* Lembar materi PDF 3D (WebGL) mengisi area visual kartu. */
+.lembar-3d { position: absolute; inset: 0; filter: drop-shadow(0 14px 18px rgba(17, 17, 17, 0.18)); }
 
 /* Layar video 3D. */
 .layar {
