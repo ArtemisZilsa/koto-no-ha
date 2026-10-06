@@ -8,13 +8,13 @@ import { JsonLd, SITE_DESCRIPTION, SITE_NAME, organizationJsonLd, websiteJsonLd 
 const notoSansJP = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
   subsets: ['latin'],
-  weight: ['300', '400', '500'],
+  // Tanpa `weight`: variable font, satu @font-face per potongan huruf untuk semua ketebalan.
+  // Dengan 3 weight statis CSS font-nya ±280 KB dan memblokir render pertama.
 })
 
 const notoSerifJP = Noto_Serif_JP({
   variable: '--font-noto-serif-jp',
   subsets: ['latin'],
-  weight: ['300', '400', '600'],
 })
 
 export const metadata: Metadata = {

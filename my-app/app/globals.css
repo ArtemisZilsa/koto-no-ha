@@ -567,3 +567,99 @@ html.no-anim .progress-fill { transition: none; width: var(--bar-w, 0%); }
   text-orientation: upright;
   letter-spacing: 0.2em;
 }
+
+/* ════════ Beranda washi (sumi-e) ════════════════════════════════════════════
+   Semua gerak memakai transform (dikerjakan GPU) dan mati di reduced-motion. */
+
+/* Ilustrasi menyatu dengan warna kertas halaman; mode gelap: tinta dibalik
+   (hue-rotate menjaga crimson tetap merah). */
+.washi-art { mix-blend-mode: multiply; }
+html.dark .washi-art { filter: invert(0.88) hue-rotate(180deg); mix-blend-mode: screen; opacity: 0.32; }
+/* Kabut kertas di sisi teks (kiri desktop, bawah HP) supaya teks tetap terbaca di atas ilustrasi. */
+.washi-scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 75%, transparent) 38%, transparent 62%);
+}
+@media (max-width: 767px) {
+  .washi-scrim { background: linear-gradient(0deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 80%, transparent) 45%, transparent 70%); }
+}
+
+/* Tangga level: desktop anak tangga naik ke kanan, kartu sedikit miring 3D. */
+@media (min-width: 768px) {
+  .tangga { perspective: 1100px; }
+  .tangga-step {
+    transform: translateY(calc(var(--step) * -36px)) rotateX(6deg) rotateY(-8deg);
+    transform-origin: bottom center;
+    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .tangga-step:hover {
+    transform: translateY(calc(var(--step) * -36px - 10px)) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+/* Kartu soal yang berbalik. */
+.kartu-soal { perspective: 1200px; }
+.kartu-soal__inner {
+  position: relative;
+  display: grid;
+  transform-style: preserve-3d;
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.kartu-soal[data-flipped='true'] .kartu-soal__inner { transform: rotateY(180deg); }
+.kartu-soal__face {
+  grid-area: 1 / 1;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: var(--surface);
+  border: 1px solid var(--brand-line);
+  box-shadow: 0 18px 40px rgba(17, 17, 17, 0.08);
+}
+.kartu-soal__back { transform: rotateY(180deg); }
+
+/* Buku PDF 3D: sampul miring; tebal halaman = box-shadow berlapis ke kanan-bawah. */
+.buku {
+  width: 96px;
+  height: 132px;
+  transform: perspective(600px) rotateY(-24deg) rotateX(6deg);
+  transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.paket:hover .buku { transform: perspective(600px) rotateY(-6deg) rotateX(2deg); }
+.buku__cover {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: var(--crimson); color: #fafafa;
+  border-radius: 2px 6px 6px 2px;
+  box-shadow:
+    inset 7px 0 0 rgba(0, 0, 0, 0.22),
+    2px 2px 0 #f3eee4, 4px 4px 0 #ddd6c8, 6px 6px 0 #f3eee4, 8px 8px 0 #cfc7b7,
+    14px 18px 26px rgba(17, 17, 17, 0.22);
+}
+
+/* Layar video 3D. */
+.layar {
+  transform: perspective(700px) rotateY(18deg) rotateX(4deg);
+  transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.paket:hover .layar { transform: perspective(700px) rotateY(4deg) rotateX(0deg); }
+.layar__screen {
+  width: 190px; height: 112px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  border-radius: 10px;
+  background: #111111; color: #fafafa;
+  border: 6px solid #2a2a2a;
+  box-shadow: 0 16px 30px rgba(17, 17, 17, 0.2);
+}
+.layar__play {
+  width: 0; height: 0;
+  border-left: 16px solid var(--crimson);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tangga-step, .kartu-soal__inner, .buku, .layar { transition: none; }
+}
+html.no-anim .tangga-step,
+html.no-anim .kartu-soal__inner,
+html.no-anim .buku,
+html.no-anim .layar { transition: none; }
