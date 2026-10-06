@@ -34,7 +34,7 @@ KY活動|ケーワイかつどう|kēwai katsudō|kegiatan prediksi bahaya|n|Dis
 内装|ないそう|naisō|interior|n|Pekerjaan bagian dalam bangunan.|建物の中の仕上げ|pekerjaan finishing bagian dalam bangunan seperti dinding dan langit-langit|来週から内装工事が始まります。|らいしゅうからないそうこうじがはじまります。|Pekerjaan interior dimulai minggu depan.
 外装|がいそう|gaisō|eksterior|n|Pekerjaan bagian luar bangunan.|建物の外の仕上げ|pekerjaan finishing bagian luar bangunan|外装のタイルを張ります。|がいそうのタイルをはります。|Ubin eksterior dipasang.
 天井|てんじょう|tenjō|langit-langit|n|Permukaan atas di dalam ruangan.|部屋の上の面|permukaan atas bagian dalam ruangan|天井にボードを張ります。|てんじょうにボードをはります。|Papan dipasang di langit-langit.
-石膏ボード|せっこうぼーど|sekkō bōdo|papan gipsum|n|Papan untuk dinding dan langit-langit dalam.|石膏でできた板|papan berbahan gipsum untuk dinding dan langit-langit|石膏ボードをビスで留めます。|せっこうボードをビスでとめます。|Papan gipsum dipasang dengan sekrup.
+石膏ボード|せっこうボード|sekkō bōdo|papan gipsum|n|Papan untuk dinding dan langit-langit dalam.|石膏でできた板|papan berbahan gipsum untuk dinding dan langit-langit|石膏ボードをビスで留めます。|せっこうボードをビスでとめます。|Papan gipsum dipasang dengan sekrup.
 左官|さかん|sakan|tukang plester|n|Pekerjaan meratakan dinding dengan adukan.|壁をぬる仕事|pekerjaan meratakan dinding dan lantai dengan adukan|左官の職人が壁をぬっています。|さかんのしょくにんがかべをぬっています。|Tukang plester sedang memlester dinding.
 塗装|とそう|tosō|pengecatan|n|Mengecat dinding atau besi.|ペンキをぬること|mengecat permukaan bangunan agar rapi dan tahan lama|塗装の前に下地を整えます。|とそうのまえにしたじをととのえます。|Sebelum dicat, permukaan dasar dirapikan.
 防水|ぼうすい|bōsui|kedap air|n|Pekerjaan agar air hujan tidak merembes.|水が入らないようにすること|pekerjaan agar air tidak merembes ke dalam bangunan|屋上の防水工事をします。|おくじょうのぼうすいこうじをします。|Pekerjaan kedap air di atap dilakukan.

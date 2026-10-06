@@ -1,0 +1,101 @@
+# 飲食料品製造業 — Produksi Makanan & Minuman (100 kata)
+食品工場|しょくひんこうじょう|shokuhin kōjō|pabrik makanan|n|Pabrik yang membuat produk makanan.|食べ物を作る工場|pabrik yang memproduksi makanan dan minuman|食品工場で弁当を作っています。|しょくひんこうじょうでべんとうをつくっています。|Saya membuat bento di pabrik makanan.
+食品|しょくひん|shokuhin|bahan makanan / produk pangan|n|Makanan yang dijual.|食べ物|makanan dan bahan pangan yang dijual|食品の安全はとても大切です。|しょくひんのあんぜんはとてもたいせつです。|Keamanan pangan sangat penting.
+食品衛生|しょくひんえいせい|shokuhin eisei|higiene pangan|n|Menjaga kebersihan agar makanan aman.|食べ物を安全で清潔に保つこと|upaya menjaga kebersihan agar makanan aman dikonsumsi|食品衛生のルールを守ります。|しょくひんえいせいのルールをまもります。|Aturan higiene pangan dipatuhi.
+衛生管理|えいせいかんり|eisei kanri|manajemen kebersihan|n|Mengelola kebersihan di pabrik.|清潔さを管理すること|pengelolaan kebersihan di tempat produksi makanan|衛生管理の記録をつけます。|えいせいかんりのきろくをつけます。|Catatan manajemen kebersihan diisi.
+HACCP|ハサップ|hasappu|HACCP|n|Sistem keamanan pangan untuk mencegah bahaya.|食品の危険を防ぐ管理の方法|sistem pengendalian keamanan pangan berdasarkan analisis bahaya dan titik kendali kritis|この工場はHACCPを導入しています。|このこうじょうはハサップをどうにゅうしています。|Pabrik ini menerapkan HACCP.
+食中毒|しょくちゅうどく|shokuchūdoku|keracunan makanan|n|Sakit karena makanan yang terkontaminasi.|悪い食べ物で病気になること|penyakit akibat mengonsumsi makanan yang terkontaminasi kuman atau racun|食中毒を防ぐために手を洗います。|しょくちゅうどくをふせぐためにてをあらいます。|Cuci tangan untuk mencegah keracunan makanan.
+細菌|さいきん|saikin|bakteri|n|Kuman kecil penyebab penyakit.|目に見えない小さな菌|mikroorganisme kecil yang dapat menyebabkan penyakit|細菌は温かい所で増えます。|さいきんはあたたかいところでふえます。|Bakteri berkembang di tempat hangat.
+ウイルス|ういるす|uirusu|virus|n|Penyebab penyakit yang sangat kecil.|病気のもとになるとても小さいもの|penyebab penyakit yang sangat kecil seperti norovirus|ノロウイルスに注意します。|ノロウイルスにちゅういします。|Waspadai norovirus.
+手洗い|てあらい|tearai|cuci tangan|n|Mencuci tangan dengan sabun.|手を洗うこと|mencuci tangan dengan sabun dan air mengalir|作業の前に手洗いをします。|さぎょうのまえにてあらいをします。|Cuci tangan sebelum bekerja.
+アルコール消毒|アルコールしょうどく|arukōru shōdoku|disinfeksi alkohol|n|Membersihkan kuman dengan alkohol.|アルコールで菌を殺すこと|membunuh kuman dengan cairan alkohol|手洗いのあとアルコール消毒をします。|てあらいのあとアルコールしょうどくをします。|Setelah cuci tangan, disinfeksi dengan alkohol.
+異物混入|いぶつこんにゅう|ibutsu kon'nyū|kontaminasi benda asing|n|Benda asing masuk ke makanan.|食べ物にちがう物が入ること|masuknya benda asing seperti rambut atau plastik ke dalam makanan|異物混入を防ぐため帽子をかぶります。|いぶつこんにゅうをふせぐためぼうしをかぶります。|Pakai topi untuk mencegah kontaminasi benda asing.
+毛髪|もうはつ|mōhatsu|rambut|n|Rambut yang bisa jatuh ke makanan.|髪の毛|rambut yang berisiko masuk ke makanan|毛髪が落ちないようにネットをかぶります。|もうはつがおちないようにネットをかぶります。|Pakai jaring rambut agar rambut tidak jatuh.
+衛生帽|えいせいぼう|eiseibō|topi higienis|n|Topi agar rambut tidak jatuh.|髪をおおう帽子|topi penutup rambut untuk pekerja pabrik makanan|衛生帽から髪を出さないでください。|えいせいぼうからかみをださないでください。|Jangan biarkan rambut keluar dari topi higienis.
+白衣|はくい|hakui|baju kerja putih|n|Baju kerja putih di pabrik makanan.|白い作業服|pakaian kerja putih untuk pekerja pabrik makanan|白衣に着替えます。|はくいにきがえます。|Berganti ke baju kerja putih.
+マスク|ますく|masuku|masker|n|Penutup mulut dan hidung.|口と鼻をおおう物|penutup mulut dan hidung untuk mencegah kontaminasi|作業中はマスクをつけます。|さぎょうちゅうはマスクをつけます。|Selama bekerja, pakai masker.
+ローラー掛け|ローラーがけ|rōrā gake|membersihkan baju dengan roller|n|Membersihkan rambut dan debu dari baju dengan roller.|粘着ローラーで服のごみを取ること|membersihkan rambut dan debu dari pakaian kerja dengan roller lengket|入室前にローラー掛けをします。|にゅうしつまえにローラーがけをします。|Sebelum masuk, baju dibersihkan dengan roller.
+エアシャワー|えあしゃわー|ea shawā|air shower|n|Ruang semprot udara untuk membersihkan debu.|風でほこりを落とす部屋|ruang yang menyemprotkan udara untuk membuang debu sebelum masuk area produksi|エアシャワーを通ってから入ります。|エアシャワーをとおってからはいります。|Masuk setelah melewati air shower.
+健康チェック|けんこうチェック|kenkō chekku|pemeriksaan kesehatan|n|Memeriksa kondisi badan sebelum kerja.|体の調子を確認すること|memeriksa kondisi kesehatan pekerja sebelum mulai bekerja|毎朝健康チェックをします。|まいあさけんこうチェックをします。|Setiap pagi dilakukan pemeriksaan kesehatan.
+下痢|げり|geri|diare|n|Gejala yang harus dilaporkan sebelum bekerja.|おなかをこわすこと|gangguan pencernaan yang wajib dilaporkan karena berisiko kontaminasi|下痢のときは必ず報告します。|げりのときはかならずほうこくします。|Saat diare, wajib melapor.
+原料|げんりょう|genryō|bahan baku|n|Bahan utama untuk membuat makanan.|食品を作るもとの材料|bahan utama untuk membuat produk makanan|原料の産地を確認します。|げんりょうのさんちをかくにんします。|Asal bahan baku diperiksa.
+受け入れ|うけいれ|ukeire|penerimaan barang|n|Menerima bahan dari pemasok.|材料を受け取ること|menerima dan memeriksa bahan dari pemasok|原料の受け入れ検査をします。|げんりょうのうけいれけんさをします。|Pemeriksaan penerimaan bahan baku dilakukan.
+計量|けいりょう|keiryō|penimbangan|n|Menimbang bahan sesuai resep.|重さをはかること|menimbang berat bahan sesuai resep|調味料を正確に計量します。|ちょうみりょうをせいかくにけいりょうします。|Bumbu ditimbang dengan tepat.
+配合|はいごう|haigō|formulasi / pencampuran|n|Mencampur bahan dengan perbandingan tertentu.|材料を決まった割合で混ぜること|mencampur bahan sesuai perbandingan yang ditentukan|配合表を見て材料を混ぜます。|はいごうひょうをみてざいりょうをまぜます。|Bahan dicampur sesuai tabel formulasi.
+レシピ|れしぴ|reshipi|resep|n|Petunjuk bahan dan cara membuat.|作り方|petunjuk bahan dan cara membuat makanan|レシピのとおりに作ります。|レシピのとおりにつくります。|Dibuat sesuai resep.
+下処理|したしょり|shitashori|persiapan bahan|n|Mencuci dan memotong bahan sebelum dimasak.|調理の前の準備|persiapan bahan seperti mencuci, mengupas, dan memotong|野菜の下処理をします。|やさいのしたしょりをします。|Sayuran dipersiapkan.
+洗浄|せんじょう|senjō|pencucian|n|Mencuci bahan atau alat.|洗ってきれいにすること|mencuci bahan atau peralatan sampai bersih|野菜を流水で洗浄します。|やさいをりゅうすいでせんじょうします。|Sayur dicuci dengan air mengalir.
+カット|かっと|katto|pemotongan|n|Memotong bahan.|切ること|memotong bahan makanan|キャベツをカットします。|キャベツをカットします。|Kubis dipotong.
+加熱|かねつ|kanetsu|pemanasan|n|Memanaskan makanan sampai matang.|熱を加えること|memanaskan makanan hingga suhu yang cukup untuk membunuh kuman|中心まで十分に加熱します。|ちゅうしんまでじゅうぶんにかねつします。|Dipanaskan cukup sampai ke bagian tengah.
+中心温度|ちゅうしんおんど|chūshin ondo|suhu inti|n|Suhu di bagian tengah makanan.|食品の真ん中の温度|suhu di bagian tengah makanan yang menentukan kematangan|中心温度を測って記録します。|ちゅうしんおんどをはかってきろくします。|Suhu inti diukur dan dicatat.
+温度計|おんどけい|ondokei|termometer|n|Alat pengukur suhu.|温度を測る道具|alat untuk mengukur suhu|温度計で油の温度を測ります。|おんどけいであぶらのおんどをはかります。|Suhu minyak diukur dengan termometer.
+冷却|れいきゃく|reikyaku|pendinginan|n|Mendinginkan makanan setelah dimasak.|冷やすこと|mendinginkan makanan dengan cepat setelah dimasak|加熱のあとすぐに冷却します。|かねつのあとすぐにれいきゃくします。|Setelah dipanaskan, segera didinginkan.
+冷蔵|れいぞう|reizō|penyimpanan dingin|n|Menyimpan pada suhu dingin.|低い温度で保存すること|menyimpan makanan pada suhu dingin di atas titik beku|原料は十度以下で冷蔵します。|げんりょうはじゅうどいかでれいぞうします。|Bahan baku disimpan dingin di bawah 10 derajat.
+冷凍|れいとう|reitō|pembekuan|n|Menyimpan dalam keadaan beku.|こおらせて保存すること|membekukan makanan agar awet|冷凍庫はマイナス十八度以下です。|れいとうこはマイナスじゅうはちどいかです。|Freezer di bawah minus 18 derajat.
+解凍|かいとう|kaitō|pencairan|n|Mencairkan makanan beku.|こおった物をとかすこと|mencairkan makanan beku sebelum diolah|肉を冷蔵庫で解凍します。|にくをれいぞうこでかいとうします。|Daging dicairkan di kulkas.
+殺菌|さっきん|sakkin|sterilisasi|n|Membunuh kuman pada makanan atau alat.|菌を殺すこと|membunuh kuman pada makanan atau peralatan|容器を殺菌します。|ようきをさっきんします。|Wadah disterilkan.
+揚げる|あげる|ageru|menggoreng|v|Memasak dengan minyak banyak.|油で調理する|memasak makanan dengan minyak panas yang banyak|からあげを揚げます。|からあげをあげます。|Karaage digoreng.
+焼く|やく|yaku|memanggang|v|Memasak dengan api atau oven.|火で調理する|memasak makanan dengan api atau panas oven|パンを焼きます。|パンをやきます。|Roti dipanggang.
+煮る|にる|niru|merebus|v|Memasak dalam air atau kuah.|水などで調理する|memasak makanan di dalam air atau kuah|野菜を煮ます。|やさいをにます。|Sayur direbus.
+蒸す|むす|musu|mengukus|v|Memasak dengan uap.|湯気で調理する|memasak makanan dengan uap panas|まんじゅうを蒸します。|まんじゅうをむします。|Manju dikukus.
+混ぜる|まぜる|mazeru|mencampur|v|Mengaduk bahan agar tercampur.|いくつかの物を一つにする|mengaduk beberapa bahan agar menyatu|材料をよく混ぜます。|ざいりょうをよくまぜます。|Bahan dicampur dengan baik.
+こねる|こねる|koneru|menguleni|v|Mengaduk adonan dengan tangan atau mesin.|粉と水を混ぜて練る|menguleni adonan tepung dengan tangan atau mesin|パンの生地をこねます。|パンのきじをこねます。|Adonan roti diuleni.
+生地|きじ|kiji|adonan|n|Adonan tepung untuk roti atau kue.|パンなどのもと|adonan dari tepung untuk roti, kue, atau mi|生地を一時間休ませます。|きじをいちじかんやすませます。|Adonan didiamkan satu jam.
+発酵|はっこう|hakkō|fermentasi|n|Proses bahan berubah karena mikroba.|菌の働きで変わること|proses perubahan bahan oleh mikroorganisme, seperti pada roti dan kecap|パンの生地を発酵させます。|パンのきじをはっこうさせます。|Adonan roti difermentasi.
+成形|せいけい|seikei|pembentukan|n|Membentuk adonan menjadi bentuk tertentu.|形を作ること|membentuk adonan atau bahan menjadi bentuk produk|生地を丸く成形します。|きじをまるくせいけいします。|Adonan dibentuk bulat.
+盛り付け|もりつけ|moritsuke|penataan makanan|n|Menata makanan di wadah.|料理を器に並べること|menata makanan di dalam wadah atau kotak|弁当の盛り付けをします。|べんとうのもりつけをします。|Bento ditata.
+包装|ほうそう|hōsō|pengemasan|n|Membungkus produk.|商品を包むこと|membungkus produk makanan|パンを一つずつ包装します。|パンをひとつずつほうそうします。|Roti dikemas satu per satu.
+充填|じゅうてん|jūten|pengisian|n|Mengisi produk ke dalam wadah.|容器に中身を入れること|mengisi produk cair atau padat ke dalam wadah|ペットボトルにお茶を充填します。|ペットボトルにおちゃをじゅうてんします。|Teh diisikan ke botol plastik.
+密封|みっぷう|mippū|penyegelan rapat|n|Menutup wadah dengan rapat.|すき間なくふさぐこと|menutup wadah dengan rapat agar udara tidak masuk|袋を密封します。|ふくろをみっぷうします。|Kantong disegel rapat.
+ラベル|らべる|raberu|label|n|Label informasi produk.|商品の情報を書いた紙|label berisi informasi produk|ラベルの日付を確認します。|ラベルのひづけをかくにんします。|Tanggal di label diperiksa.
+表示|ひょうじ|hyōji|penandaan / label informasi|n|Informasi wajib pada kemasan.|包装に書く情報|informasi wajib pada kemasan seperti bahan, alergen, dan tanggal|表示にまちがいがないか確認します。|ひょうじにまちがいがないかかくにんします。|Diperiksa apakah ada kesalahan pada label.
+賞味期限|しょうみきげん|shōmi kigen|batas terbaik dikonsumsi|n|Tanggal sampai rasa paling baik.|おいしく食べられる期限|batas tanggal makanan masih terasa paling enak|賞味期限を印字します。|しょうみきげんをいんじします。|Batas terbaik dikonsumsi dicetak.
+消費期限|しょうひきげん|shōhi kigen|batas aman dikonsumsi|n|Tanggal batas aman makanan dimakan.|安全に食べられる期限|batas tanggal makanan masih aman dimakan|弁当には消費期限があります。|べんとうにはしょうひきげんがあります。|Bento memiliki batas aman dikonsumsi.
+ロット番号|ロットばんごう|rotto bangō|nomor lot|n|Nomor kelompok produksi.|同じ時に作った製品の番号|nomor yang menandai kelompok produk yang dibuat bersamaan|ロット番号を記録します。|ロットばんごうをきろくします。|Nomor lot dicatat.
+アレルゲン|あれるげん|arerugen|alergen|n|Bahan penyebab alergi.|アレルギーのもと|bahan yang dapat menyebabkan alergi seperti telur dan susu|アレルゲンが混ざらないようにします。|アレルゲンがまざらないようにします。|Dijaga agar alergen tidak tercampur.
+金属探知機|きんぞくたんちき|kinzoku tanchiki|detektor logam|n|Mesin untuk menemukan logam di produk.|金属が入っていないか調べる機械|mesin untuk mendeteksi pecahan logam dalam produk|全部の製品を金属探知機に通します。|ぜんぶのせいひんをきんぞくたんちきにとおします。|Semua produk dilewatkan detektor logam.
+X線検査|エックスせんけんさ|ekkususen kensa|pemeriksaan sinar-X|n|Pemeriksaan benda asing dengan sinar-X.|X線で中を調べる検査|pemeriksaan benda asing di dalam produk menggunakan sinar-X|X線検査で骨を見つけます。|エックスせんけんさでほねをみつけます。|Tulang ditemukan dengan pemeriksaan sinar-X.
+検品|けんぴん|kenpin|pemeriksaan produk|n|Memeriksa produk sebelum dikirim.|製品を調べること|memeriksa produk jadi sebelum dikirim|出荷の前に検品します。|しゅっかのまえにけんぴんします。|Produk diperiksa sebelum dikirim.
+不良品|ふりょうひん|furyōhin|produk cacat|n|Produk yang tidak memenuhi standar.|基準に合わない製品|produk yang tidak sesuai standar|不良品をラインから取り除きます。|ふりょうひんをラインからとりのぞきます。|Produk cacat dikeluarkan dari jalur.
+製造ライン|せいぞうライン|seizō rain|jalur produksi|n|Rangkaian mesin produksi.|製品を作る流れ|rangkaian mesin dan pekerja untuk membuat produk|製造ラインのスピードが速いです。|せいぞうラインのスピードがはやいです。|Kecepatan jalur produksinya cepat.
+ベルトコンベア|べるとこんべあ|beruto konbea|ban berjalan|n|Ban berjalan yang membawa produk.|物を運ぶ動くベルト|ban berjalan untuk memindahkan produk|ベルトコンベアに手を入れないでください。|ベルトコンベアにてをいれないでください。|Jangan masukkan tangan ke ban berjalan.
+清掃|せいそう|seisō|pembersihan|n|Membersihkan mesin dan lantai.|きれいにすること|membersihkan mesin, alat, dan lantai|作業のあと機械を清掃します。|さぎょうのあときかいをせいそうします。|Setelah bekerja, mesin dibersihkan.
+分解洗浄|ぶんかいせんじょう|bunkai senjō|bongkar dan cuci|n|Membongkar mesin untuk dicuci.|機械をばらして洗うこと|membongkar bagian mesin untuk dicuci menyeluruh|毎日分解洗浄をします。|まいにちぶんかいせんじょうをします。|Setiap hari mesin dibongkar dan dicuci.
+洗剤|せんざい|senzai|deterjen|n|Bahan pembersih.|汚れを落とす薬|bahan untuk membersihkan kotoran|食品用の洗剤を使います。|しょくひんようのせんざいをつかいます。|Memakai deterjen khusus pangan.
+すすぎ|すすぎ|susugi|pembilasan|n|Membilas sisa deterjen.|洗剤を水で流すこと|membilas sisa deterjen dengan air bersih|洗剤が残らないようにすすぎます。|せんざいがのこらないようにすすぎます。|Dibilas agar deterjen tidak tersisa.
+交差汚染|こうさおせん|kōsa osen|kontaminasi silang|n|Kuman berpindah dari bahan mentah ke matang.|生の物から菌がうつること|perpindahan kuman dari bahan mentah atau kotor ke makanan matang|まな板を分けて交差汚染を防ぎます。|まないたをわけてこうさおせんをふせぎます。|Talenan dipisah untuk mencegah kontaminasi silang.
+汚染区域|おせんくいき|osen kuiki|area kotor|n|Area untuk bahan mentah.|生の材料を扱う場所|area untuk menangani bahan mentah yang belum diolah|汚染区域から清潔区域へ行くときは手を洗います。|おせんくいきからせいけつくいきへいくときはてをあらいます。|Saat pindah dari area kotor ke area bersih, cuci tangan.
+清潔区域|せいけつくいき|seiketsu kuiki|area bersih|n|Area untuk makanan matang dan pengemasan.|加熱後の食品を扱う場所|area untuk menangani makanan yang sudah matang dan dikemas|清潔区域には専用の靴で入ります。|せいけつくいきにはせんようのくつではいります。|Area bersih dimasuki dengan sepatu khusus.
+まな板|まないた|manaita|talenan|n|Papan untuk memotong bahan.|材料を切るための板|papan alas untuk memotong bahan makanan|肉と野菜のまな板を分けます。|にくとやさいのまないたをわけます。|Talenan daging dan sayur dipisah.
+包丁|ほうちょう|hōchō|pisau dapur|n|Pisau untuk memotong bahan.|料理に使うナイフ|pisau untuk memotong bahan makanan|包丁は決まった場所に置きます。|ほうちょうはきまったばしょにおきます。|Pisau diletakkan di tempat yang ditentukan.
+容器|ようき|yōki|wadah|n|Wadah untuk bahan atau produk.|物を入れる入れ物|wadah untuk menampung bahan atau produk|容器にふたをします。|ようきにふたをします。|Wadah ditutup.
+保管|ほかん|hokan|penyimpanan|n|Menyimpan bahan dengan benar.|物をしまっておくこと|menyimpan bahan atau produk dengan cara yang benar|原料を正しく保管します。|げんりょうをただしくほかんします。|Bahan baku disimpan dengan benar.
+先入れ先出し|さきいれさきだし|sakiire sakidashi|FIFO|n|Memakai bahan yang masuk duluan lebih dulu.|先に入れた物から先に使うこと|prinsip memakai bahan yang lebih dulu masuk terlebih dahulu|材料は先入れ先出しで使います。|ざいりょうはさきいれさきだしでつかいます。|Bahan dipakai dengan prinsip FIFO.
+在庫|ざいこ|zaiko|stok|n|Bahan atau produk yang tersimpan.|ある品物|bahan atau produk yang tersimpan|在庫の数を数えます。|ざいこのかずをかぞえます。|Jumlah stok dihitung.
+調味料|ちょうみりょう|chōmiryō|bumbu|n|Bahan perasa seperti garam dan kecap.|味をつける物|bahan perasa seperti garam, gula, dan kecap|調味料を順番に入れます。|ちょうみりょうをじゅんばんにいれます。|Bumbu dimasukkan berurutan.
+添加物|てんかぶつ|tenkabutsu|bahan tambahan pangan|n|Bahan tambahan seperti pengawet dan pewarna.|食品に加える物|bahan tambahan pada makanan seperti pengawet dan pewarna|添加物の量を守ります。|てんかぶつのりょうをまもります。|Takaran bahan tambahan dipatuhi.
+惣菜|そうざい|sōzai|lauk siap saji|n|Lauk yang sudah dimasak untuk dijual.|できあがったおかず|lauk pauk siap saji yang dijual di toko|スーパーの惣菜を作っています。|スーパーのそうざいをつくっています。|Saya membuat lauk siap saji untuk supermarket.
+弁当|べんとう|bentō|bento / nasi kotak|n|Makanan dalam kotak.|箱に入れた食事|makanan lengkap dalam kotak|コンビニの弁当を作ります。|コンビニのべんとうをつくります。|Kami membuat bento untuk minimarket.
+パン|ぱん|pan|roti|n|Roti.|小麦粉で作った食べ物|makanan dari tepung terigu yang dipanggang|朝早くパンを焼きます。|あさはやくパンをやきます。|Roti dipanggang pagi-pagi.
+菓子|かし|kashi|kue / camilan|n|Kue dan camilan.|おやつ|kue dan camilan|和菓子の工場で働きます。|わがしのこうじょうではたらきます。|Saya bekerja di pabrik kue Jepang.
+麺|めん|men|mi|n|Mi seperti udon dan ramen.|うどんやそばなど|makanan berbentuk mi seperti udon, soba, dan ramen|麺をゆでて冷やします。|めんをゆでてひやします。|Mi direbus lalu didinginkan.
+水産加工|すいさんかこう|suisan kakō|pengolahan hasil laut|n|Mengolah ikan dan hasil laut.|魚などを食品にすること|pengolahan ikan dan hasil laut menjadi produk makanan|水産加工の工場で魚をさばきます。|すいさんかこうのこうじょうでさかなをさばきます。|Saya memfillet ikan di pabrik pengolahan hasil laut.
+食肉加工|しょくにくかこう|shokuniku kakō|pengolahan daging|n|Mengolah daging menjadi produk.|肉を食品にすること|pengolahan daging menjadi produk seperti sosis dan ham|食肉加工でハムを作ります。|しょくにくかこうでハムをつくります。|Ham dibuat di pengolahan daging.
+飲料|いんりょう|inryō|minuman|n|Minuman kemasan.|飲み物|minuman yang diproduksi dan dikemas|飲料の工場はラインが長いです。|いんりょうのこうじょうはラインがながいです。|Pabrik minuman jalur produksinya panjang.
+酒類|しゅるい|shurui|minuman beralkohol|n|Minuman seperti sake dan bir.|お酒の種類|jenis minuman beralkohol seperti sake dan bir|酒類の製造は特別な許可がいります。|しゅるいのせいぞうはとくべつなきょかがいります。|Produksi minuman beralkohol perlu izin khusus.
+ハラール|はらーる|harāru|halal|n|Makanan yang sesuai syariat Islam.|イスラム教で許された食べ物|makanan dan minuman yang diizinkan menurut syariat Islam|ハラールの食品を作る工場もあります。|ハラールのしょくひんをつくるこうじょうもあります。|Ada juga pabrik yang membuat produk halal.
+品質管理|ひんしつかんり|hinshitsu kanri|pengendalian mutu|n|Menjaga kualitas produk.|品質を一定に保つこと|kegiatan menjaga mutu produk tetap stabil|品質管理の担当者に相談します。|ひんしつかんりのたんとうしゃにそうだんします。|Saya berkonsultasi dengan petugas pengendalian mutu.
+記録|きろく|kiroku|pencatatan|n|Mencatat suhu, waktu, dan hasil.|書いて残すこと|mencatat data seperti suhu, waktu, dan hasil pemeriksaan|温度を記録表に書きます。|おんどをきろくひょうにかきます。|Suhu ditulis di lembar catatan.
+報告|ほうこく|hōkoku|laporan|n|Melaporkan masalah ke atasan.|上の人に知らせること|menyampaikan masalah atau hasil kerja kepada atasan|異物を見つけたらすぐ報告します。|いぶつをみつけたらすぐほうこくします。|Kalau menemukan benda asing, segera laporkan.
+クレーム|くれーむ|kurēmu|keluhan pelanggan|n|Keluhan dari pelanggan atau toko.|お客様からの苦情|keluhan dari pelanggan atau toko tentang produk|クレームの原因を調べます。|クレームのげんいんをしらべます。|Penyebab keluhan diselidiki.
+回収|かいしゅう|kaishū|penarikan produk|n|Menarik produk bermasalah dari pasar.|売った物を集めて戻すこと|menarik kembali produk bermasalah dari pasar|問題がある製品を回収します。|もんだいがあるせいひんをかいしゅうします。|Produk bermasalah ditarik.
+廃棄|はいき|haiki|pembuangan|n|Membuang produk atau bahan.|捨てること|membuang produk atau bahan yang tidak boleh dipakai|期限が切れた原料は廃棄します。|きげんがきれたげんりょうははいきします。|Bahan yang kedaluwarsa dibuang.
+食品ロス|しょくひんロス|shokuhin rosu|pemborosan pangan|n|Makanan yang terbuang sia-sia.|捨てられる食べ物|makanan yang masih layak tetapi terbuang|食品ロスをへらす工夫をします。|しょくひんロスをへらすくふうをします。|Kami berupaya mengurangi pemborosan pangan.
+防虫|ぼうちゅう|bōchū|pencegahan serangga|n|Mencegah serangga masuk ke pabrik.|虫が入らないようにすること|upaya mencegah serangga masuk ke tempat produksi|ドアを閉めて防虫します。|ドアをしめてぼうちゅうします。|Pintu ditutup untuk mencegah serangga.
+5S|ごエス|go esu|5S|n|Prinsip kerapian tempat kerja.|整理・整頓・清掃・清潔・しつけ|lima prinsip kerapian dan kebersihan tempat kerja|５Sは食品工場の基本です。|ごエスはしょくひんこうじょうのきほんです。|5S adalah dasar pabrik makanan.
+作業手順|さぎょうてじゅん|sagyō tejun|prosedur kerja|n|Urutan cara kerja yang ditetapkan.|仕事の順番|urutan langkah kerja yang sudah ditetapkan|作業手順を守ってください。|さぎょうてじゅんをまもってください。|Patuhi prosedur kerja.
+けが|けが|kega|cedera|n|Luka saat bekerja.|体をいためること|luka atau cedera saat bekerja|包丁でけがをしないようにします。|ほうちょうでけがをしないようにします。|Hati-hati agar tidak terluka oleh pisau.
+やけど|やけど|yakedo|luka bakar|n|Luka akibat panas.|熱で皮ふをいためること|luka pada kulit akibat panas|揚げ油でやけどに注意します。|あげあぶらでやけどにちゅういします。|Waspadai luka bakar dari minyak goreng.
+異常|いじょう|ijō|kelainan|n|Keadaan tidak normal pada mesin atau produk.|いつもと違う状態|keadaan tidak normal yang menandakan masalah|機械に異常があればラインを止めます。|きかいにいじょうがあればラインをとめます。|Jika mesin bermasalah, jalur dihentikan.
+手指|しゅし|shushi|tangan dan jari|n|Tangan dan jari (istilah higiene).|手と指|tangan dan jari, istilah yang dipakai dalam higiene|手指の消毒を忘れないでください。|しゅしのしょうどくをわすれないでください。|Jangan lupa disinfeksi tangan.
+爪|つめ|tsume|kuku|n|Kuku harus pendek dan bersih.|指の先のかたい部分|kuku jari yang harus dipotong pendek dan bersih|爪は短く切っておきます。|つめはみじかくきっておきます。|Kuku dipotong pendek.

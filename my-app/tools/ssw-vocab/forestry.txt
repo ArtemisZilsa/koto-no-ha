@@ -1,0 +1,101 @@
+# 林業 — Kehutanan (100 kata)
+林業|りんぎょう|ringyō|kehutanan|n|Pekerjaan menanam, merawat, dan menebang pohon.|森の木を育てて切る仕事|kegiatan menanam, merawat, dan memanen pohon di hutan|林業の仕事を始めました。|りんぎょうのしごとをはじめました。|Saya mulai bekerja di kehutanan.
+森林|しんりん|shinrin|hutan|n|Hutan luas.|木がたくさんある所|area luas yang ditumbuhi banyak pohon|日本は森林が多い国です。|にほんはしんりんがおおいくにです。|Jepang adalah negara dengan banyak hutan.
+山林|さんりん|sanrin|hutan pegunungan|n|Hutan di daerah gunung.|山にある林|hutan di daerah pegunungan|山林で木を育てます。|さんりんできをそだてます。|Pohon dirawat di hutan pegunungan.
+人工林|じんこうりん|jinkōrin|hutan tanaman|n|Hutan yang ditanam manusia.|人が植えた林|hutan yang sengaja ditanam dan dirawat manusia|人工林の手入れをします。|じんこうりんのていれをします。|Hutan tanaman dirawat.
+天然林|てんねんりん|tennenrin|hutan alam|n|Hutan yang tumbuh alami.|自然にできた林|hutan yang tumbuh secara alami tanpa ditanam|天然林は大切に守ります。|てんねんりんはたいせつにまもります。|Hutan alam dijaga dengan baik.
+木|き|ki|pohon|n|Pohon.|幹と枝がある植物|tumbuhan berbatang keras dengan cabang dan daun|この木は五十年たっています。|このきはごじゅうねんたっています。|Pohon ini berumur 50 tahun.
+樹木|じゅもく|jumoku|pepohonan|n|Pohon secara umum (istilah resmi).|木|istilah resmi untuk pohon-pohonan|樹木の種類を覚えます。|じゅもくのしゅるいをおぼえます。|Menghafal jenis-jenis pohon.
+杉|すぎ|sugi|pohon cedar Jepang (sugi)|n|Pohon cedar khas Jepang.|日本に多い針葉樹|pohon cedar Jepang yang banyak ditanam untuk kayu|杉の木を切ります。|すぎのきをきります。|Pohon sugi ditebang.
+ひのき|ひのき|hinoki|pohon hinoki (cemara Jepang)|n|Pohon cemara Jepang yang kayunya bagus.|いいにおいの針葉樹|pohon cemara Jepang dengan kayu harum dan kuat|ひのきは家を建てる木です。|ひのきはいえをたてるきです。|Hinoki adalah kayu untuk membangun rumah.
+針葉樹|しんようじゅ|shin'yōju|pohon berdaun jarum|n|Pohon berdaun jarum seperti pinus.|葉が針のような木|pohon yang daunnya berbentuk jarum seperti pinus dan cedar|針葉樹は建築材に使われます。|しんようじゅはけんちくざいにつかわれます。|Pohon berdaun jarum dipakai sebagai bahan bangunan.
+広葉樹|こうようじゅ|kōyōju|pohon berdaun lebar|n|Pohon berdaun lebar.|葉が広い木|pohon dengan daun lebar seperti oak|広葉樹は家具に使われます。|こうようじゅはかぐにつかわれます。|Pohon berdaun lebar dipakai untuk mebel.
+幹|みき|miki|batang pohon|n|Batang utama pohon.|木の太い部分|batang utama pohon dari akar sampai cabang|幹の太さを測ります。|みきのふとさをはかります。|Diameter batang pohon diukur.
+枝|えだ|eda|cabang|n|Cabang pohon.|幹から出ている部分|bagian pohon yang tumbuh dari batang|下の枝を切ります。|したのえだをきります。|Cabang bawah dipotong.
+根|ね|ne|akar|n|Akar pohon.|土の中の部分|bagian pohon di dalam tanah|根が深くまで伸びています。|ねがふかくまでのびています。|Akarnya tumbuh sampai dalam.
+年輪|ねんりん|nenrin|lingkaran tahun|n|Lingkaran di potongan kayu yang menunjukkan umur.|木の切り口の輪|lingkaran pada potongan batang yang menunjukkan umur pohon|年輪を数えると年がわかります。|ねんりんをかぞえるととしがわかります。|Dengan menghitung lingkaran tahun, umur diketahui.
+植林|しょくりん|shokurin|penanaman hutan|n|Menanam pohon untuk membuat hutan.|木を植えること|menanam bibit pohon untuk membentuk hutan|春に植林をします。|はるにしょくりんをします。|Penanaman hutan dilakukan musim semi.
+苗木|なえぎ|naegi|bibit pohon|n|Pohon muda untuk ditanam.|植えるための小さい木|bibit pohon kecil yang siap ditanam|苗木を一本ずつ植えます。|なえぎをいっぽんずつうえます。|Bibit pohon ditanam satu per satu.
+地ごしらえ|じごしらえ|jigoshirae|penyiapan lahan|n|Membersihkan lahan sebelum menanam.|植える前に土地を整えること|membersihkan sisa cabang dan semak sebelum penanaman|植林の前に地ごしらえをします。|しょくりんのまえにじごしらえをします。|Sebelum menanam, lahan disiapkan.
+下刈り|したがり|shitagari|pembabatan semak|n|Memotong rumput di sekitar bibit.|苗木のまわりの草を刈ること|memotong rumput dan semak di sekitar bibit agar tumbuh baik|夏は下刈りの仕事が多いです。|なつはしたがりのしごとがおおいです。|Musim panas banyak pekerjaan babat semak.
+除伐|じょばつ|jobatsu|penebangan pohon pengganggu|n|Menebang pohon yang mengganggu pertumbuhan.|じゃまな木を切ること|menebang pohon liar yang mengganggu pertumbuhan pohon utama|除伐で林を明るくします。|じょばつではやしをあかるくします。|Hutan dibuat terang dengan menebang pohon pengganggu.
+間伐|かんばつ|kanbatsu|penjarangan|n|Menebang sebagian pohon agar yang lain tumbuh baik.|木の間をあけるために一部を切ること|menebang sebagian pohon agar sisanya mendapat cahaya dan tumbuh besar|間伐をすると木が太くなります。|かんばつをするときがふとくなります。|Dengan penjarangan, pohon tumbuh lebih besar.
+枝打ち|えだうち|edauchi|pemangkasan cabang|n|Memotong cabang bawah agar kayu bagus.|下の枝を切り落とすこと|memotong cabang bawah agar kayu lurus tanpa mata kayu|枝打ちで節のない木を育てます。|えだうちでふしのないきをそだてます。|Pemangkasan cabang menghasilkan kayu tanpa mata.
+主伐|しゅばつ|shubatsu|penebangan akhir|n|Menebang pohon yang sudah cukup umur.|育った木を切って収穫すること|menebang pohon yang sudah mencapai umur panen|主伐のあとはまた植林します。|しゅばつのあとはまたしょくりんします。|Setelah penebangan akhir, ditanam kembali.
+伐採|ばっさい|bassai|penebangan|n|Menebang pohon.|木を切りたおすこと|kegiatan menebang pohon|今日はこの区域を伐採します。|きょうはこのくいきをばっさいします。|Hari ini area ini ditebang.
+伐倒|ばっとう|battō|merobohkan pohon|n|Menebang pohon sampai roboh.|木を切ってたおすこと|menebang pohon sampai roboh ke arah tertentu|伐倒の前に周りの人に声をかけます。|ばっとうのまえにまわりのひとにこえをかけます。|Sebelum merobohkan pohon, beri tahu orang di sekitar.
+受け口|うけぐち|ukeguchi|takik rebah|n|Takik di sisi arah rebahnya pohon.|たおす方向に作る切り口|takik berbentuk segitiga di sisi arah pohon akan rebah|受け口を正しく作ります。|うけぐちをただしくつくります。|Takik rebah dibuat dengan benar.
+追い口|おいぐち|oiguchi|takik balas|n|Potongan di sisi belakang takik rebah.|受け口の反対側の切り口|potongan di sisi berlawanan dari takik rebah untuk merobohkan pohon|追い口を切って木をたおします。|おいぐちをきってきをたおします。|Takik balas dipotong untuk merobohkan pohon.
+つる|つる|tsuru|engsel (holding wood)|n|Bagian kayu yang tersisa sebagai engsel saat merobohkan.|木をたおす方向を決める残した部分|bagian kayu yang sengaja disisakan sebagai engsel untuk mengarahkan robohnya pohon|つるを残すことが大切です。|つるをのこすことがたいせつです。|Menyisakan engsel itu penting.
+伐倒方向|ばっとうほうこう|battō hōkō|arah rebah|n|Arah pohon akan roboh.|木がたおれる方向|arah yang direncanakan untuk robohnya pohon|伐倒方向を決めてから切ります。|ばっとうほうこうをきめてからきります。|Arah rebah ditentukan sebelum menebang.
+かかり木|かかりぎ|kakarigi|pohon tersangkut|n|Pohon tebangan yang tersangkut di pohon lain.|ほかの木にひっかかった木|pohon yang ditebang tetapi tersangkut pada pohon lain, sangat berbahaya|かかり木の下に入ってはいけません。|かかりぎのしたにはいってはいけません。|Tidak boleh masuk ke bawah pohon tersangkut.
+退避場所|たいひばしょ|taihi basho|tempat menyingkir|n|Tempat aman saat pohon roboh.|安全な所|tempat aman untuk menyingkir saat pohon roboh|伐倒の前に退避場所を決めます。|ばっとうのまえにたいひばしょをきめます。|Sebelum merobohkan, tempat menyingkir ditentukan.
+チェーンソー|ちぇーんそー|chēnsō|gergaji mesin|n|Gergaji bermesin untuk menebang pohon.|木を切る機械ののこぎり|gergaji bermesin dengan rantai bergigi untuk menebang dan memotong kayu|チェーンソーの使い方を習います。|チェーンソーのつかいかたをならいます。|Saya belajar cara memakai gergaji mesin.
+刈払機|かりばらいき|karibaraiki|mesin pemotong rumput|n|Mesin untuk memotong rumput dan semak.|草を刈る機械|mesin bermata pisau berputar untuk memotong rumput dan semak|刈払機で下刈りをします。|かりばらいきでしたがりをします。|Semak dibabat dengan mesin pemotong rumput.
+キックバック|きっくばっく|kikkubakku|tendangan balik|n|Gergaji mesin terpental ke arah pemakai.|チェーンソーがはね返ること|gerakan gergaji mesin yang tiba-tiba terpental ke arah pemakai|キックバックに注意してください。|キックバックにちゅういしてください。|Waspadai tendangan balik.
+目立て|めたて|metate|mengasah gigi gergaji|n|Mengasah rantai gergaji mesin.|刃をやすりでとぐこと|mengasah gigi rantai gergaji mesin dengan kikir|毎日チェーンソーの目立てをします。|まいにちチェーンソーのめたてをします。|Setiap hari rantai gergaji mesin diasah.
+混合燃料|こんごうねんりょう|kongō nenryō|bahan bakar campuran|n|Campuran bensin dan oli untuk mesin dua tak.|ガソリンとオイルを混ぜた燃料|campuran bensin dan oli untuk mesin dua langkah|チェーンソーに混合燃料を入れます。|チェーンソーにこんごうねんりょうをいれます。|Gergaji mesin diisi bahan bakar campuran.
+防護服|ぼうごふく|bōgofuku|pakaian pelindung|n|Celana atau baju pelindung dari gergaji.|体を守る服|pakaian pelindung yang mencegah luka akibat gergaji mesin|チェーンソーを使うときは防護服を着ます。|チェーンソーをつかうときはぼうごふくをきます。|Saat memakai gergaji mesin, pakai pakaian pelindung.
+防護ズボン|ぼうごズボン|bōgo zubon|celana pelindung|n|Celana tahan potong gergaji.|足を守るズボン|celana khusus yang menahan potongan gergaji mesin|防護ズボンは法律で決まっています。|ぼうごズボンはほうりつできまっています。|Celana pelindung diwajibkan hukum.
+ヘルメット|へるめっと|herumetto|helm|n|Pelindung kepala.|頭を守る帽子|pelindung kepala dari cabang atau benda jatuh|山ではヘルメットをかぶります。|やまではヘルメットをかぶります。|Di gunung memakai helm.
+フェイスガード|ふぇいすがーど|feisu gādo|pelindung wajah|n|Pelindung wajah dari serpihan.|顔を守る網|jaring atau pelindung wajah dari serpihan kayu|フェイスガードを下ろして切ります。|フェイスガードをおろしてきります。|Pelindung wajah diturunkan lalu memotong.
+イヤーマフ|いやーまふ|iyāmafu|pelindung telinga|n|Pelindung telinga dari suara mesin.|音から耳を守る物|pelindung telinga dari kebisingan gergaji mesin|イヤーマフをつけて作業します。|イヤーマフをつけてさぎょうします。|Bekerja dengan pelindung telinga.
+スパイク|すぱいく|supaiku|sepatu berpaku|n|Sepatu dengan paku agar tidak tergelincir.|すべらないくつ|sepatu dengan paku di sol agar tidak tergelincir di lereng|斜面ではスパイクをはきます。|しゃめんではスパイクをはきます。|Di lereng memakai sepatu berpaku.
+斜面|しゃめん|shamen|lereng|n|Permukaan tanah yang miring.|かたむいた地面|permukaan tanah yang miring di gunung|急な斜面で作業します。|きゅうなしゃめんでさぎょうします。|Bekerja di lereng yang curam.
+滑落|かつらく|katsuraku|tergelincir jatuh|n|Tergelincir dan jatuh di lereng.|斜面をすべって落ちること|tergelincir dan jatuh di lereng gunung|滑落しないように足元に注意します。|かつらくしないようにあしもとにちゅういします。|Perhatikan pijakan agar tidak tergelincir jatuh.
+集材|しゅうざい|shūzai|pengumpulan kayu|n|Mengumpulkan kayu tebangan ke satu tempat.|切った木を集めること|mengumpulkan kayu hasil tebangan ke tempat pengangkutan|ウインチで集材します。|ウインチでしゅうざいします。|Kayu dikumpulkan dengan winch.
+造材|ぞうざい|zōzai|pemotongan log|n|Memotong batang menjadi ukuran tertentu.|木を決まった長さに切ること|memotong batang pohon menjadi log dengan panjang tertentu|四メートルに造材します。|よんメートルにぞうざいします。|Dipotong menjadi log 4 meter.
+玉切り|たまぎり|tamagiri|pemotongan melintang|n|Memotong batang pohon menjadi beberapa bagian.|幹を短く切ること|memotong batang pohon secara melintang menjadi beberapa bagian|たおした木を玉切りします。|たおしたきをたまぎりします。|Pohon yang roboh dipotong melintang.
+枝払い|えだはらい|edaharai|membuang cabang|n|Membuang cabang dari batang yang sudah ditebang.|切った木の枝を落とすこと|membuang cabang dari batang pohon yang sudah ditebang|伐倒のあと枝払いをします。|ばっとうのあとえだはらいをします。|Setelah ditebang, cabang dibuang.
+丸太|まるた|maruta|log / gelondong kayu|n|Batang kayu bulat.|切った木の幹|batang kayu bulat yang sudah dipotong|丸太をトラックに積みます。|まるたをトラックにつみます。|Log dimuat ke truk.
+木材|もくざい|mokuzai|kayu (bahan)|n|Kayu sebagai bahan.|材料としての木|kayu yang digunakan sebagai bahan|この木材は家に使います。|このもくざいはいえにつかいます。|Kayu ini dipakai untuk rumah.
+林道|りんどう|rindō|jalan hutan|n|Jalan di dalam hutan untuk kendaraan.|森の中の道|jalan di dalam hutan untuk kendaraan kehutanan|林道を通って現場へ行きます。|りんどうをとおってげんばへいきます。|Pergi ke lokasi lewat jalan hutan.
+作業道|さぎょうどう|sagyōdō|jalan kerja|n|Jalan kecil untuk mesin kehutanan.|作業のための道|jalan sederhana untuk mesin dan pekerjaan kehutanan|作業道をつくります。|さぎょうどうをつくります。|Jalan kerja dibuat.
+高性能林業機械|こうせいのうりんぎょうきかい|kōseinō ringyō kikai|mesin kehutanan modern|n|Mesin besar untuk menebang dan memotong kayu.|木を切ったり運んだりする大きな機械|mesin kehutanan modern untuk menebang, memotong, dan mengangkut kayu|高性能林業機械で作業が早くなりました。|こうせいのうりんぎょうきかいでさぎょうがはやくなりました。|Dengan mesin modern, pekerjaan jadi lebih cepat.
+ハーベスタ|はーべすた|hābesuta|harvester|n|Mesin untuk menebang dan memotong pohon.|木を切って枝を払う機械|mesin yang menebang, membuang cabang, dan memotong pohon sekaligus|ハーベスタで枝払いをします。|ハーベスタでえだはらいをします。|Cabang dibuang dengan harvester.
+フォワーダ|ふぉわーだ|fowāda|forwarder|n|Kendaraan pengangkut log di hutan.|丸太を運ぶ車|kendaraan untuk mengangkut log di dalam hutan|フォワーダで丸太を運びます。|フォワーダでまるたをはこびます。|Log diangkut dengan forwarder.
+グラップル|ぐらっぷる|gurappuru|grapple|n|Alat penjepit untuk mengangkat log.|丸太をつかむ機械|alat penjepit hidrolik untuk mengangkat dan memindahkan log|グラップルで丸太をつかみます。|グラップルでまるたをつかみます。|Log dijepit dengan grapple.
+架線集材|かせんしゅうざい|kasen shūzai|penyaradan kabel|n|Mengangkut kayu dengan kabel di udara.|ワイヤーで木を運ぶ方法|metode mengumpulkan kayu menggunakan kabel yang dibentangkan di udara|急な山では架線集材をします。|きゅうなやまではかせんしゅうざいをします。|Di gunung curam dipakai penyaradan kabel.
+ワイヤーロープ|わいやーろーぷ|waiyā rōpu|tali kawat|n|Tali dari kawat baja.|鉄の線のロープ|tali kuat dari pilinan kawat baja|ワイヤーロープを点検します。|ワイヤーロープをてんけんします。|Tali kawat diperiksa.
+はい積み|はいづみ|haizumi|penumpukan log|n|Menumpuk log dengan rapi.|丸太を積み上げること|menumpuk log dengan rapi di tempat pengumpulan|丸太をはい積みします。|まるたをはいづみします。|Log ditumpuk.
+土場|どば|doba|tempat pengumpulan kayu|n|Tempat log dikumpulkan sebelum diangkut.|丸太を集めておく場所|tempat log dikumpulkan sementara sebelum diangkut|丸太を土場に運びます。|まるたをどばにはこびます。|Log dibawa ke tempat pengumpulan.
+検知|けんち|kenchi|pengukuran log|n|Mengukur panjang dan diameter log.|丸太の長さや太さを測ること|mengukur panjang dan diameter log untuk menentukan volume|出荷の前に検知します。|しゅっかのまえにけんちします。|Log diukur sebelum dikirim.
+直径|ちょっけい|chokkei|diameter|n|Lebar lingkaran batang.|丸い物の太さ|panjang garis lurus melalui pusat lingkaran batang|丸太の直径を測ります。|まるたのちょっけいをはかります。|Diameter log diukur.
+材積|ざいせき|zaiseki|volume kayu|n|Isi atau volume kayu.|木材の体積|volume kayu yang dihitung dari panjang dan diameter|材積を計算します。|ざいせきをけいさんします。|Volume kayu dihitung.
+原木市場|げんぼくいちば|genboku ichiba|pasar kayu log|n|Pasar tempat log diperdagangkan.|丸太を売り買いする市場|pasar tempat kayu log dijual dan dilelang|丸太を原木市場に出します。|まるたをげんぼくいちばにだします。|Log dikirim ke pasar kayu.
+森林組合|しんりんくみあい|shinrin kumiai|koperasi kehutanan|n|Koperasi pemilik dan pekerja hutan.|林業をする人の組合|koperasi yang membantu pemilik hutan mengelola hutannya|森林組合で働いています。|しんりんくみあいではたらいています。|Saya bekerja di koperasi kehutanan.
+山主|やまぬし|yamanushi|pemilik hutan|n|Orang yang memiliki hutan.|山の持ち主|orang yang memiliki lahan hutan|山主に作業の計画を説明します。|やまぬしにさぎょうのけいかくをせつめいします。|Rencana kerja dijelaskan kepada pemilik hutan.
+境界|きょうかい|kyōkai|batas lahan|n|Batas antara lahan.|土地と土地の間の線|garis batas antara lahan milik berbeda|山の境界を確認します。|やまのきょうかいをかくにんします。|Batas lahan hutan diperiksa.
+獣害|じゅうがい|jūgai|kerusakan oleh satwa|n|Kerusakan pohon oleh rusa atau hewan lain.|動物による被害|kerusakan tanaman atau pohon akibat hewan liar seperti rusa|獣害を防ぐためにネットを張ります。|じゅうがいをふせぐためにネットをはります。|Jaring dipasang untuk mencegah kerusakan oleh satwa.
+シカ|しか|shika|rusa|n|Rusa yang memakan bibit pohon.|森にすむ動物|hewan liar yang sering memakan bibit dan kulit pohon|シカが苗木を食べました。|シカがなえぎをたべました。|Rusa memakan bibit pohon.
+クマ|くま|kuma|beruang|n|Beruang yang berbahaya di hutan.|山にすむ大きな動物|hewan besar dan berbahaya yang hidup di gunung|クマに会わないように鈴をつけます。|クマにあわないようにすずをつけます。|Pakai lonceng agar tidak bertemu beruang.
+ハチ|はち|hachi|tawon|n|Tawon yang bisa menyengat.|刺す虫|serangga yang dapat menyengat dan berbahaya|ハチに刺されたらすぐ連絡します。|ハチにさされたらすぐれんらくします。|Kalau disengat tawon, segera hubungi.
+熱中症|ねっちゅうしょう|necchūshō|sengatan panas|n|Gangguan kesehatan karena panas.|暑さで体調が悪くなること|gangguan kesehatan akibat suhu panas|夏は熱中症に気をつけます。|なつはねっちゅうしょうにきをつけます。|Musim panas, waspadai sengatan panas.
+山火事|やまかじ|yamakaji|kebakaran hutan|n|Kebakaran di hutan.|山の火事|kebakaran yang terjadi di hutan atau gunung|たばこの火で山火事になることがあります。|たばこのひでやまかじになることがあります。|Api rokok bisa menyebabkan kebakaran hutan.
+土砂崩れ|どしゃくずれ|dosha kuzure|tanah longsor|n|Tanah di lereng runtuh.|山の土がくずれること|runtuhnya tanah dan batu di lereng|大雨のあとは土砂崩れに注意します。|おおあめのあとはどしゃくずれにちゅういします。|Setelah hujan lebat, waspadai tanah longsor.
+国土保全|こくどほぜん|kokudo hozen|pelestarian lahan|n|Melindungi tanah dari bencana.|土地を災害から守ること|perlindungan tanah dan lingkungan dari bencana|森林は国土保全の役割があります。|しんりんはこくどほぜんのやくわりがあります。|Hutan berperan dalam pelestarian lahan.
+二酸化炭素|にさんかたんそ|nisanka tanso|karbon dioksida|n|Gas yang diserap pohon.|木が吸収する気体|gas yang diserap pohon dan menyebabkan pemanasan global|森林は二酸化炭素を吸収します。|しんりんはにさんかたんそをきゅうしゅうします。|Hutan menyerap karbon dioksida.
+水源|すいげん|suigen|sumber air|n|Tempat asal air.|水がわき出る所|tempat asal air seperti mata air di hutan|森は水源を守ります。|もりはすいげんをまもります。|Hutan menjaga sumber air.
+手入れ|ていれ|teire|perawatan|n|Merawat hutan agar sehat.|よい状態に保つための世話|kegiatan merawat agar hutan tetap sehat|手入れをしないと森が暗くなります。|ていれをしないともりがくらくなります。|Kalau tidak dirawat, hutan jadi gelap.
+作業計画|さぎょうけいかく|sagyō keikaku|rencana kerja|n|Rencana pekerjaan di hutan.|仕事の予定|rencana pekerjaan yang akan dilakukan|朝、作業計画を確認します。|あさ、さぎょうけいかくをかくにんします。|Pagi hari, rencana kerja diperiksa.
+合図|あいず|aizu|isyarat|n|Tanda kepada rekan kerja.|知らせるための声や手の動き|isyarat dengan suara atau tangan kepada rekan kerja|伐倒の前に大きな声で合図します。|ばっとうのまえにおおきなこえであいずします。|Sebelum merobohkan, beri isyarat dengan suara keras.
+声かけ|こえかけ|koekake|saling memanggil|n|Saling berbicara untuk keselamatan.|仲間に声で知らせること|saling memanggil dan memberi tahu demi keselamatan|作業中は声かけを忘れません。|さぎょうちゅうはこえかけをわすれません。|Selama bekerja, tidak lupa saling memanggil.
+無線機|むせんき|musenki|radio komunikasi|n|Alat bicara jarak jauh di hutan.|線のない電話|alat komunikasi radio untuk bekerja di hutan|山では無線機で連絡します。|やまではむせんきでれんらくします。|Di gunung berkomunikasi dengan radio.
+救急箱|きゅうきゅうばこ|kyūkyūbako|kotak P3K|n|Kotak obat untuk pertolongan pertama.|けがの手当てをする道具の箱|kotak berisi obat dan alat pertolongan pertama|救急箱を車に入れておきます。|きゅうきゅうばこをくるまにいれておきます。|Kotak P3K disimpan di mobil.
+けが|けが|kega|cedera|n|Luka saat bekerja.|体をいためること|luka atau cedera saat bekerja|けがをしたらすぐ報告してください。|けがをしたらすぐほうこくしてください。|Kalau terluka, segera laporkan.
+安全第一|あんぜんだいいち|anzen daiichi|utamakan keselamatan|x|Prinsip keselamatan nomor satu.|安全がいちばん大切だということ|prinsip bahwa keselamatan adalah hal paling utama|林業は安全第一です。|りんぎょうはあんぜんだいいちです。|Dalam kehutanan, keselamatan nomor satu.
+天候|てんこう|tenkō|cuaca|n|Keadaan cuaca.|天気の様子|keadaan cuaca yang memengaruhi pekerjaan|天候が悪い日は山に入りません。|てんこうがわるいひはやまにはいりません。|Saat cuaca buruk, tidak masuk ke gunung.
+強風|きょうふう|kyōfū|angin kencang|n|Angin yang sangat kuat.|強い風|angin yang bertiup sangat kencang|強風の日は伐倒しません。|きょうふうのひはばっとうしません。|Saat angin kencang, tidak merobohkan pohon.
+節|ふし|fushi|mata kayu|n|Bekas cabang pada kayu.|木の枝のあと|bekas cabang yang tampak pada kayu|節が少ない木は高く売れます。|ふしがすくないきはたかくうれます。|Kayu dengan sedikit mata kayu dijual mahal.
+樹皮|じゅひ|juhi|kulit kayu|n|Kulit luar batang pohon.|木の皮|lapisan kulit luar batang pohon|シカが樹皮をはぎました。|シカがじゅひをはぎました。|Rusa mengelupas kulit kayu.
+きのこ|きのこ|kinoko|jamur|n|Jamur yang tumbuh di hutan.|森に生えるもの|jamur yang tumbuh di hutan atau dibudidayakan di kayu|しいたけのきのこを育てています。|しいたけのきのこをそだてています。|Kami membudidayakan jamur shiitake.
+特用林産物|とくようりんさんぶつ|tokuyō rinsanbutsu|hasil hutan non-kayu|n|Hasil hutan selain kayu seperti jamur dan bambu.|木材以外の森の産物|hasil hutan selain kayu seperti jamur, bambu, dan arang|きのこは特用林産物です。|きのこはとくようりんさんぶつです。|Jamur termasuk hasil hutan non-kayu.
+竹|たけ|take|bambu|n|Bambu.|まっすぐで中が空の植物|tanaman berbatang lurus dan berongga|竹林の手入れをします。|ちくりんのていれをします。|Hutan bambu dirawat.
+道具|どうぐ|dōgu|peralatan|n|Alat untuk bekerja.|作業に使う物|alat yang digunakan untuk bekerja|道具を山の下まで運びます。|どうぐをやまのしたまではこびます。|Peralatan dibawa sampai kaki gunung.
+ナタ|なた|nata|parang|n|Pisau besar untuk memotong ranting.|枝を切る大きな刃物|pisau besar untuk memotong ranting dan semak|ナタで小さい枝を払います。|ナタでちいさいえだをはらいます。|Ranting kecil dibuang dengan parang.
+のこぎり|のこぎり|nokogiri|gergaji tangan|n|Gergaji tangan.|木を切る道具|alat bergigi untuk memotong kayu secara manual|のこぎりで枝を切ります。|のこぎりでえだをきります。|Cabang dipotong dengan gergaji tangan.
+測量|そくりょう|sokuryō|pengukuran lahan|n|Mengukur luas dan batas hutan.|土地の広さなどを測ること|mengukur luas, posisi, dan batas lahan hutan|ドローンで森林を測量します。|ドローンでしんりんをそくりょうします。|Hutan diukur dengan drone.
+ドローン|どろーん|dorōn|drone|n|Pesawat kecil tanpa awak.|空を飛ぶ小さい機械|pesawat kecil tanpa awak yang dikendalikan jarak jauh|ドローンで苗木を運びます。|ドローンでなえぎをはこびます。|Bibit pohon diangkut dengan drone.
+育林|いくりん|ikurin|pembinaan hutan|n|Merawat pohon dari bibit sampai besar.|木を植えて育てること|seluruh kegiatan merawat pohon dari bibit sampai siap panen|育林には長い時間がかかります。|いくりんにはながいじかんがかかります。|Pembinaan hutan memakan waktu lama.
+素材生産|そざいせいさん|sozai seisan|produksi kayu bulat|n|Menebang dan memproduksi log.|木を切って丸太を作ること|kegiatan menebang pohon dan memproduksi log untuk dijual|素材生産の班で働いています。|そざいせいさんのはんではたらいています。|Saya bekerja di regu produksi kayu bulat.
+伐根|ばっこん|bakkon|tunggul pohon|n|Sisa batang dan akar setelah ditebang.|木を切ったあとに残る根元|sisa batang dan akar yang tertinggal setelah pohon ditebang|伐根につまずかないようにします。|ばっこんにつまずかないようにします。|Hati-hati jangan tersandung tunggul.

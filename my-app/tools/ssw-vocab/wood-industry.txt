@@ -1,0 +1,101 @@
+# 木材産業 — Industri Kayu: penggergajian & pengolahan kayu (100 kata)
+木材産業|もくざいさんぎょう|mokuzai sangyō|industri kayu|n|Industri yang mengolah kayu menjadi produk.|木を加工する産業|industri yang mengolah kayu bulat menjadi bahan dan produk kayu|木材産業の工場で働いています。|もくざいさんぎょうのこうじょうではたらいています。|Saya bekerja di pabrik industri kayu.
+製材|せいざい|seizai|penggergajian|n|Memotong log menjadi papan dan balok.|丸太を板や角材にすること|proses memotong log menjadi papan dan balok|この工場は製材をしています。|このこうじょうはせいざいをしています。|Pabrik ini melakukan penggergajian.
+製材所|せいざいしょ|seizaisho|penggergajian kayu (sawmill)|n|Pabrik tempat log digergaji.|丸太を切る工場|pabrik tempat log digergaji menjadi kayu|製材所に丸太が届きました。|せいざいしょにまるたがとどきました。|Log sudah tiba di penggergajian.
+丸太|まるた|maruta|log|n|Batang kayu bulat.|切った木の幹|batang kayu bulat hasil tebangan|丸太の皮をむきます。|まるたのかわをむきます。|Kulit log dikupas.
+原木|げんぼく|genboku|kayu bulat (bahan baku)|n|Kayu bulat sebelum diolah.|加工する前の丸太|kayu bulat sebagai bahan baku sebelum diolah|原木の大きさを測ります。|げんぼくのおおきさをはかります。|Ukuran kayu bulat diukur.
+皮むき|かわむき|kawamuki|pengupasan kulit|n|Mengupas kulit kayu.|木の皮を取ること|mengupas kulit dari log sebelum digergaji|機械で皮むきをします。|きかいでかわむきをします。|Kulit kayu dikupas dengan mesin.
+帯のこ|おびのこ|obinoko|gergaji pita|n|Gergaji berbentuk pita panjang yang berputar.|帯のような長いのこぎり|gergaji berbentuk pita baja panjang yang berputar untuk memotong log|帯のこで丸太を切ります。|おびのこでまるたをきります。|Log dipotong dengan gergaji pita.
+丸のこ|まるのこ|marunoko|gergaji bundar|n|Gergaji dengan mata bulat.|丸い刃ののこぎり|gergaji dengan mata pisau berbentuk bulat|丸のこで板の長さをそろえます。|まるのこでいたのながさをそろえます。|Panjang papan diratakan dengan gergaji bundar.
+送材車|そうざいしゃ|sōzaisha|kereta pengumpan log|n|Kereta yang membawa log ke gergaji.|丸太をのこぎりへ運ぶ台車|kereta yang membawa log maju ke gergaji pita|送材車に丸太をのせます。|そうざいしゃにまるたをのせます。|Log dinaikkan ke kereta pengumpan.
+挽く|ひく|hiku|menggergaji|v|Memotong kayu dengan gergaji.|のこぎりで切る|memotong kayu dengan gergaji|丸太を板に挽きます。|まるたをいたにひきます。|Log digergaji menjadi papan.
+板|いた|ita|papan|n|Kayu tipis dan lebar.|うすく平らな木|potongan kayu tipis dan lebar|板を重ねて置きます。|いたをかさねておきます。|Papan ditumpuk.
+角材|かくざい|kakuzai|balok|n|Kayu berpenampang persegi.|四角い木材|kayu dengan penampang persegi|柱の角材を作ります。|はしらのかくざいをつくります。|Balok untuk tiang dibuat.
+柱材|はしらざい|hashirazai|kayu tiang|n|Kayu untuk tiang rumah.|柱に使う木材|kayu yang dipakai sebagai tiang bangunan|ひのきの柱材は人気があります。|ひのきのはしらざいはにんきがあります。|Kayu tiang hinoki populer.
+製材品|せいざいひん|seizaihin|produk kayu gergajian|n|Kayu hasil penggergajian.|製材してできた木材|kayu hasil penggergajian seperti papan dan balok|製材品を乾燥させます。|せいざいひんをかんそうさせます。|Produk kayu gergajian dikeringkan.
+寸法|すんぽう|sunpō|ukuran|n|Panjang, lebar, dan tebal kayu.|長さや大きさ|ukuran panjang, lebar, dan tebal kayu|図面の寸法どおりに切ります。|ずめんのすんぽうどおりにきります。|Dipotong sesuai ukuran di gambar.
+長さ|ながさ|nagasa|panjang|n|Ukuran panjang.|物の長さ|ukuran panjang suatu benda|板の長さを測ります。|いたのながさをはかります。|Panjang papan diukur.
+厚さ|あつさ|atsusa|ketebalan|n|Ukuran tebal.|物の厚み|ukuran ketebalan suatu benda|板の厚さは三センチです。|いたのあつさはさんセンチです。|Tebal papannya tiga sentimeter.
+曲尺|さしがね|sashigane|penggaris siku tukang kayu|n|Penggaris siku khas tukang kayu Jepang.|大工が使うL字の定規|penggaris berbentuk siku L untuk mengukur dan menandai kayu|曲尺で直角を確認します。|さしがねでちょっかくをかくにんします。|Sudut siku dicek dengan penggaris siku.
+墨付け|すみつけ|sumitsuke|penandaan garis potong|n|Menandai garis potong pada kayu.|木に線を書くこと|menandai garis potong atau sambungan pada kayu|墨付けのとおりに切ります。|すみつけのとおりにきります。|Dipotong sesuai garis penandaan.
+乾燥|かんそう|kansō|pengeringan|n|Mengurangi kadar air kayu.|木の水分をへらすこと|mengurangi kadar air dalam kayu agar tidak berubah bentuk|木材をよく乾燥させます。|もくざいをよくかんそうさせます。|Kayu dikeringkan dengan baik.
+人工乾燥|じんこうかんそう|jinkō kansō|pengeringan buatan|n|Mengeringkan kayu dengan mesin.|機械で乾かすこと|mengeringkan kayu dengan alat atau ruang pengering|人工乾燥で一週間乾かします。|じんこうかんそうでいっしゅうかんかわかします。|Dikeringkan dengan pengeringan buatan selama seminggu.
+天然乾燥|てんねんかんそう|tennen kansō|pengeringan alami|n|Mengeringkan kayu dengan udara.|風で自然に乾かすこと|mengeringkan kayu dengan udara alami|天然乾燥には時間がかかります。|てんねんかんそうにはじかんがかかります。|Pengeringan alami memakan waktu.
+乾燥機|かんそうき|kansōki|mesin pengering (kiln)|n|Ruang mesin untuk mengeringkan kayu.|木を乾かす機械|ruang atau mesin untuk mengeringkan kayu|乾燥機の温度を確認します。|かんそうきのおんどをかくにんします。|Suhu mesin pengering diperiksa.
+含水率|がんすいりつ|gansuiritsu|kadar air|n|Persentase air di dalam kayu.|木の中の水の割合|persentase kandungan air di dalam kayu|含水率を十五パーセント以下にします。|がんすいりつをじゅうごパーセントいかにします。|Kadar air dibuat di bawah 15 persen.
+水分計|すいぶんけい|suibunkei|alat ukur kadar air|n|Alat untuk mengukur kadar air kayu.|水分を測る道具|alat untuk mengukur kadar air dalam kayu|水分計で含水率を測ります。|すいぶんけいでがんすいりつをはかります。|Kadar air diukur dengan alat ukur.
+反り|そり|sori|melengkung|n|Kayu melengkung karena kering.|木が曲がること|perubahan bentuk kayu menjadi melengkung|乾燥で板に反りが出ました。|かんそうでいたにそりがでました。|Papan melengkung karena pengeringan.
+割れ|われ|ware|retak|n|Retakan pada kayu.|木にひびが入ること|retakan yang muncul pada kayu|木口に割れがあります。|こぐちにわれがあります。|Ada retakan di ujung kayu.
+ねじれ|ねじれ|nejire|terpuntir|n|Kayu terpuntir.|木がねじれること|perubahan bentuk kayu menjadi terpuntir|ねじれた材は使えません。|ねじれたざいはつかえません。|Kayu yang terpuntir tidak bisa dipakai.
+節|ふし|fushi|mata kayu|n|Bekas cabang pada kayu.|枝のあと|bekas cabang yang terlihat pada permukaan kayu|節が多い板は安いです。|ふしがおおいいたはやすいです。|Papan dengan banyak mata kayu murah.
+木目|もくめ|mokume|serat / urat kayu|n|Pola serat pada permukaan kayu.|木の表面の模様|pola serat yang tampak di permukaan kayu|きれいな木目の板です。|きれいなもくめのいたです。|Papan dengan urat kayu yang indah.
+木口|こぐち|koguchi|ujung potongan kayu|n|Permukaan potongan melintang kayu.|木を横に切った面|permukaan potongan melintang di ujung kayu|木口に番号を書きます。|こぐちにばんごうをかきます。|Nomor ditulis di ujung potongan kayu.
+等級|とうきゅう|tōkyū|grade / tingkat mutu|n|Tingkatan mutu kayu.|品質の段階|tingkatan kualitas kayu|節の数で等級を決めます。|ふしのかずでとうきゅうをきめます。|Grade ditentukan dari jumlah mata kayu.
+選別|せんべつ|senbetsu|penyortiran|n|Memilah kayu menurut kualitas.|品質で分けること|memilah kayu berdasarkan kualitas dan ukuran|製材品を等級で選別します。|せいざいひんをとうきゅうでせんべつします。|Produk kayu disortir menurut grade.
+検品|けんぴん|kenpin|pemeriksaan produk|n|Memeriksa produk sebelum dikirim.|製品を調べること|memeriksa produk sebelum dikirim|出荷の前に検品します。|しゅっかのまえにけんぴんします。|Diperiksa sebelum dikirim.
+プレカット|ぷれかっと|purekatto|pra-potong (precut)|n|Memotong kayu bangunan dengan mesin di pabrik.|工場で家の木材を先に加工すること|pengolahan kayu rumah dengan mesin di pabrik sebelum dikirim ke lokasi|プレカット工場で柱を加工します。|プレカットこうじょうではしらをかこうします。|Tiang diproses di pabrik precut.
+継手|つぎて|tsugite|sambungan memanjang|n|Sambungan kayu untuk memperpanjang.|木と木を長くつなぐ部分|sambungan untuk menyambung dua kayu secara memanjang|継手を機械で加工します。|つぎてをきかいでかこうします。|Sambungan memanjang diproses dengan mesin.
+仕口|しぐち|shiguchi|sambungan siku|n|Sambungan kayu pada sudut.|木と木を角度をつけてつなぐ部分|sambungan kayu yang bertemu pada sudut seperti tiang dan balok|仕口がぴったり合いました。|しぐちがぴったりあいました。|Sambungan sikunya pas sekali.
+ほぞ|ほぞ|hozo|purus (tenon)|n|Tonjolan kayu yang dimasukkan ke lubang.|穴に入れる木の出っ張り|tonjolan di ujung kayu yang dimasukkan ke lubang pasangannya|ほぞを穴に入れます。|ほぞをあなにいれます。|Purus dimasukkan ke lubang.
+かんな|かんな|kanna|ketam|n|Alat untuk menghaluskan permukaan kayu.|木の表面をけずる道具|alat untuk menyerut dan menghaluskan permukaan kayu|かんなで板を削ります。|かんなでいたをけずります。|Papan diserut dengan ketam.
+自動かんな盤|じどうかんなばん|jidō kannaban|mesin ketam otomatis|n|Mesin untuk menyerut ketebalan kayu.|厚さをそろえて削る機械|mesin yang menyerut kayu sampai ketebalan yang seragam|自動かんな盤で厚さをそろえます。|じどうかんなばんであつさをそろえます。|Ketebalan diseragamkan dengan mesin ketam.
+モルダー|もるだー|morudā|mesin moulder|n|Mesin untuk menyerut empat sisi kayu sekaligus.|四面を削る機械|mesin yang menyerut empat sisi kayu dan membentuk profil|モルダーで仕上げます。|モルダーでしあげます。|Finishing dengan mesin moulder.
+削る|けずる|kezuru|menyerut|v|Mengikis permukaan sedikit demi sedikit.|表面をうすく取る|mengikis permukaan kayu sedikit demi sedikit|表面を削ってきれいにします。|ひょうめんをけずってきれいにします。|Permukaan diserut sampai rapi.
+研磨|けんま|kenma|pengampelasan|n|Menghaluskan dengan amplas.|紙やすりでなめらかにすること|menghaluskan permukaan kayu dengan amplas|家具の表面を研磨します。|かぐのひょうめんをけんまします。|Permukaan mebel diampelas.
+紙やすり|かみやすり|kamiyasuri|amplas|n|Kertas kasar untuk menghaluskan.|表面をみがく紙|kertas berlapis butiran kasar untuk menghaluskan permukaan|紙やすりで角を丸くします。|かみやすりでかどをまるくします。|Sudut dibulatkan dengan amplas.
+合板|ごうはん|gōhan|kayu lapis (plywood)|n|Papan dari beberapa lapisan kayu tipis.|うすい板を重ねた板|papan yang dibuat dari beberapa lapisan kayu tipis yang direkatkan|合板を作る工場です。|ごうはんをつくるこうじょうです。|Ini pabrik pembuat kayu lapis.
+単板|たんぱん|tanpan|veneer|n|Lembaran kayu tipis.|うすくむいた木の板|lembaran kayu tipis hasil kupasan untuk kayu lapis|単板を乾かします。|たんぱんをかわかします。|Veneer dikeringkan.
+集成材|しゅうせいざい|shūseizai|kayu laminasi (glulam)|n|Kayu dari potongan-potongan kayu yang direkatkan.|小さい木材をはり合わせた材|kayu bangunan dari potongan kayu kecil yang direkatkan|集成材は強くて反りにくいです。|しゅうせいざいはつよくてそりにくいです。|Kayu laminasi kuat dan tidak mudah melengkung.
+CLT|シーエルティー|shī eru tī|CLT (kayu laminasi silang)|n|Panel kayu tebal yang dilapis silang.|板を直角に重ねた厚いパネル|panel kayu tebal dari lapisan papan yang disusun saling tegak lurus|CLTで大きな建物を建てます。|シーエルティーでおおきなたてものをたてます。|Bangunan besar dibangun dengan CLT.
+接着剤|せっちゃくざい|secchakuzai|perekat / lem|n|Lem untuk merekatkan kayu.|物をくっつける薬|bahan untuk merekatkan kayu|接着剤を均一にぬります。|せっちゃくざいをきんいつにぬります。|Lem dioleskan merata.
+圧締|あってい|attei|pengepresan|n|Menekan kayu yang direkatkan.|はり合わせた物を強く押すこと|menekan kayu yang direkatkan agar lemnya kuat|プレス機で圧締します。|プレスきであっていします。|Dipres dengan mesin press.
+プレス機|プレスき|puresuki|mesin press|n|Mesin untuk menekan.|強く押す機械|mesin untuk menekan bahan dengan kuat|プレス機に手を入れないでください。|プレスきにてをいれないでください。|Jangan memasukkan tangan ke mesin press.
+木質ボード|もくしつボード|mokushitsu bōdo|papan berbahan kayu|n|Papan dari serpih atau serat kayu.|木のくずや繊維で作った板|papan yang dibuat dari serpihan atau serat kayu seperti MDF|木質ボードは家具に使います。|もくしつボードはかぐにつかいます。|Papan berbahan kayu dipakai untuk mebel.
+チップ|ちっぷ|chippu|serpih kayu|n|Potongan kecil kayu.|木を細かくした物|potongan kecil kayu untuk bahan kertas, papan, atau bahan bakar|端材をチップにします。|はざいをチップにします。|Sisa potongan kayu dijadikan serpih.
+端材|はざい|hazai|sisa potongan kayu|n|Potongan kayu sisa.|切ったあとに残る木|sisa potongan kayu setelah pemotongan|端材を集めて箱に入れます。|はざいをあつめてはこにいれます。|Sisa potongan dikumpulkan ke kotak.
+おがくず|おがくず|ogakuzu|serbuk gergaji|n|Serbuk halus sisa menggergaji.|のこぎりで出る細かいくず|serbuk halus sisa penggergajian kayu|おがくずを掃除します。|おがくずをそうじします。|Serbuk gergaji dibersihkan.
+木くず|きくず|kikuzu|serpihan kayu|n|Sisa-sisa kayu.|木のくず|sisa-sisa kayu dari proses pengolahan|木くずは火事の原因になります。|きくずはかじのげんいんになります。|Serpihan kayu bisa menyebabkan kebakaran.
+集じん機|しゅうじんき|shūjinki|pengumpul debu|n|Mesin penyedot debu kayu.|ほこりを集める機械|mesin untuk menyedot dan mengumpulkan debu kayu|集じん機のスイッチを入れます。|しゅうじんきのスイッチをいれます。|Pengumpul debu dinyalakan.
+粉じん|ふんじん|funjin|debu halus|n|Debu kayu halus yang berbahaya dihirup.|細かいほこり|debu halus dari pengolahan kayu yang berbahaya bila terhirup|粉じんを吸わないようにマスクをします。|ふんじんをすわないようにマスクをします。|Pakai masker agar tidak menghirup debu.
+木質バイオマス|もくしつバイオマス|mokushitsu baiomasu|biomassa kayu|n|Sisa kayu yang dipakai sebagai energi.|エネルギーに使う木の資源|sisa kayu yang dimanfaatkan sebagai bahan bakar atau energi|端材を木質バイオマスとして使います。|はざいをもくしつバイオマスとしてつかいます。|Sisa kayu dimanfaatkan sebagai biomassa.
+防腐処理|ぼうふしょり|bōfu shori|pengawetan kayu|n|Mencegah kayu membusuk.|木がくさらないようにすること|perlakuan kimia agar kayu tidak membusuk|外で使う木は防腐処理をします。|そとでつかうきはぼうふしょりをします。|Kayu untuk luar ruangan diawetkan.
+防虫|ぼうちゅう|bōchū|antirayap / antiserangga|n|Mencegah serangga merusak kayu.|虫を防ぐこと|perlakuan untuk mencegah serangga merusak kayu|防虫の薬をぬります。|ぼうちゅうのくすりをぬります。|Obat antiserangga dioleskan.
+シロアリ|しろあり|shiroari|rayap|n|Rayap yang memakan kayu.|木を食べる虫|serangga yang memakan kayu|シロアリの被害を防ぎます。|シロアリのひがいをふせぎます。|Kerusakan oleh rayap dicegah.
+塗装|とそう|tosō|pengecatan / pelapisan|n|Melapisi kayu dengan cat atau pernis.|色や保護剤をぬること|melapisi permukaan kayu dengan cat atau pernis|家具の塗装をします。|かぐのとそうをします。|Mebel dicat.
+家具|かぐ|kagu|mebel|n|Perabot seperti meja dan lemari.|机やたんすなど|perabot rumah seperti meja, kursi, dan lemari|木の家具を作っています。|きのかぐをつくっています。|Kami membuat mebel kayu.
+建材|けんざい|kenzai|bahan bangunan|n|Bahan untuk membangun rumah.|建物に使う材料|bahan yang dipakai untuk membangun bangunan|この工場は建材を作ります。|このこうじょうはけんざいをつくります。|Pabrik ini membuat bahan bangunan.
+フローリング|ふろーりんぐ|furōringu|lantai kayu|n|Lantai papan kayu.|木の床材|bahan lantai dari papan kayu|フローリングを箱に詰めます。|フローリングをはこにつめます。|Lantai kayu dikemas ke kotak.
+フォークリフト|ふぉーくりふと|fōkurifuto|forklift|n|Kendaraan pengangkat barang.|荷物を持ち上げる車|kendaraan untuk mengangkat dan memindahkan barang berat|フォークリフトで木材を運びます。|フォークリフトでもくざいをはこびます。|Kayu diangkut dengan forklift.
+桟積み|さんづみ|sanzumi|penumpukan berganjal|n|Menumpuk papan dengan ganjal agar udara mengalir.|板の間に棒をはさんで積むこと|menumpuk papan dengan ganjal di antaranya agar udara mengalir saat pengeringan|乾燥の前に桟積みをします。|かんそうのまえにさんづみをします。|Sebelum pengeringan, papan ditumpuk berganjal.
+結束|けっそく|kessoku|pengikatan|n|Mengikat kayu menjadi satu ikatan.|まとめてしばること|mengikat beberapa kayu menjadi satu ikatan|板を十枚ずつ結束します。|いたをじゅうまいずつけっそくします。|Papan diikat per sepuluh lembar.
+梱包|こんぽう|konpō|pengemasan|n|Membungkus produk.|製品を包むこと|membungkus produk agar aman saat dikirim|製品をラップで梱包します。|せいひんをラップでこんぽうします。|Produk dikemas dengan plastik wrap.
+出荷|しゅっか|shukka|pengiriman|n|Mengirim produk.|製品を送り出すこと|mengirim produk kepada pembeli|木材をトラックで出荷します。|もくざいをトラックでしゅっかします。|Kayu dikirim dengan truk.
+土場|どば|doba|lapangan penumpukan log|n|Tempat log ditumpuk di pabrik.|丸太を置く場所|area untuk menumpuk log di pabrik|丸太を土場に下ろします。|まるたをどばにおろします。|Log diturunkan di lapangan penumpukan.
+歩留まり|ぶどまり|budomari|rendemen|n|Persentase hasil produk dari bahan baku.|材料から製品がとれる割合|persentase produk yang dihasilkan dari bahan baku|歩留まりを上げる工夫をします。|ぶどまりをあげるくふうをします。|Kami berupaya menaikkan rendemen.
+刃物|はもの|hamono|mata pisau|n|Mata gergaji atau pisau mesin.|切るための刃|mata gergaji atau pisau pada mesin|刃物を交換します。|はものをこうかんします。|Mata pisau diganti.
+目立て|めたて|metate|mengasah gigi gergaji|n|Mengasah gigi gergaji.|のこぎりの刃をとぐこと|mengasah gigi gergaji agar tajam|帯のこの目立てをします。|おびのこのめたてをします。|Gigi gergaji pita diasah.
+研削|けんさく|kensaku|penggerindaan|n|Mengasah dengan batu gerinda.|砥石でけずること|mengasah atau menghaluskan dengan batu gerinda|刃物を研削します。|はものをけんさくします。|Mata pisau digerinda.
+安全カバー|あんぜんカバー|anzen kabā|penutup pengaman|n|Penutup pada bagian mesin yang berbahaya.|危ない部分をおおうカバー|penutup pelindung pada bagian mesin yang berbahaya|安全カバーを外さないでください。|あんぜんカバーをはずさないでください。|Jangan lepas penutup pengaman.
+反発|はんぱつ|hanpatsu|lontaran balik|n|Kayu terlempar balik dari mesin.|木がはね返ること|kayu yang terlempar balik dari mesin gergaji|丸のこの反発に注意します。|まるのこのはんぱつにちゅういします。|Waspadai lontaran balik gergaji bundar.
+押し棒|おしぼう|oshibō|tongkat pendorong|n|Tongkat untuk mendorong kayu ke gergaji.|木を刃へ押すための棒|tongkat untuk mendorong kayu ke gergaji agar tangan aman|小さい材は押し棒を使います。|ちいさいざいはおしぼうをつかいます。|Untuk kayu kecil, pakai tongkat pendorong.
+手袋|てぶくろ|tebukuro|sarung tangan|n|Pelindung tangan (tidak dipakai di mesin berputar).|手を守る物|sarung tangan pelindung; tidak boleh dipakai pada mesin berputar|回転する機械では手袋をしません。|かいてんするきかいではてぶくろをしません。|Pada mesin berputar, tidak memakai sarung tangan.
+巻き込まれ|まきこまれ|makikomare|tergulung mesin|n|Tubuh atau baju tertarik ke mesin.|機械に体が引き込まれること|kecelakaan ketika tubuh atau pakaian tertarik ke mesin|袖の巻き込まれに注意します。|そでのまきこまれにちゅういします。|Waspadai lengan baju tergulung mesin.
+切創|せっそう|sessō|luka sayat|n|Luka terpotong benda tajam.|刃物で切ったけが|luka akibat terpotong benda tajam|切創を防ぐため刃物に近づきません。|せっそうをふせぐためはものにちかづきません。|Untuk mencegah luka sayat, jangan dekati mata pisau.
+騒音|そうおん|sōon|kebisingan|n|Suara keras mesin.|大きな音|suara mesin yang sangat keras|騒音がひどいので耳栓をします。|そうおんがひどいのでみみせんをします。|Karena sangat bising, pakai penyumbat telinga.
+耳栓|みみせん|mimisen|penyumbat telinga|n|Pelindung telinga.|耳を守る物|alat penyumbat telinga dari kebisingan|工場の中では耳栓をします。|こうじょうのなかではみみせんをします。|Di dalam pabrik pakai penyumbat telinga.
+火気厳禁|かきげんきん|kaki genkin|dilarang menyalakan api|n|Larangan keras memakai api.|火の使用を強く禁止すること|larangan keras menggunakan api|木くずが多いので火気厳禁です。|きくずがおおいのでかきげんきんです。|Karena banyak serpihan kayu, dilarang menyalakan api.
+始業点検|しぎょうてんけん|shigyō tenken|pemeriksaan awal|n|Memeriksa mesin sebelum mulai kerja.|仕事の前の点検|pemeriksaan mesin sebelum mulai bekerja|始業点検で刃物を確認します。|しぎょうてんけんではものをかくにんします。|Mata pisau dicek saat pemeriksaan awal.
+停止|ていし|teishi|menghentikan|n|Mematikan atau menghentikan mesin.|止めること|menghentikan mesin|掃除の前に機械を停止します。|そうじのまえにきかいをていしします。|Mesin dihentikan sebelum dibersihkan.
+非常停止|ひじょうていし|hijō teishi|berhenti darurat|n|Menghentikan mesin seketika saat bahaya.|すぐに止めること|menghentikan mesin seketika dalam keadaan darurat|危ないときは非常停止ボタンを押します。|あぶないときはひじょうていしボタンをおします。|Saat bahaya, tekan tombol berhenti darurat.
+樹種|じゅしゅ|jushu|jenis kayu|n|Jenis pohon atau kayu.|木の種類|jenis-jenis kayu seperti sugi, hinoki, dan pinus|樹種によって使い方が違います。|じゅしゅによってつかいかたがちがいます。|Penggunaan berbeda sesuai jenis kayu.
+国産材|こくさんざい|kokusanzai|kayu domestik|n|Kayu yang berasal dari Jepang.|日本で育った木材|kayu yang berasal dari hutan di Jepang|国産材の利用が増えています。|こくさんざいのりようがふえています。|Penggunaan kayu domestik meningkat.
+輸入材|ゆにゅうざい|yunyūzai|kayu impor|n|Kayu dari luar negeri.|外国から来た木材|kayu yang diimpor dari luar negeri|輸入材の値段が上がりました。|ゆにゅうざいのねだんがあがりました。|Harga kayu impor naik.
+杉|すぎ|sugi|kayu sugi (cedar Jepang)|n|Kayu cedar Jepang.|日本に多い木|kayu cedar Jepang yang paling banyak diolah|杉は軽くて加工しやすいです。|すぎはかるくてかこうしやすいです。|Sugi ringan dan mudah diolah.
+ひのき|ひのき|hinoki|kayu hinoki|n|Kayu cemara Jepang berkualitas tinggi.|においのいい高い木|kayu cemara Jepang yang harum dan tahan lama|ひのきの板はいいにおいがします。|ひのきのいたはいいにおいがします。|Papan hinoki harum.
+品質|ひんしつ|hinshitsu|kualitas|n|Mutu produk kayu.|製品のよさ|mutu produk kayu|品質を一定にします。|ひんしつをいっていにします。|Kualitas dijaga konsisten.
+JAS|ジャス|jasu|standar JAS|n|Standar Pertanian Jepang untuk produk kayu.|日本農林規格|standar resmi Jepang untuk produk pertanian dan kehutanan termasuk kayu|この製品はJASの認定を受けています。|このせいひんはジャスのにんていをうけています。|Produk ini bersertifikat JAS.
+工程|こうてい|kōtei|tahap proses|n|Tahapan pengolahan kayu.|作業の段階|tahapan dalam proses pengolahan kayu|次の工程に木材を運びます。|つぎのこうていにもくざいをはこびます。|Kayu dibawa ke tahap berikutnya.
+作業手順|さぎょうてじゅん|sagyō tejun|prosedur kerja|n|Urutan kerja yang ditetapkan.|仕事の順番|urutan langkah kerja yang sudah ditetapkan|作業手順を守ります。|さぎょうてじゅんをまもります。|Prosedur kerja dipatuhi.
+指示|しじ|shiji|instruksi|n|Perintah dari atasan.|上の人からの命令|perintah atau arahan dari atasan|班長の指示に従います。|はんちょうのしじにしたがいます。|Saya mengikuti instruksi kepala regu.
+班長|はんちょう|hanchō|kepala regu|n|Pemimpin kelompok kerja.|グループのリーダー|pemimpin kelompok kerja di pabrik|班長に作業の終わりを報告します。|はんちょうにさぎょうのおわりをほうこくします。|Saya melapor ke kepala regu bahwa pekerjaan selesai.
+清掃|せいそう|seisō|pembersihan|n|Membersihkan mesin dan lantai.|きれいにすること|membersihkan mesin dan area kerja|仕事のあと機械の周りを清掃します。|しごとのあときかいのまわりをせいそうします。|Setelah kerja, sekitar mesin dibersihkan.

@@ -1,0 +1,101 @@
+# 鉄道 — Perkeretaapian: rel, sarana, stasiun (100 kata)
+鉄道|てつどう|tetsudō|kereta api / perkeretaapian|n|Sistem transportasi dengan rel.|線路を走る乗り物|sistem transportasi yang berjalan di atas rel|鉄道会社で働いています。|てつどうがいしゃではたらいています。|Saya bekerja di perusahaan kereta api.
+列車|れっしゃ|ressha|kereta|n|Rangkaian kereta yang berjalan.|つながって走る車両|rangkaian kendaraan rel yang berjalan bersama|列車が駅に着きました。|れっしゃがえきにつきました。|Kereta sudah tiba di stasiun.
+電車|でんしゃ|densha|kereta listrik|n|Kereta yang digerakkan listrik.|電気で走る列車|kereta yang digerakkan oleh tenaga listrik|電車で通勤しています。|でんしゃでつうきんしています。|Saya pergi kerja naik kereta listrik.
+新幹線|しんかんせん|shinkansen|shinkansen|n|Kereta cepat Jepang.|速く走る特別な列車|kereta berkecepatan tinggi di Jepang|新幹線の車両を点検します。|しんかんせんのしゃりょうをてんけんします。|Gerbong shinkansen diperiksa.
+車両|しゃりょう|sharyō|gerbong / sarana|n|Kendaraan rel seperti gerbong.|鉄道の車|kendaraan yang berjalan di rel seperti gerbong dan lokomotif|車両の清掃をします。|しゃりょうのせいそうをします。|Gerbong dibersihkan.
+編成|へんせい|hensei|formasi rangkaian|n|Susunan gerbong dalam satu kereta.|車両のつながり方|susunan dan jumlah gerbong dalam satu rangkaian kereta|この列車は十両編成です。|このれっしゃはじゅうりょうへんせいです。|Kereta ini formasi 10 gerbong.
+線路|せんろ|senro|rel / jalur kereta|n|Jalur rel tempat kereta berjalan.|列車が走る道|jalur rel tempat kereta berjalan|線路に入ってはいけません。|せんろにはいってはいけません。|Tidak boleh masuk ke jalur rel.
+レール|れーる|rēru|batang rel|n|Batang besi tempat roda berjalan.|線路の鉄の棒|batang baja panjang tempat roda kereta berjalan|レールの傷を調べます。|レールのきずをしらべます。|Kerusakan batang rel diperiksa.
+枕木|まくらぎ|makuragi|bantalan rel|n|Balok di bawah rel.|レールの下の木やコンクリート|balok kayu atau beton yang menopang rel|古い枕木を交換します。|ふるいまくらぎをこうかんします。|Bantalan rel lama diganti.
+バラスト|ばらすと|barasuto|batu balas|n|Kerikil di bawah rel.|線路にしく石|batu pecah di bawah bantalan untuk menahan getaran|バラストを補充します。|バラストをほじゅうします。|Batu balas ditambahkan.
+軌道|きどう|kidō|jalan rel (track)|n|Struktur rel secara keseluruhan.|列車が走る道全体|keseluruhan struktur jalan rel termasuk rel, bantalan, dan balas|軌道の整備をします。|きどうのせいびをします。|Perawatan jalan rel dilakukan.
+保線|ほせん|hosen|perawatan jalur rel|n|Merawat rel agar aman.|線路を守り整えること|kegiatan merawat dan memeriksa jalur rel agar aman|夜に保線の作業をします。|よるにほせんのさぎょうをします。|Pekerjaan perawatan rel dilakukan malam hari.
+分岐器|ぶんきき|bunkiki|wesel|n|Alat untuk mengubah jalur kereta.|列車の進む線路を変える装置|perangkat untuk memindahkan kereta dari satu jalur ke jalur lain|分岐器の動きを確認します。|ぶんききのうごきをかくにんします。|Gerakan wesel diperiksa.
+ポイント|ぽいんと|pointo|wesel (istilah lapangan)|n|Sebutan lapangan untuk wesel.|線路の分かれる所|sebutan di lapangan untuk wesel atau titik percabangan rel|ポイントに雪がつまりました。|ポイントにゆきがつまりました。|Wesel tersumbat salju.
+踏切|ふみきり|fumikiri|perlintasan sebidang|n|Tempat jalan raya memotong rel.|道路と線路が交わる所|tempat jalan raya bersilangan dengan rel kereta|踏切の警報機を点検します。|ふみきりのけいほうきをてんけんします。|Alarm perlintasan diperiksa.
+信号|しんごう|shingō|sinyal|n|Lampu tanda boleh atau tidak berjalan.|進むか止まるかを示す装置|perangkat yang menunjukkan kereta boleh berjalan atau harus berhenti|信号が赤なので止まります。|しんごうがあかなのでとまります。|Sinyal merah, jadi berhenti.
+架線|かせん|kasen|kabel listrik atas (catenary)|n|Kabel listrik di atas rel.|電車に電気を送る上の線|kabel di atas rel yang mengalirkan listrik ke kereta|架線の点検は電気を止めてから行います。|かせんのてんけんはでんきをとめてからおこないます。|Pemeriksaan kabel atas dilakukan setelah listrik dimatikan.
+パンタグラフ|ぱんたぐらふ|pantagurafu|pantograf|n|Alat di atap kereta yang mengambil listrik.|架線から電気をとる装置|alat di atap kereta listrik untuk mengambil arus dari kabel atas|パンタグラフの摩耗を見ます。|パンタグラフのまもうをみます。|Keausan pantograf diperiksa.
+変電所|へんでんしょ|hendensho|gardu listrik|n|Tempat mengubah tegangan listrik untuk kereta.|電気の電圧を変える所|fasilitas yang mengubah dan menyalurkan listrik untuk kereta|変電所から電気を送ります。|へんでんしょからでんきをおくります。|Listrik disalurkan dari gardu.
+電気設備|でんきせつび|denki setsubi|fasilitas kelistrikan|n|Peralatan listrik perkeretaapian.|鉄道の電気の設備|peralatan listrik seperti kabel atas, sinyal, dan gardu|電気設備の保守をしています。|でんきせつびのほしゅをしています。|Saya merawat fasilitas kelistrikan.
+感電|かんでん|kanden|tersengat listrik|n|Kecelakaan terkena arus listrik.|体に電気が流れること|kecelakaan tubuh dialiri arus listrik|架線の近くは感電に注意します。|かせんのちかくはかんでんにちゅういします。|Di dekat kabel atas, waspadai sengatan listrik.
+車輪|しゃりん|sharin|roda kereta|n|Roda baja kereta.|列車のタイヤ|roda baja pada kendaraan rel|車輪の形を測ります。|しゃりんのかたちをはかります。|Bentuk roda kereta diukur.
+台車|だいしゃ|daisha|bogie|n|Rangka beroda di bawah gerbong.|車両の下の車輪がついた部分|rangka beroda di bawah gerbong yang menopang badan kereta|台車の点検をします。|だいしゃのてんけんをします。|Bogie diperiksa.
+ブレーキ|ぶれーき|burēki|rem|n|Sistem rem kereta.|列車を止める装置|sistem untuk memperlambat dan menghentikan kereta|ブレーキの試験をします。|ブレーキのしけんをします。|Uji rem dilakukan.
+連結|れんけつ|renketsu|penyambungan gerbong|n|Menyambung gerbong satu dengan lainnya.|車両をつなぐこと|menyambungkan gerbong satu dengan gerbong lain|車両を連結します。|しゃりょうをれんけつします。|Gerbong disambungkan.
+連結器|れんけつき|renketsuki|alat perangkai|n|Alat penyambung antargerbong.|車両をつなぐ部品|alat yang menyambungkan gerbong satu dengan lainnya|連結器にさびがないか見ます。|れんけつきにさびがないかみます。|Periksa apakah alat perangkai berkarat.
+車両基地|しゃりょうきち|sharyō kichi|depo kereta|n|Tempat kereta disimpan dan dirawat.|車両を置いて整備する所|tempat penyimpanan dan perawatan kereta|夜は車両基地で整備します。|よるはしゃりょうきちでせいびします。|Malam hari perawatan di depo.
+検修|けんしゅう|kenshū|inspeksi & perbaikan sarana|n|Memeriksa dan memperbaiki kereta.|車両を検査して直すこと|kegiatan memeriksa dan memperbaiki kendaraan rel|検修の仕事は夜が多いです。|けんしゅうのしごとはよるがおおいです。|Pekerjaan inspeksi dan perbaikan banyak di malam hari.
+交番検査|こうばんけんさ|kōban kensa|inspeksi rutin berkala|n|Pemeriksaan kereta rutin dalam beberapa hari sekali.|決まった日数ごとの検査|pemeriksaan kereta secara rutin dalam interval hari tertentu|今日は交番検査の日です。|きょうはこうばんけんさのひです。|Hari ini jadwal inspeksi rutin.
+全般検査|ぜんぱんけんさ|zenpan kensa|inspeksi menyeluruh|n|Pemeriksaan besar seluruh bagian kereta.|車両を全部ばらして調べる検査|pemeriksaan besar dengan membongkar seluruh bagian kereta|全般検査は数年に一回です。|ぜんぱんけんさはすうねんにいっかいです。|Inspeksi menyeluruh dilakukan beberapa tahun sekali.
+整備|せいび|seibi|perawatan|n|Merawat fasilitas atau kereta.|点検して直すこと|kegiatan memeriksa dan memperbaiki|車両の整備をします。|しゃりょうのせいびをします。|Kereta dirawat.
+点検|てんけん|tenken|pemeriksaan|n|Memeriksa kondisi.|悪い所がないか調べること|memeriksa kondisi peralatan atau fasilitas|毎朝線路を点検します。|まいあさせんろをてんけんします。|Setiap pagi rel diperiksa.
+異常|いじょう|ijō|kelainan|n|Keadaan tidak normal.|いつもと違う状態|keadaan yang berbeda dari biasanya|異常を見つけたらすぐ報告します。|いじょうをみつけたらすぐほうこくします。|Kalau menemukan kelainan, segera laporkan.
+故障|こしょう|koshō|kerusakan|n|Alat atau kereta rusak.|こわれて動かないこと|keadaan alat atau kereta rusak|車両故障で遅れています。|しゃりょうこしょうでおくれています。|Terlambat karena kerusakan kereta.
+駅|えき|eki|stasiun|n|Tempat kereta berhenti.|列車が止まる所|tempat kereta berhenti untuk penumpang naik dan turun|駅で働いています。|えきではたらいています。|Saya bekerja di stasiun.
+駅員|えきいん|ekiin|petugas stasiun|n|Pegawai yang bekerja di stasiun.|駅で働く人|pegawai yang bertugas di stasiun|駅員に道を聞きます。|えきいんにみちをききます。|Bertanya jalan kepada petugas stasiun.
+ホーム|ほーむ|hōmu|peron|n|Tempat penumpang menunggu kereta.|電車に乗り降りする所|tempat penumpang naik dan turun kereta|三番ホームに電車が来ます。|さんばんホームにでんしゃがきます。|Kereta datang di peron tiga.
+改札|かいさつ|kaisatsu|gerbang tiket|n|Tempat memeriksa tiket.|切符を確認する所|gerbang tempat pemeriksaan tiket penumpang|改札でICカードをタッチします。|かいさつでアイシーカードをタッチします。|Kartu IC ditempelkan di gerbang tiket.
+切符|きっぷ|kippu|tiket|n|Tiket kereta.|乗るための券|tiket untuk naik kereta|切符を買います。|きっぷをかいます。|Membeli tiket.
+券売機|けんばいき|kenbaiki|mesin tiket|n|Mesin penjual tiket.|切符を売る機械|mesin otomatis untuk membeli tiket|券売機の使い方を案内します。|けんばいきのつかいかたをあんないします。|Cara memakai mesin tiket dijelaskan.
+運賃|うんちん|unchin|tarif|n|Harga naik kereta.|乗るためのお金|biaya perjalanan kereta|運賃を精算します。|うんちんをせいさんします。|Tarif disesuaikan.
+乗客|じょうきゃく|jōkyaku|penumpang|n|Orang yang naik kereta.|乗り物に乗る人|orang yang menumpang kereta|乗客を安全に案内します。|じょうきゃくをあんぜんにあんないします。|Penumpang dipandu dengan aman.
+案内|あんない|annai|informasi / pemanduan|n|Memberi informasi kepada penumpang.|教えたり連れて行ったりすること|memberi informasi atau mengantar penumpang|乗り換えの案内をします。|のりかえのあんないをします。|Memberi informasi transit.
+乗り換え|のりかえ|norikae|pindah kereta|n|Berganti kereta.|ほかの電車に乗りかえること|berpindah dari satu kereta ke kereta lain|この駅で乗り換えます。|このえきでのりかえます。|Pindah kereta di stasiun ini.
+アナウンス|あなうんす|anaunsu|pengumuman|n|Pengumuman lewat pengeras suara.|放送で知らせること|pengumuman melalui pengeras suara|遅れのアナウンスをします。|おくれのアナウンスをします。|Pengumuman keterlambatan disampaikan.
+発車|はっしゃ|hassha|keberangkatan kereta|n|Kereta mulai berangkat.|列車が出ること|saat kereta mulai berangkat|まもなく発車します。|まもなくはっしゃします。|Kereta segera berangkat.
+到着|とうちゃく|tōchaku|kedatangan|n|Kereta tiba.|着くこと|saat kereta tiba|列車が到着しました。|れっしゃがとうちゃくしました。|Kereta sudah tiba.
+時刻表|じこくひょう|jikokuhyō|jadwal|n|Tabel jam kereta.|発車の時間の表|tabel jam keberangkatan dan kedatangan kereta|時刻表どおりに走ります。|じこくひょうどおりにはしります。|Berjalan sesuai jadwal.
+ダイヤ|だいや|daiya|jadwal perjalanan (diagram)|n|Jadwal operasi kereta secara keseluruhan.|列車の運行計画|rencana perjalanan seluruh kereta yang digambarkan dalam diagram|事故でダイヤが乱れています。|じこでダイヤがみだれています。|Jadwal kacau karena kecelakaan.
+遅延|ちえん|chien|keterlambatan|n|Kereta terlambat.|予定より遅れること|keadaan terlambat dari jadwal|五分の遅延が出ています。|ごふんのちえんがでています。|Terjadi keterlambatan lima menit.
+運転見合わせ|うんてんみあわせ|unten miawase|penghentian sementara operasi|n|Kereta berhenti beroperasi sementara.|しばらく列車を止めること|penghentian sementara operasi kereta|大雨で運転見合わせです。|おおあめでうんてんみあわせです。|Operasi dihentikan sementara karena hujan lebat.
+運転士|うんてんし|untenshi|masinis|n|Orang yang mengemudikan kereta.|電車を運転する人|orang yang mengemudikan kereta|運転士が信号を確認します。|うんてんしがしんごうをかくにんします。|Masinis memeriksa sinyal.
+車掌|しゃしょう|shashō|kondektur|n|Petugas yang mengurus pintu dan penumpang.|列車でお客の安全を守る人|petugas kereta yang mengurus pintu, pengumuman, dan penumpang|車掌がドアを閉めます。|しゃしょうがドアをしめます。|Kondektur menutup pintu.
+指令|しれい|shirei|pusat kendali|n|Pusat yang memberi instruksi operasi kereta.|列車の運行を指示する所|pusat yang mengawasi dan memberi instruksi operasional kereta|指令に連絡します。|しれいにれんらくします。|Menghubungi pusat kendali.
+指差喚呼|しさかんこ|shisa kanko|tunjuk dan sebut|n|Menunjuk dan menyebut untuk memastikan.|指でさして声に出して確認すること|cara konfirmasi dengan menunjuk dan menyebut keras-keras|信号を指差喚呼で確認します。|しんごうをしさかんこでかくにんします。|Sinyal dicek dengan tunjuk dan sebut.
+安全確認|あんぜんかくにん|anzen kakunin|konfirmasi keselamatan|n|Memastikan keadaan aman.|安全かどうか確かめること|memastikan keadaan aman sebelum bertindak|発車の前に安全確認をします。|はっしゃのまえにあんぜんかくにんをします。|Sebelum berangkat, keselamatan dikonfirmasi.
+列車見張員|れっしゃみはりいん|ressha mihariin|pengawas kereta lewat|n|Petugas yang mengawasi kedatangan kereta saat ada pekerjaan rel.|作業中に列車が来るのを見張る人|petugas yang mengawasi kereta datang dan memberi peringatan kepada pekerja rel|列車見張員の合図で退避します。|れっしゃみはりいんのあいずでたいひします。|Menyingkir sesuai isyarat pengawas kereta.
+退避|たいひ|taihi|menyingkir|n|Menjauh dari rel saat kereta lewat.|安全な所へにげること|menjauh ke tempat aman saat kereta lewat|列車が来たら線路の外に退避します。|れっしゃがきたらせんろのそとにたいひします。|Saat kereta datang, menyingkir ke luar rel.
+触車事故|しょくしゃじこ|shokusha jiko|tertabrak kereta|n|Kecelakaan pekerja tertabrak kereta.|作業員が列車にふれる事故|kecelakaan pekerja tertabrak kendaraan rel|触車事故を防ぐために見張りをつけます。|しょくしゃじこをふせぐためにみはりをつけます。|Pengawas ditempatkan untuk mencegah kecelakaan tertabrak kereta.
+線路閉鎖|せんろへいさ|senro heisa|penutupan jalur|n|Menutup jalur rel untuk pekerjaan.|作業のため線路を使えなくすること|menutup jalur rel sementara untuk pekerjaan perawatan|線路閉鎖の時間に作業をします。|せんろへいさのじかんにさぎょうをします。|Pekerjaan dilakukan saat jalur ditutup.
+終電|しゅうでん|shūden|kereta terakhir|n|Kereta terakhir di malam hari.|一日の最後の電車|kereta terakhir yang berjalan pada malam hari|終電のあとに保線作業が始まります。|しゅうでんのあとにほせんさぎょうがはじまります。|Setelah kereta terakhir, pekerjaan rel dimulai.
+始発|しはつ|shihatsu|kereta pertama|n|Kereta pertama di pagi hari.|一日の最初の電車|kereta pertama yang berjalan pada pagi hari|始発までに作業を終わらせます。|しはつまでにさぎょうをおわらせます。|Pekerjaan diselesaikan sebelum kereta pertama.
+夜間作業|やかんさぎょう|yakan sagyō|kerja malam|n|Pekerjaan yang dilakukan malam hari.|夜に行う作業|pekerjaan yang dilakukan pada malam hari|保線は夜間作業が中心です。|ほせんはやかんさぎょうがちゅうしんです。|Perawatan rel sebagian besar kerja malam.
+ヘッドライト|へっどらいと|heddoraito|lampu kepala|n|Lampu di helm atau kepala.|頭につけるライト|lampu yang dipasang di kepala atau helm|夜間作業ではヘッドライトをつけます。|やかんさぎょうではヘッドライトをつけます。|Saat kerja malam, lampu kepala dipakai.
+反射ベスト|はんしゃベスト|hansha besuto|rompi reflektif|n|Rompi yang memantulkan cahaya.|光を反射するベスト|rompi berwarna terang yang memantulkan cahaya|線路では反射ベストを着ます。|せんろでははんしゃベストをきます。|Di jalur rel, rompi reflektif dipakai.
+笛|ふえ|fue|peluit|n|Peluit untuk memberi tanda.|音で合図する道具|peluit untuk memberi isyarat|列車が来たら笛で知らせます。|れっしゃがきたらふえでしらせます。|Saat kereta datang, diberi tahu dengan peluit.
+無線|むせん|musen|radio|n|Alat komunikasi radio.|線のない通信|alat komunikasi tanpa kabel|無線で指令と話します。|むせんでしれいとはなします。|Berbicara dengan pusat kendali lewat radio.
+工具|こうぐ|kōgu|perkakas|n|Alat kerja.|作業の道具|alat-alat untuk bekerja|工具を線路に置き忘れないでください。|こうぐをせんろにおきわすれないでください。|Jangan sampai perkakas tertinggal di rel.
+置き忘れ|おきわすれ|okiwasure|tertinggal|n|Lupa meninggalkan barang.|置いたまま忘れること|lupa meninggalkan barang di suatu tempat|作業のあと置き忘れがないか確認します。|さぎょうのあとおきわすれがないかかくにんします。|Setelah bekerja, cek apakah ada yang tertinggal.
+軌間|きかん|kikan|lebar sepur|n|Jarak antara dua rel.|二本のレールの間の幅|jarak antara dua batang rel|軌間を測ります。|きかんをはかります。|Lebar sepur diukur.
+ゆがみ|ゆがみ|yugami|distorsi / bengkok|n|Rel tidak lurus.|まっすぐでないこと|keadaan rel tidak lurus atau berubah bentuk|暑さでレールにゆがみが出ます。|あつさでレールにゆがみがでます。|Karena panas, rel bisa bengkok.
+締結装置|ていけつそうち|teiketsu sōchi|penambat rel|n|Alat pengikat rel ke bantalan.|レールを枕木に止める部品|komponen yang mengikat rel ke bantalan|締結装置のゆるみを確認します。|ていけつそうちのゆるみをかくにんします。|Kekenduran penambat rel diperiksa.
+保守用車|ほしゅようしゃ|hoshuyōsha|kendaraan perawatan rel|n|Kendaraan khusus untuk perawatan rel.|線路の整備に使う車|kendaraan khusus yang berjalan di rel untuk pekerjaan perawatan|保守用車で資材を運びます。|ほしゅようしゃでしざいをはこびます。|Material diangkut dengan kendaraan perawatan rel.
+マルチプルタイタンパー|まるちぷるたいたんぱー|maruchipuru taitanpā|mesin pemecok balas|n|Mesin besar untuk memadatkan batu balas.|バラストをつき固める大きな機械|mesin besar yang memadatkan batu balas dan meluruskan rel|マルチプルタイタンパーで軌道を直します。|マルチプルタイタンパーできどうをなおします。|Jalan rel diperbaiki dengan mesin pemecok balas.
+除雪|じょせつ|josetsu|pembersihan salju|n|Membersihkan salju dari rel.|雪を取り除くこと|membersihkan salju dari rel dan wesel|冬は朝早くから除雪をします。|ふゆはあさはやくからじょせつをします。|Musim dingin, salju dibersihkan sejak pagi.
+倒木|とうぼく|tōboku|pohon tumbang|n|Pohon tumbang yang menghalangi rel.|たおれた木|pohon yang tumbang dan dapat menghalangi jalur|台風のあと倒木を取り除きます。|たいふうのあととうぼくをとりのぞきます。|Setelah taifun, pohon tumbang disingkirkan.
+人身事故|じんしんじこ|jinshin jiko|kecelakaan yang melibatkan orang|n|Kecelakaan kereta yang melibatkan manusia.|人が列車にふれる事故|kecelakaan ketika kereta menabrak orang|人身事故で電車が止まっています。|じんしんじこででんしゃがとまっています。|Kereta berhenti karena kecelakaan yang melibatkan orang.
+非常ボタン|ひじょうボタン|hijō botan|tombol darurat|n|Tombol untuk keadaan darurat.|緊急のときに押すボタン|tombol yang ditekan saat keadaan darurat|ホームの非常ボタンの場所を覚えます。|ホームのひじょうボタンのばしょをおぼえます。|Lokasi tombol darurat di peron dihafal.
+ホームドア|ほーむどあ|hōmu doa|pintu peron|n|Pintu pengaman di tepi peron.|ホームの端の安全なドア|pintu pengaman di tepi peron untuk mencegah orang jatuh ke rel|ホームドアが閉まってから発車します。|ホームドアがしまってからはっしゃします。|Kereta berangkat setelah pintu peron tertutup.
+転落|てんらく|tenraku|terjatuh (ke rel)|n|Jatuh dari peron ke rel.|ホームから線路に落ちること|kecelakaan jatuh dari peron ke jalur rel|酔ったお客様の転落に注意します。|よったおきゃくさまのてんらくにちゅういします。|Waspadai penumpang mabuk jatuh ke rel.
+忘れ物|わすれもの|wasuremono|barang tertinggal|n|Barang yang tertinggal di kereta.|置き忘れた物|barang penumpang yang tertinggal di kereta atau stasiun|車内の忘れ物を集めます。|しゃないのわすれものをあつめます。|Barang tertinggal di dalam kereta dikumpulkan.
+車内|しゃない|shanai|di dalam kereta|n|Bagian dalam gerbong.|列車の中|bagian dalam gerbong kereta|車内の清掃をします。|しゃないのせいそうをします。|Bagian dalam kereta dibersihkan.
+清掃|せいそう|seisō|pembersihan|n|Membersihkan kereta atau stasiun.|きれいにすること|membersihkan gerbong atau stasiun|折り返しの時間に車内を清掃します。|おりかえしのじかんにしゃないをせいそうします。|Bagian dalam kereta dibersihkan saat putar balik.
+折り返し|おりかえし|orikaeshi|putar balik|n|Kereta kembali ke arah sebaliknya.|終点で反対方向に戻ること|kereta kembali ke arah sebaliknya di stasiun akhir|この駅で折り返し運転をします。|このえきでおりかえしうんてんをします。|Di stasiun ini kereta putar balik.
+終点|しゅうてん|shūten|stasiun akhir|n|Stasiun terakhir.|最後の駅|stasiun terakhir dalam suatu rute|終点で全員降ります。|しゅうてんでぜんいんおります。|Semua turun di stasiun akhir.
+運行|うんこう|unkō|operasi perjalanan|n|Menjalankan kereta sesuai jadwal.|列車を走らせること|menjalankan kereta sesuai jadwal|列車は正常に運行しています。|れっしゃはせいじょうにうんこうしています。|Kereta beroperasi normal.
+定時運行|ていじうんこう|teiji unkō|operasi tepat waktu|n|Kereta berjalan sesuai jadwal.|時間どおりの運行|operasi kereta yang tepat sesuai jadwal|日本の鉄道は定時運行で有名です。|にほんのてつどうはていじうんこうでゆうめいです。|Kereta Jepang terkenal tepat waktu.
+速度制限|そくどせいげん|sokudo seigen|pembatasan kecepatan|n|Batas kecepatan di bagian tertentu.|速さの上限|batasan kecepatan pada bagian jalur tertentu|工事区間は速度制限があります。|こうじくかんはそくどせいげんがあります。|Di area pekerjaan ada pembatasan kecepatan.
+区間|くかん|kukan|segmen / bagian jalur|n|Bagian jalur antara dua titik.|二つの場所の間|bagian jalur antara dua stasiun atau titik|この区間は単線です。|このくかんはたんせんです。|Segmen ini jalur tunggal.
+複線|ふくせん|fukusen|jalur ganda|n|Dua jalur rel berdampingan.|線路が二本あること|jalur dengan dua rel berdampingan untuk dua arah|この路線は複線です。|このろせんはふくせんです。|Lintas ini jalur ganda.
+路線|ろせん|rosen|lintas / rute|n|Rute kereta.|列車が走る決まった道|rute atau jalur tertentu yang dilalui kereta|新しい路線ができました。|あたらしいろせんができました。|Ada lintas baru.
+トンネル|とんねる|tonneru|terowongan|n|Terowongan kereta.|山の中を通る道|jalan yang menembus gunung atau bawah tanah|トンネルの中を点検します。|トンネルのなかをてんけんします。|Bagian dalam terowongan diperiksa.
+橋りょう|きょうりょう|kyōryō|jembatan kereta|n|Jembatan untuk rel.|線路の橋|jembatan yang dilalui jalur kereta|橋りょうのボルトを点検します。|きょうりょうのボルトをてんけんします。|Baut jembatan kereta diperiksa.
+報告|ほうこく|hōkoku|laporan|n|Melaporkan kejadian.|知らせること|menyampaikan kejadian atau hasil kerja|作業終了を報告します。|さぎょうしゅうりょうをほうこくします。|Selesainya pekerjaan dilaporkan.
+規則|きそく|kisoku|aturan|n|Aturan yang wajib dipatuhi.|守るべききまり|peraturan yang wajib dipatuhi|鉄道の規則はとても厳しいです。|てつどうのきそくはとてもきびしいです。|Aturan perkeretaapian sangat ketat.
+単線|たんせん|tansen|jalur tunggal|n|Satu jalur rel untuk dua arah.|線路が一本だけのこと|jalur dengan satu rel yang dipakai bergantian untuk dua arah|単線なので駅で列車を待ちます。|たんせんなのでえきでれっしゃをまちます。|Karena jalur tunggal, kereta menunggu di stasiun.
+架線柱|かせんちゅう|kasenchū|tiang listrik aliran atas|n|Tiang penyangga kabel listrik atas.|架線を支える柱|tiang yang menopang kabel listrik di atas rel|架線柱の番号で場所を伝えます。|かせんちゅうのばんごうでばしょをつたえます。|Lokasi disampaikan dengan nomor tiang listrik.
+警報機|けいほうき|keihōki|alarm perlintasan|n|Alat bunyi dan lampu di perlintasan.|音と光で知らせる装置|alat yang berbunyi dan berkedip saat kereta mendekat|踏切の警報機が鳴っています。|ふみきりのけいほうきがなっています。|Alarm perlintasan berbunyi.
+遮断機|しゃだんき|shadanki|palang pintu perlintasan|n|Palang yang menutup jalan saat kereta lewat.|道をふさぐ棒|palang yang turun menutup jalan saat kereta akan lewat|遮断機が下りたら渡ってはいけません。|しゃだんきがおりたらわたってはいけません。|Jika palang turun, tidak boleh menyeberang.
+保守|ほしゅ|hoshu|pemeliharaan|n|Menjaga fasilitas tetap berfungsi.|設備をよい状態に保つこと|kegiatan menjaga fasilitas dan peralatan tetap berfungsi baik|信号の保守をしています。|しんごうのほしゅをしています。|Saya memelihara sinyal.
