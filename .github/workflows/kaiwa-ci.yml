@@ -45,6 +45,11 @@ jobs:
       # lagi di commit berikutnya tanpa perubahan kode). Ulangi sampai 3x sebelum
       # dianggap gagal sungguhan.
       - name: npm run build (retry saat fetch font Google Fonts gagal sementara)
+        # Beranda & halaman publik kini statis: angka dibaca dari Supabase saat build
+        # (client anon). URL + anon key memang publik (ikut terkirim ke browser).
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: https://vkdtjeogushskcgvazom.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZrZHRqZW9ndXNoc2tjZ3Zhem9tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4OTc4MjksImV4cCI6MjA5NTQ3MzgyOX0.oJlyIzYMZcUzO0zFud32H_llvJClLDAdDaimsIG_7k4
         run: |
           for attempt in 1 2 3; do
             if npm run build; then
