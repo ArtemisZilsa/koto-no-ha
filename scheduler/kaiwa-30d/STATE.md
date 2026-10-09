@@ -1,5 +1,12 @@
 # State — Program 30 Hari Kaiwa
 
+## Day 18 (9 Okt 2026 JST)
+
+- Rem darurat AKTIF: PR konten terbuka #24 (Day 9, E1 N4), #41 (Day 15, E1 N3), #43 (Day 17, E1 N2) = 3. Tidak ada konten baru hari ini.
+- PR teknis STATE lama #31, #34, #42 usang (digantikan #44 dan PR ini); boleh ditutup.
+- Antrean teknis kosong. Antrean konten menunggu review Zilsa: sisa E1 N2 (2), N1 (7); D N4-N1; E2.
+- Seed menunggu Zilsa: 058, 060, 061, 064 (dan 040/048/054/055 bila belum).
+
 ## Day 17 (8 Okt 2026 JST)
 
 - PR konten terbuka: #24 (Day 9, E1 N4), #41 (Day 15, E1 N3) + PR Day 17 (E1 N2) = 3. PR #26 dan #28 sudah di-merge.
