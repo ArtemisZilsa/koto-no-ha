@@ -1,5 +1,24 @@
 # State — Program 30 Hari Kaiwa
 
+## Day 18 (9 Okt 2026 JST)
+
+- Rem darurat AKTIF: PR konten terbuka #24 (Day 9, E1 N4), #41 (Day 15, E1 N3), #43 (Day 17, E1 N2) = 3. Tidak ada konten baru hari ini.
+- PR teknis STATE lama #31, #34, #42 usang (digantikan #44 dan PR ini); boleh ditutup.
+- Antrean teknis kosong. Antrean konten menunggu review Zilsa: sisa E1 N2 (2), N1 (7); D N4-N1; E2.
+- Seed menunggu Zilsa: 058, 060, 061, 064 (dan 040/048/054/055 bila belum).
+
+## Day 17 (8 Okt 2026 JST)
+
+- PR konten terbuka: #24 (Day 9, E1 N4), #41 (Day 15, E1 N3) + PR Day 17 (E1 N2) = 3. PR #26 dan #28 sudah di-merge.
+  Rem darurat TIDAK aktif hari ini; besok aktif bila ketiganya belum di-merge.
+- E1 N2: `064_extend_kaiwa_lepas_n2_short.sql` (5 dari 7 dialog N2 pendek: Konsultasi Karier, Meminta Kenaikan Gaji,
+  Meminta Maaf atas Kesalahan, Menanggapi Keluhan Pelanggan, Negosiasi dengan Klien; 4 -> 10 baris). 4 baris asli
+  disalin dari DB. Sisa N2: "Diskusi Masalah Sosial", "Menyampaikan Ketidaksetujuan".
+- Catatan: `validate:kaiwa` dan `seed:kaiwa` hanya memahami `INSERT ... ON CONFLICT`, bukan `UPDATE`; migrasi E1 harus berbentuk INSERT penuh.
+- PR teknis STATE lama #31, #34, #42 usang (digantikan PR ini); boleh ditutup.
+- Seed menunggu Zilsa: 058, 060, 061, 064 (dan 040/048/054/055 bila belum).
+- Antrean berikutnya: sisa E1 N2 (2), N1 (7); D N4-N1; E2.
+
 ## Day 14 (5 Okt 2026 JST)
 
 - Rem darurat AKTIF: PR konten terbuka #24 (Day 9), #26 (Day 10), #28 (Day 11) belum di-merge. Tidak ada konten baru hari ini.
