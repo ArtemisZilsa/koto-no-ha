@@ -1,5 +1,13 @@
 # State — Program 30 Hari Kaiwa
 
+## Day 29 (20 Okt 2026 JST)
+
+- Rem darurat AKTIF: PR konten terbuka #24 (Day 9), #41 (Day 15), #43 (Day 17) belum di-merge. Tidak ada konten baru hari ini.
+- PR konten #26 dan #28 sudah di-merge. PR teknis STATE yang masih terbuka: #31, #34, #42, #44, #45, #46, #47, #48 (hanya ringkasan harian, aman ditutup atau di-merge bebas urutan).
+- Antrean teknis kosong. Auto-merge tidak dijalankan: sesi ini tidak bisa memuat URL uji deploy preview (jaringan ke domain Netlify diblokir).
+- Day 30 (21 Okt): tulis `scheduler/kaiwa-30d/REPORT.md` lewat PR teknis, lalu berhenti.
+- Seed menunggu Zilsa: 058, 060, 061 dan migrasi dari PR #41 dan #43 (dan 040/048/054/055 bila belum).
+
 ## Day 14 (5 Okt 2026 JST)
 
 - Rem darurat AKTIF: PR konten terbuka #24 (Day 9), #26 (Day 10), #28 (Day 11) belum di-merge. Tidak ada konten baru hari ini.
